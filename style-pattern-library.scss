@@ -3,15 +3,9 @@
 @use 'molecules';
 @use 'organisms' as o;
 
-// Option #1: Roboto font for body & Rokkitt font for headings
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@900&display=swap');
-// Option #2 Gemunu Libre font for the body & Londrina Solid for headings
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap');
-// Option #2 Acme font for the body & Josefin Slab for headings
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap');
+
 
 
 * {
@@ -70,9 +64,7 @@ section {
   margin: 0.5em;
   padding: 1em;
 }
-.uppercase {
-  @include atoms.uppercase;
-}
-.uppercase-light {
-  @include atoms.uppercase($text-light);
+
+.moon {
+  background-color: $accent2;
 }

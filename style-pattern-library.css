@@ -4,13 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap");
-h2,
+h1,
 h3,
 h4 {
   font-family: "Londrina Solid", cursive;
@@ -18,18 +14,17 @@ h4 {
 }
 
 h1 {
-  background: #E43388;
+  background-color: #B79ED1;
   color: #fff;
-  display: inline-block;
-  font-weight: normal;
-  margin-bottom: 1em;
-  padding: 0.5em 1em;
+  font-size: 6em;
+  letter-spacing: 1px;
+  line-height: 1em;
 }
 
 h2 {
-  color: #fff;
-  font-weight: 900; /* Heavy */
-  font-size: 6em;
+  font-style: italic;
+  color: #030746;
+  font-size: 3em;
   letter-spacing: 1px;
   line-height: 1em;
 }
@@ -43,7 +38,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
@@ -52,14 +47,16 @@ h4 {
 
 p {
   font-family: "Gemunu Libre", Arial, serif;
-  font-size: 1em;
+  font-size: 1.6em;
   line-height: 1.5em;
   padding: 0.5em 0;
   margin: 0;
+  letter-spacing: 0.08rem;
 }
 
 a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1.4rem;
+  border-bottom: 1px solid #333;
   color: #333;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
@@ -69,18 +66,7 @@ a:hover {
   border-color: #E43388;
 }
 
-[role=banner] > h1 {
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
 .summary {
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #fff;
   padding: 15% 0;
 }
 .summary p:last-child {
@@ -168,18 +154,8 @@ section {
   padding: 1em;
 }
 
-.uppercase {
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #333;
-}
-
-.uppercase-light {
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #fff;
+.moon {
+  background-color: #48A9A6;
 }
 
 /*# sourceMappingURL=style-pattern-library.css.map */
