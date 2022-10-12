@@ -1,7 +1,7 @@
-@use 'variables' as *; //this puts all the variables in the global namespace.
-@use 'atoms';
-@use 'molecules';
-@use 'organisms' as o;
+@use '/scss/variables' as *; //this puts all the variables in the global namespace.
+@use '/scss/atoms';
+@use '/scss/molecules';
+@use '/scss/organisms' as o;
 
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap');
