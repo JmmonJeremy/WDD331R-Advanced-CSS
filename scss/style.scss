@@ -1,4 +1,3 @@
 // styles.scss
-@use 'atoms' as a;  // file is named _atoms.scss - shortened name
-@use 'molecules'as m; //file is named _molecules.scss - shortened name
-@use 'organisms' as o;  // file is named _organisms.scss - shortened name
+@use 'atomic-basics/variables' as *; //this puts all the variables in the global namespace.
+@use 'atomic-basics/atoms' as a;  // file is named _atoms.scss - shortened name
