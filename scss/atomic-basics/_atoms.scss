@@ -1,7 +1,7 @@
 @use "variables" as *; //this puts all the variables in the global namespace.
 
 // mixins to take care of repeated patterns.
-@mixin set-font($size: 1em, $line-height: normal, $font: $fonts-body) {
+@mixin set-font($size: 1rem, $line-height: normal, $font: $fonts-body) {
   font-family: $font;
   font-size: $size;
   line-height: $line-height;
@@ -14,8 +14,8 @@
 
 @mixin divider($color: $accent1) {
   border-top: 1px solid $color;
-  margin-top: 1em;
-  padding-top: 1.5em;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
 }
 // these styles here should describe how the atoms (elements) should appear most of the time.  
 //They can be overridden at the molecule (block) as necessary
@@ -26,37 +26,38 @@ h4 {
   margin: 0;
 }
 h1 {
-  background-color: $primary;
+  text-align: center; 
   color: $text-light;
-  font-size: 6em;
-  letter-spacing: 1px;
-  line-height: 1em;
+  font-size: 2.5rem;
+  letter-spacing: 1px; 
 }
 h2 {
+  text-align: center;
+  margin-left: 3rem;
   font-style: italic;
   color: $background-color;
-  font-size: 3em;
+  font-size: 1rem;
   letter-spacing: 1px;
-  line-height: 1em;
+ 
 }
 h3 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
-  line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
+ 
+  padding: 0.5rem 0 0.25rem 0;
 }
 h4 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
-  line-height: 1em;
-  margin: 0.5em 0;
+ 
+  margin: 0.5rem 0;
 }
 
 p {
-  @include set-font(1.6em, 1.5em);
-  padding: 0.5em 0;
+  @include set-font(1.6rem, 1.5rem);
+  padding: 0.5rem 0;
   margin: 0;
   letter-spacing: .08rem;
 }

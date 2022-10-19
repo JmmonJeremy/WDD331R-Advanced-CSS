@@ -1,0 +1,7 @@
+@use '../../../atomic-basics/variables' as *; //this puts all the variables in the global namespace.
+@use '../../../atomic-basics/atoms';
+header {
+    background-color: $primary;
+    border-radius: 50%;
+    padding: 6rem 0;
+}

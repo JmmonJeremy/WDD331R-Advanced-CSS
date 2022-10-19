@@ -12,42 +12,40 @@ h4 {
 }
 
 h1 {
-  background-color: #B79ED1;
+  text-align: center;
   color: #fff;
-  font-size: 6em;
+  font-size: 2.5rem;
   letter-spacing: 1px;
-  line-height: 1em;
 }
 
 h2 {
+  text-align: center;
+  margin-left: 3rem;
   font-style: italic;
   color: #030746;
-  font-size: 3em;
+  font-size: 1rem;
   letter-spacing: 1px;
-  line-height: 1em;
 }
 
 h3 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
-  line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
+  padding: 0.5rem 0 0.25rem 0;
 }
 
 h4 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
-  line-height: 1em;
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
 }
 
 p {
   font-family: "Gemunu Libre", Arial, serif;
-  font-size: 1.6em;
-  line-height: 1.5em;
-  padding: 0.5em 0;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
   margin: 0;
   letter-spacing: 0.08rem;
 }
@@ -62,6 +60,12 @@ a {
 
 a:hover {
   border-color: #E43388;
+}
+
+header {
+  background-color: #B79ED1;
+  border-radius: 50%;
+  padding: 6rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

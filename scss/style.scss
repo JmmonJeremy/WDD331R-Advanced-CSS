@@ -1,3 +1,4 @@
 // styles.scss
 @use 'atomic-basics/variables' as *; //this puts all the variables in the global namespace.
-@use 'atomic-basics/atoms' as a;  // file is named _atoms.scss - shortened name
+@use 'atomic-basics/atoms';  // file is named _atoms.scss - shortened name
+@use 'small-view/planet-organism/planet-small';
