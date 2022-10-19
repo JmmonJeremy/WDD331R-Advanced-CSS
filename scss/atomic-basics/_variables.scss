@@ -1,22 +1,12 @@
-// Option #1: Roboto font for body & Rokkitt font for headings
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@900&display=swap');
-// Option #2 Gemunu Libre font for the body & Londrina Solid for headings
-@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+// import Londrina Solid for headings font & Gemunu Libre for the body font
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap');
-// Option #2 Acme font for the body & Josefin Slab for headings
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
 
-// $fonts-headline: "Rokkitt", Arial, sans-serif;
-// $fonts-body: "Roboto", Arial, serif;
-
+// fonts variables
 $fonts-headline: "Londrina Solid", cursive;
 $fonts-body: "Gemunu Libre", Arial, serif;
 
-// $fonts-headline: "Josefin Solid", Arial, sans-serif;
-// $fonts-body: "Acme", Arial, serif;
-
+// color variables
 $background-color: #030746;
 $primary: #B79ED1;
 $accent1: #E43388;
