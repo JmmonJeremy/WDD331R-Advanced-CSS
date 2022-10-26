@@ -63,6 +63,10 @@ p {
   letter-spacing: .08rem;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 a {
   font-size: 1.4rem;
   border-bottom: 1px solid $text-dark;
