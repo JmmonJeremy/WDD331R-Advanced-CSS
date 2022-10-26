@@ -1,0 +1,16 @@
+@use '../../../atomic-basics/variables' as *; 
+@use '../../../atomic-basics/atoms';
+
+div.summary p:last-child {
+    @include atoms.set-font(.8rem);
+    font-weight: 900;   
+    margin-bottom: -1rem;
+    color: $text-light;
+}
+
+div.summary p:last-child a{
+    @include atoms.set-font(.8rem);
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    color: $text-light;   
+}
