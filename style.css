@@ -16,6 +16,7 @@ h1 {
 
 h2 {
   text-align: center;
+  margin-top: -0.5rem;
   margin-left: 3rem;
   font-style: italic;
   color: #030746;
@@ -97,6 +98,14 @@ body {
 
 .main p {
   color: #fff;
+}
+
+div.summary p:first-child {
+  font-family: "Gemunu Libre", Arial, serif;
+  font-size: 0.8rem;
+  line-height: normal;
+  margin: -7rem 1rem 3rem 1rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 600px) {
