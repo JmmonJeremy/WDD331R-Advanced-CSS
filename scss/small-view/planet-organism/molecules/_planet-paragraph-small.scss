@@ -1,0 +1,8 @@
+@use '../../../atomic-basics/variables' as *; 
+@use '../../../atomic-basics/atoms';
+
+div.summary p:first-child {
+    @include atoms.set-font(.8rem);
+    margin: -7rem 1rem 3rem 1rem;    
+    text-align: center;
+}
