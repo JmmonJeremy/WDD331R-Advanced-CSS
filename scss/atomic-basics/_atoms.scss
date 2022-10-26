@@ -69,11 +69,11 @@ abbr {
 
 a {
   font-size: 1.4rem;
-  border-bottom: 1px solid $text-dark;
-  color: $text-dark;
+  color: $p-link;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
-a:hover {
-  border-color: $accent1;
+
+a:hover { 
+  border-bottom: 1px solid $accent1; 
 }

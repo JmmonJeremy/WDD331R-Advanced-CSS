@@ -2,9 +2,11 @@
 @use '../../../atomic-basics/variables' as *;
 
 body {
-    background-color: $background-color;
-    padding: 1rem;
+    background-color: $background-color;    
 }
+
+
+
 
 
 

@@ -53,25 +53,20 @@ abbr {
 
 a {
   font-size: 1.4rem;
-  border-bottom: 1px solid #333;
-  color: #333;
+  color: #ffff00;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
 
 a:hover {
-  border-color: #E43388;
+  border-bottom: 1px solid #E43388;
 }
 
-header {
-  background-color: #B79ED1;
-  border-radius: 50%;
-  padding: 6rem 0;
-  width: 267px;
-  margin: 0 auto;
-}
 body {
   background-color: #030746;
+}
+
+div.preamble, div.main {
   padding: 1rem;
 }
 
@@ -89,6 +84,7 @@ body {
 
 .participation h3 {
   color: #48A9A6;
+  padding-top: 2.5rem;
 }
 
 .participation a {
@@ -97,10 +93,12 @@ body {
 
 .benefits h3 {
   color: #B79ED1;
+  padding-top: 2.5rem;
 }
 
 .requirements h3 {
   color: #E43388;
+  padding-top: 2.5rem;
 }
 
 .requirements a {
@@ -109,6 +107,14 @@ body {
 
 .main p {
   color: #fff;
+}
+
+header {
+  background-color: #B79ED1;
+  border-radius: 50%;
+  padding: 6rem 0;
+  width: 267px;
+  margin: 0 auto;
 }
 
 div.summary p:first-child {
@@ -125,8 +131,10 @@ div.summary p:last-child {
   font-size: 0.8rem;
   line-height: normal;
   font-weight: 900;
-  margin-bottom: -1rem;
+  margin-bottom: -1.5rem;
   color: #fff;
+  padding: 0 1rem;
+  width: 150px;
 }
 
 div.summary p:last-child a {
@@ -135,7 +143,6 @@ div.summary p:last-child a {
   line-height: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #fff;
 }
 
 @media only screen and (min-width: 600px) {
@@ -145,11 +152,6 @@ div.summary p:last-child a {
   h2 {
     font-size: 3rem;
   }
-}
-header {
-  background-color: #B79ED1;
-  border-radius: 50%;
-  padding: 6rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
