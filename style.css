@@ -73,6 +73,22 @@ div.summary p:first-child {
   text-align: center;
 }
 
+div.summary p:last-child {
+  font-family: "Gemunu Libre", Arial, serif;
+  font-size: 0.8rem;
+  line-height: normal;
+  font-weight: 900;
+  margin-bottom: -1rem;
+}
+
+div.summary p:last-child a {
+  font-family: "Gemunu Libre", Arial, serif;
+  font-size: 0.8rem;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 @media only screen and (min-width: 600px) {
   h1 {
     font-size: 6rem;
