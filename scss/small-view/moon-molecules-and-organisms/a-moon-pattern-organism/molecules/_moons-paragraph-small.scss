@@ -1,0 +1,31 @@
+@use '../../../../atomic-basics/variables' as *;
+@use '../../../../atomic-basics/atoms';
+
+.preamble h3 {
+    color: $primary;
+}
+.preamble p {
+    color: $text-light;
+}
+
+.explanation h3 {
+    color: $accent1;
+}
+.participation h3 {
+    color: $accent2;
+}
+.participation a {
+    color: $p-link;
+}
+.benefits h3 {
+    color: $primary;
+}
+.requirements h3 {
+    color: $accent1;
+}
+.requirements a {
+    color: $p-link;
+}
+.main p {
+    color: $text-light;
+}
