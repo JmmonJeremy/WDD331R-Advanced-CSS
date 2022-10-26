@@ -86,6 +86,7 @@ div.summary p:last-child {
   line-height: normal;
   font-weight: 900;
   margin-bottom: -1rem;
+  color: #fff;
 }
 
 div.summary p:last-child a {
@@ -94,6 +95,7 @@ div.summary p:last-child a {
   line-height: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: #fff;
 }
 
 @media only screen and (min-width: 600px) {
