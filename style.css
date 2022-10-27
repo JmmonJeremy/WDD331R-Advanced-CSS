@@ -145,6 +145,27 @@ div.preamble, div.main {
   color: #fff;
 }
 
+div.page-wrapper {
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-left: -1rem;
+  padding: 0.5rem 0 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  column-gap: 0.75rem;
+  border-top: 3px solid #ffff00;
+  border-bottom: 3px solid #ffff00;
+}
+
+div.zen-resources {
+  padding-bottom: 3rem;
+}
+
 @media only screen and (min-width: 600px) {
   h1 {
     font-size: 6rem;
