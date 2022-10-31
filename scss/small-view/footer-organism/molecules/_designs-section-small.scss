@@ -1,9 +1,13 @@
+@use '../../../atomic-basics/variables' as *; 
+@use '../../../atomic-basics/atoms';
+
+
 .design-selection {
     padding: 1rem;
 }
 
 .design-selection h3 {
-    color: #48A9A6;
+    color: $accent2;
 }
 
 .design-selection ul {
@@ -15,10 +19,6 @@
     margin: 1.75rem 0;
 }
 
-.design-selection ul li:not(.design-name) {
-    grid-row: 2;
-}
-
 .design-name {
     display: block;
     font-size: 1.5rem;
@@ -26,11 +26,11 @@
 
 .designer-name {
     font-size: 1.2rem;
-    color: white;
+    color: $text-light;
 }
 
 .design-selection ul li:not(a) {
-    color: white;
+    color: $text-light;
 }
 
 .design-selection ul li a {

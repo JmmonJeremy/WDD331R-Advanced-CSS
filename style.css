@@ -183,10 +183,6 @@ div.zen-resources {
   margin: 1.75rem 0;
 }
 
-.design-selection ul li:not(.design-name) {
-  grid-row: 2;
-}
-
 .design-name {
   display: block;
   font-size: 1.5rem;
@@ -194,11 +190,11 @@ div.zen-resources {
 
 .designer-name {
   font-size: 1.2rem;
-  color: white;
+  color: #fff;
 }
 
 .design-selection ul li:not(a) {
-  color: white;
+  color: #fff;
 }
 
 .design-selection ul li a {
