@@ -166,6 +166,45 @@ div.zen-resources {
   padding-bottom: 3rem;
 }
 
+.design-selection {
+  padding: 1rem;
+}
+
+.design-selection h3 {
+  color: #48A9A6;
+}
+
+.design-selection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.design-selection ul li {
+  margin: 1.75rem 0;
+}
+
+.design-selection ul li:not(.design-name) {
+  grid-row: 2;
+}
+
+.design-name {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.designer-name {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.design-selection ul li:not(a) {
+  color: white;
+}
+
+.design-selection ul li a {
+  margin: 0.5rem 0;
+}
+
 @media only screen and (min-width: 600px) {
   h1 {
     font-size: 6rem;
