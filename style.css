@@ -172,7 +172,8 @@ h3.resources {
 
 #zen-resources a {
   font-family: "Gemunu Libre", Arial, serif;
-  line-height: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
 }
 
 .zen-resources {

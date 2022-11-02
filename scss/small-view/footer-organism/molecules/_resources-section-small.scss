@@ -5,8 +5,7 @@ h3.resources {
     color: $accent2;
 }
 #zen-resources a {
-    font-family: $fonts-body;
-    line-height: 2rem;
+    @include atoms.set-font(1.6rem, 1.5rem);
 }
 
 .zen-resources {
