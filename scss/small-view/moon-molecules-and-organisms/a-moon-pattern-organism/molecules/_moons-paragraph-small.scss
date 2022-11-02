@@ -1,7 +1,8 @@
 @use '../../../../atomic-basics/variables' as *;
 @use '../../../../atomic-basics/atoms';
 
-div.preamble, div.main {
+div.preamble,
+div.main {
     padding: 1rem;
 }
 
