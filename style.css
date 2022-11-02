@@ -176,7 +176,7 @@ div.zen-resources {
 }
 
 .design-selection h3 {
-  color: #48A9A6;
+  color: #48a9a6;
 }
 
 .design-selection ul {
@@ -204,6 +204,8 @@ div.zen-resources {
 
 .design-selection ul li a {
   margin: 0.5rem 0;
+}
+
 h3.resources {
   color: #48a9a6;
 }
