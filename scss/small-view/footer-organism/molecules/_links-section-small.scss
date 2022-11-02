@@ -2,22 +2,22 @@
 @use "../../../atomic-basics/atoms";
 
 div.page-wrapper {
-	position: relative;
+  position: relative;
 }
 
 footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	margin-left: -1rem;
-	padding: .5rem 0;
-	display: flex;
-	justify-content: center;
-	column-gap: .75rem;
-	border-top: 3px solid $p-link;
-	border-bottom: 3px solid $p-link;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-left: -1rem;
+  padding: .5rem 0;
+  display: flex;
+  justify-content: center;
+  column-gap: .75rem;
+  border-top: 3px solid $p-link;
+  border-bottom: 3px solid $p-link;
 }
 
 div.zen-resources {
-	padding-bottom: 3rem;
+  padding-bottom: 3rem;
 }

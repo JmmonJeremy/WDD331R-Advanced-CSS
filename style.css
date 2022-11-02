@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
+
 h1,
 h3,
 h4 {
@@ -39,7 +40,7 @@ h4 {
 }
 
 p {
-  font-family: "Gemunu Libre", Arial, serif;
+  font-family: "Gemunu Libre", arial, serif;
   font-size: 1.6rem;
   line-height: 1.5rem;
   padding: 0.5rem 0;
@@ -53,13 +54,13 @@ abbr {
 
 a {
   font-size: 1.4rem;
-  color: #ffff00;
+  color: #ff0;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
 
 a:hover {
-  border-bottom: 1px solid #E43388;
+  border-bottom: 1px solid #e43388;
 }
 
 body {
@@ -67,7 +68,7 @@ body {
 }
 
 header {
-  background-color: #B79ED1;
+  background-color: #b79ed1;
   border-radius: 50%;
   padding: 6rem 0;
   width: 267px;
@@ -75,7 +76,7 @@ header {
 }
 
 div.summary p:first-child {
-  font-family: "Gemunu Libre", Arial, serif;
+  font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
   margin: -7rem auto 5rem;
@@ -84,7 +85,7 @@ div.summary p:first-child {
 }
 
 div.summary p:last-child {
-  font-family: "Gemunu Libre", Arial, serif;
+  font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
   font-weight: 900;
@@ -95,7 +96,7 @@ div.summary p:last-child {
 }
 
 div.summary p:last-child a {
-  font-family: "Gemunu Libre", Arial, serif;
+  font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
   text-transform: uppercase;
@@ -108,7 +109,7 @@ div.main {
 }
 
 .preamble h3 {
-  color: #B79ED1;
+  color: #b79ed1;
 }
 
 .preamble p {
@@ -116,30 +117,30 @@ div.main {
 }
 
 .explanation h3 {
-  color: #E43388;
+  color: #e43388;
 }
 
 .participation h3 {
-  color: #48A9A6;
+  color: #48a9a6;
   padding-top: 2.5rem;
 }
 
 .participation a {
-  color: #ffff00;
+  color: #ff0;
 }
 
 .benefits h3 {
-  color: #B79ED1;
+  color: #b79ed1;
   padding-top: 2.5rem;
 }
 
 .requirements h3 {
-  color: #E43388;
+  color: #e43388;
   padding-top: 2.5rem;
 }
 
 .requirements a {
-  color: #ffff00;
+  color: #ff0;
 }
 
 .main p {
@@ -159,8 +160,8 @@ footer {
   display: flex;
   justify-content: center;
   column-gap: 0.75rem;
-  border-top: 3px solid #ffff00;
-  border-bottom: 3px solid #ffff00;
+  border-top: 3px solid #ff0;
+  border-bottom: 3px solid #ff0;
 }
 
 div.zen-resources {
@@ -171,9 +172,8 @@ div.zen-resources {
   h1 {
     font-size: 6rem;
   }
+
   h2 {
     font-size: 3rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

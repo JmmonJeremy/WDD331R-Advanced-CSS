@@ -2,9 +2,9 @@
 @use "../../../atomic-basics/atoms";
 
 div.summary p:first-child {
-	@include atoms.set-font(.8rem);
+  @include atoms.set-font(.8rem);
 
-	margin: -7rem auto 5rem;
-	text-align: center;
-	width: 235px;
+  margin: -7rem auto 5rem;
+  text-align: center;
+  width: 235px;
 }

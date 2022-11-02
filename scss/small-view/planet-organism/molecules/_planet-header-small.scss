@@ -1,10 +1,11 @@
-@use '../../../atomic-basics/variables' as *; //this puts all the variables in the global namespace.
-@use '../../../atomic-basics/atoms';
-header {
-    background-color: $primary;
-    border-radius: 50%;
-    padding: 6rem 0;
-    width: 267px;
-    margin: 0 auto;
-}
+// as * puts all the variables in the global namespace.
+@use "../../../atomic-basics/variables" as *;
+@use "../../../atomic-basics/atoms";
 
+header {
+  background-color: $primary;
+  border-radius: 50%;
+  padding: 6rem 0;
+  width: 267px;
+  margin: 0 auto;
+}
