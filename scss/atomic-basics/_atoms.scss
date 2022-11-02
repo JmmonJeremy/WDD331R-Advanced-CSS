@@ -1,4 +1,4 @@
-@use "variables" as *; //this puts all the variables in the global namespace.
+@use "variables" as *; // this puts all the variables in the global namespace.
 
 // mixins to take care of repeated patterns.
 @mixin set-font($size: 1rem, $line-height: normal, $font: $fonts-body) {
@@ -17,20 +17,23 @@
   margin-top: 1rem;
   padding-top: 1.5rem;
 }
-// these styles here should describe how the atoms (elements) should appear most of the time.  
-//They can be overridden at the molecule (block) as necessary
+
+// these styles here should describe how the atoms (elements) should appear most of the time.
+// They can be overridden at the molecule (block) as necessary
 h1,
 h3,
 h4 {
   font-family: $fonts-headline;
   margin: 0;
 }
+
 h1 {
-  text-align: center; 
+  text-align: center;
   color: $text-light;
   font-size: 2.5rem;
-  letter-spacing: 1px; 
+  letter-spacing: 1px;
 }
+
 h2 {
   text-align: center;
   margin-top: -.5rem;
@@ -39,25 +42,25 @@ h2 {
   color: $background-color;
   font-size: 1rem;
   letter-spacing: 1px;
- 
 }
+
 h3 {
   font-size: 2.25rem;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
- 
-  padding: 0.5rem 0 0.25rem 0;
+  padding: 0.5rem 0 0.25rem;
 }
+
 h4 {
   font-size: 1.6rem;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
- 
   margin: 0.5rem 0;
 }
 
 p {
   @include set-font(1.6rem, 1.5rem);
+
   padding: 0.5rem 0;
   margin: 0;
   letter-spacing: .08rem;
@@ -74,8 +77,8 @@ a {
   transition: border-color 0.2s ease-in-out;
 }
 
-a:hover { 
-  border-bottom: 1px solid $accent1; 
+a:hover {
+  border-bottom: 1px solid $accent1;
 }
 
 ul li {
