@@ -1,12 +1,16 @@
 // styles.scss
 
 // import for background scss styles
-@use 'small-view/background-organism/background-small';
+@use "small-view/background-organism/background-small";
+
 // import for header scss styles
-@use 'small-view/planet-organism/planet-small';
+@use "small-view/planet-organism/planet-small";
+
 // import for main body scss styles
-@use 'small-view/moon-molecules-and-organisms/a-moon-pattern-organism/moons-pattern-small';
+@use "small-view/moon-molecules-and-organisms/a-moon-pattern-organism/moons-pattern-small";
+
 // import for footer scss styles
-@use 'small-view/footer-organism/footer-small'; 
+@use "small-view/footer-organism/footer-small";
+
 // import for large-view scss
-@use 'atomic-basics/atoms-large';
+@use "atomic-basics/atoms-large";
