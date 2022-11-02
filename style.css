@@ -66,6 +66,12 @@ ul li {
   list-style: none;
 }
 
+.sidebar a {
+  font-family: "Gemunu Libre", arial, serif;
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+}
+
 body {
   background-color: #030746;
 }
@@ -150,6 +156,42 @@ div.main {
   color: #fff;
 }
 
+.design-selection {
+  padding: 1rem;
+}
+
+.design-selection h3 {
+  color: #48a9a6;
+}
+
+.design-selection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.design-selection ul li {
+  margin: 1.75rem 0;
+}
+
+.design-name {
+  display: block;
+  max-width: fit-content;
+  font-size: 1.5rem;
+}
+
+.designer-name {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.design-selection ul li:not(a) {
+  color: #fff;
+}
+
+.design-selection ul li a {
+  margin: 0.5rem 0;
+}
+
 .design-archives {
   padding: 1rem;
 }
@@ -164,6 +206,22 @@ div.main {
 }
 
 .design-archives ul li {
+  margin: 1.5rem 0;
+}
+
+h3.resources {
+  color: #e43388;
+}
+
+.zen-resources {
+  padding-left: 1rem;
+}
+
+.zen-resources ul {
+  padding: 0rem;
+}
+
+.zen-resources ul li {
   margin: 1.5rem 0;
 }
 
@@ -186,55 +244,6 @@ footer {
 
 div.zen-resources {
   padding-bottom: 3rem;
-}
-
-.design-selection {
-  padding: 1rem;
-}
-
-.design-selection h3 {
-  color: #48a9a6;
-}
-
-.design-selection ul {
-  list-style: none;
-  padding: 0;
-}
-
-.design-selection ul li {
-  margin: 1.75rem 0;
-}
-
-.design-name {
-  display: block;
-  font-size: 1.5rem;
-}
-
-.designer-name {
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-.design-selection ul li:not(a) {
-  color: #fff;
-}
-
-.design-selection ul li a {
-  margin: 0.5rem 0;
-}
-
-h3.resources {
-  color: #48a9a6;
-}
-
-#zen-resources a {
-  font-family: "Gemunu Libre", arial, serif;
-  font-size: 1.6rem;
-  line-height: 1.5rem;
-}
-
-.zen-resources {
-  padding-left: 1rem;
 }
 
 @media only screen and (min-width: 600px) {

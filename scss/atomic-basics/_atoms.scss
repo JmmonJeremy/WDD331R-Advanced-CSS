@@ -18,7 +18,8 @@
   padding-top: 1.5rem;
 }
 
-// these styles here should describe how the atoms (elements) should appear most of the time.
+// these styles here should describe how the atoms (elements)
+// should appear most of the time.
 // They can be overridden at the molecule (block) as necessary
 h1,
 h3,
@@ -83,4 +84,8 @@ a:hover {
 
 ul li {
   list-style: none;
+}
+
+.sidebar a {
+  @include set-font(1.6rem, 1.5rem);
 }
