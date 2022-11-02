@@ -150,6 +150,23 @@ div.main {
   color: #fff;
 }
 
+.design-archives {
+  padding: 1rem;
+}
+
+.design-archives h3 {
+  color: #b79ed1;
+}
+
+.design-archives ul {
+  list-style: none;
+  padding: 0;
+}
+
+.design-archives ul li {
+  margin: 1.5rem 0;
+}
+
 div.page-wrapper {
   position: relative;
 }
