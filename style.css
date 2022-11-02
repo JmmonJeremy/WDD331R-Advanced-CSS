@@ -62,6 +62,10 @@ a:hover {
   border-bottom: 1px solid #E43388;
 }
 
+ul li {
+  list-style: none;
+}
+
 body {
   background-color: #030746;
 }
