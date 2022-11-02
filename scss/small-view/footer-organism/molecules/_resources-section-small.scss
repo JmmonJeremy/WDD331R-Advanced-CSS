@@ -1,0 +1,13 @@
+@use '../../../atomic-basics/variables' as *; 
+@use '../../../atomic-basics/atoms';
+
+h3.resources {
+    color: $accent2;
+}
+#zen-resources a {
+    @include atoms.set-font(1.6rem, 1.5rem);
+}
+
+.zen-resources {
+    padding-left: 1rem;
+}
