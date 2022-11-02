@@ -1,6 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
-
 h1,
 h3,
 h4 {
@@ -173,11 +172,11 @@ div.zen-resources {
 }
 
 h3.resources {
-  color: #48A9A6;
+  color: #48a9a6;
 }
 
 #zen-resources a {
-  font-family: "Gemunu Libre", Arial, serif;
+  font-family: "Gemunu Libre", arial, serif;
   font-size: 1.6rem;
   line-height: 1.5rem;
 }
@@ -190,8 +189,9 @@ h3.resources {
   h1 {
     font-size: 6rem;
   }
-
   h2 {
     font-size: 3rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
