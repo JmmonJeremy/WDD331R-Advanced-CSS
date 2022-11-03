@@ -156,6 +156,12 @@ div.main {
   color: #fff;
 }
 
+div.preamble > h3 + p + p::before {
+  content: url("images/orange-moon.svg");
+  max-width: 150px;
+  display: block;
+}
+
 .design-selection {
   padding: 1rem;
 }
@@ -218,7 +224,7 @@ h3.resources {
 }
 
 .zen-resources ul {
-  padding: 0rem;
+  padding: 0;
 }
 
 .zen-resources ul li {

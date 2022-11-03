@@ -1,0 +1,9 @@
+@use "../../../../atomic-basics/variables" as *;
+@use "../../../../atomic-basics/atoms";
+
+// .preamble:nth-child(3) p::before
+div.preamble > h3 + p + p::before {  
+  content: url("images/orange-moon.svg");
+  max-width: 150px;
+  display: block;
+}
