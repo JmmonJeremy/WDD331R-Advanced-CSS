@@ -4,13 +4,13 @@
 .summary::before {
   z-index: -1;
   content: "";
-  background-image: url("images/rocket-red.svg");
+  background-image: url("images/rocket-grey-red.svg");
   position: absolute;
   left: 50%;
-  margin-left: -130px;
-  margin-top: -15px;
+  margin-left: -120px;
+  // margin-top: -10px;
   display: block;
-  width: 220px;
-  height: 285px;
-  transform: rotate(0.21turn);
+  width: 270px;
+  height: 670px;  
+  transform: rotate(.035turn);
 }
