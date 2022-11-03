@@ -157,9 +157,14 @@ div.main {
 }
 
 div.preamble > h3 + p + p::before {
-  content: url("images/orange-moon.svg");
-  max-width: 150px;
+  content: "";
+  background-image: url("images/yellow-moon.svg");
   display: block;
+  width: 120px;
+  height: 122px;
+  float: right;
+  shape-outside: url("images/yellow-moon.svg");
+  margin-top: 90px;
 }
 
 .design-selection {
