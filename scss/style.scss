@@ -6,8 +6,24 @@
 // import for header scss styles
 @use "small-view/planet-organism/planet-small";
 
-// import for main body scss styles
+// moon imports 6 files in total
+// import for main body scss styles through ***moon-pattern-small
 @use "small-view/moon-molecules-and-organisms/a-moon-pattern-organism/moons-pattern-small";
+
+// import image for enlightment section with ***enlightenment-moon-small
+@use "small-view/moon-molecules-and-organisms/enlightenment-moon-organism/enlightenment-moon-small";
+
+// import image for about section with ***about-moon-small
+@use "small-view/moon-molecules-and-organisms/about-moon-organism/about-moon-small";
+
+// import image for participation section with ***participation-moon-small
+@use "small-view/moon-molecules-and-organisms/participation-moon-organism/participation-moon-small";
+
+// import image for benefits section with ***benefits-moon-small
+@use "small-view/moon-molecules-and-organisms/benefits-moon-organism/benefits-moon-small";
+
+// import image for requirements section with ***requirements-moon-small
+@use "small-view/moon-molecules-and-organisms/requirements-moon-organism/requirements-moon-small";
 
 // import for footer scss styles
 @use "small-view/footer-organism/footer-small";
