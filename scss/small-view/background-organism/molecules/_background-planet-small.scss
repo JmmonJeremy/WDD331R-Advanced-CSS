@@ -1,0 +1,15 @@
+@use "../../../atomic-basics/variables" as *;
+@use "../../../atomic-basics/atoms";
+
+.intro::before {
+  z-index: -1;
+  content: "";
+  background-image: url("images/blue-planet.svg");
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+  display: block;
+  width: 270px;
+  height: 265px;
+  transform: rotate(0.2turn);
+}

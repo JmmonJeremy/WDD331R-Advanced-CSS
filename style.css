@@ -9,9 +9,18 @@ h4 {
 
 h1 {
   text-align: center;
-  color: #fff;
   font-size: 2.5rem;
   letter-spacing: 1px;
+  background-image: linear-gradient(10deg, #030746, #b79ed1, #030746, #e43388, #030746, #48a9a6, #000, #fff);
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background.
+  /* This will show the gradient as a text color rather than element bg. */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 h2 {
@@ -19,7 +28,7 @@ h2 {
   margin-top: -0.5rem;
   margin-left: 3rem;
   font-style: italic;
-  color: #030746;
+  color: #fff;
   font-size: 1rem;
   letter-spacing: 1px;
 }
@@ -76,15 +85,27 @@ body {
   background-color: #030746;
 }
 
+.intro::before {
+  z-index: -1;
+  content: "";
+  background-image: url("images/blue-planet.svg");
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+  display: block;
+  width: 270px;
+  height: 265px;
+  transform: rotate(0.2turn);
+}
+
 header {
-  background-color: #b79ed1;
   border-radius: 50%;
   padding: 6rem 0;
   width: 267px;
   margin: 0 auto;
 }
 
-div.summary p:first-child {
+.summary p:first-child {
   font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
@@ -218,7 +239,7 @@ h3.resources {
 }
 
 .zen-resources ul {
-  padding: 0rem;
+  padding: 0;
 }
 
 .zen-resources ul li {

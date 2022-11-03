@@ -10,10 +10,12 @@
         "rules": {
           "order/properties-alphabetical-order": null,
           "no-descending-specificity": null,
+          "no-eol-whitespace": null,
+          "property-no-vendor-prefix": null,
           "max-line-length": [
           80,          
             {
-              "ignorePattern": ["/^@import\\s+/", "/^@use\\s+/"]
+              "ignorePattern": ["/^@import\\s+/", "/^@use\\s+/", "/ background-image:\\s+/"]
             }
           ],         
           "string-quotes": "double",
@@ -31,7 +33,7 @@
               "severity": "warning"
             }
           ],
-          "unit-allowed-list": ["em", "rem", "s", "px", "%"]
+          "unit-allowed-list": ["em", "rem", "s", "px", "%", "deg", "turn"]
         },    
       }
 }
