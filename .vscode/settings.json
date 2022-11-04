@@ -12,6 +12,7 @@
           "no-descending-specificity": null,
           "no-eol-whitespace": null,
           "property-no-vendor-prefix": null,
+          "selector-max-compound-selectors": 8,
           "max-line-length": [
           80,          
             {
