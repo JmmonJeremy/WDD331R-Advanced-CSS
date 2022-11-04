@@ -1,0 +1,13 @@
+@use "../../../../atomic-basics/variables" as *;
+@use "../../../../atomic-basics/atoms";
+
+.preamble > h3 + p + p::before {
+  content: "";
+  background-image: url("images/yellow-moon.svg");
+  display: block;
+  width: 120px;
+  height: 122px;
+  float: right;
+  shape-outside: url("images/yellow-moon.svg");
+  margin-top: 90px;
+}

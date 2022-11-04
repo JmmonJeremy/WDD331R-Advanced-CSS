@@ -9,9 +9,18 @@ h4 {
 
 h1 {
   text-align: center;
-  color: #fff;
   font-size: 2.5rem;
   letter-spacing: 1px;
+  background-image: linear-gradient(10deg, #030746, #b79ed1, #030746, #e43388, #030746, #48a9a6, #000, #fff);
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background.
+  /* This will show the gradient as a text color rather than element bg. */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 h2 {
@@ -19,7 +28,7 @@ h2 {
   margin-top: -0.5rem;
   margin-left: 3rem;
   font-style: italic;
-  color: #030746;
+  color: #fff;
   font-size: 1rem;
   letter-spacing: 1px;
 }
@@ -76,35 +85,71 @@ body {
   background-color: #030746;
 }
 
+body {
+  background-color: #030746;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.intro::before {
+  z-index: -1;
+  content: "";
+  background-image: url("images/blue-planet.svg");
+  position: absolute;
+  left: 50%;
+  margin-left: -135px;
+  display: block;
+  width: 270px;
+  height: 265px;
+  transform: rotate(0.2turn);
+}
+
+.summary::before {
+  z-index: -1;
+  content: "";
+  background-image: url("images/rocket-grey-red.svg");
+  position: absolute;
+  left: 50%;
+  margin-left: -7.25rem;
+  margin-top: -8rem;
+  display: block;
+  width: 270px;
+  height: 640px;
+  transform: rotate(0.035turn);
+}
+
 header {
-  background-color: #b79ed1;
   border-radius: 50%;
   padding: 6rem 0;
   width: 267px;
   margin: 0 auto;
 }
 
-div.summary p:first-child {
+.summary p:first-child {
   font-family: "Gemunu Libre", arial, serif;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   line-height: normal;
-  margin: -7rem auto 5rem;
+  margin: 1rem auto 0;
+  padding-left: 5rem;
   text-align: center;
-  width: 235px;
+  width: 8rem;
+  transform: rotate(0.035turn);
 }
 
-div.summary p:last-child {
+.summary p:last-child {
   font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
   font-weight: 900;
+  margin-top: 17.5rem;
   margin-bottom: -1.5rem;
   color: #fff;
   padding: 0 1rem;
   width: 150px;
 }
 
-div.summary p:last-child a {
+.summary p:last-child a {
   font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
@@ -154,6 +199,17 @@ div.main {
 
 .main p {
   color: #fff;
+}
+
+.preamble > h3 + p + p::before {
+  content: "";
+  background-image: url("images/yellow-moon.svg");
+  display: block;
+  width: 120px;
+  height: 122px;
+  float: right;
+  shape-outside: url("images/yellow-moon.svg");
+  margin-top: 90px;
 }
 
 .design-selection {
@@ -218,7 +274,7 @@ h3.resources {
 }
 
 .zen-resources ul {
-  padding: 0rem;
+  padding: 0;
 }
 
 .zen-resources ul li {
