@@ -1,17 +1,20 @@
 @use "../../../../atomic-basics/variables" as *;
 @use "../../../../atomic-basics/atoms";
 
-div.preamble,
-div.main {
+.main {
   padding: 1rem;
 }
 
-.preamble h3 {
-  color: $primary;
-}
+.preamble {
+  padding: 1rem;
 
-.preamble p {
-  color: $text-light;
+  & h3 {
+    color: $primary;
+  }
+
+  & p {
+    color: $text-light;
+  }
 }
 
 .explanation h3 {
@@ -23,10 +26,6 @@ div.main {
   padding-top: 2.5rem;
 }
 
-.participation a {
-  color: $p-link;
-}
-
 .benefits h3 {
   color: $primary;
   padding-top: 2.5rem;
@@ -35,10 +34,6 @@ div.main {
 .requirements h3 {
   color: $accent1;
   padding-top: 2.5rem;
-}
-
-.requirements a {
-  color: $p-link;
 }
 
 .main p {
