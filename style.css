@@ -87,7 +87,7 @@ body {
 
 body {
   background-color: #030746;
-  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-image: radial-gradient(#fff, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(#fff, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(#fff, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
@@ -157,15 +157,16 @@ header {
   letter-spacing: 1px;
 }
 
-div.preamble,
-div.main {
+.main {
   padding: 1rem;
 }
 
+.preamble {
+  padding: 1rem;
+}
 .preamble h3 {
   color: #b79ed1;
 }
-
 .preamble p {
   color: #fff;
 }
@@ -179,10 +180,6 @@ div.main {
   padding-top: 2.5rem;
 }
 
-.participation a {
-  color: #ff0;
-}
-
 .benefits h3 {
   color: #b79ed1;
   padding-top: 2.5rem;
@@ -191,10 +188,6 @@ div.main {
 .requirements h3 {
   color: #e43388;
   padding-top: 2.5rem;
-}
-
-.requirements a {
-  color: #ff0;
 }
 
 .main p {
@@ -210,6 +203,23 @@ div.main {
   float: right;
   shape-outside: url("images/yellow-moon.svg");
   margin-top: 90px;
+}
+
+.explanation > h3 + p > abbr + abbr::before {
+  content: "";
+  background-image: url("images/red-white-moon.svg");
+  display: block;
+  width: 122px;
+  height: 122px;
+  float: left;
+  shape-outside: url("images/red-white-moon.svg");
+  shape-margin: 10px;
+  margin-right: 10px;
+  margin-top: 7.3rem;
+}
+
+.explanation > h3 + p > abbr + abbr + abbr::before {
+  display: none;
 }
 
 .design-selection {
@@ -265,7 +275,7 @@ div.main {
   margin: 1.5rem 0;
 }
 
-h3.resources {
+.resources {
   color: #e43388;
 }
 
@@ -281,7 +291,7 @@ h3.resources {
   margin: 1.5rem 0;
 }
 
-div.page-wrapper {
+.page-wrapper {
   position: relative;
 }
 
@@ -298,7 +308,7 @@ footer {
   border-bottom: 3px solid #ff0;
 }
 
-div.zen-resources {
+.zen-resources {
   padding-bottom: 3rem;
 }
 

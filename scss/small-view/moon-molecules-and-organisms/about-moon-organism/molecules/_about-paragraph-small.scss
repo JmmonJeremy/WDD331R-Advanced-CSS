@@ -1,0 +1,19 @@
+@use "../../../../atomic-basics/variables" as *;
+@use "../../../../atomic-basics/atoms";
+
+.explanation > h3 + p > abbr + abbr::before {
+  content: "";
+  background-image: url("images/red-white-moon.svg");
+  display: block;
+  width: 122px;
+  height: 122px;
+  float: left;
+  shape-outside: url("images/red-white-moon.svg");
+  shape-margin: 10px;
+  margin-right: 10px;
+  margin-top: 7.3rem;
+}
+
+.explanation > h3 + p > abbr + abbr + abbr::before {
+  display: none;
+}

@@ -1,7 +1,7 @@
 @use "../../../atomic-basics/variables" as *;
 @use "../../../atomic-basics/atoms";
 
-div.page-wrapper {
+.page-wrapper {
   position: relative;
 }
 
@@ -18,6 +18,6 @@ footer {
   border-bottom: 3px solid $p-link;
 }
 
-div.zen-resources {
+.zen-resources {
   padding-bottom: 3rem;
 }
