@@ -212,6 +212,18 @@ header {
   margin-top: 7.3rem;
 }
 
+.requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
+  content: "";
+  background-image: url("images/orange-moon.svg");
+  display: block;
+  width: 123px;
+  height: 122px;
+  shape-outside: url("images/orange-moon.svg");
+  float: right;
+  shape-margin: 10px;
+  margin-top: 27.75rem;
+}
+
 .design-selection {
   padding: 1rem;
 }
