@@ -11,10 +11,6 @@
   & h3 {
     color: $primary;
   }
-
-  & p {
-    color: $text-light;
-  }
 }
 
 .explanation h3 {
@@ -36,6 +32,6 @@
   padding-top: 2.5rem;
 }
 
-.main p {
-  color: $text-light;
+.main a {
+  @include atoms.font(1.4rem);
 }

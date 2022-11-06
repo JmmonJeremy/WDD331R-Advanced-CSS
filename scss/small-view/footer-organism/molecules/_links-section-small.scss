@@ -6,16 +6,12 @@
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  @include atoms.line(horizontal);
+  @include atoms.flex($gap-type: column-gap, $justify: center);
+  @include atoms.absolute($bottom: 0);
+  
   width: 100%;
   margin-left: -1rem;
-  padding: .5rem 0;
-  display: flex;
-  justify-content: center;
-  column-gap: .75rem;
-  border-top: 3px solid $p-link;
-  border-bottom: 3px solid $p-link;
 }
 
 .zen-resources {

@@ -2,7 +2,7 @@
 @use "../../../atomic-basics/atoms";
 
 .summary p:first-child {
-  @include atoms.set-font(1.2rem);
+  @include atoms.font(1.2rem, $color: $text-darkest, $height: normal);
 
   margin: 1rem auto 0;
   padding-left: 5rem;

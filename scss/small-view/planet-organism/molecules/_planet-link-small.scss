@@ -2,19 +2,19 @@
 @use "../../../atomic-basics/atoms";
 
 .summary p:last-child {
-  @include atoms.set-font(.8rem);
+  @include atoms.font(.8rem, $height: normal);
   
   font-weight: 900;
   margin-top: 17.5rem;
   margin-bottom: -1.5rem;
   color: $text-light;
   padding: 0 1rem;
-  width: 150px;
-}
+  width: 9rem;
 
-.summary p:last-child a {
-  @include atoms.set-font(.8rem);
+  & a {
+    @include atoms.font(.8rem, $height: normal);
 
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }

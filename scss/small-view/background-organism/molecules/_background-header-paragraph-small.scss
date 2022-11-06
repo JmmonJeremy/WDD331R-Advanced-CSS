@@ -2,15 +2,12 @@
 @use "../../../atomic-basics/atoms";
 
 .summary::before {
+  @include atoms.insert-image("images/rocket-grey-red.svg", $width: 270px,
+  $height: 640px, $add-shape-outside: no);
+  @include atoms.absolute($left: 50%);
+
   z-index: -1;
-  content: "";
-  background-image: url("images/rocket-grey-red.svg");
-  position: absolute;
-  left: 50%;
   margin-left: -7.25rem;
   margin-top: -8rem;
-  display: block;
-  width: 270px;
-  height: 640px;
   transform: rotate(.035turn);
 }

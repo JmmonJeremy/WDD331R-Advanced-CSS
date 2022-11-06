@@ -1,5 +1,10 @@
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
+body {
+  font-family: "Gemunu Libre", arial, serif;
+  background-color: #030746;
+}
+
 h1,
 h3,
 h4 {
@@ -8,14 +13,14 @@ h4 {
 }
 
 h1 {
-  text-align: center;
   font-size: 2.5rem;
   letter-spacing: 1px;
+  text-align: center;
   background-image: linear-gradient(10deg, #030746, #b79ed1, #030746, #e43388, #030746, #48a9a6, #000, #fff);
   background-size: 100%;
   background-repeat: repeat;
-  /* Use the text as a mask for the background.
-  /* This will show the gradient as a text color rather than element bg. */
+  /*** Use the text as a mask for the background.
+  // This will show the gradient as a text color rather than element bg. ***/
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -24,65 +29,60 @@ h1 {
 }
 
 h2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #fff;
+  font-style: italic;
   text-align: center;
   margin-top: -0.5rem;
   margin-left: 3rem;
-  font-style: italic;
-  color: #fff;
-  font-size: 1rem;
-  letter-spacing: 1px;
 }
 
 h3 {
   font-size: 2.25rem;
-  font-weight: 200; /* Thin */
+  font-weight: 200;
   letter-spacing: 1px;
   padding: 0.5rem 0 0.25rem;
 }
 
 h4 {
   font-size: 1.6rem;
-  font-weight: 200; /* Thin */
+  font-weight: 200;
   letter-spacing: 1px;
   margin: 0.5rem 0;
 }
 
 p {
-  font-family: "Gemunu Libre", arial, serif;
   font-size: 1.6rem;
+  letter-spacing: 0.08rem;
+  color: #fff;
   line-height: 1.5rem;
   padding: 0.5rem 0;
   margin: 0;
-  letter-spacing: 0.08rem;
 }
 
 abbr {
   text-decoration: none;
 }
 
-a {
-  font-size: 1.4rem;
-  color: #ff0;
-  text-decoration: none;
-  transition: border-color 0.2s ease-in-out;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
+li {
+  margin: 1.75rem 0;
+}
+
+a {
+  font-size: 1.6rem;
+  color: #ff0;
+  line-height: 1.5rem;
+  text-decoration: none;
+  transition: border-color 0.3s ease-in-out;
+}
 a:hover {
   border-bottom: 1px solid #e43388;
-}
-
-ul li {
-  list-style: none;
-}
-
-.sidebar a {
-  font-family: "Gemunu Libre", arial, serif;
-  font-size: 1.6rem;
-  line-height: 1.5rem;
-}
-
-body {
-  background-color: #030746;
 }
 
 body {
@@ -92,31 +92,31 @@ body {
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
-.intro::before {
-  z-index: -1;
-  content: "";
-  background-image: url("images/blue-planet.svg");
-  position: absolute;
-  left: 50%;
-  margin-left: -135px;
-  display: block;
-  width: 270px;
-  height: 265px;
-  transform: rotate(0.2turn);
-}
-
 .summary::before {
-  z-index: -1;
   content: "";
   background-image: url("images/rocket-grey-red.svg");
-  position: absolute;
-  left: 50%;
-  margin-left: -7.25rem;
-  margin-top: -8rem;
   display: block;
   width: 270px;
   height: 640px;
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  margin-left: -7.25rem;
+  margin-top: -8rem;
   transform: rotate(0.035turn);
+}
+
+.intro::before {
+  content: "";
+  background-image: url("images/blue-planet.svg");
+  display: block;
+  width: 270px;
+  height: 265px;
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  margin-left: -135px;
+  transform: rotate(0.2turn);
 }
 
 header {
@@ -127,8 +127,8 @@ header {
 }
 
 .summary p:first-child {
-  font-family: "Gemunu Libre", arial, serif;
   font-size: 1.2rem;
+  color: #000;
   line-height: normal;
   margin: 1rem auto 0;
   padding-left: 5rem;
@@ -138,7 +138,6 @@ header {
 }
 
 .summary p:last-child {
-  font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
   font-weight: 900;
@@ -146,11 +145,9 @@ header {
   margin-bottom: -1.5rem;
   color: #fff;
   padding: 0 1rem;
-  width: 150px;
+  width: 9rem;
 }
-
 .summary p:last-child a {
-  font-family: "Gemunu Libre", arial, serif;
   font-size: 0.8rem;
   line-height: normal;
   text-transform: uppercase;
@@ -166,9 +163,6 @@ header {
 }
 .preamble h3 {
   color: #b79ed1;
-}
-.preamble p {
-  color: #fff;
 }
 
 .explanation h3 {
@@ -190,8 +184,8 @@ header {
   padding-top: 2.5rem;
 }
 
-.main p {
-  color: #fff;
+.main a {
+  font-size: 1.4rem;
 }
 
 .preamble > h3 + p + p::before {
@@ -200,62 +194,48 @@ header {
   display: block;
   width: 120px;
   height: 122px;
-  float: right;
   shape-outside: url("images/yellow-moon.svg");
-  margin-top: 90px;
+  float: right;
+  margin-top: 5.625rem;
 }
 
-.explanation > h3 + p > abbr + abbr::before {
+.explanation [title="HyperText Markup Language"]::before {
   content: "";
   background-image: url("images/red-white-moon.svg");
   display: block;
   width: 122px;
   height: 122px;
-  float: left;
   shape-outside: url("images/red-white-moon.svg");
+  float: left;
   shape-margin: 10px;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   margin-top: 7.3rem;
-}
-
-.explanation > h3 + p > abbr + abbr + abbr::before {
-  display: none;
 }
 
 .design-selection {
   padding: 1rem;
 }
-
 .design-selection h3 {
   color: #48a9a6;
 }
-
-.design-selection ul {
-  list-style: none;
-  padding: 0;
+.design-selection .designer-name {
+  margin-left: 0.25rem;
 }
-
-.design-selection ul li {
-  margin: 1.75rem 0;
+.design-selection ul li:not(a) {
+  color: #fff;
+}
+.design-selection ul li a {
+  margin: 0.5rem 0;
 }
 
 .design-name {
   display: block;
   max-width: fit-content;
-  font-size: 1.5rem;
 }
 
 .designer-name {
-  font-size: 1.2rem;
   color: #fff;
-}
-
-.design-selection ul li:not(a) {
-  color: #fff;
-}
-
-.design-selection ul li a {
-  margin: 0.5rem 0;
+  margin-left: 1rem;
 }
 
 .design-archives {
@@ -266,15 +246,6 @@ header {
   color: #b79ed1;
 }
 
-.design-archives ul {
-  list-style: none;
-  padding: 0;
-}
-
-.design-archives ul li {
-  margin: 1.5rem 0;
-}
-
 .resources {
   color: #e43388;
 }
@@ -283,29 +254,22 @@ header {
   padding-left: 1rem;
 }
 
-.zen-resources ul {
-  padding: 0;
-}
-
-.zen-resources ul li {
-  margin: 1.5rem 0;
-}
-
 .page-wrapper {
   position: relative;
 }
 
 footer {
+  border-top: 3px solid #ff0;
+  border-bottom: 3px solid #ff0;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 0.75rem;
   position: absolute;
   bottom: 0;
   width: 100%;
   margin-left: -1rem;
-  padding: 0.5rem 0;
-  display: flex;
-  justify-content: center;
-  column-gap: 0.75rem;
-  border-top: 3px solid #ff0;
-  border-bottom: 3px solid #ff0;
 }
 
 .zen-resources {

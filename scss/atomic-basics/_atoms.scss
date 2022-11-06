@@ -1,26 +1,112 @@
 @use "variables" as *; // this puts all the variables in the global namespace.
 
-// mixins to take care of repeated patterns.
-@mixin set-font($size: 1rem, $line-height: normal, $font: $fonts-body) {
-  font-family: $font;
-  font-size: $size;
-  line-height: $line-height;
+@mixin font($size: no, $weight: no, $spacing: no, $color: no, $style: no,
+$height: no, $font: no) {
+  @if $size != no {
+    font-size: $size;
+  }
+  @if $weight != no {
+    font-weight: $weight;
+  }
+  @if $spacing != no {
+    letter-spacing: $spacing;
+  }
+  @if $color != no {
+    color: $color;
+  }
+  @if $style != no {
+    font-style: $style;
+  }
+  @if $height != no {
+    line-height: $height;
+  } 
+  @if $font != no {
+    font-family: $font;
+  }
 }
 
-@mixin set-flex($direction: row, $wrap: wrap) {
+@mixin flex($direction: row, $wrap: wrap, $gap-type: none, $gap: .75rem,
+$justify: no, $align: no) {
   display: flex;
   flex-flow: $direction $wrap;
+  @if $justify != no {
+    justify-content: $justify;
+  }
+  @if $align != no {
+    align-content: $align;
+  }
+  @if $gap-type == column-gap {
+    #{$gap-type}: $gap;
+  }
+  @if $gap-type == row-gap {
+    #{$gap-type}: $gap;
+  }
+  @if $gap-type == gap {
+    #{$gap-type}: $gap;
+  }
 }
 
-@mixin divider($color: $accent1) {
-  border-top: 1px solid $color;
-  margin-top: 1rem;
-  padding-top: 1.5rem;
+@mixin line($side, $color: $p-link, $thickness:3px, $spacing:.5rem) {
+  @if $side == top {
+    border-top: $thickness solid $color;
+    padding-top: $spacing;
+  }
+  @if $side == bottom {
+    border-bottom: $thickness solid $color;
+    padding-bottom: $spacing;
+  }
+  @if $side == horizontal {
+    border-top: $thickness solid $color;
+    border-bottom: $thickness solid $color;
+    padding: $spacing 0;
+  }
+}
+
+@mixin absolute($top: no, $bottom: no, $left: no, $right: no) {
+  position: absolute;
+  @if $top != no {
+    top: $top;
+  }
+  @if $bottom != no {
+    bottom: $bottom;
+  }
+  @if $left != no {
+    left: $left;
+  }
+  @if $right != no {
+    right: $right;
+  }
+}
+
+@mixin insert-image($image, $width: 122px, $height: 122px, $float: no,
+$add-shape-outside: yes, $add-shape-margin: no, $shape-margin: 10px) {
+  content: "";
+  background-image: url($image);
+  display: block;
+  width: $width;
+  height: $height;
+  @if $add-shape-outside == yes {
+    shape-outside: url($image);
+  }  
+  @if $float == left {
+    float: left;
+  }
+  @if $float == right {
+    float: right;
+  }
+  @if $add-shape-margin == yes {
+    shape-margin: $shape-margin;
+  }
 }
 
 // these styles here should describe how the atoms (elements)
 // should appear most of the time.
 // They can be overridden at the molecule (block) as necessary
+body {
+  font-family: $fonts-body;
+  background-color: $background-color;
+}
+
 h1,
 h3,
 h4 {
@@ -29,15 +115,15 @@ h4 {
 }
 
 h1 {
+  @include font(2.5rem, $spacing: 1px);
+
   text-align: center;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
   background-image: linear-gradient(10deg, $background-color, $primary, $background-color, $accent1, $background-color, $accent2, #000, $text-light);
   background-size: 100%;
   background-repeat: repeat;
 
-  /* Use the text as a mask for the background.
-  /* This will show the gradient as a text color rather than element bg. */
+  /*** Use the text as a mask for the background.
+  // This will show the gradient as a text color rather than element bg. ***/
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -46,56 +132,54 @@ h1 {
 }
 
 h2 {
+  @include font(1rem, $spacing: 1px, $color: $text-light, $style: italic);
+
   text-align: center;
   margin-top: -.5rem;
   margin-left: 3rem;
-  font-style: italic;
-  color: $text-light;
-  font-size: 1rem;
-  letter-spacing: 1px;
 }
 
 h3 {
-  font-size: 2.25rem;
-  font-weight: 200; /* Thin */
-  letter-spacing: 1px;
-  padding: 0.5rem 0 0.25rem;
+  @include font(2.25rem, 200, 1px,);
+
+  padding: .5rem 0 .25rem;
 }
 
+// for styleguide
 h4 {
-  font-size: 1.6rem;
-  font-weight: 200; /* Thin */
-  letter-spacing: 1px;
+  @include font(1.6rem, 200, 1px);
+ 
   margin: 0.5rem 0;
 }
 
 p {
-  @include set-font(1.6rem, 1.5rem);
+  @include font(1.6rem, $spacing: .08rem, $color: $text-light, 
+  $height: 1.5rem);
 
   padding: 0.5rem 0;
   margin: 0;
-  letter-spacing: .08rem;
 }
 
 abbr {
   text-decoration: none;
 }
 
-a {
-  font-size: 1.4rem;
-  color: $p-link;
-  text-decoration: none;
-  transition: border-color 0.2s ease-in-out;
-}
-
-a:hover {
-  border-bottom: 1px solid $accent1;
-}
-
-ul li {
+ul {
   list-style: none;
+  padding: 0;
 }
 
-.sidebar a {
-  @include set-font(1.6rem, 1.5rem);
+li {
+  margin: 1.75rem 0;
+}
+
+a {
+  @include font(1.6rem, $color: $p-link, $height: 1.5rem);
+  
+  text-decoration: none;
+  transition: border-color 0.3s ease-in-out;
+  
+  &:hover {
+    border-bottom: 1px solid $accent1;
+  }
 }

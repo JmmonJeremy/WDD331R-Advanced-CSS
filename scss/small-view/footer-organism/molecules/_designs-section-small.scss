@@ -3,36 +3,30 @@
 
 .design-selection {
   padding: 1rem;
-}
 
-.design-selection h3 {
-  color: $accent2;
-}
+  & h3 {
+    color: $accent2;
+  }
 
-.design-selection ul {
-  list-style: none;
-  padding: 0;
-}
+  & .designer-name {
+    margin-left: .25rem;
+  }
 
-.design-selection ul li {
-  margin: 1.75rem 0;
+  & ul li:not(a) {
+    color: $text-light;
+  }
+
+  & ul li a {
+    margin: .5rem 0;
+  }
 }
 
 .design-name {
   display: block;
   max-width: fit-content;
-  font-size: 1.5rem;
 }
 
 .designer-name {
-  font-size: 1.2rem;
   color: $text-light;
-}
-
-.design-selection ul li:not(a) {
-  color: $text-light;
-}
-
-.design-selection ul li a {
-  margin: .5rem 0;
+  margin-left: 1rem;
 }
