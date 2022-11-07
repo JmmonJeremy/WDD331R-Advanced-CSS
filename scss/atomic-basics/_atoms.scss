@@ -78,24 +78,24 @@ $justify: no, $align: no) {
   }
 }
 
-@mixin insert-image($image, $width: 122px, $height: 122px, $float: no,
-$add-shape-outside: yes, $add-shape-margin: no, $shape-margin: 10px) {
+@mixin insert-image($image, $display: block, $width: 122px, $height: 122px, 
+$size: no, $float: no, $shape: no, $margin: no) {
   content: "";
   background-image: url($image);
-  display: block;
+  display: $display;
   width: $width;
   height: $height;
-  @if $add-shape-outside == yes {
+  @if $size != no {
+    background-size: $size;
+  }
+  @if $float != no {
+    float: $float;
+  }
+  @if $shape == yes {
     shape-outside: url($image);
   }  
-  @if $float == left {
-    float: left;
-  }
-  @if $float == right {
-    float: right;
-  }
-  @if $add-shape-margin == yes {
-    shape-margin: $shape-margin;
+  @if $margin != no {
+    shape-margin: $margin;
   }
 }
 

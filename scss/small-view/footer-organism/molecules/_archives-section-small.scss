@@ -1,27 +1,21 @@
 @use "../../../atomic-basics/variables" as *;
 @use "../../../atomic-basics/atoms";
 
-.design-archives {
-  padding: 1rem;
-}
-
-.design-archives h3 {
+.archives {
   color: $primary;
 }
-.design-archives ul li {
-  list-style: none;
-  padding-left: 50px;
-  position: relative;
 
-  &:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 15px;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background-size: contain;
-  background-image: url("../../../../images/The-Earth-Seen-From-Apollo-17-by-Merlin2525.svg");
-}
+.design-archives {
+  padding: 1rem;
+
+  & ul li {
+    padding-left: 50px;
+    position: relative;
+  
+    &::before {
+      @include atoms.insert-image("images/earth-planet.svg", inline-block,
+      20px, 20px, contain);
+      @include atoms.absolute($top: 0, $left: 15px);
+    }
+  }
 }

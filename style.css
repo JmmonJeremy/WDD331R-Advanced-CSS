@@ -194,8 +194,8 @@ header {
   display: block;
   width: 120px;
   height: 122px;
-  shape-outside: url("images/yellow-moon.svg");
   float: right;
+  shape-outside: url("images/yellow-moon.svg");
   margin-top: 5.625rem;
 }
 
@@ -205,21 +205,37 @@ header {
   display: block;
   width: 122px;
   height: 122px;
-  shape-outside: url("images/red-white-moon.svg");
   float: left;
+  shape-outside: url("images/red-white-moon.svg");
   shape-margin: 10px;
   margin-right: 0.625rem;
   margin-top: 7.3rem;
 }
 
+.select {
+  color: #48a9a6;
+}
+
 .design-selection {
   padding: 1rem;
 }
-.design-selection h3 {
-  color: #48a9a6;
-}
 .design-selection .designer-name {
   margin-left: 0.25rem;
+}
+.design-selection ul li {
+  padding-left: 3.125rem;
+  position: relative;
+}
+.design-selection ul li::before {
+  content: "";
+  background-image: url("images/mars-planet.svg");
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 15px;
 }
 .design-selection ul li:not(a) {
   color: #fff;
@@ -238,46 +254,27 @@ header {
   margin-left: 1rem;
 }
 
-.design-selection ul li {
-  list-style: none;
-  padding-left: 50px;
-  position: relative;
-}
-.design-selection ul li:before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 15px;
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  background-size: contain;
-  background-image: url("../../../../images/Mars.svg");
+.archives {
+  color: #b79ed1;
 }
 
 .design-archives {
   padding: 1rem;
 }
-
-.design-archives h3 {
-  color: #b79ed1;
-}
-
 .design-archives ul li {
-  list-style: none;
   padding-left: 50px;
   position: relative;
 }
-.design-archives ul li:before {
+.design-archives ul li::before {
   content: "";
-  position: absolute;
-  top: 0px;
-  left: 15px;
+  background-image: url("images/earth-planet.svg");
   display: inline-block;
-  height: 20px;
   width: 20px;
+  height: 20px;
   background-size: contain;
-  background-image: url("../../../../images/The-Earth-Seen-From-Apollo-17-by-Merlin2525.svg");
+  position: absolute;
+  top: 0;
+  left: 15px;
 }
 
 .resources {
@@ -287,22 +284,20 @@ header {
 .zen-resources {
   padding-left: 1rem;
 }
-
 .zen-resources ul li {
-  list-style: none;
   padding-left: 50px;
   position: relative;
 }
-.zen-resources ul li:before {
+.zen-resources ul li::before {
   content: "";
-  position: absolute;
-  top: 0px;
-  left: 15px;
+  background-image: url("images/green-planet.svg");
   display: inline-block;
-  height: 20px;
   width: 25px;
+  height: 20px;
   background-size: contain;
-  background-image: url("../../../../images/greenplanet.svg");
+  position: absolute;
+  top: 0;
+  left: 15px;
   transform: rotate(-30deg);
 }
 

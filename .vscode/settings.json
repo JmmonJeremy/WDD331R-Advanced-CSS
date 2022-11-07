@@ -9,6 +9,7 @@
         ],
         "rules": {
           "scss/selector-no-redundant-nesting-selector": null,
+          "max-nesting-depth": null,
           "order/properties-alphabetical-order": null,
           "no-descending-specificity": null,
           "no-eol-whitespace": null,
