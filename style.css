@@ -218,8 +218,8 @@ header {
   display: block;
   width: 122px;
   height: 122px;
-  shape-outside: url("images/white-moon.svg");
   float: left;
+  shape-outside: url("images/white-moon.svg");
   shape-margin: 10px;
   margin-right: 0.625rem;
   margin-top: 3rem;

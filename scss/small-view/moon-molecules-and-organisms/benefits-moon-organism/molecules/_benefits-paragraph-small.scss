@@ -3,7 +3,7 @@
 
 .benefits [title="Cascading Style Sheets"]::before {
   @include atoms.insert-image("images/white-moon.svg", $float: left,
-  $add-shape-margin: yes);
+  $margin: 10px);
 
   margin-right: .625rem;
   margin-top: 3rem;

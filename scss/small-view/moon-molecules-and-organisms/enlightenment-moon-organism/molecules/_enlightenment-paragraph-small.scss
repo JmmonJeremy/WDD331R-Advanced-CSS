@@ -3,7 +3,7 @@
 
 .preamble > h3 + p + p::before {
   @include atoms.insert-image("images/yellow-moon.svg", $width: 120px,
-  $float: right, $shape: yes);
+  $height: 122px, $float: right, $shape: yes);
 
   margin-top: 5.625rem;
 }

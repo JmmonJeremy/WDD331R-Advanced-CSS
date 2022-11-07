@@ -18,7 +18,7 @@
   
     &::before {
       @include atoms.insert-image("images/mars-planet.svg", inline-block,
-      20px, 20px, contain);
+      contain, 20px);
       @include atoms.absolute($top: 0, $left: 15px);
     }
 

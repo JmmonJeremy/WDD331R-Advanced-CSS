@@ -3,7 +3,7 @@
 
 .explanation [title="HyperText Markup Language"]::before {
   @include atoms.insert-image("images/red-white-moon.svg", $float: left,
-  $shape: yes, $margin: 10px);
+  $margin: 10px);
 
   margin-right: .625rem;
   margin-top: 7.3rem;

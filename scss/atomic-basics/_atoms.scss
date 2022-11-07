@@ -78,8 +78,8 @@ $justify: no, $align: no) {
   }
 }
 
-@mixin insert-image($image, $display: block, $width: 122px, $height: 122px, 
-$size: no, $float: no, $shape: no, $margin: no) {
+@mixin insert-image($image, $display: block, $size: no, $width: 122px,
+$height: $width, $float: no, $shape: no, $margin: no) {
   content: "";
   background-image: url($image);
   display: $display;
@@ -91,7 +91,7 @@ $size: no, $float: no, $shape: no, $margin: no) {
   @if $float != no {
     float: $float;
   }
-  @if $shape == yes {
+  @if $shape == yes or $margin != no {
     shape-outside: url($image);
   }  
   @if $margin != no {
