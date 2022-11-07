@@ -243,7 +243,6 @@ header {
   padding-left: 50px;
   position: relative;
 }
-
 .design-selection ul li:before {
   content: "";
   position: absolute;
@@ -269,7 +268,6 @@ header {
   padding-left: 50px;
   position: relative;
 }
-
 .design-archives ul li:before {
   content: "";
   position: absolute;
@@ -295,7 +293,6 @@ header {
   padding-left: 50px;
   position: relative;
 }
-
 .zen-resources ul li:before {
   content: "";
   position: absolute;

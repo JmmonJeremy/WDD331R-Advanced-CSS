@@ -35,8 +35,8 @@
   list-style: none;
   padding-left: 50px;
   position: relative;
-}
-.design-selection ul li:before {
+
+ &:before {
   content: "";
   position: absolute;
   top: 0px;
@@ -46,5 +46,6 @@
   width: 20px;
   background-size: contain;
   background-image: url("../../../../images/Mars.svg");
+}
 }
 
