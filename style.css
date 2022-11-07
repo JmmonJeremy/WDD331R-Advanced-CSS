@@ -212,6 +212,19 @@ header {
   margin-top: 7.3rem;
 }
 
+.benefits [title="Cascading Style Sheets"]::before {
+  content: "";
+  background-image: url("images/white-moon.svg");
+  display: block;
+  width: 122px;
+  height: 122px;
+  shape-outside: url("images/white-moon.svg");
+  float: left;
+  shape-margin: 10px;
+  margin-right: 0.625rem;
+  margin-top: 3rem;
+}
+
 .select {
   color: #48a9a6;
 }
