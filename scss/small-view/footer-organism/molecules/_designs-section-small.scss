@@ -1,23 +1,34 @@
 @use "../../../atomic-basics/variables" as *;
 @use "../../../atomic-basics/atoms";
 
+.select {
+  color: $accent2;
+}
+
 .design-selection {
   padding: 1rem;
-
-  & h3 {
-    color: $accent2;
-  }
 
   & .designer-name {
     margin-left: .25rem;
   }
 
-  & ul li:not(a) {
-    color: $text-light;
-  }
+  & ul li {
+    padding-left: 3.125rem;
+    position: relative;
+  
+    &::before {
+      @include atoms.insert-image("images/mars-planet.svg", inline-block,
+      contain, 20px);
+      @include atoms.absolute($top: 0, $left: 15px);
+    }
 
-  & ul li a {
-    margin: .5rem 0;
+    &:not(a) {
+      color: $text-light;
+    }
+  
+    & a {
+      margin: .5rem 0;
+    }
   }
 }
 
