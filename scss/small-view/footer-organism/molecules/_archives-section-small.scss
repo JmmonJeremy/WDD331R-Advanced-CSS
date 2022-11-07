@@ -8,3 +8,20 @@
 .design-archives h3 {
   color: $primary;
 }
+.design-archives ul li {
+  list-style: none;
+  padding-left: 50px;
+  position: relative;
+}
+
+.design-archives ul li:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-image: url("../../../../images/The-Earth-Seen-From-Apollo-17-by-Merlin2525.svg");
+}
