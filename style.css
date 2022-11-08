@@ -28,6 +28,7 @@
  * Atoms................(_atoms.scss) Basic units from atomic design.
  * Mixins...............(_mixins.scss) Useful mixins to consolidate code.
  *
+ * SMALL VIEW
  * BACKGROUND ORGANISM
  * Sass Subfiles...........(_background.scss) Background molecules combined.
  * BACKGROUND MOLECULES
@@ -41,8 +42,7 @@
  * Title................(_planet-image.scss) Header's title.
  * Paragraph............(_planet-paragraph.scss) Header's introduction.
  * Downloads............(_planet-link.scss) HTML & CSS download files.
- *
- * SMALL VIEW
+ * 
  * MOON MOLECULES AND ORGANISMS
  * A MOON PATTERN ORGANISM
  * Sass Subfiles...........(_moons-pattern.scss) Moons molecules combined.
@@ -200,6 +200,7 @@ body {
 }
 
 /**
+ * BACKGROUND ORGANISM
  * This is the Section for the background imagery of stars and a rocket
  */
 .intro::before {
@@ -251,6 +252,7 @@ header {
 }
 
 /**
+ * PLANET ORGANISM
  * This is the Section for styling the Header, consisting of the main planet,
  * the Header's title, the Header's intro paragraph, and the download links
  * for the site's HTML and CSS code files.
@@ -290,6 +292,7 @@ header {
 }
 
 /**
+ * A MOON PATTERN ORGANISM
  * This is the Section for styling the Body's titles and paragraphs.
  */
 .preamble > h3 + p + p::before {
@@ -304,6 +307,7 @@ header {
 }
 
 /**
+ * ENLIGHTENMENT MOON MOLECULES
  * This is the segment for styling the The Road to Enlightenment section moon.
  */
 .explanation [title="HyperText Markup Language"]::before {
@@ -320,9 +324,11 @@ header {
 }
 
 /**
+ * ABOUT MOON ORGANISM
  * This is the segment for styling the So What is This About section moon.
  */
 /**
+ * PARTICIPATION MOON ORGANISM
  * This is the segment for styling the Participation section astronaut.
  */
 .benefits [title="Cascading Style Sheets"]::before {
@@ -339,6 +345,7 @@ header {
 }
 
 /**
+ * BENEFITS MOON ORGANISM
  * This is the segment for styling the Benefits section moon.
  */
 .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
@@ -354,6 +361,7 @@ header {
 }
 
 /**
+ * REQUIREMENTS MOON ORGANISM
  * This is the segment for styling the Requirements section moon.
  */
 .select {
@@ -468,6 +476,7 @@ footer {
 }
 
 /**
+ * FOOTER ORGANISM
  * This is the Section for styling the Select a Design, Archives and Resources
  * sections of the Aside placed in the Footer as well as the Footer links
  */
