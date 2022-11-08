@@ -1,3 +1,4 @@
+// BASE UNITS
 @use "variables" as *; // this puts all the variables in the global namespace.
 @use "mixins";
 
@@ -34,7 +35,8 @@ h1 {
 }
 
 h2 {
-  @include mixins.font(1rem, $spacing: 1px, $color: $text-light, $style: italic);
+  @include mixins.font(1rem, $spacing: 1px, $color: $text-light,
+  $style: italic);
 
   text-align: center;
   margin-top: -.5rem;

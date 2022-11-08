@@ -16,6 +16,9 @@
  * IMAGES
  * Vector Images........SVG images inserted into HTML through CSS.
  *
+ * NODE MODULES
+ * NPM Packages.........NPM node modules needed for project tools.
+ *
  * SCSS
  * Sass File............(style.scss) Main Sass file to compile CSS file.
  *
@@ -39,22 +42,35 @@
  * Paragraph............(_planet-paragraph.scss) Header's introduction.
  * Downloads............(_planet-link.scss) HTML & CSS download files.
  *
+ * SMALL VIEW
  * MOON MOLECULES AND ORGANISMS
  * A MOON PATTERN ORGANISM
  * Sass Subfiles...........(_moons-pattern.scss) Moons molecules combined.
  * MOONS MOLECULES
  * Body's Text..........(_moons-text.scss) Body's titles and paragraphs.
  * ENLIGHTENMENT MOON ORGANISM
- * Sass Subfiles...........(_moons-pattern.scss) Moons molecules combined.
- * MOONS MOLECULES
+ * Sass Subfiles...........(_enlightenment-moon.scss) Moon molecules combined.
+ * ENLIGHTENMENT MOON MOLECULES
  * Enligntenment Moon...(_moons-enlightenment-image.scss) "The Road to
  *......................Enlightenment" section's yellow-moon.svg image.
+ * ABOUT MOON ORGANISM
+ * Sass Subfiles...........(_about-moon.scss) Moon molecules combined.
+ * ABOUT MOON MOLECULES
  * About Moon...........(_moons-about-image.scss) "So What is This About?"
  *......................section's red-white-moon.svg image.
+ * PARTICIPATION MOON ORGANISM
+ * Sass Subfiles...........(_participation-moon.scss) Moon molecules combined.
+ * PARTICIPATION MOON MOLECULES
  * Participation Moon...(_moons-participation-image.scss) "Participation"
  *......................section's astronaut.svg image.
+ * BENEFITS MOON ORGANISM
+ * Sass Subfiles...........(_benefits-moon.scss) Moon molecules combined.
+ * BENEFITS MOON MOLECULES
  * Benefits Moon........(_moons-benefits-image.scss) "Benefits"
  *......................section's white-moon.svg image.
+ * REQUIREMENTS MOON ORGANISM
+ * Sass Subfiles...........(_requirements-moon.scss) Moon molecules combined.
+ * REQUIREMENTS MOON MOLECULES
  * Requirements Moon....(_moons-requirements-image.scss) "Requirements"
  *......................section's orange-moon.svg image.
  *
@@ -183,6 +199,9 @@ body {
   color: #e43388;
 }
 
+/**
+ * This is the Section for the background imagery of stars and a rocket
+ */
 .intro::before {
   content: "";
   background-image: url("images/blue-planet.svg");
@@ -231,6 +250,11 @@ header {
   letter-spacing: 1px;
 }
 
+/**
+ * This is the Section for styling the Header, consisting of the main planet,
+ * the Header's title, the Header's intro paragraph, and the download links
+ * for the site's HTML and CSS code files.
+ */
 .main {
   padding: 1rem;
 }
@@ -265,6 +289,9 @@ header {
   font-size: 1.4rem;
 }
 
+/**
+ * This is the Section for styling the Body's titles and paragraphs.
+ */
 .preamble > h3 + p + p::before {
   content: "";
   background-image: url("images/yellow-moon.svg");
@@ -276,6 +303,9 @@ header {
   margin-top: 5.625rem;
 }
 
+/**
+ * This is the segment for styling the The Road to Enlightenment section moon.
+ */
 .explanation [title="HyperText Markup Language"]::before {
   content: "";
   background-image: url("images/red-white-moon.svg");
@@ -289,6 +319,12 @@ header {
   margin-top: 7.3rem;
 }
 
+/**
+ * This is the segment for styling the So What is This About section moon.
+ */
+/**
+ * This is the segment for styling the Participation section astronaut.
+ */
 .benefits [title="Cascading Style Sheets"]::before {
   content: "";
   background-image: url("images/white-moon.svg");
@@ -302,6 +338,9 @@ header {
   margin-top: 3rem;
 }
 
+/**
+ * This is the segment for styling the Benefits section moon.
+ */
 .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
   content: "";
   background-image: url("images/orange-moon.svg");
@@ -314,6 +353,9 @@ header {
   margin-top: 27.75rem;
 }
 
+/**
+ * This is the segment for styling the Requirements section moon.
+ */
 .select {
   color: #48a9a6;
 }
@@ -425,6 +467,10 @@ footer {
   padding-bottom: 3rem;
 }
 
+/**
+ * This is the Section for styling the Select a Design, Archives and Resources
+ * sections of the Aside placed in the Footer as well as the Footer links
+ */
 @media only screen and (min-width: 600px) {
   h1 {
     font-size: 6rem;
