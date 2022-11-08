@@ -1,4 +1,5 @@
-// BASE UNITS
+// #BASE UNITS
+// mixins to help speed up repeating patterns of code
 @use "variables" as *; // this puts all the variables in the global namespace.
 
 // #1 font mixin

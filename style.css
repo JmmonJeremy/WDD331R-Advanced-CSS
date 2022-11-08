@@ -1,5 +1,11 @@
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
+/* ------------------------------------*\
+  #BASE UNITS
+\*------------------------------------ */
+/** 
+ * This is the TABLE OF CONTENTS as notes at the top of the CSS file
+ */
 /**
  * CONTENTS
  *
@@ -91,6 +97,13 @@
  * Sass.................(style-pattern-library.scss) Sass file for Style Guide.
  * Sass Compiler........CSS Map(style-pattern-library.css.map)
  * CSS..................(style-pattern-library.css) CSS file for Style Guide.
+ */
+/* ------------------------------------*\
+  #BASE UNITS
+\*------------------------------------ */
+/** 
+ * This is the segment for the base elements or "atoms" as a foundation
+ * for the CSS code.
  */
 body {
   font-family: "Gemunu Libre", arial, serif;
@@ -199,8 +212,10 @@ body {
   color: #e43388;
 }
 
+/* ------------------------------------*\
+  #BACKGROUND ORGANISM
+\*------------------------------------ */
 /**
- * BACKGROUND ORGANISM
  * This is the Section for the background imagery of stars and a rocket
  */
 .intro::before {
@@ -251,8 +266,10 @@ header {
   letter-spacing: 1px;
 }
 
+/* ------------------------------------*\
+  #PLANET ORGANISM
+\*------------------------------------ */
 /**
- * PLANET ORGANISM
  * This is the Section for styling the Header, consisting of the main planet,
  * the Header's title, the Header's intro paragraph, and the download links
  * for the site's HTML and CSS code files.
@@ -291,8 +308,10 @@ header {
   font-size: 1.4rem;
 }
 
-/**
- * A MOON PATTERN ORGANISM
+/* ------------------------------------*\
+  #A MOON PATTERN ORGANISM
+\*------------------------------------ */
+/** 
  * This is the Section for styling the Body's titles and paragraphs.
  */
 .preamble > h3 + p + p::before {
@@ -306,8 +325,10 @@ header {
   margin-top: 5.625rem;
 }
 
+/* ------------------------------------*\
+  #ENLIGHTENMENT MOON ORGANISM
+\*------------------------------------ */
 /**
- * ENLIGHTENMENT MOON MOLECULES
  * This is the segment for styling the The Road to Enlightenment section moon.
  */
 .explanation [title="HyperText Markup Language"]::before {
@@ -323,12 +344,16 @@ header {
   margin-top: 7.3rem;
 }
 
+/* ------------------------------------*\
+  #ABOUT MOON ORGANISM
+\*------------------------------------ */
 /**
- * ABOUT MOON ORGANISM
  * This is the segment for styling the So What is This About section moon.
  */
-/**
- * PARTICIPATION MOON ORGANISM
+/* ------------------------------------*\
+  #PARTICIPATION MOON ORGANISM
+\*------------------------------------ */
+/** 
  * This is the segment for styling the Participation section astronaut.
  */
 .benefits [title="Cascading Style Sheets"]::before {
@@ -344,8 +369,10 @@ header {
   margin-top: 3rem;
 }
 
+/* ------------------------------------*\
+  #BENEFITS MOON ORGANISM
+\*------------------------------------ */
 /**
- * BENEFITS MOON ORGANISM
  * This is the segment for styling the Benefits section moon.
  */
 .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
@@ -360,8 +387,10 @@ header {
   margin-top: 27.75rem;
 }
 
+/* ------------------------------------*\
+  #REQUIREMENTS MOON ORGANISM
+\*------------------------------------ */
 /**
- * REQUIREMENTS MOON ORGANISM
  * This is the segment for styling the Requirements section moon.
  */
 .select {
@@ -479,6 +508,13 @@ footer {
  * FOOTER ORGANISM
  * This is the Section for styling the Select a Design, Archives and Resources
  * sections of the Aside placed in the Footer as well as the Footer links
+ */
+/* ------------------------------------*\
+  #BASE UNITS
+\*------------------------------------ */
+/** 
+ * This is the segment for the base elements or "atoms" as a foundation
+ * for the CSS code.
  */
 @media only screen and (min-width: 600px) {
   h1 {
