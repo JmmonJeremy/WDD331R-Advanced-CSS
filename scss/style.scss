@@ -1,5 +1,11 @@
 // styles.scss
 
+// import table of contents notes for css file
+@use "base-units/table-of-contents";
+
+// import for atoms file
+@use "base-units/atoms";
+
 // import for background scss styles
 @use "small-view/background-organism/background-small";
 
@@ -29,4 +35,4 @@
 @use "small-view/footer-organism/footer-small";
 
 // import for large-view scss
-@use "atomic-basics/atoms-large";
+@use "base-units/atoms-large";

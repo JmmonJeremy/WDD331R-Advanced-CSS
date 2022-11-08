@@ -1,5 +1,5 @@
-@use "../../../../atomic-basics/variables" as *;
-@use "../../../../atomic-basics/atoms";
+@use "../../../../base-units/variables" as *;
+@use "../../../../base-units/mixins";
 
 .main {
   padding: 1rem;
@@ -33,5 +33,5 @@
 }
 
 .main a {
-  @include atoms.font(1.4rem);
+  @include mixins.font(1.4rem);
 }

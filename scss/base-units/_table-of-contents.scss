@@ -1,0 +1,72 @@
+/**
+ * CONTENTS
+ *
+ * ROOT
+ * Webpage Files........HTML(index.html) and CSS(style.css).
+ * Sass Compiler........CSS Map(style.css.map).
+ * GitHub Files.........README.md(project summary) and gitignore(local files).
+ * Stylelint............Dependencies(package.json).
+ * NPM Packages.........Node Modules(package-lock.json).
+ *
+ * VS CODE
+ * Stylelint............Project rules for SCSS and CSS linting.
+ *
+ * IMAGES
+ * Vector Images........SVG images inserted into HTML through CSS.
+ *
+ * SCSS
+ * Sass File............(style.scss) Main Sass file to compile CSS file.
+ *
+ * BASE UNITS
+ * CSS Reset............(_css-reset.scss) Set same baseline for all browsers.
+ * Variables............(_variables.scss) Sass variables.
+ * Atoms................(_atoms.scss) Basic units from atomic design.
+ * Mixins...............(_mixins.scss) Useful mixins to consolidate code.
+ *
+ * BACKGROUND ORGANISM
+ * Sass Files...........(_background.scss) Background molecules combined.
+ * BACKGROUND MOLECULES
+ * Rocket...............(_background-rocket.scss) Webpage's rocket.
+ * Stars................(_background-stars.scss) Webpage's stars.
+ *
+ * PLANET ORGANISM
+ * Sass Files...........(_planet.scss) Planet molecules combined.
+ * PLANET MOLECULES
+ * Planet...............(_planet-image.scss) Header's planet.
+ * Title................(_planet-image.scss) Header's title.
+ * Paragraph............(_planet-paragraph.scss) Header's introduction.
+ * Downloads............(_planet-link.scss) HTML & CSS download files.
+ *
+ * MOONS ORGANISM
+ * Sass Files...........(_planet.scss) Moon molecules combined.
+ * MOONS MOLECULES
+ * Body's Text..........(_moons-text.scss) Body's titles and paragraphs.
+ * Enligntenment Moon...(_moons-enlightenment-image.scss) "The Road to
+ *......................Enlightenment" section's yellow-moon.svg image.
+ * About Moon...........(_moons-about-image.scss) "So What is This About?"
+ *......................section's red-white-moon.svg image.
+ * Participation Moon...(_moons-participation-image.scss) "Participation"
+ *......................section's astronaut.svg image.
+ * Benefits Moon........(_moons-benefits-image.scss) "Benefits"
+ *......................section's white-moon.svg image.
+ * Requirements Moon....(_moons-requirements-image.scss) "Requirements"
+ *......................section's orange-moon.svg image.
+ *
+ * FOOTER ORGANISM
+ * Sass Subfiles...........(_footer.scss) Planet molecules combined.
+ * FOOTER MOLECULES
+ * Designs Aside........(_designs-section.scss) "Select a Design" aside
+ *......................section's list of links.
+ * Archives Aside.......(_archives-section.scss) "Archives" aside section's
+ *......................list of links.
+ * Resources Aside......(_resources-section.scss) "Resources" aside section's
+ *......................list of links.
+ * Footer Links.........(_links-section.scss) The footer section's list of
+ *......................links.
+ *
+ * STYLE GUIDE
+ * HTML.................(pattern-library.html) Style Guide Pages HTML file.
+ * Sass.................(style-pattern-library.scss) Sass file for Style Guide.
+ * Sass Compiler........CSS Map(style-pattern-library.css.map)
+ * CSS..................(style-pattern-library.css) CSS file for Style Guide.
+ */

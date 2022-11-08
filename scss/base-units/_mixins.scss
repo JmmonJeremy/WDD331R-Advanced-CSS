@@ -1,5 +1,6 @@
 @use "variables" as *; // this puts all the variables in the global namespace.
 
+// #1 font mixin
 @mixin font($size: no, $weight: no, $spacing: no, $color: no, $style: no,
 $height: no, $font: no) {
   @if $size != no {
@@ -25,6 +26,7 @@ $height: no, $font: no) {
   }
 }
 
+// #2 flex mixin
 @mixin flex($direction: row, $wrap: wrap, $gap-type: none, $gap: .75rem,
 $justify: no, $align: no) {
   display: flex;
@@ -46,6 +48,7 @@ $justify: no, $align: no) {
   }
 }
 
+// #3 adding a line mixin
 @mixin line($side, $color: $p-link, $thickness:3px, $spacing:.5rem) {
   @if $side == top {
     border-top: $thickness solid $color;
@@ -62,6 +65,7 @@ $justify: no, $align: no) {
   }
 }
 
+// #4 absolute position mixin
 @mixin absolute($top: no, $bottom: no, $left: no, $right: no) {
   position: absolute;
   @if $top != no {
@@ -78,6 +82,7 @@ $justify: no, $align: no) {
   }
 }
 
+// #5 inserting an image with before or after mixin
 @mixin insert-image($image, $display: block, $size: no, $width: 122px,
 $height: $width, $float: no, $shape: no, $margin: no) {
   content: "";
@@ -96,90 +101,5 @@ $height: $width, $float: no, $shape: no, $margin: no) {
   }  
   @if $margin != no {
     shape-margin: $margin;
-  }
-}
-
-// these styles here should describe how the atoms (elements)
-// should appear most of the time.
-// They can be overridden at the molecule (block) as necessary
-body {
-  font-family: $fonts-body;
-  background-color: $background-color;
-}
-
-h1,
-h3,
-h4 {
-  font-family: $fonts-headline;
-  margin: 0;
-}
-
-h1 {
-  @include font(2.5rem, $spacing: 1px);
-
-  text-align: center;
-  background-image: linear-gradient(10deg, $background-color, $primary, $background-color, $accent1, $background-color, $accent2, #000, $text-light);
-  background-size: 100%;
-  background-repeat: repeat;
-
-  /*** Use the text as a mask for the background.
-  // This will show the gradient as a text color rather than element bg. ***/
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-
-h2 {
-  @include font(1rem, $spacing: 1px, $color: $text-light, $style: italic);
-
-  text-align: center;
-  margin-top: -.5rem;
-  margin-left: 3rem;
-}
-
-h3 {
-  @include font(2.25rem, 200, 1px,);
-
-  padding: .5rem 0 .25rem;
-}
-
-// for styleguide
-h4 {
-  @include font(1.6rem, 200, 1px);
- 
-  margin: 0.5rem 0;
-}
-
-p {
-  @include font(1.6rem, $spacing: .08rem, $color: $text-light, 
-  $height: 1.5rem);
-
-  padding: 0.5rem 0;
-  margin: 0;
-}
-
-abbr {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 1.75rem 0;
-}
-
-a {
-  @include font(1.6rem, $color: $p-link, $height: 1.5rem);
-  
-  text-decoration: none;
-  transition: border-color 0.3s ease-in-out;
-  
-  &:hover {
-    border-bottom: 1px solid $accent1;
   }
 }

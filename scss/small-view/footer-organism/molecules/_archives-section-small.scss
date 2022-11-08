@@ -1,5 +1,5 @@
-@use "../../../atomic-basics/variables" as *;
-@use "../../../atomic-basics/atoms";
+@use "../../../base-units/variables" as *;
+@use "../../../base-units/mixins";
 
 .archives {
   color: $primary;
@@ -13,9 +13,9 @@
     position: relative;
   
     &::before {
-      @include atoms.insert-image("images/earth-planet.svg", inline-block,
+      @include mixins.insert-image("images/earth-planet.svg", inline-block,
       contain, 20px);
-      @include atoms.absolute($top: 0, $left: 15px);
+      @include mixins.absolute($top: 0, $left: 15px);
     }
   }
 }

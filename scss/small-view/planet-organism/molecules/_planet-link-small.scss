@@ -1,8 +1,8 @@
-@use "../../../atomic-basics/variables" as *;
-@use "../../../atomic-basics/atoms";
+@use "../../../base-units/variables" as *;
+@use "../../../base-units/mixins";
 
 .summary p:last-child {
-  @include atoms.font(.8rem, $height: normal);
+  @include mixins.font(.8rem, $height: normal);
   
   font-weight: 900;
   margin-top: 17.5rem;
@@ -12,7 +12,7 @@
   width: 9rem;
 
   & a {
-    @include atoms.font(.8rem, $height: normal);
+    @include mixins.font(.8rem, $height: normal);
 
     text-transform: uppercase;
     letter-spacing: 1px;

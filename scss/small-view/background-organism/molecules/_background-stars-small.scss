@@ -1,5 +1,5 @@
-@use "../../../atomic-basics/atoms";
-@use "../../../atomic-basics/variables" as *;
+@use "../../../base-units/mixins";
+@use "../../../base-units/variables" as *;
 
 body {
   background-color: $background-color;

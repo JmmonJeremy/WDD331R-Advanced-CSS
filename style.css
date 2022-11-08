@@ -1,5 +1,46 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
+/**
+ * CONTENTS
+ *
+ * ROOT
+ * Webpage Files........HTML(index.html) and CSS(style.css).
+ * Sass Compiler........CSS(style.css).
+ * GitHub Files.........README.md(project summary) and gitignore(local files).
+ * Stylelint............Dependencies(package.json).
+ * NPM Packages.........Node Modules(package-lock.json).
+ *
+ * VS CODE
+ * Stylelint............Project rules for SCSS and CSS linting.
+ *
+ * IMAGES
+ * Vector Images........SVG images inserted into HTML through CSS.
+ *
+ * BASE UNITS
+ * CSS Reset............(_css-reset.scss) Set same baseline for all browsers.
+ * Variables............(_variables.scss) Sass variables.
+ * Atoms................(_atoms.scss) Basic units from atomic design.
+ * Mixins...............(_mixins.scss) Useful mixins to consolidate code.
+ *
+ * BACKGROUND MOLECULES
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
 body {
   font-family: "Gemunu Libre", arial, serif;
   background-color: #030746;
@@ -104,6 +145,7 @@ body {
   margin-left: -7.25rem;
   margin-top: -8rem;
   transform: rotate(0.035turn);
+  color: #e43388;
 }
 
 .intro::before {
