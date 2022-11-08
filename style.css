@@ -192,8 +192,8 @@ header {
   content: "";
   background-image: url("images/yellow-moon.svg");
   display: block;
-  width: 120px;
-  height: 122px;
+  width: 130px;
+  height: 132px;
   float: right;
   shape-outside: url("images/yellow-moon.svg");
   margin-top: 5.625rem;
@@ -210,6 +210,18 @@ header {
   shape-margin: 10px;
   margin-right: 0.625rem;
   margin-top: 7.3rem;
+}
+
+.participation [title="HyperText Markup Language"]::before {
+  content: "";
+  background-image: url("images/astronaut.svg");
+  display: block;
+  width: 122px;
+  height: 130px;
+  float: right;
+  shape-outside: url("images/astronaut.svg");
+  shape-margin: 10px;
+  margin-top: 2.75rem;
 }
 
 .benefits [title="Cascading Style Sheets"]::before {
