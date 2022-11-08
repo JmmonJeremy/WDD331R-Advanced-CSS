@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
 /**
@@ -6,7 +5,7 @@
  *
  * ROOT
  * Webpage Files........HTML(index.html) and CSS(style.css).
- * Sass Compiler........CSS(style.css).
+ * Sass Compiler........CSS Map(style.css.map).
  * GitHub Files.........README.md(project summary) and gitignore(local files).
  * Stylelint............Dependencies(package.json).
  * NPM Packages.........Node Modules(package-lock.json).
@@ -17,29 +16,65 @@
  * IMAGES
  * Vector Images........SVG images inserted into HTML through CSS.
  *
+ * SCSS
+ * Sass File............(style.scss) Main Sass file to compile CSS file.
+ *
  * BASE UNITS
  * CSS Reset............(_css-reset.scss) Set same baseline for all browsers.
  * Variables............(_variables.scss) Sass variables.
  * Atoms................(_atoms.scss) Basic units from atomic design.
  * Mixins...............(_mixins.scss) Useful mixins to consolidate code.
  *
+ * BACKGROUND ORGANISM
+ * Sass Subfiles...........(_background.scss) Background molecules combined.
  * BACKGROUND MOLECULES
- * Normalize.css........A level playing field.
- * Box-sizing...........Better default `box-sizing`.
+ * Rocket...............(_background-rocket.scss) Webpage's rocket.
+ * Stars................(_background-stars.scss) Webpage's stars.
  *
- * BASE
- * Headings.............H1–H6 styles.
+ * PLANET ORGANISM
+ * Sass Subfiles...........(_planet.scss) Planet molecules combined.
+ * PLANET MOLECULES
+ * Planet...............(_planet-image.scss) Header's planet.
+ * Title................(_planet-image.scss) Header's title.
+ * Paragraph............(_planet-paragraph.scss) Header's introduction.
+ * Downloads............(_planet-link.scss) HTML & CSS download files.
  *
- * OBJECTS
- * Wrappers.............Wrapping and constraining elements.
+ * MOON MOLECULES AND ORGANISMS
+ * A MOON PATTERN ORGANISM
+ * Sass Subfiles...........(_moons-pattern.scss) Moons molecules combined.
+ * MOONS MOLECULES
+ * Body's Text..........(_moons-text.scss) Body's titles and paragraphs.
+ * ENLIGHTENMENT MOON ORGANISM
+ * Sass Subfiles...........(_moons-pattern.scss) Moons molecules combined.
+ * MOONS MOLECULES
+ * Enligntenment Moon...(_moons-enlightenment-image.scss) "The Road to
+ *......................Enlightenment" section's yellow-moon.svg image.
+ * About Moon...........(_moons-about-image.scss) "So What is This About?"
+ *......................section's red-white-moon.svg image.
+ * Participation Moon...(_moons-participation-image.scss) "Participation"
+ *......................section's astronaut.svg image.
+ * Benefits Moon........(_moons-benefits-image.scss) "Benefits"
+ *......................section's white-moon.svg image.
+ * Requirements Moon....(_moons-requirements-image.scss) "Requirements"
+ *......................section's orange-moon.svg image.
  *
- * COMPONENTS
- * Page-head............The main page header.
- * Page-foot............The main page footer.
- * Buttons..............Button elements.
+ * FOOTER ORGANISM
+ * Sass Subfiles...........(_footer.scss) Planet molecules combined.
+ * FOOTER MOLECULES
+ * Designs Aside........(_designs-section.scss) "Select a Design" aside
+ *......................section's list of links.
+ * Archives Aside.......(_archives-section.scss) "Archives" aside section's
+ *......................list of links.
+ * Resources Aside......(_resources-section.scss) "Resources" aside section's
+ *......................list of links.
+ * Footer Links.........(_links-section.scss) The footer section's list of
+ *......................links.
  *
- * TRUMPS
- * Text.................Text helpers.
+ * STYLE GUIDE
+ * HTML.................(pattern-library.html) Style Guide Pages HTML file.
+ * Sass.................(style-pattern-library.scss) Sass file for Style Guide.
+ * Sass Compiler........CSS Map(style-pattern-library.css.map)
+ * CSS..................(style-pattern-library.css) CSS file for Style Guide.
  */
 body {
   font-family: "Gemunu Libre", arial, serif;

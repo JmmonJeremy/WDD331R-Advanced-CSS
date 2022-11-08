@@ -14,6 +14,9 @@
  * IMAGES
  * Vector Images........SVG images inserted into HTML through CSS.
  *
+ * NODE MODULES
+ * NPM Packages.........NPM node modules needed for project tools.
+ *
  * SCSS
  * Sass File............(style.scss) Main Sass file to compile CSS file.
  *
@@ -24,31 +27,48 @@
  * Mixins...............(_mixins.scss) Useful mixins to consolidate code.
  *
  * BACKGROUND ORGANISM
- * Sass Files...........(_background.scss) Background molecules combined.
+ * Sass Subfiles...........(_background.scss) Background molecules combined.
  * BACKGROUND MOLECULES
  * Rocket...............(_background-rocket.scss) Webpage's rocket.
  * Stars................(_background-stars.scss) Webpage's stars.
  *
  * PLANET ORGANISM
- * Sass Files...........(_planet.scss) Planet molecules combined.
+ * Sass Subfiles...........(_planet.scss) Planet molecules combined.
  * PLANET MOLECULES
  * Planet...............(_planet-image.scss) Header's planet.
  * Title................(_planet-image.scss) Header's title.
  * Paragraph............(_planet-paragraph.scss) Header's introduction.
  * Downloads............(_planet-link.scss) HTML & CSS download files.
  *
- * MOONS ORGANISM
- * Sass Files...........(_planet.scss) Moon molecules combined.
+ * SMALL VIEW
+ * MOON MOLECULES AND ORGANISMS
+ * A MOON PATTERN ORGANISM
+ * Sass Subfiles...........(_moons-pattern.scss) Moons molecules combined.
  * MOONS MOLECULES
  * Body's Text..........(_moons-text.scss) Body's titles and paragraphs.
+ * ENLIGHTENMENT MOON ORGANISM
+ * Sass Subfiles...........(_enlightenment-moon.scss) Moon molecules combined.
+ * ENLIGHTENMENT MOON MOLECULES
  * Enligntenment Moon...(_moons-enlightenment-image.scss) "The Road to
  *......................Enlightenment" section's yellow-moon.svg image.
+ * ABOUT MOON ORGANISM
+ * Sass Subfiles...........(_about-moon.scss) Moon molecules combined.
+ * ABOUT MOON MOLECULES
  * About Moon...........(_moons-about-image.scss) "So What is This About?"
  *......................section's red-white-moon.svg image.
+ * PARTICIPATION MOON ORGANISM
+ * Sass Subfiles...........(_participation-moon.scss) Moon molecules combined.
+ * PARTICIPATION MOON MOLECULES
  * Participation Moon...(_moons-participation-image.scss) "Participation"
  *......................section's astronaut.svg image.
+ * BENEFITS MOON ORGANISM
+ * Sass Subfiles...........(_benefits-moon.scss) Moon molecules combined.
+ * BENEFITS MOON MOLECULES
  * Benefits Moon........(_moons-benefits-image.scss) "Benefits"
  *......................section's white-moon.svg image.
+ * REQUIREMENTS MOON ORGANISM
+ * Sass Subfiles...........(_requirements-moon.scss) Moon molecules combined.
+ * REQUIREMENTS MOON MOLECULES
  * Requirements Moon....(_moons-requirements-image.scss) "Requirements"
  *......................section's orange-moon.svg image.
  *
