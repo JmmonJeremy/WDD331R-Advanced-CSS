@@ -2,8 +2,8 @@
 @use "../../../../atomic-basics/atoms";
 
 .preamble > h3 + p + p::before {
-  @include atoms.insert-image("images/yellow-moon.svg", $width: 120px,
-  $height: 122px, $float: right, $shape: yes);
+  @include atoms.insert-image("images/yellow-moon.svg", $width: 130px,
+  $height: 132px, $float: right, $shape: yes);
 
   margin-top: 5.625rem;
 }
