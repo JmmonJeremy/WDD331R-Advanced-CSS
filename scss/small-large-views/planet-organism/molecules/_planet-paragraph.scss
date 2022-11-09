@@ -1,0 +1,20 @@
+/* ------------------------------------*\
+  #PARAGRAPH PLANET MOLECULE
+\*------------------------------------ */
+
+/** 
+ * This section styles and positions the paragraph over the rocket in the
+ * header for the small-view.
+ */
+@use "../../../base-units/variables" as *;
+@use "../../../base-units/mixins";
+
+.summary p:first-child {
+  @include mixins.font(1.2rem, $color: $text-darkest, $height: normal);
+
+  margin: 1rem auto 0;
+  padding-left: 5rem;
+  text-align: center;
+  width: 8rem;
+  transform: rotate(.035turn);
+}

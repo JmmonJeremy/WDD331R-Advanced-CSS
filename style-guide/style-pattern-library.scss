@@ -1,5 +1,5 @@
-@use "../scss/atomic-basics/variables" as *; //this puts all the variables in the global namespace.
-@use "../scss/atomic-basics/atoms";
+@use "../scss/base-units/variables" as *; // this puts all the variables in the global namespace.
+@use "../scss/base-units/mixins";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 
@@ -22,13 +22,13 @@ body {
 }
 
 section {
-  background-color: white;
+  background-color: $text-light;
   padding: 1em;
   margin: 1em;
 }
 
 .colors {
-  @include atoms.set-flex;
+  @include mixins.set-flex;
 
   > h3 {
     width: 100%;

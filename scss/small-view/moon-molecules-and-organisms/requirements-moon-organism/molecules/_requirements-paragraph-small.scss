@@ -1,9 +1,0 @@
-@use "../../../../atomic-basics/variables" as *;
-@use "../../../../atomic-basics/atoms";
-
-.requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
-  @include atoms.insert-image("images/orange-moon.svg", $margin: 10px, 
-  $float: right);
-
-  margin-top: 27.75rem;
-}

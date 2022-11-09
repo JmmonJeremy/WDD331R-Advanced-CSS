@@ -1,0 +1,23 @@
+// BASE UNITS
+// This is a list of Sass variables for use in scss files
+// import Londrina Solid for headings font & Gemunu Libre for the body font
+@import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
+
+// fonts variables
+$fonts-headline: "Londrina Solid", cursive;
+$fonts-body: "Gemunu Libre", arial, serif;
+
+// color variables
+$background-color: #030746;
+$primary: #b79ed1;
+$accent1: #e43388;
+$accent2: #48a9a6;
+$grey-sidebar: rgb(51 55 69 / 90%);
+$text-dark: #333;
+$text-darkest: #000;
+$text-light: #fff;
+$p-link: #ff0;
+
+// set screen widths or breakpoint sizes
+$break-large: 600px;

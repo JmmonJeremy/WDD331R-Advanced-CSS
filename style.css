@@ -1,5 +1,147 @@
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
+/* ------------------------------------*\
+  #BASE UNITS
+\*------------------------------------ */
+/** 
+ * This is the TABLE OF CONTENTS inserted as notes at the top of the CSS file
+ */
+/**
+ * CONTENTS
+ *__________
+ *
+ * ROOT
+ * Webpage Files........HTML(index.html) and CSS(style.css).
+ * Sass Compiler........CSS Map(style.css.map).
+ * GitHub Files.........README.md(project summary) and gitignore(local files).
+ * Stylelint............Dependencies(package.json).
+ * NPM Packages.........Version Unification(package-lock.json).
+ *_____________________________________________________________________________
+ *
+ * VS CODE
+ * Stylelint............Project rules for SCSS and CSS linting.
+ *_____________________________________________________________________________
+ *
+ * IMAGES
+ * Vector Images........SVG images inserted into HTML through CSS.
+ *_____________________________________________________________________________
+ *
+ * NODE MODULES
+ * NPM Packages.........Tool libraries needed for project tools.
+ *_____________________________________________________________________________
+ *
+ * SCSS
+ * Sass File............(style.scss) Main Sass file to compile CSS file.
+ *_____________________________________________________________________________
+ *
+ * BASE UNITS
+ * Table of Contents....(_table-of-contents) Project directory.
+ * CSS Reset............(_css-reset.scss) Set same baseline for all browsers.
+ * Variables............(_variables.scss) Sass variables.
+ * Atoms................(_atoms.scss) Basic units from atomic design.
+ * Mixins...............(_mixins.scss) Useful mixins to consolidate code.
+ *_____________________________________________________________________________
+ *
+ * SMALL LARGE VIEWS
+ *___________________
+ *
+ * BACKGROUND ORGANISM
+ * Sass Subfiles........(_background.scss) Background molecules combined.
+ *
+ * BACKGROUND MOLECULES
+ * Rocket Small-View....(_background-rocket-small.scss) Webpage's rocket for 
+ * .....................small-view.
+ * Stars................(_background-stars.scss) Webpage's background stars.
+ *_____________________________________________________________________________
+ *
+ * PLANET ORGANISM
+ * Sass Subfiles........(_planet.scss) Planet molecules combined.
+ *
+ * PLANET MOLECULES
+ * Planet Small-View....(_planet-image-small.scss) Header's planet for small
+ * .....................-view.
+ * Title................(_planet-header.scss) Header's title.
+ * Paragraph............(_planet-paragraph.scss) Header's introduction.
+ * Downloads............(_planet-link.scss) HTML & CSS download files.
+ *_____________________________________________________________________________
+ *
+ * MOON MOLECULES AND ORGANISMS
+ *______________________________
+ *
+ * A MOON PATTERN ORGANISM
+ * Sass Subfiles........(_moons-pattern.scss) Moons molecules combined.
+ *
+ * MOONS MOLECULES
+ * Body's Text..........(_moons-text.scss) Body's titles and paragraphs.
+ *_____________________________________________________________________________
+ *
+ * ENLIGHTENMENT MOON ORGANISM
+ * Sass Subfiles........(_enlightenment-moon.scss) Moon molecules combined.
+ *
+ * ENLIGHTENMENT MOON MOLECULES
+ * Moon Small-View......(_enlightenment-moon-image-small.scss) "The Road to
+ *......................Enlightenment" section's yellow-moon.svg image.
+ *_____________________________________________________________________________
+ *
+ * ABOUT MOON ORGANISM
+ * Sass Subfiles........(_about-moon.scss) Moon molecules combined.
+ *
+ * ABOUT MOON MOLECULES
+ * Moon Small-View......(_about-moon-image-small.scss) "So What is This About?"
+ *......................section's red-white-moon.svg image in small-view.
+ *_____________________________________________________________________________
+ *
+ * PARTICIPATION MOON ORGANISM
+ * Sass Subfiles........(_participation-moon.scss) Moon molecules combined.
+ *
+ * PARTICIPATION MOON MOLECULES
+ * Moon Small-View......(_participation-moon-image-small.scss) "Participation"
+ *......................section's astronaut.svg image in small-view.
+ *_____________________________________________________________________________
+ *
+ * BENEFITS MOON ORGANISM
+ * Sass Subfiles........(_benefits-moon.scss) Moon molecules combined.
+ *
+ * BENEFITS MOON MOLECULES
+ * Moon Small-View......(_benefits-moon-image-small.scss) "Benefits" section's
+ *......................white-moon.svg image in small-view.
+ *_____________________________________________________________________________
+ *
+ * REQUIREMENTS MOON ORGANISM
+ * Sass Subfiles........(_requirements-moon.scss) Moon molecules combined.
+ *
+ * REQUIREMENTS MOON MOLECULES
+ * Moon Small-View......(_requirements-moon-image-small.scss) "Requirements"
+ *......................section's orange-moon.svg image in small-view.
+ *_____________________________________________________________________________
+ *
+ * FOOTER ORGANISM
+ * Sass Subfiles........(_footer.scss) Planet molecules combined.
+ *
+ * FOOTER MOLECULES
+ * Designs Aside........(_designs-section.scss) "Select a Design" aside
+ *......................section's list of links.
+ * Archives Aside.......(_archives-section.scss) "Archives" aside section's
+ *......................list of links.
+ * Resources Aside......(_resources-section.scss) "Resources" aside section's
+ *......................list of links.
+ * Footer Links.........(_links-section.scss) The footer section's list of
+ *......................links.
+ *_____________________________________________________________________________
+ *
+ * STYLE GUIDE
+ * HTML.................(pattern-library.html) Style Guide Pages HTML file.
+ * Sass.................(style-pattern-library.scss) Sass file for Style Guide.
+ * Sass Compiler........CSS Map(style-pattern-library.css.map)
+ * CSS..................(style-pattern-library.css) CSS file for Style Guide.
+ **/
+/* ------------------------------------*\
+  #ATOMS BASE UNITS
+\*------------------------------------ */
+/** 
+ * This is the segment for the base elements or "atoms" as a foundation
+ * for the CSS code.
+ */
 body {
   font-family: "Gemunu Libre", arial, serif;
   background-color: #030746;
@@ -27,6 +169,11 @@ h1 {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
 
 h2 {
   font-size: 1rem;
@@ -36,6 +183,11 @@ h2 {
   text-align: center;
   margin-top: -0.5rem;
   margin-left: 3rem;
+}
+@media only screen and (min-width: 600px) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 h3 {
@@ -85,6 +237,12 @@ a:hover {
   border-bottom: 1px solid #e43388;
 }
 
+/* ------------------------------------*\
+  #STARS BACKGROUND MOLECULE
+\*------------------------------------ */
+/** 
+ * This section creates the starry background.
+ */
 body {
   background-color: #030746;
   background-image: radial-gradient(#fff, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(#fff, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(#fff, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
@@ -92,6 +250,14 @@ body {
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
+/* -------------------------------------*\
+  #ROCKET SMALL-VIEW BACKGROUND MOLECULE
+\*------------------------------------- */
+/** 
+ * This section inserts the small-view rocket svg into the div holding
+ * the introductory paragraph and HTML and CSS file downloads. It also
+ * positions the rocket to be behind the paragraph.
+ */
 .summary::before {
   content: "";
   background-image: url("images/rocket-grey-red.svg");
@@ -100,25 +266,48 @@ body {
   height: 640px;
   position: absolute;
   left: 50%;
-  z-index: -1;
+  z-index: -1; /* position behind paragraph */
   margin-left: -7.25rem;
   margin-top: -8rem;
   transform: rotate(0.035turn);
+  color: #e43388;
 }
 
+/* ------------------------------------*\
+  #BACKGROUND ORGANISM
+\*------------------------------------ */
+/**
+ * This is the Section for the background imagery of stars and a rocket
+ */
+/* ------------------------------------*\
+  #PLANET SMALL-VIEW PLANET MOLECULE
+\*------------------------------------ */
+/** 
+ * This section inserts the planet into the section HTML tag and positions
+ * the planet behind the title.
+ */
 .intro::before {
   content: "";
   background-image: url("images/blue-planet.svg");
   display: block;
   width: 270px;
   height: 265px;
+  /* insert planet image */
   position: absolute;
   left: 50%;
-  z-index: -1;
-  margin-left: -135px;
-  transform: rotate(0.2turn);
+  /* position */
+  z-index: -1; /* position */
+  margin-left: -135px; /* position */
+  transform: rotate(0.2turn); /* position */
 }
 
+/* ------------------------------------*\
+  #TITLE PLANET MOLECULE
+\*------------------------------------ */
+/** 
+ * This section styles the header size and shapes it into a circle the size
+ * of the planet that the title is in.
+ */
 header {
   border-radius: 50%;
   padding: 6rem 0;
@@ -126,6 +315,13 @@ header {
   margin: 0 auto;
 }
 
+/* ------------------------------------*\
+  #PARAGRAPH PLANET MOLECULE
+\*------------------------------------ */
+/** 
+ * This section styles and positions the paragraph over the rocket in the
+ * header for the small-view.
+ */
 .summary p:first-child {
   font-size: 1.2rem;
   color: #000;
@@ -137,6 +333,13 @@ header {
   transform: rotate(0.035turn);
 }
 
+/* ------------------------------------*\
+  #DOWNLOADS PLANET MOLECULE
+\*------------------------------------ */
+/** 
+ * This section styles and positions the HTML and CSS download links and 
+ * sentence they are contained within.
+ */
 .summary p:last-child {
   font-size: 0.8rem;
   line-height: normal;
@@ -154,6 +357,21 @@ header {
   letter-spacing: 1px;
 }
 
+/* ------------------------------------*\
+  #PLANET ORGANISM
+\*------------------------------------ */
+/**
+ * This is the Section for styling the Header, consisting of the main planet,
+ * the Header's title, the Header's intro paragraph, and the download links
+ * for the site's HTML and CSS code files.
+ */
+/* ------------------------------------*\
+  #BODY'S TEXT MOONS MOLECULES
+\*------------------------------------ */
+/** 
+ * This section styles and positions the titles of sections and the sections
+ * paragraphs and links.
+ */
 .main {
   padding: 1rem;
 }
@@ -188,17 +406,47 @@ header {
   font-size: 1.4rem;
 }
 
+/* ------------------------------------*\
+  #A MOON PATTERN ORGANISM
+\*------------------------------------ */
+/** 
+ * This is the Section for styling the Body's titles and paragraphs.
+ */
+/* ----------------------------------------------*\
+  #MOON SMALL-VIEW  ENLIGHTENMENT MOON MOLECULES
+\*---------------------------------------------- */
+/** 
+ * This section inserts the moon image into the second paragraph within the
+ * section and positions the moon in the middle of that paragraphs on the 
+ * right side and also styles the paragraph to wrap around the moon.
+ */
 .preamble > h3 + p + p::before {
   content: "";
   background-image: url("images/yellow-moon.svg");
   display: block;
-  width: 130px;
+  width: 132px;
   height: 132px;
   float: right;
   shape-outside: url("images/yellow-moon.svg");
-  margin-top: 5.625rem;
+  /* insert moon image to right 
+  & create word wrapping */
+  margin-top: 5.625rem; /* position */
 }
 
+/* ------------------------------------*\
+  #ENLIGHTENMENT MOON ORGANISM
+\*------------------------------------ */
+/**
+ * This is the segment for styling the The Road to Enlightenment section moon.
+ */
+/* ------------------------------------*\
+  #MOON SMALL-VIEW ABOUT MOON MOLECULES
+\*------------------------------------ */
+/** 
+ * This section inserts the moon image into the HTML abbr tag within the
+ * sections first pargraph and positions the moon on the left side between 
+ * the two paragraphs so that both paragraphs wrap around the moon.
+ */
 .explanation [title="HyperText Markup Language"]::before {
   content: "";
   background-image: url("images/red-white-moon.svg");
@@ -208,10 +456,26 @@ header {
   float: left;
   shape-outside: url("images/red-white-moon.svg");
   shape-margin: 10px;
-  margin-right: 0.625rem;
-  margin-top: 7.3rem;
+  /* insert moon image to left & create word wrapping */
+  margin-right: 0.625rem; /* position */
+  margin-top: 7.3rem; /* position */
 }
 
+/* ------------------------------------*\
+  #ABOUT MOON ORGANISM
+\*------------------------------------ */
+/**
+ * This is the segment for styling the So What is This About section moon.
+ */
+/* --------------------------------------------*\
+  #MOON SMALL-VIEW PARTICIPATION MOON MOLECULES
+\*-------------------------------------------- */
+/** 
+ * This section inserts the astronaut image into the HTML abbr within the 
+ * second paragraph of the section and positions the astronaut in the middle 
+ * of that paragraph on the right side and also styles the paragraph to wrap 
+ * around the astronaut for the small-view.
+ */
 .participation [title="HyperText Markup Language"]::before {
   content: "";
   background-image: url("images/astronaut.svg");
@@ -221,9 +485,26 @@ header {
   float: right;
   shape-outside: url("images/astronaut.svg");
   shape-margin: 10px;
-  margin-top: 2.75rem;
+  /* insert astronaut image to 
+  right & create word wrapping */
+  margin-top: 2.75rem; /* position */
 }
 
+/* ------------------------------------*\
+  #PARTICIPATION MOON ORGANISM
+\*------------------------------------ */
+/**
+ * This is the segment for styling the Participation section astronaut.
+ */
+/* ---------------------------------------*\
+  #MOON SMALL-VIEW BENEFITS MOON MOLECULES
+\*--------------------------------------- */
+/** 
+ * This section inserts the moon image into the CSS abbr tag within the
+ * sections only paragraph and positions the moon in the middle of the 
+ * paragraphs on the left side and also styles the paragraph to wrap around
+ * the moon.
+ */
 .benefits [title="Cascading Style Sheets"]::before {
   content: "";
   background-image: url("images/white-moon.svg");
@@ -233,10 +514,25 @@ header {
   float: left;
   shape-outside: url("images/white-moon.svg");
   shape-margin: 10px;
-  margin-right: 0.625rem;
-  margin-top: 3rem;
+  /* insert moon image to left & create word wrapping */
+  margin-right: 0.625rem; /* position */
+  margin-top: 3rem; /* position */
 }
 
+/* ------------------------------------*\
+  #BENEFITS MOON ORGANISM
+\*------------------------------------ */
+/**
+ * This is the segment for styling the Benefits section moon.
+ */
+/* -------------------------------------------*\
+  #MOON SMALL-VIEW REQUIREMENTS MOON MOLECULES
+\*------------------------------------------- */
+/** 
+ * This section inserts the moon image into the CSS abbr tag within the
+ * sections second pargraph and positions the moon on the right side towards 
+ * the bottom of that paragraph while wrapping the paragraph around the moon.
+ */
 .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
   content: "";
   background-image: url("images/orange-moon.svg");
@@ -246,9 +542,23 @@ header {
   float: right;
   shape-outside: url("images/orange-moon.svg");
   shape-margin: 10px;
-  margin-top: 27.75rem;
+  /* insert moon image to right & create word wrapping */
+  margin-top: 27.75rem; /* position */
 }
 
+/* ------------------------------------*\
+  #REQUIREMENTS MOON ORGANISM
+\*------------------------------------ */
+/**
+ * This is the segment for styling the Requirements section moon.
+ */
+/* ------------------------------------*\
+  #DESIGNS ASIDE FOOTER MOLECULE
+\*------------------------------------ */
+/** 
+ * This section styles the designs aside and inserts planet icons next to 
+ * each design example.
+ */
 .select {
   color: #48a9a6;
 }
@@ -291,6 +601,13 @@ header {
   margin-left: 1rem;
 }
 
+/* ------------------------------------*\
+  #ARCHIVES ASIDE FOOTER MOLECULE
+\*------------------------------------ */
+/** 
+ * This section styles the archives aside and inserts planet icons next to 
+ * each archive entry.
+ */
 .archives {
   color: #b79ed1;
 }
@@ -314,6 +631,13 @@ header {
   left: 15px;
 }
 
+/* ------------------------------------*\
+  #RESOURCES ASIDE FOOTER MOLECULE
+\*------------------------------------ */
+/** 
+ * This section styles the resources aside and inserts planet icons next to 
+ * each resource listed.
+ */
 .resources {
   color: #e43388;
 }
@@ -338,35 +662,44 @@ header {
   transform: rotate(-30deg);
 }
 
+/* ------------------------------------*\
+  #FOOTER LINKS FOOTER MOLECULE
+\*------------------------------------ */
+/** 
+ * This section places the footer below the aside aside and styles the footer
+ * and creates the layout for the links in the footer.
+ */
 .page-wrapper {
-  position: relative;
+  position: relative; /* place footer at bottom */
 }
 
 footer {
   border-top: 3px solid #ff0;
   border-bottom: 3px solid #ff0;
   padding: 0.5rem 0;
+  /* put lines above & below links */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   column-gap: 0.75rem;
+  /* layout */
   position: absolute;
   bottom: 0;
-  width: 100%;
-  margin-left: -1rem;
+  /* place footer at bottom */
+  width: 100%; /* layout */
+  margin-left: -1rem; /* layout */
 }
 
 .zen-resources {
-  padding-bottom: 3rem;
+  padding-bottom: 3rem; /* layout */
 }
 
-@media only screen and (min-width: 600px) {
-  h1 {
-    font-size: 6rem;
-  }
-  h2 {
-    font-size: 3rem;
-  }
-}
+/* ------------------------------------*\
+  #FOOTER ORGANISM
+\*------------------------------------ */
+/**
+ * This is the Section for styling the Select a Design, Archives and Resources
+ * sections of the Aside placed in the Footer as well as the Footer links
+ */
 
 /*# sourceMappingURL=style.css.map */

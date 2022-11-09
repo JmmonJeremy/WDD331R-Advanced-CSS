@@ -1,0 +1,31 @@
+/* ------------------------------------*\
+  #RESOURCES ASIDE FOOTER MOLECULE
+\*------------------------------------ */
+
+/** 
+ * This section styles the resources aside and inserts planet icons next to 
+ * each resource listed.
+ */
+@use "../../../base-units/variables" as *;
+@use "../../../base-units/mixins";
+
+.resources {
+  color: $accent1;
+}
+
+.zen-resources {
+  padding-left: 1rem;
+
+  & ul li {
+    padding-left: 50px;
+    position: relative;
+  
+    &::before {
+      @include mixins.insert-image("images/green-planet.svg", inline-block,
+      contain, 25px, 20px);
+      @include mixins.absolute($top: 0, $left: 15px);
+      
+      transform: rotate(-30deg);
+    }
+  }
+}

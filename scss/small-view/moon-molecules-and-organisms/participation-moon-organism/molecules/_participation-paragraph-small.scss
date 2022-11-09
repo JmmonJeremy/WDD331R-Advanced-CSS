@@ -1,9 +1,0 @@
-@use "../../../../atomic-basics/variables" as *;
-@use "../../../../atomic-basics/atoms";
-
-.participation [title="HyperText Markup Language"]::before {
-  @include atoms.insert-image("images/astronaut.svg", $float: right,
-  $width: 122px, $height: 130px, $margin: 10px);
-
-  margin-top: 2.75rem;
-}

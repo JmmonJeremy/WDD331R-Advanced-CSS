@@ -1,0 +1,17 @@
+/* ------------------------------------*\
+  #TITLE PLANET MOLECULE
+\*------------------------------------ */
+
+/** 
+ * This section styles the header size and shapes it into a circle the size
+ * of the planet that the title is in.
+ */
+@use "../../../base-units/variables" as *;
+@use "../../../base-units/mixins";
+
+header {
+  border-radius: 50%;
+  padding: 6rem 0;
+  width: 267px;
+  margin: 0 auto;
+}
