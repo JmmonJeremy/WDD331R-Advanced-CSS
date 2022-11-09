@@ -108,6 +108,9 @@ $height: $width, $float: no, $shape: no, $margin: no) {
 
 // #6 inserting a breakpoint mixin
 @mixin breakpoint($break) {
+  @if $break == small {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
   @if $break == large {
     @media only screen and (min-width: $break-large) { @content; }
   }
