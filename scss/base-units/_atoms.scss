@@ -39,6 +39,11 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  @include mixins.breakpoint(large) {
+    & {
+      font-size: 6rem;
+    }
+  }
 }
 
 h2 {
@@ -48,6 +53,11 @@ h2 {
   text-align: center;
   margin-top: -.5rem;
   margin-left: 3rem;
+  @include mixins.breakpoint(large) {
+    & {
+      font-size: 3rem;
+    }
+  }
 }
 
 h3 {

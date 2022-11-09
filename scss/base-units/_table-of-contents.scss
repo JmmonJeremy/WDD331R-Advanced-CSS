@@ -14,7 +14,7 @@
  * Sass Compiler........CSS Map(style.css.map).
  * GitHub Files.........README.md(project summary) and gitignore(local files).
  * Stylelint............Dependencies(package.json).
- * NPM Packages.........Node Modules(package-lock.json).
+ * NPM Packages.........Version Unification(package-lock.json).
  *
  * VS CODE
  * Stylelint............Project rules for SCSS and CSS linting.
@@ -23,29 +23,32 @@
  * Vector Images........SVG images inserted into HTML through CSS.
  *
  * NODE MODULES
- * NPM Packages.........NPM node modules needed for project tools.
+ * NPM Packages.........Tool libraries needed for project tools.
  *
  * SCSS
  * Sass File............(style.scss) Main Sass file to compile CSS file.
  *
  * BASE UNITS
+ * Table of Contents....(_table-of-contents) Project directory.
  * CSS Reset............(_css-reset.scss) Set same baseline for all browsers.
  * Variables............(_variables.scss) Sass variables.
  * Atoms................(_atoms.scss) Basic units from atomic design.
  * Mixins...............(_mixins.scss) Useful mixins to consolidate code.
  *
- * SMALL VIEW
+ * SMALL LARGE VIEWS
  * BACKGROUND ORGANISM
  * Sass Subfiles...........(_background.scss) Background molecules combined.
  * BACKGROUND MOLECULES
- * Rocket...............(_background-rocket.scss) Webpage's rocket.
- * Stars................(_background-stars.scss) Webpage's stars.
+ * Rocket...............(_background-rocket-small.scss) Webpage's rocket for 
+ * .....................small-view.
+ * Stars................(_background-stars.scss) Webpage's background stars.
  *
  * PLANET ORGANISM
  * Sass Subfiles...........(_planet.scss) Planet molecules combined.
  * PLANET MOLECULES
- * Planet...............(_planet-image.scss) Header's planet.
- * Title................(_planet-image.scss) Header's title.
+ * Planet...............(_planet-image-small.scss) Header's planet for small
+ * .....................-view.
+ * Title................(_planet-header.scss) Header's title.
  * Paragraph............(_planet-paragraph.scss) Header's introduction.
  * Downloads............(_planet-link.scss) HTML & CSS download files.
  * 
@@ -57,28 +60,28 @@
  * ENLIGHTENMENT MOON ORGANISM
  * Sass Subfiles...........(_enlightenment-moon.scss) Moon molecules combined.
  * ENLIGHTENMENT MOON MOLECULES
- * Enligntenment Moon...(_moons-enlightenment-image.scss) "The Road to
+ * Enligntenment Moon...(_enlightenment-moon-image-small.scss) "The Road to
  *......................Enlightenment" section's yellow-moon.svg image.
  * ABOUT MOON ORGANISM
  * Sass Subfiles...........(_about-moon.scss) Moon molecules combined.
  * ABOUT MOON MOLECULES
- * About Moon...........(_moons-about-image.scss) "So What is This About?"
- *......................section's red-white-moon.svg image.
+ * About Moon...........(_about-moon-image-small.scss) "So What is This About?"
+ *......................section's red-white-moon.svg image in small-view.
  * PARTICIPATION MOON ORGANISM
  * Sass Subfiles...........(_participation-moon.scss) Moon molecules combined.
  * PARTICIPATION MOON MOLECULES
- * Participation Moon...(_moons-participation-image.scss) "Participation"
- *......................section's astronaut.svg image.
+ * Participation Moon...(_participation-moon-image-small.scss) "Participation"
+ *......................section's astronaut.svg image in small-view.
  * BENEFITS MOON ORGANISM
  * Sass Subfiles...........(_benefits-moon.scss) Moon molecules combined.
  * BENEFITS MOON MOLECULES
- * Benefits Moon........(_moons-benefits-image.scss) "Benefits"
- *......................section's white-moon.svg image.
+ * Benefits Moon........(_benefits-moon-image-small.scss) "Benefits" section's
+ *......................white-moon.svg image in small-view.
  * REQUIREMENTS MOON ORGANISM
  * Sass Subfiles...........(_requirements-moon.scss) Moon molecules combined.
  * REQUIREMENTS MOON MOLECULES
- * Requirements Moon....(_moons-requirements-image.scss) "Requirements"
- *......................section's orange-moon.svg image.
+ * Requirements Moon....(_requirements-moon-image-small.scss) "Requirements"
+ *......................section's orange-moon.svg image in small-view.
  *
  * FOOTER ORGANISM
  * Sass Subfiles...........(_footer.scss) Planet molecules combined.
