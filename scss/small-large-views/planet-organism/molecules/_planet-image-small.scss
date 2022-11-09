@@ -1,13 +1,20 @@
-// as * puts all the variables in the global namespace.
+/* ------------------------------------*\
+  #PLANET PLANET MOLECULE
+\*------------------------------------ */
+
+/** 
+ * This section inserts the planet into the section HTML tag and positions
+ * the planet behind the title.
+ */
 @use "../../../base-units/variables" as *;
 @use "../../../base-units/mixins";
 
 .intro::before {
   @include mixins.insert-image("images/blue-planet.svg", $width: 270px,
-  $height: 265px);
-  @include mixins.absolute($left: 50%);
+  $height: 265px); /* insert planet image */
+  @include mixins.absolute($left: 50%); /* position */
 
-  z-index: -1;
-  margin-left: -135px;
-  transform: rotate(0.2turn);
+  z-index: -1; /* position */
+  margin-left: -135px; /* position */
+  transform: rotate(0.2turn); /* position */
 }

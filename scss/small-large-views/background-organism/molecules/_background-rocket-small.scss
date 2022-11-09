@@ -1,3 +1,12 @@
+/* ------------------------------------*\
+  #SMALL-VIEW ROCKET BACKGROUND MOLECULE
+\*------------------------------------ */
+
+/** 
+ * This section inserts the small-view rocket svg into the div holding
+ * the introductory paragraph and HTML and CSS file downloads. It also
+ * positions the rocket to be behind the paragraph.
+ */
 @use "../../../base-units/variables" as *;
 @use "../../../base-units/mixins";
 
@@ -6,7 +15,7 @@
   $height: 640px);
   @include mixins.absolute($left: 50%);
 
-  z-index: -1;
+  z-index: -1; /* position behind paragraph */
   margin-left: -7.25rem;
   margin-top: -8rem;
   transform: rotate(.035turn);

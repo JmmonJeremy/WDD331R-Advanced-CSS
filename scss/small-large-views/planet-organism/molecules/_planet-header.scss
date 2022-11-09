@@ -1,4 +1,11 @@
-// as * puts all the variables in the global namespace.
+/* ------------------------------------*\
+  #TITLE PLANET MOLECULE
+\*------------------------------------ */
+
+/** 
+ * This section styles the header size and shapes it into a circle the size
+ * of the planet that the title is in.
+ */
 @use "../../../base-units/variables" as *;
 @use "../../../base-units/mixins";
 
