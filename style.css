@@ -73,6 +73,7 @@
  *
  * MOONS MOLECULES
  * Body's Text..........(_moons-text.scss) Body's titles and paragraphs.
+ * Text Large-View......(_moons-text-larg.scss) Body's paragraphs.
  *_____________________________________________________________________________
  *
  * ENLIGHTENMENT MOON ORGANISM
@@ -404,6 +405,19 @@ header {
 
 .main a {
   font-size: 1.4rem;
+}
+
+/* --------------------------------------*\
+  #BODY'S TEXT LARGE-VIEW MOONS MOLECULES
+\*-------------------------------------- */
+/** 
+ * This section controls the appearance of the paragraphs.
+ */
+@media only screen and (min-width: 600px) {
+  .preamble p,
+.main p {
+    display: none; /* conceals the sections paragraphs */
+  }
 }
 
 /* ------------------------------------*\
