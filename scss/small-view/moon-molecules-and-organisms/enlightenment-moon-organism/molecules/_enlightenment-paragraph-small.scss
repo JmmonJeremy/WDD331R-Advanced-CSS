@@ -2,8 +2,8 @@
 @use "../../../../base-units/mixins";
 
 .preamble > h3 + p + p::before {
-  @include mixins.insert-image("images/yellow-moon.svg", $width: 120px,
-  $height: 122px, $float: right, $shape: yes);
+  @include mixins.insert-image("images/yellow-moon.svg", $width: 132px,
+  $height: 132px, $float: right, $shape: yes);
 
   margin-top: 5.625rem;
 }
