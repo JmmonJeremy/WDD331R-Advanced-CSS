@@ -4,7 +4,7 @@
 
 /** 
  * This section styles and positions the paragraph over the rocket in the
- * header for the small-view.
+ * header for the small-view and over the planet in the large-view.
  */
 @use "../../../base-units/variables" as *;
 @use "../../../base-units/mixins";
@@ -13,8 +13,16 @@
   @include mixins.font(1.2rem, $color: $text-darkest, $height: normal);
 
   margin: 1.7rem auto 0;
-  padding-left: 5rem;
-  text-align: center;
   width: 8rem;
   transform: rotate(.035turn);
+  text-align: center;
+  padding-left: 5rem;
+  @include mixins.breakpoint(large) {
+    & {
+      width: 24rem; /* set width of paragraph */
+      padding: 1.5rem 1rem 0 0;
+      color: $text-light;
+      text-align: right;
+    }
+  }
 }
