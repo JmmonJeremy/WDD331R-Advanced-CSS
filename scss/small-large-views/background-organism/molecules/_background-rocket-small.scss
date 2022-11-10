@@ -11,6 +11,7 @@
 @use "../../../base-units/mixins";
 
 .summary::before {
+  
   @include mixins.insert-image("images/rocket-grey-red.svg", $width: 270px,
   $height: 640px);
   @include mixins.absolute($left: 50%);
