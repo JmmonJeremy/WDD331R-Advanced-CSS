@@ -11,13 +11,17 @@
 @use "../../../base-units/mixins";
 
 .summary::before {
-  @include mixins.insert-image("images/rocket-grey-red.svg", $width: 270px,
-  $height: 640px);
-  @include mixins.absolute($left: 50%);
+  @include mixins.breakpoint(small) { /* keep this in small-view */
+    & {
+      @include mixins.insert-image("images/rocket-grey-red.svg", $width: 270px,
+      $height: 640px);
+      @include mixins.absolute($left: 50%);
 
-  z-index: -1; /* position behind paragraph */
-  margin-left: -7.25rem;
-  margin-top: -8rem;
-  transform: rotate(.035turn);
-  color: $accent1;
+      z-index: -1; /* position behind paragraph */
+      margin-left: -7.25rem;
+      margin-top: -8rem;
+      transform: rotate(.035turn);
+      color: $accent1;
+    }
+  }
 }

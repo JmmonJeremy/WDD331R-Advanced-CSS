@@ -51,6 +51,8 @@
  * BACKGROUND MOLECULES
  * Rocket Small-View....(_background-rocket-small.scss) Webpage's rocket for 
  * .....................small-view.
+ * Rocket Large-View....(_background-rocket-large.scss) Webpage's rocket for 
+ * .....................large-view.
  * Stars................(_background-stars.scss) Webpage's background stars.
  *_____________________________________________________________________________
  *
@@ -261,19 +263,49 @@ body {
  * the introductory paragraph and HTML and CSS file downloads. It also
  * positions the rocket to be behind the paragraph.
  */
-.summary::before {
-  content: "";
-  background-image: url("images/rocket-grey-red.svg");
-  display: block;
-  width: 270px;
-  height: 640px;
-  position: absolute;
-  left: 50%;
-  z-index: -1; /* position behind paragraph */
-  margin-left: -7.25rem;
-  margin-top: -8rem;
-  transform: rotate(0.035turn);
-  color: #e43388;
+@media only screen and (max-width: 600px) {
+  .summary::before { /* keep this in small-view */ }
+  .summary::before {
+    content: "";
+    background-image: url("images/rocket-grey-red.svg");
+    display: block;
+    width: 270px;
+    height: 640px;
+    position: absolute;
+    left: 50%;
+    z-index: -1; /* position behind paragraph */
+    margin-left: -7.25rem;
+    margin-top: -8rem;
+    transform: rotate(0.035turn);
+    color: #e43388;
+  }
+}
+
+/* -------------------------------------*\
+  #ROCKET LARGE-VIEW BACKGROUND MOLECULE
+\*------------------------------------- */
+/** 
+ * This section inserts the small-view rocket svg to the left of the large,
+ * main, central planet using the section tag that holds the title and opening
+ * paragraphs and Enlightenment section.
+ */
+@media only screen and (min-width: 600px) {
+  .intro::after { /* keep this in large-view */ }
+  .intro::after {
+    content: "";
+    background-image: url("images/rocket-animated.svg");
+    display: block;
+    width: 120px;
+    height: 150px;
+    /* insert rocket image */
+    position: absolute;
+    top: 38rem;
+    left: 50%;
+    /* position */
+    overflow: visible;
+    margin-left: -500px; /* position */
+    transform: rotate(-25deg);
+  }
 }
 
 /* ------------------------------------*\
