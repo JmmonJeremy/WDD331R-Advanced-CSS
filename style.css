@@ -60,6 +60,8 @@
  * PLANET MOLECULES
  * Planet Small-View....(_planet-image-small.scss) Header's planet for small
  * .....................-view.
+ * Planet Large-View....(_planet-image-large.scss) Header's and main central 
+ * .....................planet in large-view.
  * Title................(_planet-header.scss) Header's title.
  * Paragraph............(_planet-paragraph.scss) Header's introduction.
  * Downloads............(_planet-link.scss) HTML & CSS download files.
@@ -284,22 +286,51 @@ body {
   #PLANET SMALL-VIEW PLANET MOLECULE
 \*------------------------------------ */
 /** 
- * This section inserts the planet into the section HTML tag and positions
- * the planet behind the title.
+ * This section inserts the planet into the section tag that holds the header 
+ * and opening paragraph and then positions the planet behind the title.
  */
-.intro::before {
-  content: "";
-  background-image: url("images/blue-planet.svg");
-  display: block;
-  width: 270px;
-  height: 265px;
-  /* insert planet image */
-  position: absolute;
-  left: 50%;
-  /* position */
-  z-index: -1; /* position */
-  margin-left: -135px; /* position */
-  transform: rotate(0.2turn); /* position */
+@media only screen and (max-width: 600px) {
+  .intro::before { /* keep this in small-view */ }
+  .intro::before {
+    content: "";
+    background-image: url("images/blue-planet.svg");
+    display: block;
+    width: 270px;
+    height: 265px;
+    /* insert planet image */
+    position: absolute;
+    left: 50%;
+    /* position */
+    z-index: -1; /* position */
+    margin-left: -135px; /* position */
+    transform: rotate(0.2turn); /* position */
+  }
+}
+
+/* ------------------------------------*\
+  #PLANET LARGE-VIEW PLANET MOLECULE
+\*------------------------------------ */
+/** 
+ * This section inserts the planet into the section tag that holds the title 
+ * and opening paragraphs and then positions the planet behind them and puts
+ * the planet into the center of the large screen view.
+ */
+@media only screen and (min-width: 600px) {
+  .intro::before { /* keep this in large-view */ }
+  .intro::before {
+    content: "";
+    background-image: url("images/mars.svg");
+    display: block;
+    width: 600px;
+    height: 595px;
+    /* insert planet image */
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    /* position */
+    z-index: -1; /* position */
+    margin-left: -300px; /* position */
+  }
 }
 
 /* ------------------------------------*\
