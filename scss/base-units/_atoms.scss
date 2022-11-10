@@ -15,6 +15,7 @@
 body {
   font-family: $fonts-body;
   background-color: $background-color;
+  margin: .5rem;
 }
 
 h1,
@@ -35,6 +36,7 @@ h1 {
   /*** Use the text as a mask for the background.
   // This will show the gradient as a text color rather than element bg. ***/
   background-clip: text;
+  -webkit-block-start: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -47,15 +49,15 @@ h1 {
 }
 
 h2 {
-  @include mixins.font(1rem, $spacing: 1px, $color: $text-light,
-  $style: italic);
+  @include mixins.font(1rem, bold, 1px, $text-light, italic);
 
   text-align: center;
   margin-top: -.5rem;
-  margin-left: 3rem;
+  margin-left: 4.5rem;
   @include mixins.breakpoint(large) {
     & {
       font-size: 3rem;
+      margin-left: 7rem;
     }
   }
 }
@@ -63,7 +65,7 @@ h2 {
 h3 {
   @include mixins.font(2.25rem, 200, 1px,);
 
-  padding: .5rem 0 .25rem;
+  padding: .5rem 0 .3rem;
 }
 
 // for styleguide

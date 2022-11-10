@@ -15,7 +15,7 @@
     & {
       @include mixins.insert-image("images/mars.svg", $width: 600px,
       $height: 595px); /* insert planet image */
-      @include mixins.absolute($left: 50%, $top: 12rem); /* position */
+      @include mixins.absolute($left: 50%); /* position */
     
       z-index: -1; /* position */
       margin-left: -300px; /* position */
