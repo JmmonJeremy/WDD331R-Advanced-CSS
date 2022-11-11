@@ -15,7 +15,7 @@
     & {
       @include mixins.insert-image("images/rocket-animated.svg", 
       $width: 120px, $height: 150px); /* insert rocket image */
-      @include mixins.absolute($left: 50%, $top: 38rem); /* position */
+      @include mixins.absolute($left: 50%, $top: 26rem); /* position */
     
       overflow: visible;
       margin-left: -500px; /* position */

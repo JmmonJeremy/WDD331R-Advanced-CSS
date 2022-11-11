@@ -12,7 +12,7 @@
 .summary p:first-child {
   @include mixins.font(1.2rem, $color: $text-darkest, $height: normal);
 
-  margin: 1rem auto 0;
+  margin: 1.7rem auto 0;
   padding-left: 5rem;
   text-align: center;
   width: 8rem;
