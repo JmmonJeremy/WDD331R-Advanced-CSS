@@ -570,10 +570,21 @@ header {
   line-height: normal;
   font-weight: 900;
   margin-top: 17.5rem;
-  margin-bottom: -1.5rem;
   color: #fff;
   padding: 0 1rem;
-  width: 9rem;
+}
+@media only screen and (max-width: 600px) {
+  .summary p:last-child {
+    width: 9rem;
+    margin-bottom: -1.5rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .summary p:last-child {
+    color: #fff;
+    text-align: center;
+    margin-top: 3rem;
+  }
 }
 .summary p:last-child a {
   font-size: 0.8rem;
@@ -669,6 +680,18 @@ header {
   /* insert moon image to right 
   & create word wrapping */
   margin-top: 5.625rem; /* position */
+}
+
+/* ----------------------------------------------*\
+  #MOON SMALL-VIEW  ENLIGHTENMENT MOON MOLECULES
+\*---------------------------------------------- */
+/** 
+ * This section inserts the moon image around the planet on the left side.
+ */
+@media only screen and (min-width: 600px) {
+  .preamble {
+    margin-top: 10rem;
+  }
 }
 
 /* ------------------------------------*\

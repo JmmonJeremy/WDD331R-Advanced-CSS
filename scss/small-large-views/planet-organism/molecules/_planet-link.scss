@@ -14,10 +14,21 @@
   
   font-weight: 900;
   margin-top: 17.5rem;
-  margin-bottom: -1.5rem;
   color: $text-light;
   padding: 0 1rem;
-  width: 9rem;
+  @include mixins.breakpoint(small) {
+    & {
+      width: 9rem;      
+      margin-bottom: -1.5rem;
+    }
+  }
+  @include mixins.breakpoint(large) {
+    & {
+      color: $text-light;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  }
 
   & a {
     @include mixins.font(.8rem, $height: normal);

@@ -1,0 +1,18 @@
+/* ----------------------------------------------*\
+  #MOON SMALL-VIEW  ENLIGHTENMENT MOON MOLECULES
+\*---------------------------------------------- */
+
+/** 
+ * This section inserts the moon image around the planet on the left side.
+ */
+@use "../../../../base-units/variables" as *;
+@use "../../../../base-units/mixins";
+
+// Added temporarily to place the link and have the headers out of the view
+.preamble {
+  @include mixins.breakpoint(large) {
+    & {
+      margin-top: 10rem;
+    }
+  }
+}
