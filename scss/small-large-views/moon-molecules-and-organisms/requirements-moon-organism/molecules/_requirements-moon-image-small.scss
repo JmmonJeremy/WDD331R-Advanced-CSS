@@ -11,8 +11,10 @@
 @use "../../../../base-units/mixins";
 
 .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
-  @include mixins.insert-image("images/orange-moon.svg", $margin: 10px, 
-  $float: right); /* insert moon image to right & create word wrapping */
+  @include mixins.breakpoint(small) {
+    @include mixins.insert-image("images/orange-moon.svg", $margin: 10px, 
+    $float: right); /* insert moon image to right & create word wrapping */
 
-  margin-top: 27.75rem; /* position */
+    margin-top: 27.75rem; /* position */
+  }
 }

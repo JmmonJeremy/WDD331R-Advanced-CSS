@@ -3,16 +3,51 @@
 \*-------------------------------------- */
 
 /** 
- * This section controls the appearance of the paragraphs.
+ * This section controls the appearance of the paragraphs and their titles.
  */
 @use "../../../../base-units/variables" as *;
 @use "../../../../base-units/mixins";
 
-.preamble p,
-.main p {
+// Added temporarily to place the link and have the headers out of the view
+.main {
   @include mixins.breakpoint(large) {
     & {
+      margin-top: 10rem;
+    }
+  }
+}
+
+// Hides the paragraphs
+.preamble,
+.main {
+  @include mixins.breakpoint(large) {
+    & p {
       display: none; /* conceals the sections paragraphs */
+    }
+
+    & h3 {
+      font-size: 130%;
+      text-align: center;
+      color: #000;
+    }
+  }
+}
+
+// Styles the Enlightenment section title
+.preamble h3 {
+  @include mixins.breakpoint(large) {
+    & {
+      padding: 35% 15% 25% 7%;
+    }
+  }
+}
+
+// Styles the Requirement section title
+.requirements h3 {
+  @include mixins.breakpoint(large) {
+    & {
+      padding-top: 40%;
+      text-shadow: 1px 1px 10px  #fefca6, -1px -1px 10px #fefca6;
     }
   }
 }

@@ -17,9 +17,9 @@
       $width: 120px, $height: 150px); /* insert rocket image */
       @include mixins.absolute($left: 50%, $top: 26rem); /* position */
     
-      overflow: visible;
-      margin-left: -500px; /* position */
-      transform: rotate(-25deg);
+     
+      margin-left: -400px; /* position horizontally from center of screen */
+      transform: rotate(-35deg);
     }
   }
 }

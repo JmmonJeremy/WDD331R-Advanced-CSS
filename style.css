@@ -118,6 +118,8 @@
  * REQUIREMENTS MOON MOLECULES
  * Moon Small-View......(_requirements-moon-image-small.scss) "Requirements"
  *......................section's orange-moon.svg image in small-view.
+ * Moon Large-View......(_requirements-moon-image-large.scss "Requirements"
+ *......................section's orange-moon.svg image in large-view.
  *_____________________________________________________________________________
  *
  * FOOTER ORGANISM
@@ -447,9 +449,8 @@ body {
     top: 26rem;
     left: 50%;
     /* position */
-    overflow: visible;
-    margin-left: -500px; /* position */
-    transform: rotate(-25deg);
+    margin-left: -400px; /* position horizontally from center of screen */
+    transform: rotate(-35deg);
   }
 }
 
@@ -646,12 +647,37 @@ header {
   #BODY'S TEXT LARGE-VIEW MOONS MOLECULES
 \*-------------------------------------- */
 /** 
- * This section controls the appearance of the paragraphs.
+ * This section controls the appearance of the paragraphs and their titles.
  */
+@media only screen and (min-width: 600px) {
+  .main {
+    margin-top: 10rem;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .preamble p,
 .main p {
     display: none; /* conceals the sections paragraphs */
+  }
+  .preamble h3,
+.main h3 {
+    font-size: 130%;
+    text-align: center;
+    color: #000;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .preamble h3 {
+    padding: 35% 15% 25% 7%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .requirements h3 {
+    padding-top: 40%;
+    text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
   }
 }
 
@@ -689,8 +715,16 @@ header {
  * This section inserts the moon image around the planet on the left side.
  */
 @media only screen and (min-width: 600px) {
+  .preamble { /* keep this in large-view */ }
   .preamble {
-    margin-top: 10rem;
+    content: "";
+    background-image: url("images/yellow-moon.svg");
+    display: block;
+    width: 150px;
+    height: 152px;
+    position: absolute;
+    top: 19%;
+    left: 5%;
   }
 }
 
@@ -794,17 +828,46 @@ header {
  * sections second pargraph and positions the moon on the right side towards 
  * the bottom of that paragraph while wrapping the paragraph around the moon.
  */
-.requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
-  content: "";
-  background-image: url("images/orange-moon.svg");
-  display: block;
-  width: 122px;
-  height: 122px;
-  float: right;
-  shape-outside: url("images/orange-moon.svg");
-  shape-margin: 10px;
-  /* insert moon image to right & create word wrapping */
-  margin-top: 27.75rem; /* position */
+@media only screen and (max-width: 600px) {
+  .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
+    content: "";
+    background-image: url("images/orange-moon.svg");
+    display: block;
+    width: 122px;
+    height: 122px;
+    float: right;
+    shape-outside: url("images/orange-moon.svg");
+    shape-margin: 10px;
+    /* insert moon image to right & create word wrapping */
+    margin-top: 27.75rem; /* position */
+  }
+}
+
+/* -------------------------------------------*\
+  #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
+\*------------------------------------------- */
+/** 
+ * This section styles the requirement moon orbiting
+ * the center planet in large-view.
+ */
+@media only screen and (min-width: 600px) {
+  .requirements { /* keep this in large-view */ }
+  .requirements {
+    content: "";
+    background-image: url("images/orange-moon.svg");
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+  }
+  .requirements h3 {
+    font-size: 130%;
+    text-align: center;
+    padding-top: 40%;
+    color: #000;
+  }
 }
 
 /* ------------------------------------*\
