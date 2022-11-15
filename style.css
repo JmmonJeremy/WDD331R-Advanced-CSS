@@ -691,8 +691,16 @@ header {
  * This section inserts the moon image around the planet on the left side.
  */
 @media only screen and (min-width: 600px) {
+  .preamble { /* keep this in large-view */ }
   .preamble {
-    margin-top: 10rem;
+    content: "";
+    background-image: url("images/yellow-moon.svg");
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 20%;
+    left: 5%;
   }
 }
 
@@ -819,18 +827,16 @@ header {
  * the center planet in large-view.
  */
 @media only screen and (min-width: 600px) {
-  .requirements::before { /* keep this in large-view */ }
-  .requirements::before {
+  .requirements { /* keep this in large-view */ }
+  .requirements {
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
     width: 150px;
     height: 150px;
     position: absolute;
-    top: -15%;
-    left: 85%;
-    z-index: -1;
-    margin-left: -75px;
+    top: 20%;
+    right: 5%;
   }
 }
 
