@@ -449,9 +449,8 @@ body {
     top: 26rem;
     left: 50%;
     /* position */
-    overflow: visible;
-    margin-left: -500px; /* position */
-    transform: rotate(-25deg);
+    margin-left: -400px; /* position horizontally from center of screen */
+    transform: rotate(-35deg);
   }
 }
 
@@ -648,12 +647,37 @@ header {
   #BODY'S TEXT LARGE-VIEW MOONS MOLECULES
 \*-------------------------------------- */
 /** 
- * This section controls the appearance of the paragraphs.
+ * This section controls the appearance of the paragraphs and their titles.
  */
+@media only screen and (min-width: 600px) {
+  .main {
+    margin-top: 10rem;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .preamble p,
 .main p {
     display: none; /* conceals the sections paragraphs */
+  }
+  .preamble h3,
+.main h3 {
+    font-size: 130%;
+    text-align: center;
+    color: #000;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .preamble h3 {
+    padding: 35% 15% 25% 7%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .requirements h3 {
+    padding-top: 40%;
+    text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
   }
 }
 
@@ -697,16 +721,10 @@ header {
     background-image: url("images/yellow-moon.svg");
     display: block;
     width: 150px;
-    height: 150px;
+    height: 152px;
     position: absolute;
-    top: 20%;
+    top: 19%;
     left: 5%;
-  }
-  .preamble h3 {
-    font-size: 130%;
-    text-align: center;
-    padding: 35% 15% 25% 10%;
-    color: #000;
   }
 }
 

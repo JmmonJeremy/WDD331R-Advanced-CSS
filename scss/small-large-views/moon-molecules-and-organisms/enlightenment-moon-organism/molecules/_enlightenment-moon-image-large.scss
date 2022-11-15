@@ -11,15 +11,9 @@
 .preamble {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     & {
-      @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,);
-      @include mixins.absolute($left: 5%, $top: 20%);
-    }
-
-    h3 {
-      font-size: 130%;
-      text-align: center;
-      padding: 35% 15% 25% 10%;
-      color: #000;
+      @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,
+      $height: 152px);
+      @include mixins.absolute($left: 5%, $top: 19%);
     }
   }
 }
