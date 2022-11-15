@@ -1,5 +1,5 @@
 {
-    "liveServer.settings.port": 5503,
+    "liveServer.settings.port": 5504,
     "stylelint.validate": ["css", "scss"],
     "stylelint.config": {
         "extends": [

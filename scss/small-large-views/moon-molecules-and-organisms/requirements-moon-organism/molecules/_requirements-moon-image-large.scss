@@ -17,7 +17,7 @@
         $width: 150px,
         $height: 150px
       );
-      @include mixins.absolute($left: 85%, $top: -25%);
+      @include mixins.absolute($left: 85%, $top: -15%);
 
       z-index: -1;
       margin-left: -75px;
