@@ -14,6 +14,15 @@
       @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,);
       @include mixins.absolute($left: 5%, $top: 20%);
     }
+    h3 {
+      font-size: 125%;
+      text-align: center;
+      padding-top: 35%;
+      padding-bottom: 25%;
+      padding-left: 10%;
+      padding-right: 15%;
+      color: black;
+    }
   }
 }
 

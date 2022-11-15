@@ -702,6 +702,15 @@ header {
     top: 20%;
     left: 5%;
   }
+  .preamble h3 {
+    font-size: 125%;
+    text-align: center;
+    padding-top: 35%;
+    padding-bottom: 25%;
+    padding-left: 10%;
+    padding-right: 15%;
+    color: black;
+  }
 }
 
 /* ------------------------------------*\
@@ -837,6 +846,12 @@ header {
     position: absolute;
     top: 20%;
     right: 5%;
+  }
+  .requirements h3 {
+    font-size: 130%;
+    text-align: center;
+    padding-top: 40%;
+    color: black;
   }
 }
 
