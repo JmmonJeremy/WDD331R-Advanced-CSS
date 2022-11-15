@@ -118,6 +118,8 @@
  * REQUIREMENTS MOON MOLECULES
  * Moon Small-View......(_requirements-moon-image-small.scss) "Requirements"
  *......................section's orange-moon.svg image in small-view.
+ * Moon Large-View......(_requirements-moon-image-large.scss "Requirements"
+ *......................section's orange-moon.svg image in large-view.
  *_____________________________________________________________________________
  *
  * FOOTER ORGANISM
@@ -806,6 +808,29 @@ header {
     shape-margin: 10px;
     /* insert moon image to right & create word wrapping */
     margin-top: 27.75rem; /* position */
+  }
+}
+
+/* -------------------------------------------*\
+  #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
+\*------------------------------------------- */
+/** 
+ * This section styles the requirement moon orbiting
+ * the center planet in large-view.
+ */
+@media only screen and (min-width: 600px) {
+  .requirements::before { /* keep this in large-view */ }
+  .requirements::before {
+    content: "";
+    background-image: url("images/orange-moon.svg");
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -25%;
+    left: 85%;
+    z-index: -1;
+    margin-left: -75px;
   }
 }
 
