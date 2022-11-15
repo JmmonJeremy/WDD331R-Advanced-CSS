@@ -794,17 +794,19 @@ header {
  * sections second pargraph and positions the moon on the right side towards 
  * the bottom of that paragraph while wrapping the paragraph around the moon.
  */
-.requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
-  content: "";
-  background-image: url("images/orange-moon.svg");
-  display: block;
-  width: 122px;
-  height: 122px;
-  float: right;
-  shape-outside: url("images/orange-moon.svg");
-  shape-margin: 10px;
-  /* insert moon image to right & create word wrapping */
-  margin-top: 27.75rem; /* position */
+@media only screen and (max-width: 600px) {
+  .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
+    content: "";
+    background-image: url("images/orange-moon.svg");
+    display: block;
+    width: 122px;
+    height: 122px;
+    float: right;
+    shape-outside: url("images/orange-moon.svg");
+    shape-margin: 10px;
+    /* insert moon image to right & create word wrapping */
+    margin-top: 27.75rem; /* position */
+  }
 }
 
 /* ------------------------------------*\
