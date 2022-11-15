@@ -10,10 +10,8 @@
 
 .preamble {
   @include mixins.breakpoint(large) { /* keep this in large-view */
-    & {
-      @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,
-      $height: 152px);
-      @include mixins.absolute($left: 5%, $top: 19%);
-    }
+    @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,
+    $height: 152px);
+    @include mixins.absolute($left: 5%, $top: 19%);
   }
 }

@@ -11,9 +11,7 @@
 // Added temporarily to place the link and have the headers out of the view
 .main {
   @include mixins.breakpoint(large) {
-    & {
-      margin-top: 10rem;
-    }
+    margin-top: 10rem;
   }
 }
 
@@ -36,18 +34,14 @@
 // Styles the Enlightenment section title
 .preamble h3 {
   @include mixins.breakpoint(large) {
-    & {
-      padding: 35% 15% 25% 7%;
-    }
+    padding: 35% 15% 25% 7%;
   }
 }
 
 // Styles the Requirement section title
 .requirements h3 {
   @include mixins.breakpoint(large) {
-    & {
-      padding-top: 40%;
-      text-shadow: 1px 1px 10px  #fefca6, -1px -1px 10px #fefca6;
-    }
+    padding-top: 40%;
+    text-shadow: 1px 1px 10px  #fefca6, -1px -1px 10px #fefca6;
   }
 }

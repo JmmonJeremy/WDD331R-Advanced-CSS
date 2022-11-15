@@ -11,14 +11,12 @@
 
 .intro::before {
   @include mixins.breakpoint(small) { /* keep this in small-view */
-    & {
-      @include mixins.insert-image("images/blue-planet.svg", $width: 270px,
-      $height: 265px); /* insert planet image */
-      @include mixins.absolute($left: 50%); /* position */
+    @include mixins.insert-image("images/blue-planet.svg", $width: 270px,
+    $height: 265px); /* insert planet image */
+    @include mixins.absolute($left: 50%); /* position */
 
-      z-index: -1; /* position */
-      margin-left: -135px; /* position */
-      transform: rotate(0.2turn); /* position */
-    }
+    z-index: -1; /* position */
+    margin-left: -135px; /* position */
+    transform: rotate(0.2turn); /* position */
   }
 }

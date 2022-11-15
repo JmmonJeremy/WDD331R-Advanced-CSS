@@ -11,16 +11,7 @@
 
 .requirements {
   @include mixins.breakpoint(large) { /* keep this in large-view */
-    & {
-      @include mixins.insert-image("images/orange-moon.svg", $width: 150px,);
-      @include mixins.absolute($right: 5%, $top: 20%);
-    }
-
-    h3 {
-      font-size: 130%;
-      text-align: center;
-      padding-top: 40%;
-      color: #000;
-    }
+    @include mixins.insert-image("images/orange-moon.svg", $width: 150px,);
+    @include mixins.absolute($right: 5%, $top: 20%);
   }
 }
