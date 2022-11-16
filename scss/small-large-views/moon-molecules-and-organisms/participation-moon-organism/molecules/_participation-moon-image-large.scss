@@ -2,9 +2,11 @@
 @use "../../../../base-units/mixins";
 
 .participation {
-    @include mixins.breakpoint(large) {
-        @include mixins.insert-image("images/blue-planet.svg", $width: 150px);
-        @include mixins.absolute($left: 50%, $top: -8%);
-        margin-left: -75px;
-    }
+  @include mixins.breakpoint(large) {
+    @include mixins.insert-image("images/blue-planet.svg", $width: 150px,
+    $height: 147px);
+    @include mixins.absolute($left: 50%, $top: -8%);
+
+    margin-left: -75px;
+  }
 }
