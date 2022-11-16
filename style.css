@@ -660,11 +660,11 @@ header {
 
 @media only screen and (min-width: 600px) {
   .preamble p,
-.main p {
+  .main p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-.main h3 {
+  .main h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -787,6 +787,20 @@ header {
   /* insert astronaut image to 
   right & create word wrapping */
   margin-top: 2.75rem; /* position */
+}
+
+@media only screen and (min-width: 600px) {
+  .participation::before {
+    content: "";
+    background-image: url("images/blue-planet.svg");
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -11rem;
+    left: 50%;
+    margin-left: -75px;
+  }
 }
 
 /* ------------------------------------*\
