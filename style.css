@@ -684,6 +684,12 @@ header {
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .benefits h3 {
+    padding-top: 40%;
+  }
+}
+
 /* ------------------------------------*\
   #A MOON PATTERN ORGANISM
 \*------------------------------------ */
@@ -819,16 +825,15 @@ header {
 }
 
 @media only screen and (min-width: 600px) {
-  .benefits::before {
+  .benefits {
     content: "";
     background-image: url("images/white-moon.svg");
     display: block;
     width: 150px;
     height: 150px;
     position: absolute;
-    top: -2rem;
-    left: 85%;
-    margin-left: -75px;
+    top: 1%;
+    right: 10%;
   }
 }
 
