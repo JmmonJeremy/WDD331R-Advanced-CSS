@@ -660,11 +660,11 @@ header {
 
 @media only screen and (min-width: 600px) {
   .preamble p,
-.main p {
+  .main p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-.main h3 {
+  .main h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -681,6 +681,12 @@ header {
   .requirements h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .explanation h3 {
+    padding-top: 40%;
   }
 }
 
@@ -795,6 +801,19 @@ header {
   /* insert moon image to left & create word wrapping */
   margin-right: 0.625rem; /* position */
   margin-top: 7.3rem; /* position */
+}
+
+@media only screen and (min-width: 600px) {
+  .explanation {
+    content: "";
+    background-image: url("images/red-white-moon.svg");
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 1%;
+    left: 10%;
+  }
 }
 
 /* ------------------------------------*\
