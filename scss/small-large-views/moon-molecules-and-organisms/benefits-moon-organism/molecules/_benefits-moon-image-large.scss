@@ -1,0 +1,9 @@
+@use "../../../../base-units/variables";
+@use "../../../../base-units/mixins";
+
+.benefits {
+    @include mixins.breakpoint(large) {
+        @include mixins.insert-image("images/white-moon.svg", $width: 150px);
+        @include mixins.absolute($right: 10%, $top: 1%);
+    }
+}
