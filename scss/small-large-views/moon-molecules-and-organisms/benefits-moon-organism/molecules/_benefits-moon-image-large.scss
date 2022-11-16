@@ -1,0 +1,14 @@
+@use "../../../../base-units/variables";
+@use "../../../../base-units/mixins";
+
+.benefits::before {
+    @include mixins.breakpoint(large) {
+        @include mixins.insert-image(
+            "images/white-moon.svg",
+            $width: 150px,
+            $height: 150px
+        );
+        @include mixins.absolute($left: 85%, $top: -2rem);
+        margin-left: -75px;
+    }
+}
