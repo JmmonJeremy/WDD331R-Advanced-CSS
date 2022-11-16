@@ -414,7 +414,7 @@ body {
  * the introductory paragraph and HTML and CSS file downloads. It also
  * positions the rocket to be behind the paragraph.
  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   .summary::before { /* keep this in small-view */ }
   .summary::before {
     content: "";
@@ -471,7 +471,7 @@ body {
  * This section inserts the planet into the section tag that holds the header 
  * and opening paragraph and then positions the planet behind the title.
  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   .intro::before { /* keep this in small-view */
     content: "";
     background-image: url("images/blue-planet.svg");
@@ -577,7 +577,7 @@ header {
   color: #fff;
   padding: 0 1rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   .summary p:last-child {
     width: 9rem;
     margin-bottom: -1.5rem;
@@ -698,7 +698,7 @@ header {
  * section and positions the moon in the middle of that paragraphs on the 
  * right side and also styles the paragraph to wrap around the moon.
  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   .preamble > h3 + p + p::before {
     content: "";
     background-image: url("images/yellow-moon.svg");
@@ -720,15 +720,52 @@ header {
  * This section inserts the moon image around the planet on the left side.
  */
 @media only screen and (min-width: 600px) {
-  .preamble { /* keep this in large-view */
+  .preamble { /* keep this in large-view */ }
+  .preamble {
     content: "";
     background-image: url("images/yellow-moon.svg");
     display: block;
     width: 150px;
     height: 152px;
     position: absolute;
-    top: 19%;
-    left: 5%;
+    top: 18.5%;
+    left: 50%;
+    margin-left: -580px;
+  }
+  .preamble:hover::before {
+    position: absolute;
+    top: -250%;
+    right: 50%;
+    margin-right: -785px;
+    content: "";
+    background-color: #b79ed1;
+    width: 590px;
+    height: 590px;
+    border-radius: 50%;
+    box-shadow: 0 50px 100px 50px #b79ed1;
+  }
+  .preamble:hover p {
+    position: absolute;
+    top: -200%;
+    right: 50%;
+    margin-right: -770px;
+    display: block;
+    text-align: center;
+    width: 560px;
+    height: 228px;
+    border-radius: 2% 2% 40% 40%/5% 5% 95% 95%;
+  }
+  .preamble p:nth-child(2) {
+    width: 450px;
+    margin-right: -715px;
+  }
+  .preamble p:nth-child(3) {
+    top: -140%;
+  }
+  .preamble p:nth-child(4) {
+    top: -80%;
+    width: 420px;
+    margin-right: -700px;
   }
 }
 
@@ -832,7 +869,7 @@ header {
  * sections second pargraph and positions the moon on the right side towards 
  * the bottom of that paragraph while wrapping the paragraph around the moon.
  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 599px) {
   .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
     content: "";
     background-image: url("images/orange-moon.svg");
@@ -859,11 +896,12 @@ header {
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     position: absolute;
-    top: 20%;
-    right: 5%;
+    top: 19%;
+    right: 50%;
+    margin-right: -575px;
   }
 }
 

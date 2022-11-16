@@ -11,7 +11,9 @@
 
 .requirements {
   @include mixins.breakpoint(large) { /* keep this in large-view */
-    @include mixins.insert-image("images/orange-moon.svg", $width: 150px,);
-    @include mixins.absolute($right: 5%, $top: 20%);
+    @include mixins.insert-image("images/orange-moon.svg", $width: 170px,);
+    @include mixins.absolute($right: 50%, $top: 19%);
+
+    margin-right: -575px;
   }
 }
