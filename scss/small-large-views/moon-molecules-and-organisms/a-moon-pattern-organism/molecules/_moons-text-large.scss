@@ -52,6 +52,13 @@
   }
 }
 
+// Styles the Benefits section title
+.benefits h3 {
+  @include mixins.breakpoint(large) {
+    padding-top: 40%;
+  }
+}
+
 // Styles the Requirement section title
 .requirements h3 {
   @include mixins.breakpoint(large) {
