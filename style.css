@@ -684,6 +684,12 @@ header {
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .participation h3 {
+    padding-top: 40%;
+  }
+}
+
 /* ------------------------------------*\
   #A MOON PATTERN ORGANISM
 \*------------------------------------ */
@@ -790,14 +796,14 @@ header {
 }
 
 @media only screen and (min-width: 600px) {
-  .participation::before {
+  .participation {
     content: "";
     background-image: url("images/blue-planet.svg");
     display: block;
     width: 150px;
     height: 150px;
     position: absolute;
-    top: -11rem;
+    top: -8%;
     left: 50%;
     margin-left: -75px;
   }
