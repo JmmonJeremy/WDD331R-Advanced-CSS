@@ -660,11 +660,11 @@ header {
 
 @media only screen and (min-width: 600px) {
   .preamble p,
-  .main p {
+.main p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-  .main h3 {
+.main h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -699,12 +699,6 @@ header {
   .requirements h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .benefits h3 {
-    padding-top: 40%;
   }
 }
 
