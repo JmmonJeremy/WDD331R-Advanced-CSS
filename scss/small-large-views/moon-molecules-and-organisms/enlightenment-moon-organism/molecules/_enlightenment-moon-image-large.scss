@@ -15,7 +15,7 @@
       $height: 152px);
       @include mixins.absolute($left: 50%, $top: 18.5%);
 
-      margin-left: -580px;
+      margin-left: -580px;     
       // animation: pulse 3s ease-in-out infinite;
     }
 
@@ -23,10 +23,9 @@
       animation: none;
       transform: scale(1.2);
     }
-
-    &:hover ~ .page-wrapper::after {
-      animation: none;
-    }
+    // &:hover ~ .page-wrapper::after {
+    //   animation: none;
+    // }
 
     &:hover::before {
       @include mixins.absolute($right: 50%, $top: -208.5%);
