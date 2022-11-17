@@ -1027,13 +1027,13 @@ header {
 }
 .design-selection ul li::before {
   content: "";
-  background-image: url("images/mars-planet.svg");
+  background-image: url("images/orange-planet.svg");
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 37px;
   background-size: contain;
   position: absolute;
-  top: 0;
+  top: -6px;
   left: 15px;
 }
 .design-selection ul li:not(a) {
