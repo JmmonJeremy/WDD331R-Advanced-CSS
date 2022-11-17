@@ -25,9 +25,9 @@
     position: relative;
   
     &::before {
-      @include mixins.insert-image("images/mars-planet.svg", inline-block,
-      contain, 20px);
-      @include mixins.absolute($top: 0, $left: 15px);
+      @include mixins.insert-image("images/orange-planet.svg", inline-block,
+      contain, 27px, 37px);
+      @include mixins.absolute($top: -6px, $left: 15px);
     }
 
     &:not(a) {

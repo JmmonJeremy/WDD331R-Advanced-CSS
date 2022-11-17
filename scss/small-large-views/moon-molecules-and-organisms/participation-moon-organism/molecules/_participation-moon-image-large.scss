@@ -3,7 +3,7 @@
 
 .participation {
   @include mixins.breakpoint(large) {
-    @include mixins.insert-image("images/blue-planet.svg", $width: 150px,
+    @include mixins.insert-image("images/blue-moon.svg", $width: 150px,
     $height: 147px);
     @include mixins.absolute($left: 50%, $top: -8.85%);
 

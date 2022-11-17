@@ -323,7 +323,7 @@ h1 {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   h1 {
     font-size: 6rem;
   }
@@ -339,7 +339,7 @@ h2 {
   margin-top: -0.5rem;
   margin-left: 4.5rem;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   h2 {
     font-size: 3rem;
     margin-left: 7rem;
@@ -414,7 +414,7 @@ body {
  * the introductory paragraph and HTML and CSS file downloads. It also
  * positions the rocket to be behind the paragraph.
  */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1174px) {
   .summary::before { /* keep this in small-view */ }
   .summary::before {
     content: "";
@@ -439,7 +439,7 @@ body {
  * This section inserts the large-view rocket svg that animates, 
  * circling around the center planet.
  */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .page-wrapper::after {
     content: "";
     background-image: url("images/rocket-animated.svg");
@@ -476,10 +476,10 @@ body {
  * This section inserts the planet into the section tag that holds the header 
  * and opening paragraph and then positions the planet behind the title.
  */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1174px) {
   .intro::before { /* keep this in small-view */
     content: "";
-    background-image: url("images/blue-planet.svg");
+    background-image: url("images/blue-moon.svg");
     display: block;
     width: 270px;
     height: 265px;
@@ -501,11 +501,11 @@ body {
  * and opening paragraphs and then positions the planet behind them and puts
  * the planet into the center of the large screen view.
  */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .intro::before { /* keep this in large-view */ }
   .intro::before {
     content: "";
-    background-image: url("images/mars.svg");
+    background-image: url("images/central-planet.svg");
     display: block;
     width: 600px;
     height: 595px;
@@ -533,7 +533,7 @@ header {
   margin: 0 auto; /* center header horizontally in screen */
   width: 267px; /* set width to planet width */
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   header {
     width: 600px; /* set width to planet width */
     padding: 12rem 0 0 0.4rem; /* center header in planet */
@@ -558,7 +558,7 @@ header {
   text-align: center;
   padding-left: 5rem;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .summary p:first-child {
     width: 24rem; /* set width of paragraph */
     padding: 1.5rem 1rem 0 0;
@@ -582,13 +582,13 @@ header {
   color: #fff;
   padding: 0 1rem;
 }
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1174px) {
   .summary p:last-child {
     width: 9rem;
     margin-bottom: -1.5rem;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .summary p:last-child {
     color: #fff;
     text-align: center;
@@ -657,13 +657,13 @@ header {
 /** 
  * This section controls the appearance of the paragraphs and their titles.
  */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .main {
     margin-top: 10rem;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .preamble p,
 .main p {
     display: none; /* conceals the sections paragraphs */
@@ -676,7 +676,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .preamble h3 {
     padding: 35% 15% 25% 7%;
     text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
@@ -684,7 +684,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .explanation h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
@@ -692,7 +692,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .participation h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
@@ -700,7 +700,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .benefits h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
@@ -708,7 +708,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .requirements h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
@@ -741,7 +741,7 @@ header {
  * section and positions the moon in the middle of that paragraphs on the 
  * right side and also styles the paragraph to wrap around the moon.
  */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1174px) {
   .preamble > h3 + p + p::before {
     content: "";
     background-image: url("images/yellow-moon.svg");
@@ -762,7 +762,7 @@ header {
 /** 
  * This section inserts the moon image around the planet on the left side.
  */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .preamble { /* keep this in large-view */ }
   .preamble {
     content: "";
@@ -844,7 +844,7 @@ header {
   margin-top: 7.3rem; /* position */
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .explanation {
     content: "";
     background-image: url("images/red-white-moon.svg");
@@ -886,10 +886,10 @@ header {
   margin-top: 2.75rem; /* position */
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .participation {
     content: "";
-    background-image: url("images/blue-planet.svg");
+    background-image: url("images/blue-moon.svg");
     display: block;
     width: 150px;
     height: 147px;
@@ -930,7 +930,7 @@ header {
   margin-top: 3rem; /* position */
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .benefits {
     content: "";
     background-image: url("images/white-moon.svg");
@@ -957,7 +957,7 @@ header {
  * sections second pargraph and positions the moon on the right side towards 
  * the bottom of that paragraph while wrapping the paragraph around the moon.
  */
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1174px) {
   .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
     content: "";
     background-image: url("images/orange-moon.svg");
@@ -979,7 +979,7 @@ header {
  * This section styles the requirement moon orbiting
  * the center planet in large-view.
  */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .requirements { /* keep this in large-view */
     content: "";
     background-image: url("images/orange-moon.svg");
@@ -1022,13 +1022,13 @@ header {
 }
 .design-selection ul li::before {
   content: "";
-  background-image: url("images/mars-planet.svg");
+  background-image: url("images/orange-planet.svg");
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 37px;
   background-size: contain;
   position: absolute;
-  top: 0;
+  top: -6px;
   left: 15px;
 }
 .design-selection ul li:not(a) {
