@@ -19,7 +19,8 @@
     }
 
     &:hover::before {
-      @include mixins.absolute($right: 50%, $top: -250%);   
+      @include mixins.absolute($right: 50%, $top: -250%);
+   
 
       margin-right: -785px;
       content: "";
@@ -39,7 +40,6 @@
       width: 560px;
       height: 228px;
       border-radius: 2% 2% 40% 40% / 5% 5% 95% 95%;
-   
     }
 
     & p:nth-child(2) {
@@ -55,7 +55,6 @@
       top: -80%;
       width: 420px;
       margin-right: -700px;
-
     }
   }
 }

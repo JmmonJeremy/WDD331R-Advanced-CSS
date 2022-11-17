@@ -14,8 +14,7 @@
     @include mixins.insert-image("images/rocket-animated.svg", $width: 120px,
     $height: 150px);
     @include mixins.absolute($left: 50%, $top: 14rem);
-
-    z-index: 2;
+   
     margin-left: -60px;
     animation: rocket-flight 10s linear infinite;
   }
