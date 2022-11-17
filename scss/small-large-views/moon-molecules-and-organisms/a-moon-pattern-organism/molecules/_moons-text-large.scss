@@ -36,7 +36,8 @@
   @include mixins.breakpoint(large) {
     padding: 35% 15% 25% 7%;
     text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
-    // animation: pulse 3s ease-in-out infinite;
+    animation: pulse 3s ease-in-out infinite;
+    transition: all 4s;
   }
 }
 
@@ -45,6 +46,7 @@
   @include mixins.breakpoint(large) {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -53,6 +55,7 @@
   @include mixins.breakpoint(large) {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -61,6 +64,7 @@
   @include mixins.breakpoint(large) {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -69,5 +73,20 @@
   @include mixins.breakpoint(large) {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
+    animation: pulse 3s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(none);
+  }
+  
+  50% {
+    transform: scale(1.03);
+  }
+    
+  100% {
+    transform: scale(none);
   }
 }
