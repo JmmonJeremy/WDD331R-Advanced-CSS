@@ -680,6 +680,7 @@ header {
   .preamble h3 {
     padding: 35% 15% 25% 7%;
     text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
+    transition: all 1s ease-in-out;
   }
 }
 
@@ -711,6 +712,23 @@ header {
   }
 }
 
+/* -----------------------------------------------------*\
+  #MOON'S ANIMATION KEYFRAMES LARGE-VIEW MOONS MOLECULES
+\*----------------------------------------------------- */
+/** 
+ * This section controls the keyframes for the moons animations.
+ */
+@keyframes pulse {
+  0% {
+    transform: scale(none);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(none);
+  }
+}
 /* ------------------------------------*\
   #A MOON PATTERN ORGANISM
 \*------------------------------------ */
@@ -763,8 +781,8 @@ header {
   .preamble:hover {
     animation: none;
   }
-  .preamble:hover ~ .page-wrapper::after {
-    animation: none;
+  .preamble:hover h3 {
+    transform: scale(1.2);
   }
   .preamble:hover::before {
     position: absolute;
@@ -804,17 +822,6 @@ header {
   }
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(none);
-  }
-  50% {
-    transform: scale(1.03);
-  }
-  100% {
-    transform: scale(none);
-  }
-}
 /* ------------------------------------*\
   #ENLIGHTENMENT MOON ORGANISM
 \*------------------------------------ */
@@ -853,6 +860,7 @@ header {
     position: absolute;
     top: 1%;
     left: 10%;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -897,6 +905,7 @@ header {
     left: 50%;
     z-index: -1;
     margin-left: -75px;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -939,6 +948,7 @@ header {
     position: absolute;
     top: 1%;
     right: 10%;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -989,6 +999,7 @@ header {
     top: 19%;
     right: 50%;
     margin-right: -575px;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 

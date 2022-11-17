@@ -5,5 +5,7 @@
   @include mixins.breakpoint(large) {
     @include mixins.insert-image("images/white-moon.svg", $width: 150px);
     @include mixins.absolute($right: 10%, $top: 1%);
+
+    animation: pulse 3s ease-in-out infinite;
   }
 }

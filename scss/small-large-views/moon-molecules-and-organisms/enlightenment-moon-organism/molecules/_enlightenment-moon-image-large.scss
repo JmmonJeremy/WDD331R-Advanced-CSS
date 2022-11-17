@@ -23,9 +23,16 @@
       animation: none;
     }
 
-    &:hover ~ .page-wrapper::after {
-      animation: none;
+    &:hover h3 {
+      transform: scale(1.2);
     }
+    // &:hover ~ .page-wrapper::after {
+    //   animation: none;
+    // }
+
+    // &::before {
+    //   transition: background-color 1s ease-in-out;
+    // }
 
     &:hover::before {
       @include mixins.absolute($right: 50%, $top: -265%);
@@ -67,19 +74,5 @@
       width: 420px;
       margin-right: -700px;
     }
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(none);
-  }
-
-  50% {
-    transform: scale(1.03);
-  }
-  
-  100% {
-    transform: scale(none);
   }
 }
