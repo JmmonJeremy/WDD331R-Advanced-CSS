@@ -436,27 +436,22 @@ body {
   #ROCKET LARGE-VIEW BACKGROUND MOLECULE
 \*------------------------------------- */
 /** 
- * This section inserts the small-view rocket svg to the left of the large,
- * main, central planet using the section tag that holds the title and opening
- * paragraphs and Enlightenment section.
+ * This section inserts the large-view rocket svg that animates, 
+ * circling around the center planet.
  */
 @media only screen and (min-width: 600px) {
-  .intro::after {
-    /* keep this in large-view */
-    animation: rocket-flight 10s linear infinite;
-  }
   .intro::after {
     content: "";
     background-image: url("images/rocket-animated.svg");
     display: block;
     width: 120px;
     height: 150px;
-    /* insert rocket image */
     position: absolute;
     top: 14rem;
     left: 50%;
-    /* position */
+    z-index: 2;
     margin-left: -60px;
+    animation: rocket-flight 10s linear infinite;
   }
 }
 
@@ -670,11 +665,11 @@ header {
 
 @media only screen and (min-width: 600px) {
   .preamble p,
-  .main p {
+.main p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-  .main h3 {
+.main h3 {
     font-size: 130%;
     text-align: center;
     color: #000;

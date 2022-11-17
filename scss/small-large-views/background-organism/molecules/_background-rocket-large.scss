@@ -10,25 +10,23 @@
 @use "../../../base-units/mixins";
 
 .intro::after {
-    @include mixins.breakpoint(large) {
-        & {
-            @include mixins.insert-image(
-                "images/rocket-animated.svg",
-                $width: 120px,
-                $height: 150px
-            );
-            @include mixins.absolute($left: 50%, $top: 14rem);
-            margin-left: -60px;
-        }
-        animation: rocket-flight 10s linear infinite;
-    }
+  @include mixins.breakpoint(large) {
+    @include mixins.insert-image("images/rocket-animated.svg", $width: 120px,
+    $height: 150px);
+    @include mixins.absolute($left: 50%, $top: 14rem);
+
+    z-index: 2;
+    margin-left: -60px;
+    animation: rocket-flight 10s linear infinite;
+  }
 }
 
 @keyframes rocket-flight {
-    0% {
-        transform: rotate(0deg) translateX(360px) rotate(155deg);
-    }
-    100% {
-        transform: rotate(360deg) translateX(360px) rotate(155deg);
-    }
+  0% {
+    transform: rotate(0deg) translateX(360px) rotate(155deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(360px) rotate(155deg);
+  }
 }
