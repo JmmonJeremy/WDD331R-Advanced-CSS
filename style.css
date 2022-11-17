@@ -781,15 +781,14 @@ header {
   }
   .preamble:hover::before {
     position: absolute;
-    top: -208.5%;
+    top: -270%;
     right: 50%;
-    margin-right: -789px;
     content: "";
-    background-color: #b79ed1;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    box-shadow: 0 5px 100px 50px #b79ed1;
+    background-image: url("images/yellow-moon.svg");
+    display: block;
+    width: 800px;
+    height: 820px;
+    margin-right: -889px;
   }
   .preamble:hover p {
     position: absolute;
