@@ -441,7 +441,10 @@ body {
  * paragraphs and Enlightenment section.
  */
 @media only screen and (min-width: 600px) {
-  .intro::after { /* keep this in large-view */ }
+  .intro::after {
+    /* keep this in large-view */
+    animation: rocket-flight 10s linear infinite;
+  }
   .intro::after {
     content: "";
     background-image: url("images/rocket-animated.svg");
@@ -450,14 +453,21 @@ body {
     height: 150px;
     /* insert rocket image */
     position: absolute;
-    top: 26rem;
+    top: 14rem;
     left: 50%;
     /* position */
-    margin-left: -400px; /* position horizontally from center of screen */
-    transform: rotate(-35deg);
+    margin-left: -60px;
   }
 }
 
+@keyframes rocket-flight {
+  0% {
+    transform: rotate(0deg) translateX(360px) rotate(155deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(360px) rotate(155deg);
+  }
+}
 /* ------------------------------------*\
   #BACKGROUND ORGANISM
 \*------------------------------------ */
@@ -660,11 +670,11 @@ header {
 
 @media only screen and (min-width: 600px) {
   .preamble p,
-.main p {
+  .main p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-.main h3 {
+  .main h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
