@@ -23,6 +23,7 @@
     }
 
     &:hover h3 {
+      animation: none;
       transform: scale(1.2);
     }
     // &:hover ~ .page-wrapper::after {
@@ -35,14 +36,13 @@
 
     &:hover::before {
       @include mixins.absolute($right: 50%, $top: -265%);
-     
-      margin-right: -905px;
-      content: "";
-      background-color: $primary;
-      width: 820px;
-      height: 810px;
+      @include mixins.insert-image("images/yellow-moon.svg", $width: 840px,
+      $height: 860px);
+
+      background-color: $background-color;
+      margin-right: -915px;
       border-radius: 50%;
-      box-shadow: 0 5px 100px 50px $primary;
+      // box-shadow: 0 5px 100px 50px $primary;
     }
 
     &:hover p {
