@@ -696,7 +696,7 @@ header {
   .participation h3 {
     padding-top: 40%;
     font-size: 100%;
-    text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
+    text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     animation: pulse 3s ease-in-out infinite;
   }
 }
@@ -896,7 +896,7 @@ header {
 @media only screen and (min-width: 600px) {
   .participation {
     content: "";
-    background-image: url("images/blue-planet.svg");
+    background-image: url("images/brown-moon.svg");
     display: block;
     width: 100px;
     height: 98px;

@@ -54,7 +54,7 @@
   @include mixins.breakpoint(large) {
     padding-top: 40%;
     font-size: 100%;
-    text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
+    text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     animation: pulse 3s ease-in-out infinite;
   }
 }
