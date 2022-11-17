@@ -9,12 +9,13 @@
 @use "../../../base-units/variables" as *;
 @use "../../../base-units/mixins";
 
-.intro::after {
+.page-wrapper::after {
   @include mixins.breakpoint(large) {
     @include mixins.insert-image("images/rocket-animated.svg", $width: 120px,
     $height: 150px);
     @include mixins.absolute($left: 50%, $top: 14rem);
    
+    z-index: -1;
     margin-left: -60px;
     animation: rocket-flight 10s linear infinite;
   }

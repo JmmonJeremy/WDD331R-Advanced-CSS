@@ -440,7 +440,7 @@ body {
  * circling around the center planet.
  */
 @media only screen and (min-width: 600px) {
-  .intro::after {
+  .page-wrapper::after {
     content: "";
     background-image: url("images/rocket-animated.svg");
     display: block;
@@ -449,6 +449,7 @@ body {
     position: absolute;
     top: 14rem;
     left: 50%;
+    z-index: -1;
     margin-left: -60px;
     animation: rocket-flight 10s linear infinite;
   }
@@ -678,24 +679,28 @@ header {
 @media only screen and (min-width: 600px) {
   .preamble h3 {
     padding: 35% 15% 25% 7%;
+    text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .explanation h3 {
     padding-top: 40%;
+    text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .participation h3 {
     padding-top: 40%;
+    text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .benefits h3 {
     padding-top: 40%;
+    text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
   }
 }
 
@@ -725,7 +730,7 @@ header {
     content: "";
     background-image: url("images/yellow-moon.svg");
     display: block;
-    width: 132px;
+    width: 130px;
     height: 132px;
     float: right;
     shape-outside: url("images/yellow-moon.svg");
@@ -753,22 +758,29 @@ header {
     top: 18.5%;
     left: 50%;
     margin-left: -580px;
+    animation: pulse 3s ease-in-out infinite;
+  }
+  .preamble:hover {
+    animation: none;
+  }
+  .preamble:hover ~ .page-wrapper::after {
+    animation: none;
   }
   .preamble:hover::before {
     position: absolute;
-    top: -250%;
+    top: -265%;
     right: 50%;
-    margin-right: -785px;
+    margin-right: -905px;
     content: "";
     background-color: #b79ed1;
-    width: 590px;
-    height: 590px;
+    width: 820px;
+    height: 810px;
     border-radius: 50%;
-    box-shadow: 0 50px 100px 50px #b79ed1;
+    box-shadow: 0 5px 100px 50px #b79ed1;
   }
   .preamble:hover p {
     position: absolute;
-    top: -200%;
+    top: -148.5%;
     right: 50%;
     margin-right: -770px;
     display: block;
@@ -776,21 +788,33 @@ header {
     width: 560px;
     height: 228px;
     border-radius: 2% 2% 40% 40%/5% 5% 95% 95%;
+    text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
   }
   .preamble p:nth-child(2) {
     width: 450px;
     margin-right: -715px;
   }
   .preamble p:nth-child(3) {
-    top: -140%;
+    top: -88.5%;
   }
   .preamble p:nth-child(4) {
-    top: -80%;
+    top: -28.5%;
     width: 420px;
     margin-right: -700px;
   }
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(none);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(none);
+  }
+}
 /* ------------------------------------*\
   #ENLIGHTENMENT MOON ORGANISM
 \*------------------------------------ */
@@ -869,7 +893,7 @@ header {
     width: 150px;
     height: 147px;
     position: absolute;
-    top: -8%;
+    top: -8.85%;
     left: 50%;
     z-index: -1;
     margin-left: -75px;
@@ -959,8 +983,8 @@ header {
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 160px;
     position: absolute;
     top: 19%;
     right: 50%;

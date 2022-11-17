@@ -2,11 +2,8 @@
 @use "../../../../base-units/mixins";
 
 .explanation {
-    @include mixins.breakpoint(large) {
-        @include mixins.insert-image(
-            "images/red-white-moon.svg",
-            $width: 150px
-        );
-        @include mixins.absolute($left: 10%, $top: 1%);
-    }
+  @include mixins.breakpoint(large) {
+    @include mixins.insert-image("images/red-white-moon.svg", $width: 150px);
+    @include mixins.absolute($left: 10%, $top: 1%);
+  }
 }

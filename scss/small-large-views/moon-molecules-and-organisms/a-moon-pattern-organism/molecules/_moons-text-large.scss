@@ -35,6 +35,8 @@
 .preamble h3 {
   @include mixins.breakpoint(large) {
     padding: 35% 15% 25% 7%;
+    text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
+    // animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -42,6 +44,7 @@
 .explanation h3 {
   @include mixins.breakpoint(large) {
     padding-top: 40%;
+    text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
   }
 }
 
@@ -49,6 +52,7 @@
 .participation h3 {
   @include mixins.breakpoint(large) {
     padding-top: 40%;
+    text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
   }
 }
 
@@ -56,6 +60,7 @@
 .benefits h3 {
   @include mixins.breakpoint(large) {
     padding-top: 40%;
+    text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
   }
 }
 

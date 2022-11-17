@@ -16,23 +16,31 @@
       @include mixins.absolute($left: 50%, $top: 18.5%);
 
       margin-left: -580px;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    &:hover {
+      animation: none;
+    }
+
+    &:hover ~ .page-wrapper::after {
+      animation: none;
     }
 
     &:hover::before {
-      @include mixins.absolute($right: 50%, $top: -250%);
-   
-
-      margin-right: -785px;
+      @include mixins.absolute($right: 50%, $top: -265%);
+     
+      margin-right: -905px;
       content: "";
       background-color: $primary;
-      width: 590px;
-      height: 590px;
+      width: 820px;
+      height: 810px;
       border-radius: 50%;
-      box-shadow: 0 50px 100px 50px $primary;
+      box-shadow: 0 5px 100px 50px $primary;
     }
 
     &:hover p {
-      @include mixins.absolute($right: 50%, $top: -200%);   
+      @include mixins.absolute($right: 50%, $top: -148.5%);
 
       margin-right: -770px;
       display: block;
@@ -40,6 +48,9 @@
       width: 560px;
       height: 228px;
       border-radius: 2% 2% 40% 40% / 5% 5% 95% 95%;
+      text-shadow:
+        1px 1px 20px $background-color,
+        -1px -1px 20px $background-color;
     }
 
     & p:nth-child(2) {
@@ -48,13 +59,27 @@
     }
 
     & p:nth-child(3) {
-      top: -140%;
+      top: -88.5%;
     }
 
     & p:nth-child(4) {
-      top: -80%;
+      top: -28.5%;
       width: 420px;
       margin-right: -700px;
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(none);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+  
+  100% {
+    transform: scale(none);
   }
 }
