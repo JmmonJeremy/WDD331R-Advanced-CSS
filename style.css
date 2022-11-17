@@ -798,7 +798,7 @@ header {
   }
   .preamble:hover p {
     position: absolute;
-    top: -78.5%;
+    top: -70.5%;
     right: 50%;
     margin-right: -788px;
     display: block;
@@ -813,10 +813,10 @@ header {
     margin-right: -715px;
   }
   .preamble p:nth-child(3) {
-    top: -18.5%;
+    top: -10.5%;
   }
   .preamble p:nth-child(4) {
-    top: 58.5%;
+    top: 53.5%;
     width: 420px;
     margin-right: -700px;
   }

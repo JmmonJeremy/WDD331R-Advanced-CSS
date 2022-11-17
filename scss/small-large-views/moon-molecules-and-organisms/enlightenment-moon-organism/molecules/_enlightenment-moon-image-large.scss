@@ -46,7 +46,7 @@
     }
 
     &:hover p {
-      @include mixins.absolute($right: 50%, $top: -78.5%);
+      @include mixins.absolute($right: 50%, $top: -70.5%);
 
       margin-right: -788px;
       display: block;
@@ -65,11 +65,11 @@
     }
 
     & p:nth-child(3) {
-      top: -18.5%;
+      top: -10.5%;
     }
 
     & p:nth-child(4) {
-      top: 58.5%;
+      top: 53.5%;
       width: 420px;
       margin-right: -700px;
     }
