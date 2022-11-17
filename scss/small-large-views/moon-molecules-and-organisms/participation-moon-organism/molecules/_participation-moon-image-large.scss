@@ -1,13 +1,26 @@
+/* ----------------------------------------------*\
+  #MOON LARGE-VIEW PARTICIPATION MOON MOLECULES
+\*---------------------------------------------- */
+
+/** 
+ * This section inserts the moon image around the planet on the top side and 
+ * creates the large central moon image with the Participation section's text 
+ * inside it when the smaller moon is hovered over.
+ */
 @use "../../../../base-units/variables";
 @use "../../../../base-units/mixins";
 
+/* inserts the Participation moon on the top side of the planet */
 .participation {
-  @include mixins.breakpoint(large) {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
     @include mixins.insert-image("images/blue-moon.svg", $width: 150px,
     $height: 147px);
     @include mixins.absolute($left: 50%, $top: -8.85%);
 
-    z-index: -1;
+    z-index: -1;  /* places planet behind the animated rocket */
+
+    /* positions moon in fixed position from planet's center to create a *
+     * stable hover image positon */
     margin-left: -75px;
   }
 }

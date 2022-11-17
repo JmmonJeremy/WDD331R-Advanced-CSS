@@ -1,8 +1,18 @@
+/* ----------------------------------------------*\
+  #MOON LARGE-VIEW BENEFITS MOON MOLECULES
+\*---------------------------------------------- */
+
+/** 
+ * This section inserts the moon image around the planet on the right side and 
+ * creates the large central moon image with the Benefits section's text 
+ * inside it when the smaller moon is hovered over.
+ */
 @use "../../../../base-units/variables";
 @use "../../../../base-units/mixins";
 
+/* inserts the Benefits moon on the right side of the planet */
 .benefits {
-  @include mixins.breakpoint(large) {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
     @include mixins.insert-image("images/white-moon.svg", $width: 150px);
     @include mixins.absolute($right: 10%, $top: 1%);
   }

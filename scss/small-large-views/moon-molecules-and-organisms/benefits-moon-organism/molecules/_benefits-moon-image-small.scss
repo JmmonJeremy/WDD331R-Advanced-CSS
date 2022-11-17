@@ -12,9 +12,11 @@
 @use "../../../../base-units/mixins";
 
 .benefits [title="Cascading Style Sheets"]::before {
-  @include mixins.insert-image("images/white-moon.svg", $float: left,
-  $margin: 10px); /* insert moon image to left & create word wrapping */
+  @include mixins.breakpoint(small) { /* keeps in small-view */
+    @include mixins.insert-image("images/white-moon.svg", $float: left,
+    $margin: 10px); /* insert moon image to left & create word wrapping */
 
-  margin-right: .625rem; /* position */
-  margin-top: 3rem; /* position */
+    margin-right: .625rem; /* position */
+    margin-top: 3rem; /* position */
+  }
 }

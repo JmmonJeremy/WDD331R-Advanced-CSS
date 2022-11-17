@@ -1,64 +1,66 @@
 /* ----------------------------------------------*\
-  #MOON SMALL-VIEW  ENLIGHTENMENT MOON MOLECULES
+  #MOON LARGE-VIEW ENLIGHTENMENT MOON MOLECULES
 \*---------------------------------------------- */
 
 /** 
- * This section inserts the moon image around the planet on the left side.
+ * This section inserts the moon image around the planet on the left side and 
+ * creates the large central moon image with the Enlightenment section's text 
+ * inside it when the smaller moon is hovered over.
  */
 @use "../../../../base-units/variables" as *;
 @use "../../../../base-units/mixins";
 
+/* inserts the Enlightenment moon on the left side of the planet */
 .preamble {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     & {
       @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,
       $height: 152px);
       @include mixins.absolute($left: 50%, $top: 18.5%);
-
-      margin-left: -580px;     
-      // animation: pulse 3s ease-in-out infinite;
+      
+      /* positions moon in fixed position from planet's center to create a *
+       * stable hover image positon */
+      margin-left: -580px;
     }
 
+    /* enlarge title when hovered over and stop pulse animation */
     &:hover h3 {
       animation: none;
       transform: scale(1.2);
     }
-    // &:hover ~ .page-wrapper::after {
-    //   animation: none;
-    // }
 
+    /* insertion & placement of large version of image to hold paragraphs */   
     &:hover::before {
       @include mixins.absolute($right: 50%, $top: -270%);
       @include mixins.insert-image("images/yellow-moon.svg", $width: 800px,
       $height: 820px);
 
       margin-right: -889px;
-     
     }
 
+    /* absolute position for all & placement for first paragraph */
     &:hover p {
       @include mixins.absolute($right: 50%, $top: -148.5%);
 
-      margin-right: -770px;
+      margin-right: -715px;
+      width: 450px;
+
+      /* shared characteristics of all Enlightenment paragraphs */
       display: block;
       text-align: center;
-      width: 560px;
-      height: 228px;
-      border-radius: 2% 2% 40% 40% / 5% 5% 95% 95%;
       text-shadow:
         1px 1px 20px $background-color,
         -1px -1px 20px $background-color;
     }
 
-    & p:nth-child(2) {
-      width: 450px;
-      margin-right: -715px;
-    }
-
+    /* placement for second paragraph */
     & p:nth-child(3) {
       top: -88.5%;
+      margin-right: -770px;
+      width: 560px;
     }
 
+    /* placement for third paragraph */    
     & p:nth-child(4) {
       top: -28.5%;
       width: 420px;

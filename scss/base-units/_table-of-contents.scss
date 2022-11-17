@@ -52,7 +52,7 @@
  * Rocket Small-View....(_background-rocket-small.scss) Webpage's rocket for 
  * .....................small-view.
  * Rocket Large-View....(_background-rocket-large.scss) Webpage's rocket for 
- * .....................large-view.
+ * .....................large-view and circling planet animation.
  * Stars................(_background-stars.scss) Webpage's background stars.
  *_____________________________________________________________________________
  *
@@ -89,7 +89,9 @@
  *......................for small viewing screens.
  * Moon Large-view......(_enlightenment-moon-image-large.scss) "The Road to 
  *......................Enlightenment" section's yellow-moon.svg image design 
- *......................for large viewing screens
+ *......................for large viewing screens, along with the hover effects 
+ *......................including projection of the central moon image with 
+ *......................the text.
  *_____________________________________________________________________________
  *
  * ABOUT MOON ORGANISM
@@ -98,6 +100,10 @@
  * ABOUT MOON MOLECULES
  * Moon Small-View......(_about-moon-image-small.scss) "So What is This About?"
  *......................section's red-white-moon.svg image in small-view.
+ * Moon Large-View......(_about-moon-image-large.scss "About" section's 
+ *......................red-white-moon.svg image design in large-view, along
+ *......................with the hover effects including projection of the 
+ *......................central moon image with the text.
  *_____________________________________________________________________________
  *
  * PARTICIPATION MOON ORGANISM
@@ -106,6 +112,10 @@
  * PARTICIPATION MOON MOLECULES
  * Moon Small-View......(_participation-moon-image-small.scss) "Participation"
  *......................section's astronaut.svg image in small-view.
+ * Moon Large-view......(_participation-moon-image-large.scss) "Participation" 
+ *......................section's blue-moon.svg image design for large  
+ *......................viewing screens, along with the hover effects including
+ *......................projection of the central moon image with the text.
  *_____________________________________________________________________________
  *
  * BENEFITS MOON ORGANISM
@@ -114,6 +124,10 @@
  * BENEFITS MOON MOLECULES
  * Moon Small-View......(_benefits-moon-image-small.scss) "Benefits" section's
  *......................white-moon.svg image in small-view.
+* Moon Large-view.......(_benefits-moon-image-large.scss) "Benefits" section's
+ *......................white-moon.svg image design for large viewing screens, 
+ *......................along with the hover effects including projection of
+ *......................the central moon image with the text.
  *_____________________________________________________________________________
  *
  * REQUIREMENTS MOON ORGANISM
@@ -123,7 +137,9 @@
  * Moon Small-View......(_requirements-moon-image-small.scss) "Requirements"
  *......................section's orange-moon.svg image design in small-view.
  * Moon Large-View......(_requirements-moon-image-large.scss "Requirements"
- *......................section's orange-moon.svg image design in large-view.
+ *......................section's orange-moon.svg image design for large 
+ *......................viewing screens, along with the hover effects including
+ *......................projection of the central moon image with the text.
  *_____________________________________________________________________________
  *
  * FOOTER ORGANISM

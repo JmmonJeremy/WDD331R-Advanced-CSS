@@ -18,7 +18,7 @@
       @include mixins.absolute($left: 50%); /* position */
     
       z-index: -1; /* position */
-      margin-left: -300px; /* position */
+      margin-left: -300px; /* position center the planet */
     }
   }
 }
