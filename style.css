@@ -686,7 +686,7 @@ header {
 
 @media only screen and (min-width: 600px) {
   .explanation h3 {
-    padding-top: 40%;
+    padding-top: 30%;
     text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     animation: pulse 3s ease-in-out infinite;
   }
@@ -695,6 +695,7 @@ header {
 @media only screen and (min-width: 600px) {
   .participation h3 {
     padding-top: 40%;
+    font-size: 100%;
     text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
     animation: pulse 3s ease-in-out infinite;
   }
@@ -771,7 +772,7 @@ header {
     width: 150px;
     height: 152px;
     position: absolute;
-    top: 18.5%;
+    top: 12%;
     left: 50%;
     margin-left: -580px;
   }
@@ -784,22 +785,22 @@ header {
   }
   .preamble:hover::before {
     position: absolute;
-    top: -265%;
+    top: -195%;
     right: 50%;
     content: "";
     background-image: url("images/yellow-moon.svg");
     display: block;
-    width: 840px;
-    height: 860px;
+    width: 830px;
+    height: 850px;
     background-color: #030746;
-    margin-right: -915px;
+    margin-right: -913px;
     border-radius: 50%;
   }
   .preamble:hover p {
     position: absolute;
-    top: -148.5%;
+    top: -78.5%;
     right: 50%;
-    margin-right: -770px;
+    margin-right: -788px;
     display: block;
     text-align: center;
     width: 560px;
@@ -812,10 +813,10 @@ header {
     margin-right: -715px;
   }
   .preamble p:nth-child(3) {
-    top: -88.5%;
+    top: -18.5%;
   }
   .preamble p:nth-child(4) {
-    top: -28.5%;
+    top: 58.5%;
     width: 420px;
     margin-right: -700px;
   }
@@ -854,11 +855,12 @@ header {
     content: "";
     background-image: url("images/red-white-moon.svg");
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     position: absolute;
-    top: 1%;
-    left: 10%;
+    top: -2%;
+    left: 50%;
+    margin-left: -470px;
   }
 }
 
@@ -896,13 +898,13 @@ header {
     content: "";
     background-image: url("images/blue-planet.svg");
     display: block;
-    width: 150px;
-    height: 147px;
+    width: 100px;
+    height: 98px;
     position: absolute;
     top: -8.85%;
     left: 50%;
     z-index: -1;
-    margin-left: -75px;
+    margin-left: -50px;
   }
 }
 
@@ -940,11 +942,12 @@ header {
     content: "";
     background-image: url("images/white-moon.svg");
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     position: absolute;
-    top: 1%;
-    right: 10%;
+    top: -2%;
+    right: 50%;
+    margin-right: -480px;
   }
 }
 
@@ -992,7 +995,7 @@ header {
     width: 160px;
     height: 160px;
     position: absolute;
-    top: 19%;
+    top: 12.5%;
     right: 50%;
     margin-right: -575px;
   }

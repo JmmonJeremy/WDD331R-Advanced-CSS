@@ -3,7 +3,9 @@
 
 .explanation {
   @include mixins.breakpoint(large) {
-    @include mixins.insert-image("images/red-white-moon.svg", $width: 150px);
-    @include mixins.absolute($left: 10%, $top: 1%);
+    @include mixins.insert-image("images/red-white-moon.svg", $width: 125px);
+    @include mixins.absolute($left: 50%, $top: -2%);
+   
+    margin-left: -470px;
   }
 }

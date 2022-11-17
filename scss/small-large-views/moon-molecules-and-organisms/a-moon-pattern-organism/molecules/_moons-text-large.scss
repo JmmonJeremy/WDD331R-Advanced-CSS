@@ -26,7 +26,6 @@
     & h3 {
       font-size: 130%;
       text-align: center;
-    //   color: #000;
     }
   }
 }
@@ -44,7 +43,7 @@
 // Styles the About section title
 .explanation h3 {
   @include mixins.breakpoint(large) {
-    padding-top: 40%;
+    padding-top: 30%;
     text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     animation: pulse 3s ease-in-out infinite;
   }
@@ -54,6 +53,7 @@
 .participation h3 {
   @include mixins.breakpoint(large) {
     padding-top: 40%;
+    font-size: 100%;
     text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
     animation: pulse 3s ease-in-out infinite;
   }

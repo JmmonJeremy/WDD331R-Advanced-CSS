@@ -13,7 +13,7 @@
     & {
       @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,
       $height: 152px);
-      @include mixins.absolute($left: 50%, $top: 18.5%);
+      @include mixins.absolute($left: 50%, $top: 12%);
 
       margin-left: -580px;
     }
@@ -35,20 +35,20 @@
     // }
 
     &:hover::before {
-      @include mixins.absolute($right: 50%, $top: -265%);
-      @include mixins.insert-image("images/yellow-moon.svg", $width: 840px,
-      $height: 860px);
+      @include mixins.absolute($right: 50%, $top: -195%);
+      @include mixins.insert-image("images/yellow-moon.svg", $width: 830px,
+      $height: 850px);
 
       background-color: $background-color;
-      margin-right: -915px;
+      margin-right: -913px;
       border-radius: 50%;
       // box-shadow: 0 5px 100px 50px $primary;
     }
 
     &:hover p {
-      @include mixins.absolute($right: 50%, $top: -148.5%);
+      @include mixins.absolute($right: 50%, $top: -78.5%);
 
-      margin-right: -770px;
+      margin-right: -788px;
       display: block;
       text-align: center;
       width: 560px;
@@ -65,11 +65,11 @@
     }
 
     & p:nth-child(3) {
-      top: -88.5%;
+      top: -18.5%;
     }
 
     & p:nth-child(4) {
-      top: -28.5%;
+      top: 58.5%;
       width: 420px;
       margin-right: -700px;
     }
