@@ -672,14 +672,13 @@ header {
 .main h3 {
     font-size: 130%;
     text-align: center;
-    color: #000;
   }
 }
 
 @media only screen and (min-width: 600px) {
   .preamble h3 {
     padding: 35% 15% 25% 7%;
-    text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
+    text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     transition: all 1s ease-in-out;
     animation: pulse 3s ease-in-out infinite;
   }
@@ -688,7 +687,7 @@ header {
 @media only screen and (min-width: 600px) {
   .explanation h3 {
     padding-top: 40%;
-    text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
+    text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     animation: pulse 3s ease-in-out infinite;
   }
 }
@@ -704,7 +703,7 @@ header {
 @media only screen and (min-width: 600px) {
   .benefits h3 {
     padding-top: 40%;
-    text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
+    text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     animation: pulse 3s ease-in-out infinite;
   }
 }
@@ -712,7 +711,7 @@ header {
 @media only screen and (min-width: 600px) {
   .requirements h3 {
     padding-top: 40%;
-    text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
+    text-shadow: 1px 1px 10px #000, -1px -1px 10px #000;
     animation: pulse 3s ease-in-out infinite;
   }
 }
