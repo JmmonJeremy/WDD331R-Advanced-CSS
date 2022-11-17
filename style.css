@@ -681,6 +681,7 @@ header {
     padding: 35% 15% 25% 7%;
     text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
     transition: all 1s ease-in-out;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -688,6 +689,7 @@ header {
   .explanation h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -695,6 +697,7 @@ header {
   .participation h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -702,6 +705,7 @@ header {
   .benefits h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -709,15 +713,10 @@ header {
   .requirements h3 {
     padding-top: 40%;
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
+    animation: pulse 3s ease-in-out infinite;
   }
 }
 
-/* -----------------------------------------------------*\
-  #MOON'S ANIMATION KEYFRAMES LARGE-VIEW MOONS MOLECULES
-\*----------------------------------------------------- */
-/** 
- * This section controls the keyframes for the moons animations.
- */
 @keyframes pulse {
   0% {
     transform: scale(none);
@@ -776,7 +775,6 @@ header {
     top: 18.5%;
     left: 50%;
     margin-left: -580px;
-    animation: pulse 3s ease-in-out infinite;
   }
   .preamble:hover {
     animation: none;
@@ -860,7 +858,6 @@ header {
     position: absolute;
     top: 1%;
     left: 10%;
-    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -905,7 +902,6 @@ header {
     left: 50%;
     z-index: -1;
     margin-left: -75px;
-    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -948,7 +944,6 @@ header {
     position: absolute;
     top: 1%;
     right: 10%;
-    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -999,7 +994,6 @@ header {
     top: 19%;
     right: 50%;
     margin-right: -575px;
-    animation: pulse 3s ease-in-out infinite;
   }
 }
 

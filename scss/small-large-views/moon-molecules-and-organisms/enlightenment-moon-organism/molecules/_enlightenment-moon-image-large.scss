@@ -16,7 +16,6 @@
       @include mixins.absolute($left: 50%, $top: 18.5%);
 
       margin-left: -580px;
-      animation: pulse 3s ease-in-out infinite;
     }
 
     &:hover {
