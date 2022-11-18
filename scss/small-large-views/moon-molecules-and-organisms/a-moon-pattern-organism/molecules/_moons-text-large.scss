@@ -29,6 +29,14 @@
       text-align: center;
       color: $text-darkest;
       padding-top: 40%;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    
+    /* enlarge title when hovered over and stop pulse animation */
+    &:hover h3 {
+      animation: none;
+      transform: scale(1.2);
     }
   }
 }
@@ -39,8 +47,7 @@
     padding: 35% 15% 25% 7%;
     text-shadow:
       1px 1px 10px $enlightenment-light,
-      -1px -1px 10px $enlightenment-light;
-    animation: pulse 3s ease-in-out infinite;
+      -1px -1px 10px $enlightenment-light;    
   }
 }
 

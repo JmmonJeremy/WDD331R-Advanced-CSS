@@ -19,15 +19,10 @@
       @include mixins.absolute($left: 50%, $top: 18.5%);
       
       /* positions moon in fixed position from planet's center to create a *
-       * stable hover image positon */
+       * stable hover image positon **/
       margin-left: -580px;
     }
 
-    /* enlarge title when hovered over and stop pulse animation */
-    &:hover h3 {
-      animation: none;
-      transform: scale(1.2);
-    }
 
     /* insertion & placement of large version of image to hold paragraphs */   
     &:hover::before {

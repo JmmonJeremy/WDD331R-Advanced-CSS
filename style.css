@@ -685,6 +685,7 @@ header {
   .preamble,
 .main { /* keep this in large-view */
     /* styles shared by all large-view titles in moons */
+    /* enlarge title when hovered over and stop pulse animation */
   }
   .preamble p,
 .main p {
@@ -696,6 +697,12 @@ header {
     text-align: center;
     color: #000;
     padding-top: 40%;
+    animation: pulse 3s ease-in-out infinite;
+  }
+  .preamble:hover h3,
+.main:hover h3 {
+    animation: none;
+    transform: scale(1.2);
   }
 }
 
@@ -704,7 +711,6 @@ header {
   .preamble h3 { /* keep this in large-view */
     padding: 35% 15% 25% 7%;
     text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
-    animation: pulse 3s ease-in-out infinite;
   }
 }
 
@@ -788,7 +794,6 @@ header {
 /* inserts the Enlightenment moon on the left side of the planet */
 @media only screen and (min-width: 1175px) {
   .preamble { /* keep this in large-view */
-    /* enlarge title when hovered over and stop pulse animation */
     /* insertion & placement of large version of image to hold paragraphs */
     /* absolute position for all & placement for first paragraph */
     /* placement for second paragraph */
@@ -804,12 +809,8 @@ header {
     top: 18.5%;
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
-     * stable hover image positon */
+     * stable hover image positon **/
     margin-left: -580px;
-  }
-  .preamble:hover h3 {
-    animation: none;
-    transform: scale(1.2);
   }
   .preamble:hover::before {
     position: absolute;
