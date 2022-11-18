@@ -10,7 +10,7 @@
 @use "../../../../base-units/variables" as *;
 @use "../../../../base-units/mixins";
 
-.preamble > h3 + p + p::before {
+.preamble p:nth-child(3)::before {
   @include mixins.breakpoint(small) { /* keeps in small-view */
     @include mixins.insert-image("images/yellow-moon.svg", $width: 130px,
     $height: 132px, $float: right, $shape: yes); /* insert moon image to right 

@@ -10,7 +10,7 @@
 @use "../../../../base-units/variables" as *;
 @use "../../../../base-units/mixins";
 
-.requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
+.requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before {
   @include mixins.breakpoint(small) { /* keeps in small-view */
     @include mixins.insert-image("images/orange-moon.svg", $margin: 10px, 
     $float: right); /* insert moon image to right & create word wrapping */

@@ -763,7 +763,7 @@ header {
  * right side and also styles the paragraph to wrap around the moon.
  */
 @media only screen and (max-width: 1174px) {
-  .preamble > h3 + p + p::before { /* keeps in small-view */
+  .preamble p:nth-child(3)::before { /* keeps in small-view */
     content: "";
     background-image: url("images/yellow-moon.svg");
     display: block;
@@ -1022,7 +1022,7 @@ header {
  * the bottom of that paragraph while wrapping the paragraph around the moon.
  */
 @media only screen and (max-width: 1174px) {
-  .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before { /* keeps in small-view */
+  .requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before { /* keeps in small-view */
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
