@@ -14,6 +14,6 @@
 .benefits {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     @include mixins.insert-image("images/white-moon.svg", $width: 150px);
-    @include mixins.absolute($right: 10%, $top: 1%);
+    @include mixins.absolute($right: 10%, $top: 1.3rem);
   }
 }

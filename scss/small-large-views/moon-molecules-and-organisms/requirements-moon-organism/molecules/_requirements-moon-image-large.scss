@@ -14,7 +14,7 @@
 .requirements {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     @include mixins.insert-image("images/orange-moon.svg", $width: 160px,);
-    @include mixins.absolute($right: 50%, $top: 19%);
+    @include mixins.absolute($right: 50%, $top: 24.5rem);
 
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */

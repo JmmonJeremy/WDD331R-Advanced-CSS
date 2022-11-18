@@ -806,7 +806,7 @@ header {
     width: 150px;
     height: 152px;
     position: absolute;
-    top: 18.5%;
+    top: 24rem;
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon **/
@@ -893,7 +893,7 @@ header {
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 1%;
+    top: 1.3rem;
     left: 10%;
   }
 }
@@ -946,7 +946,7 @@ header {
     width: 150px;
     height: 147px;
     position: absolute;
-    top: -8.85%;
+    top: -11.5rem;
     left: 50%;
     z-index: -1; /* places planet behind the animated rocket */
     /* positions moon in fixed position from planet's center to create a *
@@ -1003,7 +1003,7 @@ header {
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 1%;
+    top: 1.3rem;
     right: 10%;
   }
 }
@@ -1054,7 +1054,7 @@ header {
     width: 160px;
     height: 160px;
     position: absolute;
-    top: 19%;
+    top: 24.5rem;
     right: 50%;
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */

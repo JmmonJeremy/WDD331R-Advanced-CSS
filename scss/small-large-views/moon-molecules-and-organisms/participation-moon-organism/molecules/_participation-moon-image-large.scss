@@ -15,7 +15,7 @@
   @include mixins.breakpoint(large) { /* keep this in large-view */
     @include mixins.insert-image("images/blue-moon.svg", $width: 150px,
     $height: 147px);
-    @include mixins.absolute($left: 50%, $top: -8.85%);
+    @include mixins.absolute($left: 50%, $top: -11.5rem);
 
     z-index: -1;  /* places planet behind the animated rocket */
 

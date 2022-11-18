@@ -14,6 +14,6 @@
 .explanation {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     @include mixins.insert-image("images/red-white-moon.svg", $width: 150px);
-    @include mixins.absolute($left: 10%, $top: 1%);
+    @include mixins.absolute($left: 10%, $top: 1.3rem);
   }
 }

@@ -16,7 +16,7 @@
     & {
       @include mixins.insert-image("images/yellow-moon.svg", $width: 150px,
       $height: 152px);
-      @include mixins.absolute($left: 50%, $top: 18.5%);
+      @include mixins.absolute($left: 50%, $top: 24rem);
       
       /* positions moon in fixed position from planet's center to create a *
        * stable hover image positon **/
