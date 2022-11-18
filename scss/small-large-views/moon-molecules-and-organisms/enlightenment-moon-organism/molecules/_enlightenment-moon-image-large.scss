@@ -23,7 +23,6 @@
       margin-left: -580px;
     }
 
-
     /* insertion & placement of large version of image to hold paragraphs */   
     &:hover::before {
       @include mixins.absolute($right: 50%, $top: -270%);
