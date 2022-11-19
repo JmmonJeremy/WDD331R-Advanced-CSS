@@ -52,7 +52,7 @@
  * Rocket Small-View....(_background-rocket-small.scss) Webpage's rocket for 
  * .....................small-view.
  * Rocket Large-View....(_background-rocket-large.scss) Webpage's rocket for 
- * .....................large-view.
+ * .....................large-view and circling planet animation.
  * Stars................(_background-stars.scss) Webpage's background stars.
  *_____________________________________________________________________________
  *
@@ -89,7 +89,9 @@
  *......................for small viewing screens.
  * Moon Large-view......(_enlightenment-moon-image-large.scss) "The Road to 
  *......................Enlightenment" section's yellow-moon.svg image design 
- *......................for large viewing screens
+ *......................for large viewing screens, along with the hover effects 
+ *......................including projection of the central moon image with 
+ *......................the text.
  *_____________________________________________________________________________
  *
  * ABOUT MOON ORGANISM
@@ -98,6 +100,10 @@
  * ABOUT MOON MOLECULES
  * Moon Small-View......(_about-moon-image-small.scss) "So What is This About?"
  *......................section's red-white-moon.svg image in small-view.
+ * Moon Large-View......(_about-moon-image-large.scss "About" section's 
+ *......................red-white-moon.svg image design in large-view, along
+ *......................with the hover effects including projection of the 
+ *......................central moon image with the text.
  *_____________________________________________________________________________
  *
  * PARTICIPATION MOON ORGANISM
@@ -106,6 +112,10 @@
  * PARTICIPATION MOON MOLECULES
  * Moon Small-View......(_participation-moon-image-small.scss) "Participation"
  *......................section's astronaut.svg image in small-view.
+ * Moon Large-view......(_participation-moon-image-large.scss) "Participation" 
+ *......................section's blue-moon.svg image design for large  
+ *......................viewing screens, along with the hover effects including
+ *......................projection of the central moon image with the text.
  *_____________________________________________________________________________
  *
  * BENEFITS MOON ORGANISM
@@ -114,6 +124,10 @@
  * BENEFITS MOON MOLECULES
  * Moon Small-View......(_benefits-moon-image-small.scss) "Benefits" section's
  *......................white-moon.svg image in small-view.
+* Moon Large-view.......(_benefits-moon-image-large.scss) "Benefits" section's
+ *......................white-moon.svg image design for large viewing screens, 
+ *......................along with the hover effects including projection of
+ *......................the central moon image with the text.
  *_____________________________________________________________________________
  *
  * REQUIREMENTS MOON ORGANISM
@@ -123,7 +137,9 @@
  * Moon Small-View......(_requirements-moon-image-small.scss) "Requirements"
  *......................section's orange-moon.svg image design in small-view.
  * Moon Large-View......(_requirements-moon-image-large.scss "Requirements"
- *......................section's orange-moon.svg image design in large-view.
+ *......................section's orange-moon.svg image design for large 
+ *......................viewing screens, along with the hover effects including
+ *......................projection of the central moon image with the text.
  *_____________________________________________________________________________
  *
  * FOOTER ORGANISM
@@ -323,7 +339,7 @@ h1 {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   h1 {
     font-size: 6rem;
   }
@@ -339,7 +355,7 @@ h2 {
   margin-top: -0.5rem;
   margin-left: 4.5rem;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   h2 {
     font-size: 3rem;
     margin-left: 7rem;
@@ -414,7 +430,7 @@ body {
  * the introductory paragraph and HTML and CSS file downloads. It also
  * positions the rocket to be behind the paragraph.
  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1174px) {
   .summary::before { /* keep this in small-view */ }
   .summary::before {
     content: "";
@@ -436,28 +452,35 @@ body {
   #ROCKET LARGE-VIEW BACKGROUND MOLECULE
 \*------------------------------------- */
 /** 
- * This section inserts the small-view rocket svg to the left of the large,
- * main, central planet using the section tag that holds the title and opening
- * paragraphs and Enlightenment section.
+ * This section inserts the large-view rocket svg that animates, 
+ * circling around the center planet.
  */
-@media only screen and (min-width: 600px) {
-  .intro::after { /* keep this in large-view */ }
-  .intro::after {
+/* inserts the rocket in the center of the planet */
+@media only screen and (min-width: 1175px) {
+  .page-wrapper::after { /* keep this in large-view */
     content: "";
     background-image: url("images/rocket-animated.svg");
     display: block;
     width: 120px;
     height: 150px;
-    /* insert rocket image */
     position: absolute;
-    top: 26rem;
+    top: 14rem;
     left: 50%;
-    /* position */
-    margin-left: -400px; /* position horizontally from center of screen */
-    transform: rotate(-35deg);
+    z-index: -1; /* place rocket behind the hover images */
+    margin-left: -60px; /* center the rocket over the planet */
+    animation: rocket-flight 10s linear infinite;
   }
 }
 
+/* sets up the animation for the rocket to circle the planet */
+@keyframes rocket-flight {
+  0% {
+    transform: rotate(0deg) translateX(360px) rotate(155deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(360px) rotate(155deg);
+  }
+}
 /* ------------------------------------*\
   #BACKGROUND ORGANISM
 \*------------------------------------ */
@@ -471,10 +494,10 @@ body {
  * This section inserts the planet into the section tag that holds the header 
  * and opening paragraph and then positions the planet behind the title.
  */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1174px) {
   .intro::before { /* keep this in small-view */
     content: "";
-    background-image: url("images/blue-planet.svg");
+    background-image: url("images/blue-moon.svg");
     display: block;
     width: 270px;
     height: 265px;
@@ -496,11 +519,11 @@ body {
  * and opening paragraphs and then positions the planet behind them and puts
  * the planet into the center of the large screen view.
  */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .intro::before { /* keep this in large-view */ }
   .intro::before {
     content: "";
-    background-image: url("images/mars.svg");
+    background-image: url("images/central-planet.svg");
     display: block;
     width: 600px;
     height: 595px;
@@ -509,7 +532,7 @@ body {
     left: 50%;
     /* position */
     z-index: -1; /* position */
-    margin-left: -300px; /* position */
+    margin-left: -300px; /* position center the planet */
   }
 }
 
@@ -528,7 +551,7 @@ header {
   margin: 0 auto; /* center header horizontally in screen */
   width: 267px; /* set width to planet width */
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   header {
     width: 600px; /* set width to planet width */
     padding: 12rem 0 0 0.4rem; /* center header in planet */
@@ -553,7 +576,7 @@ header {
   text-align: center;
   padding-left: 5rem;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .summary p:first-child {
     width: 24rem; /* set width of paragraph */
     padding: 1.5rem 1rem 0 0;
@@ -577,13 +600,13 @@ header {
   color: #fff;
   padding: 0 1rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1174px) {
   .summary p:last-child {
     width: 9rem;
     margin-bottom: -1.5rem;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .summary p:last-child {
     color: #fff;
     text-align: center;
@@ -652,13 +675,18 @@ header {
 /** 
  * This section controls the appearance of the paragraphs and their titles.
  */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
   .main {
     margin-top: 10rem;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1175px) {
+  .preamble,
+.main { /* keep this in large-view */
+    /* styles shared by all large-view titles in moons */
+    /* enlarge title when hovered over and stop pulse animation */
+  }
   .preamble p,
 .main p {
     display: none; /* conceals the sections paragraphs */
@@ -668,22 +696,64 @@ header {
     font-size: 130%;
     text-align: center;
     color: #000;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .preamble h3 {
-    padding: 35% 15% 25% 7%;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .requirements h3 {
     padding-top: 40%;
+    animation: pulse 3s ease-in-out infinite;
+  }
+  .preamble:hover h3,
+.main:hover h3 {
+    animation: none;
+    transform: scale(1.2);
+  }
+}
+
+/* Styles the Enlightenment section title */
+@media only screen and (min-width: 1175px) {
+  .preamble h3 { /* keep this in large-view */
+    padding: 35% 15% 25% 7%;
+    text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
+  }
+}
+
+/* Styles the About section title */
+@media only screen and (min-width: 1175px) {
+  .explanation h3 { /* keep this in large-view */
+    text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
+  }
+}
+
+/* Styles the Participation section title */
+@media only screen and (min-width: 1175px) {
+  .participation h3 { /* keep this in large-view */
+    text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
+  }
+}
+
+/* Styles the Benefits section title */
+@media only screen and (min-width: 1175px) {
+  .benefits h3 { /* keep this in large-view */
+    text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
+  }
+}
+
+/* Styles the Requirement section title */
+@media only screen and (min-width: 1175px) {
+  .requirements h3 { /* keep this in large-view */
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
   }
 }
 
+/* Sets up the actions for the title's pulsing */
+@keyframes pulse {
+  0% {
+    transform: scale(none);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(none);
+  }
+}
 /* ------------------------------------*\
   #A MOON PATTERN ORGANISM
 \*------------------------------------ */
@@ -698,12 +768,12 @@ header {
  * section and positions the moon in the middle of that paragraphs on the 
  * right side and also styles the paragraph to wrap around the moon.
  */
-@media only screen and (max-width: 600px) {
-  .preamble > h3 + p + p::before {
+@media only screen and (max-width: 1174px) {
+  .preamble p:nth-child(3)::before { /* keeps in small-view */
     content: "";
     background-image: url("images/yellow-moon.svg");
     display: block;
-    width: 132px;
+    width: 130px;
     height: 132px;
     float: right;
     shape-outside: url("images/yellow-moon.svg");
@@ -714,21 +784,65 @@ header {
 }
 
 /* ----------------------------------------------*\
-  #MOON SMALL-VIEW  ENLIGHTENMENT MOON MOLECULES
+  #MOON LARGE-VIEW ENLIGHTENMENT MOON MOLECULES
 \*---------------------------------------------- */
 /** 
- * This section inserts the moon image around the planet on the left side.
+ * This section inserts the moon image around the planet on the left side and 
+ * creates the large central moon image with the Enlightenment section's text 
+ * inside it when the smaller moon is hovered over.
  */
-@media only screen and (min-width: 600px) {
+/* inserts the Enlightenment moon on the left side of the planet */
+@media only screen and (min-width: 1175px) {
   .preamble { /* keep this in large-view */
+    /* insertion & placement of large version of image to hold paragraphs */
+    /* absolute position for all & placement for first paragraph */
+    /* placement for second paragraph */
+    /* placement for third paragraph */
+  }
+  .preamble {
     content: "";
     background-image: url("images/yellow-moon.svg");
     display: block;
     width: 150px;
     height: 152px;
     position: absolute;
-    top: 19%;
-    left: 5%;
+    top: 24rem;
+    left: 50%;
+    /* positions moon in fixed position from planet's center to create a *
+     * stable hover image positon **/
+    margin-left: -580px;
+  }
+  .preamble:hover::before {
+    position: absolute;
+    top: -270%;
+    right: 50%;
+    content: "";
+    background-image: url("images/yellow-moon.svg");
+    display: block;
+    width: 800px;
+    height: 820px;
+    margin-right: -889px;
+  }
+  .preamble:hover p {
+    position: absolute;
+    top: -148.5%;
+    right: 50%;
+    margin-right: -715px;
+    width: 450px;
+    /* shared characteristics of all Enlightenment paragraphs */
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+  }
+  .preamble p:nth-child(3) {
+    top: -88.5%;
+    margin-right: -770px;
+    width: 560px;
+  }
+  .preamble p:nth-child(4) {
+    top: -28.5%;
+    width: 420px;
+    margin-right: -700px;
   }
 }
 
@@ -746,18 +860,42 @@ header {
  * sections first pargraph and positions the moon on the left side between 
  * the two paragraphs so that both paragraphs wrap around the moon.
  */
-.explanation [title="HyperText Markup Language"]::before {
-  content: "";
-  background-image: url("images/red-white-moon.svg");
-  display: block;
-  width: 122px;
-  height: 122px;
-  float: left;
-  shape-outside: url("images/red-white-moon.svg");
-  shape-margin: 10px;
-  /* insert moon image to left & create word wrapping */
-  margin-right: 0.625rem; /* position */
-  margin-top: 7.3rem; /* position */
+@media only screen and (max-width: 1174px) {
+  .explanation [title="HyperText Markup Language"]::before { /* keeps in small-view */
+    content: "";
+    background-image: url("images/red-white-moon.svg");
+    display: block;
+    width: 122px;
+    height: 122px;
+    float: left;
+    shape-outside: url("images/red-white-moon.svg");
+    shape-margin: 10px;
+    /* insert moon image to left & create word wrapping */
+    margin-right: 0.625rem; /* position */
+    margin-top: 7.3rem; /* position */
+  }
+}
+
+/* ----------------------------------------------*\
+  #MOON LARGE-VIEW ABOUT MOON MOLECULES
+\*---------------------------------------------- */
+/** 
+ * This section inserts the moon image around the planet on the left side and 
+ * creates the large central moon image with the About sectoin's text inside it
+ * when the smaller moon is hovered over.
+ */
+/* inserts the About moon on the left side of the planet */
+@media only screen and (min-width: 1175px) {
+  .explanation { /* keep this in large-view */
+    content: "";
+    background-image: url("images/red-white-moon.svg");
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 1.3rem;
+    left: 10%;
+  }
 }
 
 /* ------------------------------------*\
@@ -775,18 +913,46 @@ header {
  * of that paragraph on the right side and also styles the paragraph to wrap 
  * around the astronaut for the small-view.
  */
-.participation [title="HyperText Markup Language"]::before {
-  content: "";
-  background-image: url("images/astronaut.svg");
-  display: block;
-  width: 122px;
-  height: 130px;
-  float: right;
-  shape-outside: url("images/astronaut.svg");
-  shape-margin: 10px;
-  /* insert astronaut image to 
-  right & create word wrapping */
-  margin-top: 2.75rem; /* position */
+@media only screen and (max-width: 1174px) {
+  .participation [title="HyperText Markup Language"]::before { /* keeps in small-view */
+    content: "";
+    background-image: url("images/astronaut.svg");
+    display: block;
+    width: 122px;
+    height: 130px;
+    float: right;
+    shape-outside: url("images/astronaut.svg");
+    shape-margin: 10px;
+    /* insert astronaut image to 
+    right & create word wrapping */
+    margin-top: 2.75rem; /* position */
+  }
+}
+
+/* ----------------------------------------------*\
+  #MOON LARGE-VIEW PARTICIPATION MOON MOLECULES
+\*---------------------------------------------- */
+/** 
+ * This section inserts the moon image around the planet on the top side and 
+ * creates the large central moon image with the Participation section's text 
+ * inside it when the smaller moon is hovered over.
+ */
+/* inserts the Participation moon on the top side of the planet */
+@media only screen and (min-width: 1175px) {
+  .participation { /* keep this in large-view */
+    content: "";
+    background-image: url("images/blue-moon.svg");
+    display: block;
+    width: 150px;
+    height: 147px;
+    position: absolute;
+    top: -11.5rem;
+    left: 50%;
+    z-index: -1; /* places planet behind the animated rocket */
+    /* positions moon in fixed position from planet's center to create a *
+     * stable hover image positon */
+    margin-left: -75px;
+  }
 }
 
 /* ------------------------------------*\
@@ -804,18 +970,42 @@ header {
  * paragraphs on the left side and also styles the paragraph to wrap around
  * the moon.
  */
-.benefits [title="Cascading Style Sheets"]::before {
-  content: "";
-  background-image: url("images/white-moon.svg");
-  display: block;
-  width: 122px;
-  height: 122px;
-  float: left;
-  shape-outside: url("images/white-moon.svg");
-  shape-margin: 10px;
-  /* insert moon image to left & create word wrapping */
-  margin-right: 0.625rem; /* position */
-  margin-top: 3rem; /* position */
+@media only screen and (max-width: 1174px) {
+  .benefits [title="Cascading Style Sheets"]::before { /* keeps in small-view */
+    content: "";
+    background-image: url("images/white-moon.svg");
+    display: block;
+    width: 122px;
+    height: 122px;
+    float: left;
+    shape-outside: url("images/white-moon.svg");
+    shape-margin: 10px;
+    /* insert moon image to left & create word wrapping */
+    margin-right: 0.625rem; /* position */
+    margin-top: 3rem; /* position */
+  }
+}
+
+/* ----------------------------------------------*\
+  #MOON LARGE-VIEW BENEFITS MOON MOLECULES
+\*---------------------------------------------- */
+/** 
+ * This section inserts the moon image around the planet on the right side and 
+ * creates the large central moon image with the Benefits section's text 
+ * inside it when the smaller moon is hovered over.
+ */
+/* inserts the Benefits moon on the right side of the planet */
+@media only screen and (min-width: 1175px) {
+  .benefits { /* keep this in large-view */
+    content: "";
+    background-image: url("images/white-moon.svg");
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 1.3rem;
+    right: 10%;
+  }
 }
 
 /* ------------------------------------*\
@@ -832,8 +1022,8 @@ header {
  * sections second pargraph and positions the moon on the right side towards 
  * the bottom of that paragraph while wrapping the paragraph around the moon.
  */
-@media only screen and (max-width: 600px) {
-  .requirements > h3 + p + p > [title="Cascading Style Sheets"]::before {
+@media only screen and (max-width: 1174px) {
+  .requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before { /* keeps in small-view */
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
@@ -851,19 +1041,24 @@ header {
   #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
 \*------------------------------------------- */
 /** 
- * This section styles the requirement moon orbiting
- * the center planet in large-view.
+ * This section inserts the moon image around the planet on the right side and 
+ * creates the large central moon image with the Requirements section's text 
+ * inside it when the smaller moon is hovered over.
  */
-@media only screen and (min-width: 600px) {
+/* inserts the Requirements moon on the right side of the planet */
+@media only screen and (min-width: 1175px) {
   .requirements { /* keep this in large-view */
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     position: absolute;
-    top: 20%;
-    right: 5%;
+    top: 24.5rem;
+    right: 50%;
+    /* positions moon in fixed position from planet's center to create a *
+     * stable hover image positon */
+    margin-right: -575px;
   }
 }
 
@@ -896,13 +1091,13 @@ header {
 }
 .design-selection ul li::before {
   content: "";
-  background-image: url("images/mars-planet.svg");
+  background-image: url("images/orange-planet.svg");
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 27px;
+  height: 37px;
   background-size: contain;
   position: absolute;
-  top: 0;
+  top: -6px;
   left: 15px;
 }
 .design-selection ul li:not(a) {

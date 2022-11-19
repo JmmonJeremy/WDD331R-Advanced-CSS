@@ -18,30 +18,82 @@
 // Hides the paragraphs
 .preamble,
 .main {
-  @include mixins.breakpoint(large) {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
     & p {
       display: none; /* conceals the sections paragraphs */
     }
 
+    /* styles shared by all large-view titles in moons */
     & h3 {
       font-size: 130%;
       text-align: center;
-      color: #000;
+      color: $text-darkest;
+      padding-top: 40%;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    
+    /* enlarge title when hovered over and stop pulse animation */
+    &:hover h3 {
+      animation: none;
+      transform: scale(1.2);
     }
   }
 }
 
-// Styles the Enlightenment section title
+/* Styles the Enlightenment section title */
 .preamble h3 {
-  @include mixins.breakpoint(large) {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
     padding: 35% 15% 25% 7%;
+    text-shadow:
+      1px 1px 10px $enlightenment-light,
+      -1px -1px 10px $enlightenment-light;
   }
 }
 
-// Styles the Requirement section title
+/* Styles the About section title */
+.explanation h3 {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
+    text-shadow: 1px 1px 10px $about-light, -1px -1px 10px $about-light;
+  }
+}
+
+/* Styles the Participation section title */
+.participation h3 {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
+    text-shadow:
+      1px 1px 10px $participation-light,
+      -1px -1px 10px $participation-light;
+  }
+}
+
+/* Styles the Benefits section title */
+.benefits h3 {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
+    text-shadow: 1px 1px 10px $benefits-light, -1px -1px 10px $benefits-light;
+  }
+}
+
+/* Styles the Requirement section title */
 .requirements h3 {
-  @include mixins.breakpoint(large) {
-    padding-top: 40%;
-    text-shadow: 1px 1px 10px  #fefca6, -1px -1px 10px #fefca6;
+  @include mixins.breakpoint(large) { /* keep this in large-view */
+    text-shadow:
+      1px 1px 10px $requirements-light,
+      -1px -1px 10px $requirements-light;
+  }
+}
+
+/* Sets up the actions for the title's pulsing */
+@keyframes pulse {
+  0% {
+    transform: scale(none);
+  }
+  
+  50% {
+    transform: scale(1.03);
+  }
+    
+  100% {
+    transform: scale(none);
   }
 }

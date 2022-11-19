@@ -13,12 +13,12 @@
 .intro::before {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     & {
-      @include mixins.insert-image("images/mars.svg", $width: 600px,
+      @include mixins.insert-image("images/central-planet.svg", $width: 600px,
       $height: 595px); /* insert planet image */
       @include mixins.absolute($left: 50%); /* position */
     
       z-index: -1; /* position */
-      margin-left: -300px; /* position */
+      margin-left: -300px; /* position center the planet */
     }
   }
 }

@@ -12,9 +12,11 @@
 @use "../../../../base-units/mixins";
 
 .participation [title="HyperText Markup Language"]::before {
-  @include mixins.insert-image("images/astronaut.svg", $float: right,
-  $width: 122px, $height: 130px, $margin: 10px); /* insert astronaut image to 
+  @include mixins.breakpoint(small) { /* keeps in small-view */
+    @include mixins.insert-image("images/astronaut.svg", $float: right,
+    $width: 122px, $height: 130px, $margin: 10px); /* insert astronaut image to 
   right & create word wrapping */
 
-  margin-top: 2.75rem; /* position */
+    margin-top: 2.75rem; /* position */
+  }
 }

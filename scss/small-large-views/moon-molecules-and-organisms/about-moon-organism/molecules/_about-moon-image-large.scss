@@ -1,0 +1,19 @@
+/* ----------------------------------------------*\
+  #MOON LARGE-VIEW ABOUT MOON MOLECULES
+\*---------------------------------------------- */
+
+/** 
+ * This section inserts the moon image around the planet on the left side and 
+ * creates the large central moon image with the About sectoin's text inside it
+ * when the smaller moon is hovered over.
+ */
+@use "../../../../base-units/variables";
+@use "../../../../base-units/mixins";
+
+/* inserts the About moon on the left side of the planet */
+.explanation {
+  @include mixins.breakpoint(large) { /* keep this in large-view */
+    @include mixins.insert-image("images/red-white-moon.svg", $width: 150px);
+    @include mixins.absolute($left: 10%, $top: 1.3rem);
+  }
+}

@@ -11,9 +11,11 @@
 @use "../../../../base-units/mixins";
 
 .explanation [title="HyperText Markup Language"]::before {
-  @include mixins.insert-image("images/red-white-moon.svg", $float: left,
-  $margin: 10px); /* insert moon image to left & create word wrapping */
+  @include mixins.breakpoint(small) { /* keeps in small-view */
+    @include mixins.insert-image("images/red-white-moon.svg", $float: left,
+    $margin: 10px); /* insert moon image to left & create word wrapping */
 
-  margin-right: .625rem; /* position */
-  margin-top: 7.3rem; /* position */
+    margin-right: .625rem; /* position */
+    margin-top: 7.3rem; /* position */
+  }
 }

@@ -3,15 +3,21 @@
 \*------------------------------------------- */
 
 /** 
- * This section styles the requirement moon orbiting
- * the center planet in large-view.
+ * This section inserts the moon image around the planet on the right side and 
+ * creates the large central moon image with the Requirements section's text 
+ * inside it when the smaller moon is hovered over.
  */
 @use "../../../../base-units/variables" as *;
 @use "../../../../base-units/mixins";
 
+/* inserts the Requirements moon on the right side of the planet */
 .requirements {
   @include mixins.breakpoint(large) { /* keep this in large-view */
-    @include mixins.insert-image("images/orange-moon.svg", $width: 150px,);
-    @include mixins.absolute($right: 5%, $top: 20%);
+    @include mixins.insert-image("images/orange-moon.svg", $width: 160px,);
+    @include mixins.absolute($right: 50%, $top: 24.5rem);
+
+    /* positions moon in fixed position from planet's center to create a *
+     * stable hover image positon */
+    margin-right: -575px;
   }
 }
