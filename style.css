@@ -458,17 +458,14 @@ body {
 /* inserts the rocket in the center of the planet */
 @media only screen and (min-width: 1175px) {
   .page-wrapper::after { /* keep this in large-view */
-    content: "";
-    background-image: url("images/rocket-animated.svg");
-    display: block;
-    width: 120px;
-    height: 150px;
+    /*@include mixins.insert-image("images/rocket-animated.svg", $width: 120px,
+    $height: 150px); */
     position: absolute;
     top: 14rem;
     left: 50%;
     z-index: -1; /* place rocket behind the hover images */
     margin-left: -60px; /* center the rocket over the planet */
-    animation: rocket-flight 10s linear infinite;
+    /* animation: rocket-flight 10s linear infinite; */
   }
 }
 
@@ -938,6 +935,9 @@ header {
  * inside it when the smaller moon is hovered over.
  */
 /* inserts the Participation moon on the top side of the planet */
+.participation {
+  /* insertion & placement of large version of image to hold paragraphs */
+}
 @media only screen and (min-width: 1175px) {
   .participation { /* keep this in large-view */
     content: "";
@@ -953,6 +953,17 @@ header {
      * stable hover image positon */
     margin-left: -75px;
   }
+}
+.participation:hover::before {
+  position: absolute;
+  top: 50%;
+  right: -190%;
+  content: "";
+  background-image: url("images/blue-moon.svg");
+  display: block;
+  width: 700px;
+  height: 700px;
+  margin-top: 100px;
 }
 
 /* ------------------------------------*\
@@ -1059,6 +1070,42 @@ header {
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-right: -575px;
+    /* inserts and places large version of image hold paragraphs */
+    /* absolute positioning for all & placing first paragraph */
+    /* placement for second paragraph */
+    /* placement for third paragraph */
+  }
+  .requirements:hover::before {
+    position: absolute;
+    top: -270%;
+    right: 50%;
+    content: "";
+    background-image: url("images/orange-moon.svg");
+    display: block;
+    width: 650px;
+    height: 650px;
+    margin-right: 170px;
+  }
+  .requirements:hover p {
+    position: absolute;
+    top: -220%;
+    right: 50%;
+    margin-right: 200px;
+    width: 500px;
+    /* shared characteristics of all Enlightenment paragraphs */
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+  }
+  .requirements p:nth-child(3) {
+    top: -88.5%;
+    margin-right: -770px;
+    width: 560px;
+  }
+  .requirements p:nth-child(4) {
+    top: -28.5%;
+    width: 420px;
+    margin-right: -700px;
   }
 }
 
