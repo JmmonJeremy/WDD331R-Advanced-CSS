@@ -7,7 +7,7 @@
  * creates the large central moon image with the Participation section's text 
  * inside it when the smaller moon is hovered over.
  */
-@use "../../../../base-units/variables";
+@use "../../../../base-units/variables" as *;
 @use "../../../../base-units/mixins";
 
 /* inserts the Participation moon on the top side of the planet */
@@ -23,6 +23,7 @@
      * stable hover image positon */
     margin-left: -75px;
   }
+
   /* insertion & placement of large version of image to hold paragraphs */   
   &:hover::before {
     @include mixins.absolute($right: -190%, $top: 50%);
@@ -30,5 +31,21 @@
     $height: 700px);
 
     margin-top: 100px;
+    z-index: 1; /* brings image in front of main planet text */
+  }
+
+  /* absolute position for all & placement for first paragraph */
+  &:hover p {
+    @include mixins.absolute($right: -190%, $top: -50%);
+
+    margin-right: -715px;
+    width: 450px;
+
+    /* shared characteristics of all Enlightenment paragraphs */
+    display: block;
+    text-align: center;
+    text-shadow:
+      1px 1px 20px $background-color,
+      -1px -1px 20px $background-color;
   }
 }
