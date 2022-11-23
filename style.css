@@ -686,16 +686,25 @@ header {
 
 @media only screen and (min-width: 1175px) {
   .preamble,
-.main { /* keep this in large-view */
+.explanation,
+.participation,
+.benefits,
+.requirements { /* keep this in large-view */
     /* styles shared by all large-view titles in moons */
     /* enlarge title when hovered over and stop pulse animation */
   }
   .preamble p,
-.main p {
+.explanation p,
+.participation p,
+.benefits p,
+.requirements p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-.main h3 {
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -703,7 +712,10 @@ header {
     animation: pulse 3s ease-in-out infinite;
   }
   .preamble:hover h3,
-.main:hover h3 {
+.explanation:hover h3,
+.participation:hover h3,
+.benefits:hover h3,
+.requirements:hover h3 {
     animation: none;
     transform: scale(1.2);
   }

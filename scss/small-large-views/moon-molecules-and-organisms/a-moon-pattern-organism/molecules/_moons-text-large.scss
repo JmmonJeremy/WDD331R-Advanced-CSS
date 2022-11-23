@@ -17,7 +17,10 @@
 
 // Hides the paragraphs
 .preamble,
-.main {
+.explanation,
+.participation,
+.benefits,
+.requirements {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     & p {
       display: none; /* conceals the sections paragraphs */
