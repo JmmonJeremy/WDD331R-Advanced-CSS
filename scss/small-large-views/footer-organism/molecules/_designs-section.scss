@@ -14,7 +14,10 @@
 }
 
 .design-selection {
+  @include mixins.line(top); /* put lines above & below links */
+
   padding: 1rem;
+  margin-top: 3rem;
 
   & .designer-name {
     margin-left: .25rem;
@@ -27,7 +30,7 @@
     &::before {
       @include mixins.insert-image("images/orange-planet.svg", inline-block,
       contain, 27px, 37px);
-      @include mixins.absolute($top: -6px, $left: 15px);
+      @include mixins.absolute($top: 0, $left: 15px);
     }
 
     &:not(a) {
@@ -42,7 +45,7 @@
 
 .design-name {
   display: block;
-  max-width: fit-content;
+  max-width: max-content;
 }
 
 .designer-name {

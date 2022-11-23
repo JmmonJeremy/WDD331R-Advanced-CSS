@@ -390,6 +390,8 @@ abbr {
 }
 
 ul {
+  display: flex;
+  flex-flow: row wrap;
   list-style: none;
   padding: 0;
 }
@@ -1036,6 +1038,11 @@ header {
     margin-top: 27.75rem; /* position */
   }
 }
+@media only screen and (min-width: 715px) {
+  .requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before {
+    margin-top: 17.5rem;
+  }
+}
 
 /* -------------------------------------------*\
   #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
@@ -1080,7 +1087,11 @@ header {
 }
 
 .design-selection {
+  border-top: 3px solid #ff0;
+  padding-top: 0.5rem;
+  /* put lines above & below links */
   padding: 1rem;
+  margin-top: 3rem;
 }
 .design-selection .designer-name {
   margin-left: 0.25rem;
@@ -1097,7 +1108,7 @@ header {
   height: 37px;
   background-size: contain;
   position: absolute;
-  top: -6px;
+  top: 0;
   left: 15px;
 }
 .design-selection ul li:not(a) {
@@ -1109,7 +1120,7 @@ header {
 
 .design-name {
   display: block;
-  max-width: fit-content;
+  max-width: max-content;
 }
 
 .designer-name {
