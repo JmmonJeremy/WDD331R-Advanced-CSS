@@ -1181,7 +1181,13 @@ header {
 }
 
 .zen-resources {
-  padding-left: 1rem;
+  /* added to have title float next to items when screen is enlarged */
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem; /* changed from padding-left to mathc other asides */
+}
+.zen-resources h3 {
+  margin-top: 0.6rem; /* align title with items */
 }
 .zen-resources ul li {
   padding-left: 50px;
