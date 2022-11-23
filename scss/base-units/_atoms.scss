@@ -30,7 +30,6 @@ h1 {
 
   /*** Use the text as a mask for the background.
   // This will show the gradient as a text color rather than element bg. ***/
- 
   @include mixins.breakpoint(large) {
     & {
       font-size: 6rem;
@@ -39,7 +38,6 @@ h1 {
       background-size: 20%;
       background-repeat: repeat;
       background-position: top;
-
       background-clip: text;
       -webkit-block-start: 0;
       -webkit-background-clip: text;
