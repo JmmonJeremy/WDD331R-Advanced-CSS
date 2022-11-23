@@ -326,23 +326,23 @@ h4 {
 h1 {
   font-size: 2.5rem;
   letter-spacing: 1px;
-  color: #333;
-  background: url("../../images/night-time.svg");
-  background-size: 20%;
-  background-repeat: repeat;
-  background-position: top;
   /*** Use the text as a mask for the background.
   // This will show the gradient as a text color rather than element bg. ***/
-  background-clip: text;
-  -webkit-block-start: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
 }
 @media only screen and (min-width: 1175px) {
   h1 {
     font-size: 6rem;
+    color: #333;
+    background: url("../../images/night-time.svg");
+    background-size: 20%;
+    background-repeat: repeat;
+    background-position: top;
+    background-clip: text;
+    -webkit-block-start: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
   }
 }
 
@@ -498,7 +498,7 @@ body {
 @media only screen and (max-width: 1174px) {
   .intro::before { /* keep this in small-view */
     content: "";
-    background-image: url("images/jupiter.svg");
+    background-image: url("images/blue-moon.svg");
     display: block;
     width: 270px;
     height: 265px;
@@ -508,7 +508,7 @@ body {
     /* position */
     z-index: -1; /* position */
     margin-left: -135px; /* position */
-    transform: rotate(180deg); /* position */
+    transform: rotate(-20deg); /* position */
     background-repeat: no-repeat;
   }
 }
@@ -1140,6 +1140,7 @@ header {
   .requirements p:nth-child(4) {
     width: 800px;
     margin-right: 90px;
+    margin-top: 10px;
   }
   .requirements p:nth-child(5) {
     top: 110px;
