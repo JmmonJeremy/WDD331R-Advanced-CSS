@@ -390,6 +390,7 @@ abbr {
 }
 
 ul {
+  /* added to expand asides in footer as screen enlarges */
   display: flex;
   flex-flow: row wrap;
   list-style: none;
@@ -1040,6 +1041,7 @@ header {
 }
 @media only screen and (min-width: 715px) {
   .requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before {
+    /* added to keep moon from going into footer in screen width over 715px */
     margin-top: 17.5rem;
   }
 }
@@ -1089,9 +1091,9 @@ header {
 .design-selection {
   border-top: 3px solid #ff0;
   padding-top: 0.5rem;
-  /* put lines above & below links */
+  /* put line above section */
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 3rem; /* seperates footer from main body */
 }
 .design-selection .designer-name {
   margin-left: 0.25rem;
@@ -1107,6 +1109,7 @@ header {
   width: 27px;
   height: 37px;
   background-size: contain;
+  /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
   top: 0;
   left: 15px;
@@ -1120,6 +1123,8 @@ header {
 
 .design-name {
   display: block;
+  /* changed from fit-content to max-content to keep it from prematurely
+   * wrapping in flex */
   max-width: max-content;
 }
 

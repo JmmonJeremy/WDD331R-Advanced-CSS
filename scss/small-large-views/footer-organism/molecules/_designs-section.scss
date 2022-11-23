@@ -14,10 +14,10 @@
 }
 
 .design-selection {
-  @include mixins.line(top); /* put lines above & below links */
+  @include mixins.line(top); /* put line above section */
 
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 3rem; /* seperates footer from main body */
 
   & .designer-name {
     margin-left: .25rem;
@@ -30,6 +30,8 @@
     &::before {
       @include mixins.insert-image("images/orange-planet.svg", inline-block,
       contain, 27px, 37px);
+
+      /* changed $top to 0 from -6px due changes caused by flex */
       @include mixins.absolute($top: 0, $left: 15px);
     }
 
@@ -45,6 +47,9 @@
 
 .design-name {
   display: block;
+
+  /* changed from fit-content to max-content to keep it from prematurely
+   * wrapping in flex */
   max-width: max-content;
 }
 
