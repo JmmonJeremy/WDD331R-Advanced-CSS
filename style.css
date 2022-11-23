@@ -686,25 +686,25 @@ header {
 
 @media only screen and (min-width: 1175px) {
   .preamble,
-.explanation,
-.participation,
-.benefits,
-.requirements { /* keep this in large-view */
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements { /* keep this in large-view */
     /* styles shared by all large-view titles in moons */
     /* enlarge title when hovered over and stop pulse animation */
   }
   .preamble p,
-.explanation p,
-.participation p,
-.benefits p,
-.requirements p {
+  .explanation p,
+  .participation p,
+  .benefits p,
+  .requirements p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-.explanation h3,
-.participation h3,
-.benefits h3,
-.requirements h3 {
+  .explanation h3,
+  .participation h3,
+  .benefits h3,
+  .requirements h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -712,10 +712,10 @@ header {
     animation: pulse 3s ease-in-out infinite;
   }
   .preamble:hover h3,
-.explanation:hover h3,
-.participation:hover h3,
-.benefits:hover h3,
-.requirements:hover h3 {
+  .explanation:hover h3,
+  .participation:hover h3,
+  .benefits:hover h3,
+  .requirements:hover h3 {
     animation: none;
     transform: scale(1.2);
   }
@@ -1011,15 +1011,43 @@ header {
  */
 /* inserts the Benefits moon on the right side of the planet */
 @media only screen and (min-width: 1175px) {
-  .benefits { /* keep this in large-view */
+  .benefits {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/white-moon.svg");
     display: block;
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 1.3rem;
-    right: 10%;
+    top: -2rem;
+    left: 50%;
+    margin-left: 340px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #e8e7e6;
+    /* absolute position for all & placement for first paragraph */
+  }
+  .benefits:hover::before {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    content: "";
+    background-image: url("images/white-moon.svg");
+    display: block;
+    width: 630px;
+    height: 630px;
+    margin-left: -730px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 90px 50px #e8e7e6;
+  }
+  .benefits:hover p {
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    margin-left: -630px;
+    width: 440px;
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
   }
 }
 
