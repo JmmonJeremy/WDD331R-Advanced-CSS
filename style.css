@@ -683,16 +683,26 @@ header {
 
 @media only screen and (min-width: 1175px) {
   .preamble,
-.main { /* keep this in large-view */
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    /* keep this in large-view */
     /* styles shared by all large-view titles in moons */
     /* enlarge title when hovered over and stop pulse animation */
   }
   .preamble p,
-.main p {
+  .explanation p,
+  .participation p,
+  .benefits p,
+  .requirements p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-.main h3 {
+  .explanation h3,
+  .participation h3,
+  .benefits h3,
+  .requirements h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -700,7 +710,10 @@ header {
     animation: pulse 3s ease-in-out infinite;
   }
   .preamble:hover h3,
-.main:hover h3 {
+  .explanation:hover h3,
+  .participation:hover h3,
+  .benefits:hover h3,
+  .requirements:hover h3 {
     animation: none;
     transform: scale(1.2);
   }
@@ -708,7 +721,8 @@ header {
 
 /* Styles the Enlightenment section title */
 @media only screen and (min-width: 1175px) {
-  .preamble h3 { /* keep this in large-view */
+  .preamble h3 {
+    /* keep this in large-view */
     padding: 35% 15% 25% 7%;
     text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
   }
@@ -716,28 +730,32 @@ header {
 
 /* Styles the About section title */
 @media only screen and (min-width: 1175px) {
-  .explanation h3 { /* keep this in large-view */
+  .explanation h3 {
+    /* keep this in large-view */
     text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
   }
 }
 
 /* Styles the Participation section title */
 @media only screen and (min-width: 1175px) {
-  .participation h3 { /* keep this in large-view */
+  .participation h3 {
+    /* keep this in large-view */
     text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
   }
 }
 
 /* Styles the Benefits section title */
 @media only screen and (min-width: 1175px) {
-  .benefits h3 { /* keep this in large-view */
+  .benefits h3 {
+    /* keep this in large-view */
     text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
   }
 }
 
 /* Styles the Requirement section title */
 @media only screen and (min-width: 1175px) {
-  .requirements h3 { /* keep this in large-view */
+  .requirements h3 {
+    /* keep this in large-view */
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
   }
 }
@@ -881,20 +899,52 @@ header {
 \*---------------------------------------------- */
 /** 
  * This section inserts the moon image around the planet on the left side and 
- * creates the large central moon image with the About sectoin's text inside it
+ * creates the large central moon image with the About section's text inside it
  * when the smaller moon is hovered over.
  */
 /* inserts the About moon on the left side of the planet */
 @media only screen and (min-width: 1175px) {
-  .explanation { /* keep this in large-view */
+  .explanation {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/red-white-moon.svg");
     display: block;
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 1.3rem;
-    left: 10%;
+    top: -2rem;
+    left: 50%;
+    margin-left: -500px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #f3f4de;
+    /* absolute position for all & placement for first paragraph */
+    /* position the second paragraph */
+  }
+  .explanation:hover::before {
+    position: absolute;
+    top: 8%;
+    right: 50%;
+    content: "";
+    background-image: url("images/red-white-moon.svg");
+    display: block;
+    width: 630px;
+    height: 630px;
+    margin-right: -740px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 90px 50px #f3f4de;
+  }
+  .explanation:hover p {
+    position: absolute;
+    top: 80%;
+    right: 50%;
+    margin-right: -675px;
+    width: 490px;
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
+  }
+  .explanation p:nth-child(3) {
+    top: 215%;
   }
 }
 
