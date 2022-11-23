@@ -727,6 +727,7 @@ header {
     /* keep this in large-view */
     padding: 35% 15% 25% 7%;
     text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
+    color: #e43388;
   }
 }
 
