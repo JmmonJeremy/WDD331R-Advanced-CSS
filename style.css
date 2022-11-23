@@ -825,7 +825,7 @@ header {
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon **/
-    margin-left: -580px;
+    margin-left: -560px;
   }
   .preamble:hover::before {
     position: absolute;
@@ -836,13 +836,13 @@ header {
     display: block;
     width: 800px;
     height: 820px;
-    margin-right: -889px;
+    margin-right: -869px;
   }
   .preamble:hover p {
     position: absolute;
     top: -148.5%;
     right: 50%;
-    margin-right: -715px;
+    margin-right: -695px;
     width: 450px;
     /* shared characteristics of all Enlightenment paragraphs */
     display: block;
@@ -851,13 +851,13 @@ header {
   }
   .preamble p:nth-child(3) {
     top: -88.5%;
-    margin-right: -770px;
+    margin-right: -750px;
     width: 560px;
   }
   .preamble p:nth-child(4) {
     top: -28.5%;
     width: 420px;
-    margin-right: -700px;
+    margin-right: -680px;
   }
 }
 
