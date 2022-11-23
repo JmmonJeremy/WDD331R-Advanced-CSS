@@ -390,6 +390,9 @@ abbr {
 }
 
 ul {
+  /* added to expand asides in footer as screen enlarges */
+  display: flex;
+  flex-flow: row wrap;
   list-style: none;
   padding: 0;
 }
@@ -1036,6 +1039,12 @@ header {
     margin-top: 27.75rem; /* position */
   }
 }
+@media only screen and (min-width: 715px) {
+  .requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before {
+    /* added to keep moon from going into footer in screen width over 715px */
+    margin-top: 17.5rem;
+  }
+}
 
 /* -------------------------------------------*\
   #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
@@ -1080,7 +1089,11 @@ header {
 }
 
 .design-selection {
+  border-top: 3px solid #ff0;
+  padding-top: 0.5rem;
+  /* put line above section */
   padding: 1rem;
+  margin-top: 3rem; /* seperates footer from main body */
 }
 .design-selection .designer-name {
   margin-left: 0.25rem;
@@ -1096,8 +1109,9 @@ header {
   width: 27px;
   height: 37px;
   background-size: contain;
+  /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
-  top: -6px;
+  top: 0;
   left: 15px;
 }
 .design-selection ul li:not(a) {
@@ -1109,7 +1123,9 @@ header {
 
 .design-name {
   display: block;
-  max-width: fit-content;
+  /* changed from fit-content to max-content to keep it from prematurely
+   * wrapping in flex */
+  max-width: max-content;
 }
 
 .designer-name {
@@ -1129,7 +1145,13 @@ header {
 }
 
 .design-archives {
+  /* added to have title float next to items when screen is enlarged */
+  display: flex;
+  flex-flow: row wrap;
   padding: 1rem;
+}
+.design-archives h3 {
+  margin-top: 0.6rem; /* align title with items */
 }
 .design-archives ul li {
   padding-left: 50px;
@@ -1159,7 +1181,13 @@ header {
 }
 
 .zen-resources {
-  padding-left: 1rem;
+  /* added to have title float next to items when screen is enlarged */
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem; /* changed from padding-left to mathc other asides */
+}
+.zen-resources h3 {
+  margin-top: 0.6rem; /* align title with items */
 }
 .zen-resources ul li {
   padding-left: 50px;
