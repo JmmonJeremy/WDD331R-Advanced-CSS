@@ -390,6 +390,9 @@ abbr {
 }
 
 ul {
+  /* added to expand asides in footer as screen enlarges */
+  display: flex;
+  flex-flow: row wrap;
   list-style: none;
   padding: 0;
 }
@@ -827,7 +830,7 @@ header {
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon **/
-    margin-left: -580px;
+    margin-left: -560px;
   }
   .preamble:hover::before {
     position: absolute;
@@ -838,13 +841,13 @@ header {
     display: block;
     width: 800px;
     height: 820px;
-    margin-right: -889px;
+    margin-right: -869px;
   }
   .preamble:hover p {
     position: absolute;
     top: -148.5%;
     right: 50%;
-    margin-right: -715px;
+    margin-right: -695px;
     width: 450px;
     /* shared characteristics of all Enlightenment paragraphs */
     display: block;
@@ -853,13 +856,13 @@ header {
   }
   .preamble p:nth-child(3) {
     top: -88.5%;
-    margin-right: -770px;
+    margin-right: -750px;
     width: 560px;
   }
   .preamble p:nth-child(4) {
     top: -28.5%;
     width: 420px;
-    margin-right: -700px;
+    margin-right: -680px;
   }
 }
 
@@ -1045,15 +1048,43 @@ header {
  */
 /* inserts the Benefits moon on the right side of the planet */
 @media only screen and (min-width: 1175px) {
-  .benefits { /* keep this in large-view */
+  .benefits {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/white-moon.svg");
     display: block;
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 1.3rem;
-    right: 10%;
+    top: -2rem;
+    left: 50%;
+    margin-left: 340px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #e8e7e6;
+    /* absolute position for all & placement for first paragraph */
+  }
+  .benefits:hover::before {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    content: "";
+    background-image: url("images/white-moon.svg");
+    display: block;
+    width: 630px;
+    height: 630px;
+    margin-left: -730px;
+    border-radius: 50%;
+    box-shadow: 0 0 90px 50px #e8e7e6;
+  }
+  .benefits:hover p {
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    margin-left: -630px;
+    width: 440px;
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
   }
 }
 
@@ -1083,6 +1114,12 @@ header {
     shape-margin: 10px;
     /* insert moon image to right & create word wrapping */
     margin-top: 27.75rem; /* position */
+  }
+}
+@media only screen and (min-width: 715px) {
+  .requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before {
+    /* added to keep moon from going into footer in screen width over 715px */
+    margin-top: 17.5rem;
   }
 }
 
@@ -1129,7 +1166,11 @@ header {
 }
 
 .design-selection {
+  border-top: 3px solid #ff0;
+  padding-top: 0.5rem;
+  /* put line above section */
   padding: 1rem;
+  margin-top: 3rem; /* seperates footer from main body */
 }
 .design-selection .designer-name {
   margin-left: 0.25rem;
@@ -1145,8 +1186,9 @@ header {
   width: 27px;
   height: 37px;
   background-size: contain;
+  /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
-  top: -6px;
+  top: 0;
   left: 15px;
 }
 .design-selection ul li:not(a) {
@@ -1158,7 +1200,9 @@ header {
 
 .design-name {
   display: block;
-  max-width: fit-content;
+  /* changed from fit-content to max-content to keep it from prematurely
+   * wrapping in flex */
+  max-width: max-content;
 }
 
 .designer-name {
@@ -1208,7 +1252,7 @@ header {
 }
 
 .zen-resources {
-  padding-left: 1rem;
+  padding: 1rem; /* changed from padding-left to mathc other asides */
 }
 .zen-resources ul li {
   padding-left: 50px;

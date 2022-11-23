@@ -14,7 +14,7 @@
 }
 
 .zen-resources {
-  padding-left: 1rem;
+  padding: 1rem; /* changed from padding-left to mathc other asides */
 
   & ul li {
     padding-left: 50px;

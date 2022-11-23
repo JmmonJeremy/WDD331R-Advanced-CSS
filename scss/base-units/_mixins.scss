@@ -111,6 +111,9 @@ $height: $width, $float: no, $shape: no, $margin: no) {
   @if $break == small {
     @media only screen and (max-width: $break-small) { @content; }
   }
+  @if $break == medium {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
   @if $break == large {
     @media only screen and (min-width: $break-large) { @content; }
   }
