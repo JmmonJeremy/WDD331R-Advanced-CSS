@@ -17,6 +17,7 @@
 
     z-index: -1; /* position */
     margin-left: -135px; /* position */
-    transform: rotate(0.2turn); /* position */
+    transform: rotate(180deg); /* position */
+    background-repeat: no-repeat;
   }
 }

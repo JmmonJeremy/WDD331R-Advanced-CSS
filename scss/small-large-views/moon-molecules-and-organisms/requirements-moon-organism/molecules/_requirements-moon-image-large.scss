@@ -22,19 +22,20 @@
 
     /* inserts and places large version of image hold paragraphs */
     &:hover::before {
-      @include mixins.absolute($right: 50%, $top: -260%);
-      @include mixins.insert-image("images/orange-moon.svg", $width: 650px,
-      $height: 650px);
+      @include mixins.absolute($right: 8%, $top: -320%);
+      @include mixins.insert-image("images/orange-moon.svg", $width: 880px,
+      $height: 880px);
 
-      margin-right: 170px;
+      margin-right: 120px;
+      background-repeat: no-repeat; /* prevents svg image from repeating */
     }
 
     /* absolute positioning for all & placing first paragraph */
     &:hover p {
-      @include mixins.absolute($right: 50%, $top: -220%);
+      @include mixins.absolute($right: 50%, $top: -250%);
 
-      margin-right: 200px;
-      width: 500px;
+      margin-right: 210px;
+      width: 550px;
 
       /* shared characteristics of all Enlightenment paragraphs */
       display: block;
@@ -46,16 +47,29 @@
 
     /* placement for second paragraph */
     & p:nth-child(3) {
-      top: -88.5%;
-      margin-right: -770px;
-      width: 560px;
+      top: -205px;
+      width: 820px;
+      margin-right: 70px;
     }
 
     /* placement for third paragraph */    
     & p:nth-child(4) {
-      top: -28.5%;
-      width: 420px;
-      margin-right: -700px;
+      width: 800px;
+      margin-right: 90px;
+    }
+    
+    /* placement for fourth paragraph */
+    & p:nth-child(5) {
+      top: 110px;
+      width: 630px;
+      margin-right: 160px;
+    }
+
+    /* placement for fifth paragraph */
+    & p:nth-child(6) {
+      top: 250px;
+      width: 400px;
+      margin-right: 280px;
     }
   }
 }

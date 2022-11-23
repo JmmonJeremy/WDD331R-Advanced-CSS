@@ -17,7 +17,7 @@
     $height: 147px);
     @include mixins.absolute($left: 50%, $top: -11.5rem);
 
-    z-index: -1;  /* places planet behind the animated rocket */
+    /* z-index: -1; */  /* places planet behind the animated rocket */
 
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
@@ -31,15 +31,16 @@
     $height: 700px);
 
     margin-top: 100px;
-    z-index: 1; /* brings image in front of main planet text */
+    background-repeat: no-repeat;
   }
 
   /* absolute position for all & placement for first paragraph */
   &:hover p {
     @include mixins.absolute($right: -190%, $top: -50%);
 
-    margin-right: -715px;
-    width: 450px;
+    margin-top: 350px;
+    margin-right: 80px;
+    width: 520px;
 
     /* shared characteristics of all Enlightenment paragraphs */
     display: block;
@@ -47,5 +48,17 @@
     text-shadow:
       1px 1px 20px $background-color,
       -1px -1px 20px $background-color;
+  }
+
+  & p:nth-child(3) {
+    top: 120px;
+    margin-right: 20px;
+    width: 650px;
+  }
+  
+  & p:nth-child(4) {
+    top: 240px;
+    width: 500px;
+    margin-right: 95px;
   }
 }

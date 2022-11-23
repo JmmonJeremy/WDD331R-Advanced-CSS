@@ -13,12 +13,14 @@
 .intro::before {
   @include mixins.breakpoint(large) { /* keep this in large-view */
     & {
-      @include mixins.insert-image("images/jupiter.svg", $width: 600px,
-      $height: 595px); /* insert planet image */
-      @include mixins.absolute($left: 50%); /* position */
+      @include mixins.insert-image("images/jupiter.svg", $width: 620px,
+      $height: 610px); /* insert planet image */
+      @include mixins.absolute($top: -10px, $left: 50%); /* position */
     
       z-index: -1; /* position */
       margin-left: -300px; /* position center the planet */
+      transform: rotate(180deg); /* rotate the planet image 180deg */
+      background-repeat: no-repeat;
     }
   }
 }
