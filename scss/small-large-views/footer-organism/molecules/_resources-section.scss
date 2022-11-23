@@ -14,14 +14,7 @@
 }
 
 .zen-resources {
-  /* added to have title float next to items when screen is enlarged */
-  @include mixins.flex;
-
   padding: 1rem; /* changed from padding-left to mathc other asides */
- 
-  & h3 {
-    margin-top: .6rem;/* align title with items */
-  }
 
   & ul li {
     padding-left: 50px;
