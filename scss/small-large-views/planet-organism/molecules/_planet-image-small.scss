@@ -11,7 +11,7 @@
 
 .intro::before {
   @include mixins.breakpoint(small) { /* keep this in small-view */
-    @include mixins.insert-image("images/blue-moon.svg", $width: 270px,
+    @include mixins.insert-image("images/jupiter.svg", $width: 270px,
     $height: 265px); /* insert planet image */
     @include mixins.absolute($left: 50%); /* position */
 

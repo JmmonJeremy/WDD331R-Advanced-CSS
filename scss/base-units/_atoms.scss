@@ -28,13 +28,18 @@ h4 {
 h1 {
   @include mixins.font(2.5rem, $spacing: 1px);
 
-  text-align: center;
-  background-image: linear-gradient(10deg, $background-color, $primary, $background-color, $accent1, $background-color, $accent2, #000, $text-light);
-  background-size: 100%;
+  color: $text-dark;
+  background: url("../../images/night-time.svg");
+  background-size: 20%;
   background-repeat: repeat;
+  background-position: top;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6); 
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.6);
 
   /*** Use the text as a mask for the background.
   // This will show the gradient as a text color rather than element bg. ***/
+
   background-clip: text;
   -webkit-block-start: 0;
   -webkit-background-clip: text;
@@ -43,9 +48,9 @@ h1 {
   -moz-text-fill-color: transparent;
   @include mixins.breakpoint(large) {
     & {
-      font-size: 6rem;
+      font-size: 6rem; 
     }
-  }
+  } 
 }
 
 h2 {

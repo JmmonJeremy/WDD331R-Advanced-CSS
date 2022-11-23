@@ -326,10 +326,14 @@ h4 {
 h1 {
   font-size: 2.5rem;
   letter-spacing: 1px;
-  text-align: center;
-  background-image: linear-gradient(10deg, #030746, #b79ed1, #030746, #e43388, #030746, #48a9a6, #000, #fff);
-  background-size: 100%;
+  color: #333;
+  background: url("../../images/night-time.svg");
+  background-size: 20%;
   background-repeat: repeat;
+  background-position: top;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.6);
   /*** Use the text as a mask for the background.
   // This will show the gradient as a text color rather than element bg. ***/
   background-clip: text;
@@ -494,7 +498,7 @@ body {
 @media only screen and (max-width: 1174px) {
   .intro::before { /* keep this in small-view */
     content: "";
-    background-image: url("images/blue-moon.svg");
+    background-image: url("images/jupiter.svg");
     display: block;
     width: 270px;
     height: 265px;
@@ -520,7 +524,7 @@ body {
   .intro::before { /* keep this in large-view */ }
   .intro::before {
     content: "";
-    background-image: url("images/central-planet.svg");
+    background-image: url("images/jupiter.svg");
     display: block;
     width: 600px;
     height: 595px;
@@ -551,7 +555,7 @@ header {
 @media only screen and (min-width: 1175px) {
   header {
     width: 600px; /* set width to planet width */
-    padding: 12rem 0 0 0.4rem; /* center header in planet */
+    padding: 12rem 0 0 1.2rem; /* center header in planet */
     margin-top: 12rem; /* lower header vertically in screen */
   }
 }
@@ -1090,7 +1094,7 @@ header {
   }
   .requirements:hover::before {
     position: absolute;
-    top: -270%;
+    top: -260%;
     right: 50%;
     content: "";
     background-image: url("images/orange-moon.svg");
