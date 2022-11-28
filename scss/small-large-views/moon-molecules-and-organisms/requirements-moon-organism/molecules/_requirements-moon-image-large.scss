@@ -19,9 +19,11 @@
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-right: -575px;
+    
+    /* adds glow to headline planet */
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px $requirements-light; /* adds glow to headline planet */
-
+    box-shadow: 0 0 10px 10px $requirements-light; 
+   
 
     /* inserts and places large version of image hold paragraphs */
     &:hover::before {

@@ -17,14 +17,13 @@
     $height: 147px);
     @include mixins.absolute($left: 50%, $top: -11.5rem);
 
-    /* z-index: -1; */  /* places planet behind the animated rocket */
-
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-left: -75px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px 10px $participation-light; /* adds glow to headline planet */
 
+    /* adds glow to headline planet */
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px $participation-light; 
   }
 
   /* insertion & placement of large version of image to hold paragraphs */   
