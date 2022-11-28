@@ -22,7 +22,7 @@
 
     /* inserts and places large version of image hold paragraphs */
     &:hover::before {
-      @include mixins.absolute($right: 8%, $top: -320%);
+      @include mixins.absolute($right: 8%, $top: -355%);
       @include mixins.insert-image("images/orange-moon.svg", $width: 880px,
       $height: 880px);
 
@@ -32,9 +32,9 @@
 
     /* absolute positioning for all & placing first paragraph */
     &:hover p {
-      @include mixins.absolute($right: 50%, $top: -250%);
+      @include mixins.absolute($right: 50%, $top: -300%);
 
-      margin-right: 210px;
+      margin-right: 218px;
       width: 550px;
 
       /* shared characteristics of all Enlightenment paragraphs */
@@ -47,28 +47,28 @@
 
     /* placement for second paragraph */
     & p:nth-child(3) {
-      top: -205px;
+      top: -295px;
       width: 820px;
       margin-right: 70px;
     }
 
     /* placement for third paragraph */    
     & p:nth-child(4) {
-      width: 800px;
-      margin-right: 90px;
-      margin-top: 400px;
+      width: 867px;
+      margin-right: 55px;
+      margin-top: 390px;
     }
     
     /* placement for fourth paragraph */
     & p:nth-child(5) {
-      top: 110px;
+      top: 20px;
       width: 630px;
       margin-right: 160px;
     }
 
     /* placement for fifth paragraph */
     & p:nth-child(6) {
-      top: 250px;
+      top: 160px;
       width: 400px;
       margin-right: 280px;
     }

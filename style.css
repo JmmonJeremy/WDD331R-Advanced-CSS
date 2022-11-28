@@ -1111,7 +1111,7 @@ header {
   }
   .requirements:hover::before {
     position: absolute;
-    top: -320%;
+    top: -355%;
     right: 8%;
     content: "";
     background-image: url("images/orange-moon.svg");
@@ -1123,9 +1123,9 @@ header {
   }
   .requirements:hover p {
     position: absolute;
-    top: -250%;
+    top: -300%;
     right: 50%;
-    margin-right: 210px;
+    margin-right: 218px;
     width: 550px;
     /* shared characteristics of all Enlightenment paragraphs */
     display: block;
@@ -1133,22 +1133,22 @@ header {
     text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
   }
   .requirements p:nth-child(3) {
-    top: -205px;
+    top: -295px;
     width: 820px;
     margin-right: 70px;
   }
   .requirements p:nth-child(4) {
-    width: 800px;
-    margin-right: 90px;
-    margin-top: 400px;
+    width: 867px;
+    margin-right: 55px;
+    margin-top: 390px;
   }
   .requirements p:nth-child(5) {
-    top: 110px;
+    top: 20px;
     width: 630px;
     margin-right: 160px;
   }
   .requirements p:nth-child(6) {
-    top: 250px;
+    top: 160px;
     width: 400px;
     margin-right: 280px;
   }
