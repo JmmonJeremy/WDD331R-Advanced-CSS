@@ -961,6 +961,8 @@ header {
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-left: -75px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #fcfcfc; /* adds glow to headline planet */
   }
 }
 .participation:hover::before {
@@ -1104,6 +1106,8 @@ header {
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-right: -575px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #fefca6; /* adds glow to headline planet */
     /* inserts and places large version of image hold paragraphs */
     /* absolute positioning for all & placing first paragraph */
     /* placement for second paragraph */

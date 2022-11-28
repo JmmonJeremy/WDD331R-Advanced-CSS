@@ -22,6 +22,9 @@
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-left: -75px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px $participation-light; /* adds glow to headline planet */
+
   }
 
   /* insertion & placement of large version of image to hold paragraphs */   
