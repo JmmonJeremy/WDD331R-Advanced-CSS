@@ -952,10 +952,6 @@ header {
  * inside it when the smaller moon is hovered over.
  */
 /* inserts the Participation moon on the top side of the planet */
-.participation {
-  /* insertion & placement of large version of image to hold paragraphs */
-  /* absolute position for all & placement for first paragraph */
-}
 @media only screen and (min-width: 1175px) {
   .participation { /* keep this in large-view */
     content: "";
@@ -972,43 +968,45 @@ header {
     /* adds glow to headline planet */
     border-radius: 50%;
     box-shadow: 0 0 10px 10px #fcfcfc;
+    /* insertion & placement of large version of image to hold paragraphs */
+    /* absolute position for all & placement for first paragraph */
   }
-}
-.participation:hover::before {
-  position: absolute;
-  top: 50%;
-  right: -190%;
-  content: "";
-  background-image: url("images/blue-moon.svg");
-  display: block;
-  width: 700px;
-  height: 700px;
-  margin-top: 100px;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  box-shadow: 0 0 90px 50px #fcfcfc;
-}
-.participation:hover p {
-  position: absolute;
-  top: -50%;
-  right: -190%;
-  margin-top: 350px;
-  margin-right: 80px;
-  width: 520px;
-  /* shared characteristics of all Enlightenment paragraphs */
-  display: block;
-  text-align: center;
-  text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
-}
-.participation p:nth-child(3) {
-  top: 120px;
-  margin-right: 20px;
-  width: 650px;
-}
-.participation p:nth-child(4) {
-  top: 240px;
-  width: 500px;
-  margin-right: 95px;
+  .participation:hover::before {
+    position: absolute;
+    top: 50%;
+    right: -190%;
+    content: "";
+    background-image: url("images/blue-moon.svg");
+    display: block;
+    width: 700px;
+    height: 700px;
+    margin-top: 100px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 0 90px 50px #fcfcfc;
+  }
+  .participation:hover p {
+    position: absolute;
+    top: -50%;
+    right: -190%;
+    margin-top: 350px;
+    margin-right: 80px;
+    width: 520px;
+    /* shared characteristics of all Enlightenment paragraphs */
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+  }
+  .participation p:nth-child(3) {
+    top: 120px;
+    margin-right: 20px;
+    width: 650px;
+  }
+  .participation p:nth-child(4) {
+    top: 240px;
+    width: 500px;
+    margin-right: 95px;
+  }
 }
 
 /* ------------------------------------*\

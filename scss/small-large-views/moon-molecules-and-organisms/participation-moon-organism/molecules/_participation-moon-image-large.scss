@@ -23,46 +23,46 @@
 
     /* adds glow to headline planet */
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px $participation-light; 
-  }
+    box-shadow: 0 0 10px 10px $participation-light;  
 
-  /* insertion & placement of large version of image to hold paragraphs */   
-  &:hover::before {
-    @include mixins.absolute($right: -190%, $top: 50%);
-    @include mixins.insert-image("images/blue-moon.svg", $width: 700px,
-    $height: 700px);
+    /* insertion & placement of large version of image to hold paragraphs */
+    &:hover::before {
+      @include mixins.absolute($right: -190%, $top: 50%);
+      @include mixins.insert-image("images/blue-moon.svg", $width: 700px,
+      $height: 700px);
 
-    margin-top: 100px;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    box-shadow: 0 0 90px 50px $participation-light;
-  }
+      margin-top: 100px;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      box-shadow: 0 0 90px 50px $participation-light;
+    }
 
-  /* absolute position for all & placement for first paragraph */
-  &:hover p {
-    @include mixins.absolute($right: -190%, $top: -50%);
+    /* absolute position for all & placement for first paragraph */
+    &:hover p {
+      @include mixins.absolute($right: -190%, $top: -50%);
 
-    margin-top: 350px;
-    margin-right: 80px;
-    width: 520px;
+      margin-top: 350px;
+      margin-right: 80px;
+      width: 520px;
 
-    /* shared characteristics of all Enlightenment paragraphs */
-    display: block;
-    text-align: center;
-    text-shadow:
-      1px 1px 20px $background-color,
-      -1px -1px 20px $background-color;
-  }
+      /* shared characteristics of all Enlightenment paragraphs */
+      display: block;
+      text-align: center;
+      text-shadow:
+        1px 1px 20px $background-color,
+        -1px -1px 20px $background-color;
+    }
 
-  & p:nth-child(3) {
-    top: 120px;
-    margin-right: 20px;
-    width: 650px;
-  }
+    & p:nth-child(3) {
+      top: 120px;
+      margin-right: 20px;
+      width: 650px;
+    }
   
-  & p:nth-child(4) {
-    top: 240px;
-    width: 500px;
-    margin-right: 95px;
+    & p:nth-child(4) {
+      top: 240px;
+      width: 500px;
+      margin-right: 95px;
+    }
   }
 }
