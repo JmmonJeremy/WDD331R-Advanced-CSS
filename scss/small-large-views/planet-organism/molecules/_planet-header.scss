@@ -18,8 +18,8 @@ header {
   width: 267px; /* set width to planet width */
   @include mixins.breakpoint(large) {
     & {
-      width: 600px; /* set width to planet width */
-      padding: 12rem 0 0 2rem; /* center header in planet */
+      width: 620px; /* set width to planet width */
+      padding: 12rem 0 0 .4rem; /* center header in planet */
       margin-top: 12rem; /* lower header vertically in screen */
     }
   }

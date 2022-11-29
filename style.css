@@ -544,7 +544,7 @@ body {
     left: 50%;
     /* position */
     z-index: -1; /* position */
-    margin-left: -300px; /* position center the planet */
+    margin-left: -310px; /* position center the planet */
     transform: rotate(180deg); /* rotate the planet image 180deg */
     background-repeat: no-repeat;
   }
@@ -567,8 +567,8 @@ header {
 }
 @media only screen and (min-width: 1175px) {
   header {
-    width: 600px; /* set width to planet width */
-    padding: 12rem 0 0 2rem; /* center header in planet */
+    width: 620px; /* set width to planet width */
+    padding: 12rem 0 0 0.4rem; /* center header in planet */
     margin-top: 12rem; /* lower header vertically in screen */
   }
 }
