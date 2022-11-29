@@ -326,8 +326,18 @@ h4 {
 h1 {
   font-size: 2.5rem;
   letter-spacing: 1px;
+  text-align: center;
+  background-image: linear-gradient(10deg, #030746, #b79ed1, #030746, #e43388, #030746, #48a9a6, #000, #fff);
+  background-size: 100%;
+  background-repeat: repeat;
   /*** Use the text as a mask for the background.
   // This will show the gradient as a text color rather than element bg. ***/
+  background-clip: text;
+  -webkit-block-start: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 @media only screen and (min-width: 1175px) {
   h1 {
@@ -957,12 +967,12 @@ header {
     position: absolute;
     top: -11.5rem;
     left: 50%;
-    /* z-index: -1; */ /* places planet behind the animated rocket */
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-left: -75px;
+    /* adds glow to headline planet */
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px #fcfcfc; /* adds glow to headline planet */
+    box-shadow: 0 0 10px 10px #fcfcfc;
   }
 }
 .participation:hover::before {
@@ -1106,8 +1116,9 @@ header {
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-right: -575px;
+    /* adds glow to headline planet */
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px #fefca6; /* adds glow to headline planet */
+    box-shadow: 0 0 10px 10px #fefca6;
     /* inserts and places large version of image hold paragraphs */
     /* absolute positioning for all & placing first paragraph */
     /* placement for second paragraph */
