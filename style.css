@@ -561,7 +561,7 @@ body {
  */
 header {
   border-radius: 50%; /* shape header circular */
-  padding: 7rem 0; /* center header in planet */
+  padding: 6rem 0; /* center header in planet */
   margin: 0 auto; /* center header horizontally in screen */
   width: 267px; /* set width to planet width */
 }
