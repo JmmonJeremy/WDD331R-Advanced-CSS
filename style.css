@@ -979,7 +979,7 @@ header {
     background-image: url("images/blue-moon.svg");
     display: block;
     width: 700px;
-    height: 700px;
+    height: 688px;
     margin-top: 100px;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -992,7 +992,7 @@ header {
     margin-top: 350px;
     margin-right: 80px;
     width: 520px;
-    /* shared characteristics of all Enlightenment paragraphs */
+    /* shared characteristics of all Participation paragraphs */
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
@@ -1143,7 +1143,7 @@ header {
     right: 50%;
     margin-right: 218px;
     width: 550px;
-    /* shared characteristics of all Enlightenment paragraphs */
+    /* shared characteristics of all Requirements paragraphs */
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
