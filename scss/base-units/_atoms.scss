@@ -68,7 +68,7 @@ h2 {
   @include mixins.breakpoint(large) {
     & {
       font-size: 3rem;
-      margin-left: 7rem;
+      margin-left: 6.25rem;
     }
   }
 }
