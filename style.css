@@ -1298,6 +1298,7 @@ header {
   position: absolute;
   top: 0;
   left: 15px;
+  animation: down 10s linear infinite;
 }
 .design-selection ul li:not(a) {
   color: #fff;
@@ -1318,6 +1319,22 @@ header {
   margin-left: 1rem;
 }
 
+@keyframes down {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(2.25rem);
+  }
+}
+@keyframes left {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: translateX(1rem);
+  }
+}
 /* ------------------------------------*\
   #ARCHIVES ASIDE FOOTER MOLECULE
 \*------------------------------------ */
@@ -1360,6 +1377,7 @@ header {
   position: absolute;
   top: 0;
   left: 15px;
+  animation: sideways 7s linear infinite;
 }
 
 /* sets up the animation for the floating astronaut */
@@ -1381,6 +1399,14 @@ header {
   }
   85% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+}
+@keyframes sideways {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: translateX(0.75rem);
   }
 }
 /* ------------------------------------*\
@@ -1412,8 +1438,17 @@ header {
   top: 0;
   left: 15px;
   transform: rotate(-30deg);
+  animation: rotate 8s linear infinite;
 }
 
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
 /* ------------------------------------*\
   #FOOTER LINKS FOOTER MOLECULE
 \*------------------------------------ */

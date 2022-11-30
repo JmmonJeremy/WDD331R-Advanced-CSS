@@ -35,6 +35,8 @@
       @include mixins.insert-image("images/earth-planet.svg", inline-block,
       contain, 20px);
       @include mixins.absolute($top: 0, $left: 15px);
+
+      animation: sideways 7s linear infinite;
     }
   }
 }
@@ -64,5 +66,16 @@
   
   85% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+}
+
+@keyframes sideways {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: translateX(.75rem);
   }
 }

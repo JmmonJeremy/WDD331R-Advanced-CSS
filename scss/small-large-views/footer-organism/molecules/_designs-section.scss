@@ -33,6 +33,8 @@
 
       /* changed $top to 0 from -6px due changes caused by flex */
       @include mixins.absolute($top: 0, $left: 15px);
+
+      animation: down 10s linear infinite;
     }
 
     &:not(a) {
@@ -56,4 +58,26 @@
 .designer-name {
   color: $text-light;
   margin-left: 1rem;
+}
+
+@keyframes down {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: translateY(2.25rem);
+  }
+}
+
+@keyframes left {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  50% {
+    transform: translateX(1rem);
+  }
 }
