@@ -1355,6 +1355,16 @@ header {
     animation: floating-astronaut 15s linear infinite;
   }
 }
+@media only screen and (min-width: 1240px) {
+  .design-archives::after {
+    animation: xlg-floating-astronaut 17s linear infinite;
+  }
+}
+@media only screen and (min-width: 1375px) {
+  .design-archives::after {
+    animation: xxlg-floating-astronaut 20s linear infinite;
+  }
+}
 .design-archives ul li {
   padding-left: 50px;
   position: relative;
@@ -1380,16 +1390,58 @@ header {
   15% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
-  30% {
-    transform: rotate(0deg) translateX(-18rem) rotate(0deg);
+  35% {
+    transform: rotate(0deg) translateX(-20rem) rotate(0deg);
   }
-  45% {
+  55% {
     transform: rotate(0deg) translateY(5rem) rotate(-15deg);
   }
   70% {
     transform: rotate(0deg) translateX(10rem) rotate(0deg);
   }
   85% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+}
+/* sets up the animation for the floating astronaut */
+@keyframes xlg-floating-astronaut {
+  0%, 100% {
+    bottom: 12rem;
+  }
+  10% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+  40% {
+    transform: rotate(0deg) translateX(-30rem) rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg) translateY(5rem) rotate(-15deg);
+  }
+  80% {
+    transform: rotate(0deg) translateX(10rem) rotate(0deg);
+  }
+  90% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+}
+/* sets up the animation for the floating astronaut */
+@keyframes xxlg-floating-astronaut {
+  0%, 100% {
+    bottom: 12rem;
+  }
+  10% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+  40% {
+    transform: rotate(0deg) translateX(-45rem) rotate(0deg);
+  }
+  70% {
+    transform: rotate(0deg) translateY(5rem) rotate(-15deg);
+  }
+  80% {
+    transform: rotate(0deg) translateX(10rem) rotate(0deg);
+  }
+  90% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
 }
