@@ -20,7 +20,7 @@
       
       /* positions moon in fixed position from planet's center to create a *
        * stable hover image positon **/
-      margin-left: -580px;
+      margin-left: -560px;
     }
 
     /* insertion & placement of large version of image to hold paragraphs */   
@@ -29,14 +29,14 @@
       @include mixins.insert-image("images/yellow-moon.svg", $width: 800px,
       $height: 820px);
 
-      margin-right: -889px;
+      margin-right: -869px;
     }
 
     /* absolute position for all & placement for first paragraph */
     &:hover p {
       @include mixins.absolute($right: 50%, $top: -148.5%);
 
-      margin-right: -715px;
+      margin-right: -695px;
       width: 450px;
 
       /* shared characteristics of all Enlightenment paragraphs */
@@ -50,7 +50,7 @@
     /* placement for second paragraph */
     & p:nth-child(3) {
       top: -88.5%;
-      margin-right: -770px;
+      margin-right: -750px;
       width: 560px;
     }
 
@@ -58,7 +58,7 @@
     & p:nth-child(4) {
       top: -28.5%;
       width: 420px;
-      margin-right: -700px;
+      margin-right: -680px;
     }
   }
 }

@@ -99,6 +99,9 @@ abbr {
 }
 
 ul {
+  /* added to expand asides in footer as screen enlarges */
+  @include mixins.flex;
+
   list-style: none;
   padding: 0;
 }
