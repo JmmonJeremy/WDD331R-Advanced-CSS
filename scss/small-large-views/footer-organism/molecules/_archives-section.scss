@@ -17,13 +17,19 @@
   padding: 1rem;
 
   /* inserts animated astronaut in large-view */
-  @include mixins.breakpoint(large) {
-    &::after {
+  &::after {
+    @include mixins.breakpoint(large) {
       @include mixins.insert-image("images/astronaut.svg", $width: 122px,
       $height: 130px);
       @include mixins.absolute($bottom: 12rem, $right: 12rem);
 
       animation: floating-astronaut 15s linear infinite;
+    }
+    @include mixins.breakpoint(xlarge) {
+      animation: xlg-floating-astronaut 17s linear infinite;
+    }
+    @include mixins.breakpoint(xxlarge) {
+      animation: xxlg-floating-astronaut 22s linear infinite;
     }
   }
 
