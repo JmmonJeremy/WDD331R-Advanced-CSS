@@ -339,7 +339,7 @@ h1 {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   h1 {
     font-size: 6rem;
     color: #333;
@@ -366,7 +366,7 @@ h2 {
   margin-top: -0.5rem;
   margin-left: 4.5rem;
 }
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   h2 {
     font-size: 3rem;
     margin-left: 6.25rem;
@@ -444,7 +444,7 @@ body {
  * the introductory paragraph and HTML and CSS file downloads. It also
  * positions the rocket to be behind the paragraph.
  */
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .summary::before { /* keep this in small-view */ }
   .summary::before {
     content: "";
@@ -470,7 +470,7 @@ body {
  * circling around the center planet.
  */
 /* inserts the rocket in the center of the planet */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .page-wrapper::after { /* keep this in large-view */
     content: "";
     background-image: url("images/rocket-animated.svg");
@@ -508,7 +508,7 @@ body {
  * This section inserts the planet into the section tag that holds the header 
  * and opening paragraph and then positions the planet behind the title.
  */
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .intro::before { /* keep this in small-view */
     content: "";
     background-image: url("images/blue-moon.svg");
@@ -533,7 +533,7 @@ body {
  * and opening paragraphs and then positions the planet behind them and puts
  * the planet into the center of the large screen view.
  */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .intro::before { /* keep this in large-view */ }
   .intro::before {
     content: "";
@@ -568,7 +568,7 @@ header {
   margin: 0 auto; /* center header horizontally in screen */
   width: 267px; /* set width to planet width */
 }
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   header {
     width: 620px; /* set width to planet width */
     padding: 12rem 0 0 0.4rem; /* center header in planet */
@@ -593,7 +593,7 @@ header {
   text-align: center;
   padding-left: 5rem;
 }
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .summary p:first-child {
     width: 24rem; /* set width of paragraph */
     padding: 1.5rem 1rem 0 0;
@@ -617,13 +617,13 @@ header {
   color: #fff;
   padding: 0 1rem;
 }
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .summary p:last-child {
     width: 9rem;
     margin-bottom: -1.5rem;
   }
 }
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .summary p:last-child {
     color: #fff;
     text-align: center;
@@ -692,13 +692,13 @@ header {
 /** 
  * This section controls the appearance of the paragraphs and their titles.
  */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .main {
     margin-top: 10rem;
   }
 }
 
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .preamble,
 .explanation,
 .participation,
@@ -736,7 +736,7 @@ header {
 }
 
 /* Styles the Enlightenment section title */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .preamble h3 {
     /* keep this in large-view */
     padding: 35% 15% 25% 7%;
@@ -745,7 +745,7 @@ header {
 }
 
 /* Styles the About section title */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .explanation h3 {
     /* keep this in large-view */
     text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
@@ -753,7 +753,7 @@ header {
 }
 
 /* Styles the Participation section title */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .participation h3 {
     /* keep this in large-view */
     text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
@@ -761,7 +761,7 @@ header {
 }
 
 /* Styles the Benefits section title */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .benefits h3 {
     /* keep this in large-view */
     text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
@@ -769,7 +769,7 @@ header {
 }
 
 /* Styles the Requirement section title */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .requirements h3 {
     /* keep this in large-view */
     text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
@@ -802,7 +802,7 @@ header {
  * section and positions the moon in the middle of that paragraphs on the 
  * right side and also styles the paragraph to wrap around the moon.
  */
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .preamble p:nth-child(3)::before { /* keeps in small-view */
     content: "";
     background-image: url("images/yellow-moon.svg");
@@ -826,7 +826,7 @@ header {
  * inside it when the smaller moon is hovered over.
  */
 /* inserts the Enlightenment moon on the left side of the planet */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .preamble { /* keep this in large-view */
     /* insertion & placement of large version of image to hold paragraphs */
     /* absolute position for all & placement for first paragraph */
@@ -894,7 +894,7 @@ header {
  * sections first pargraph and positions the moon on the left side between 
  * the two paragraphs so that both paragraphs wrap around the moon.
  */
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .explanation [title="HyperText Markup Language"]::before { /* keeps in small-view */
     content: "";
     background-image: url("images/red-white-moon.svg");
@@ -919,7 +919,7 @@ header {
  * when the smaller moon is hovered over.
  */
 /* inserts the About moon on the left side of the planet */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .explanation {
     /* keep this in large-view */
     content: "";
@@ -979,7 +979,7 @@ header {
  * of that paragraph on the right side and also styles the paragraph to wrap 
  * around the astronaut for the small-view.
  */
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .participation [title="HyperText Markup Language"]::before { /* keeps in small-view */
     content: "";
     background-image: url("images/astronaut.svg");
@@ -1004,7 +1004,7 @@ header {
  * inside it when the smaller moon is hovered over.
  */
 /* inserts the Participation moon on the top side of the planet */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .participation { /* keep this in large-view */
     content: "";
     background-image: url("images/blue-moon.svg");
@@ -1077,7 +1077,7 @@ header {
  * paragraphs on the left side and also styles the paragraph to wrap around
  * the moon.
  */
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .benefits [title="Cascading Style Sheets"]::before { /* keeps in small-view */
     content: "";
     background-image: url("images/white-moon.svg");
@@ -1102,7 +1102,7 @@ header {
  * inside it when the smaller moon is hovered over.
  */
 /* inserts the Benefits moon on the right side of the planet */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .benefits {
     /* keep this in large-view */
     content: "";
@@ -1157,7 +1157,7 @@ header {
  * sections second pargraph and positions the moon on the right side towards 
  * the bottom of that paragraph while wrapping the paragraph around the moon.
  */
-@media only screen and (max-width: 1174px) {
+@media only screen and (max-width: 1129px) {
   .requirements p:nth-child(3) > [title="Cascading Style Sheets"]::before { /* keeps in small-view */
     content: "";
     background-image: url("images/orange-moon.svg");
@@ -1187,7 +1187,7 @@ header {
  * inside it when the smaller moon is hovered over.
  */
 /* inserts the Requirements moon on the right side of the planet */
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1130px) {
   .requirements { /* keep this in large-view */
     content: "";
     background-image: url("images/orange-moon.svg");
