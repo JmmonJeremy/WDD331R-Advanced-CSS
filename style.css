@@ -1195,11 +1195,11 @@ header {
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 24.5rem;
+    top: 25rem;
     right: 50%;
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
-    margin-right: -575px;
+    margin-right: -545px;
     /* adds glow to headline planet */
     border-radius: 50%;
     box-shadow: 0 0 10px 10px #fefca6;
@@ -1219,7 +1219,7 @@ header {
     display: block;
     width: 880px;
     height: 880px;
-    margin-right: 120px;
+    margin-right: 90px;
     background-repeat: no-repeat; /* prevents svg image from repeating */
     border-radius: 50%;
     box-shadow: 0 0 90px 50px #fefca6;
@@ -1228,7 +1228,7 @@ header {
     position: absolute;
     top: -325%;
     right: 50%;
-    margin-right: 219px;
+    margin-right: 189px;
     width: 550px;
     /* shared characteristics of all Requirements paragraphs */
     display: block;
@@ -1238,22 +1238,22 @@ header {
   .requirements p:nth-child(3) {
     top: -295px;
     width: 820px;
-    margin-right: 85px;
+    margin-right: 55px;
   }
   .requirements p:nth-child(4) {
     width: 867px;
-    margin-right: 62px;
+    margin-right: 32px;
     margin-top: 408px;
   }
   .requirements p:nth-child(5) {
     top: 43px;
     width: 630px;
-    margin-right: 180px;
+    margin-right: 150px;
   }
   .requirements p:nth-child(6) {
     top: 188px;
     width: 400px;
-    margin-right: 300px;
+    margin-right: 265px;
   }
 }
 
