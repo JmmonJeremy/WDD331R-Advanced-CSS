@@ -12,8 +12,7 @@
 
 /* inserts the Benefits moon on the right side of the planet */
 .benefits {
-  @include mixins.breakpoint(large) {
-    /* keep this in large-view */
+  @include mixins.breakpoint(large) { /* keep this in large-view */
     @include mixins.insert-image("images/white-moon.svg", $width: 150px);
     @include mixins.absolute($left: 50%, $top: -2rem);
 
@@ -23,8 +22,7 @@
 
     &:hover::before {
       @include mixins.absolute($left: 50%, $top: 8%);
-      @include mixins.insert-image(
-        "images/white-moon.svg", $width: 630px, $height: 630px);
+      @include mixins.insert-image("images/white-moon.svg", $width: 630px);
 
       margin-left: -730px;
       border-radius: 50%;

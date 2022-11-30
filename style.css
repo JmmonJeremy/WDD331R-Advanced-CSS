@@ -869,12 +869,12 @@ header {
     text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
   }
   .preamble p:nth-child(3) {
-    top: -88.5%;
+    top: -83%;
     margin-right: -750px;
     width: 560px;
   }
   .preamble p:nth-child(4) {
-    top: -28.5%;
+    top: -18%;
     width: 420px;
     margin-right: -680px;
   }
@@ -920,8 +920,7 @@ header {
  */
 /* inserts the About moon on the left side of the planet */
 @media only screen and (min-width: 1130px) {
-  .explanation {
-    /* keep this in large-view */
+  .explanation { /* keep this in large-view */
     content: "";
     background-image: url("images/red-white-moon.svg");
     display: block;
@@ -947,20 +946,21 @@ header {
     height: 630px;
     margin-right: -740px;
     border-radius: 50%;
+    background-repeat: no-repeat;
     box-shadow: 0 0 90px 50px #f3f4de;
   }
   .explanation:hover p {
     position: absolute;
-    top: 80%;
+    top: 75%;
     right: 50%;
-    margin-right: -675px;
+    margin-right: -672px;
     width: 490px;
     display: block;
     text-align: center;
     text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
   }
   .explanation p:nth-child(3) {
-    top: 215%;
+    top: 219%;
   }
 }
 
@@ -1103,8 +1103,7 @@ header {
  */
 /* inserts the Benefits moon on the right side of the planet */
 @media only screen and (min-width: 1130px) {
-  .benefits {
-    /* keep this in large-view */
+  .benefits { /* keep this in large-view */
     content: "";
     background-image: url("images/white-moon.svg");
     display: block;
