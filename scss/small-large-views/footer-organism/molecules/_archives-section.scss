@@ -16,6 +16,17 @@
 .design-archives {
   padding: 1rem;
 
+  /* inserts animated astronaut in large-view */
+  @include mixins.breakpoint(large) {
+    &::after {
+      @include mixins.insert-image("images/astronaut.svg", $width: 122px,
+      $height: 130px);
+      @include mixins.absolute($bottom: 12rem, $right: 12rem);
+
+      animation: floating-astronaut 15s linear infinite;
+    }
+  }
+
   & ul li {
     padding-left: 50px;
     position: relative;
@@ -25,5 +36,33 @@
       contain, 20px);
       @include mixins.absolute($top: 0, $left: 15px);
     }
+  }
+}
+
+/* sets up the animation for the floating astronaut */
+@keyframes floating-astronaut {
+  0%,
+  100% {
+    bottom: 12rem;
+  }
+
+  15% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+
+  30% {
+    transform: rotate(0deg) translateX(-18rem) rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(0deg) translateY(5rem) rotate(-15deg);
+  }
+
+  70% {
+    transform: rotate(0deg) translateX(10rem) rotate(0deg);
+  }
+  
+  85% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
 }

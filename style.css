@@ -1331,6 +1331,20 @@ header {
 
 .design-archives {
   padding: 1rem;
+  /* inserts animated astronaut in large-view */
+}
+@media only screen and (min-width: 1130px) {
+  .design-archives::after {
+    content: "";
+    background-image: url("images/astronaut.svg");
+    display: block;
+    width: 122px;
+    height: 130px;
+    position: absolute;
+    bottom: 12rem;
+    right: 12rem;
+    animation: floating-astronaut 15s linear infinite;
+  }
 }
 .design-archives ul li {
   padding-left: 50px;
@@ -1348,6 +1362,27 @@ header {
   left: 15px;
 }
 
+/* sets up the animation for the floating astronaut */
+@keyframes floating-astronaut {
+  0%, 100% {
+    bottom: 12rem;
+  }
+  15% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+  30% {
+    transform: rotate(0deg) translateX(-18rem) rotate(0deg);
+  }
+  45% {
+    transform: rotate(0deg) translateY(5rem) rotate(-15deg);
+  }
+  70% {
+    transform: rotate(0deg) translateX(10rem) rotate(0deg);
+  }
+  85% {
+    transform: rotate(0deg) translateY(-10rem) rotate(25deg);
+  }
+}
 /* ------------------------------------*\
   #RESOURCES ASIDE FOOTER MOLECULE
 \*------------------------------------ */
