@@ -13,7 +13,7 @@
 /* inserts the Requirements moon on the right side of the planet */
 .requirements {
   @include mixins.breakpoint(large) { /* keep this in large-view */
-    @include mixins.insert-image("images/orange-moon.svg", $width: 160px,);
+    @include mixins.insert-image("images/orange-moon.svg", $width: 150px,);
     @include mixins.absolute($right: 50%, $top: 24.5rem);
 
     /* positions moon in fixed position from planet's center to create a *
@@ -26,9 +26,8 @@
 
     /* inserts and places large version of image hold paragraphs */
     &:hover::before {
-      @include mixins.absolute($right: 8%, $top: -355%);
-      @include mixins.insert-image("images/orange-moon.svg", $width: 880px,
-      $height: 880px);
+      @include mixins.absolute($right: 8%, $top: -380%);
+      @include mixins.insert-image("images/orange-moon.svg", $width: 880px);
 
       margin-right: 120px;
       background-repeat: no-repeat; /* prevents svg image from repeating */
@@ -38,9 +37,9 @@
 
     /* absolute positioning for all & placing first paragraph */
     &:hover p {
-      @include mixins.absolute($right: 50%, $top: -300%);
+      @include mixins.absolute($right: 50%, $top: -325%);
 
-      margin-right: 218px;
+      margin-right: 219px;
       width: 550px;
 
       /* shared characteristics of all Requirements paragraphs */
@@ -55,28 +54,28 @@
     & p:nth-child(3) {
       top: -295px;
       width: 820px;
-      margin-right: 70px;
+      margin-right: 85px;
     }
 
     /* placement for third paragraph */    
     & p:nth-child(4) {
       width: 867px;
-      margin-right: 55px;
-      margin-top: 390px;
+      margin-right: 62px;
+      margin-top: 408px;
     }
     
     /* placement for fourth paragraph */
     & p:nth-child(5) {
-      top: 20px;
+      top: 43px;
       width: 630px;
-      margin-right: 160px;
+      margin-right: 180px;
     }
 
     /* placement for fifth paragraph */
     & p:nth-child(6) {
-      top: 160px;
+      top: 188px;
       width: 400px;
-      margin-right: 280px;
+      margin-right: 300px;
     }
   }
 }

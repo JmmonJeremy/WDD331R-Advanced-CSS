@@ -1106,8 +1106,8 @@ header {
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     top: 24.5rem;
     right: 50%;
@@ -1126,7 +1126,7 @@ header {
   }
   .requirements:hover::before {
     position: absolute;
-    top: -355%;
+    top: -380%;
     right: 8%;
     content: "";
     background-image: url("images/orange-moon.svg");
@@ -1140,9 +1140,9 @@ header {
   }
   .requirements:hover p {
     position: absolute;
-    top: -300%;
+    top: -325%;
     right: 50%;
-    margin-right: 218px;
+    margin-right: 219px;
     width: 550px;
     /* shared characteristics of all Requirements paragraphs */
     display: block;
@@ -1152,22 +1152,22 @@ header {
   .requirements p:nth-child(3) {
     top: -295px;
     width: 820px;
-    margin-right: 70px;
+    margin-right: 85px;
   }
   .requirements p:nth-child(4) {
     width: 867px;
-    margin-right: 55px;
-    margin-top: 390px;
+    margin-right: 62px;
+    margin-top: 408px;
   }
   .requirements p:nth-child(5) {
-    top: 20px;
+    top: 43px;
     width: 630px;
-    margin-right: 160px;
+    margin-right: 180px;
   }
   .requirements p:nth-child(6) {
-    top: 160px;
+    top: 188px;
     width: 400px;
-    margin-right: 280px;
+    margin-right: 300px;
   }
 }
 
