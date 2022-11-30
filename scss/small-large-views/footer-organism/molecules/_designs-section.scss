@@ -70,14 +70,3 @@
     transform: translateY(2.25rem);
   }
 }
-
-@keyframes left {
-  0%,
-  100% {
-    transform: none;
-  }
-
-  50% {
-    transform: translateX(1rem);
-  }
-}
