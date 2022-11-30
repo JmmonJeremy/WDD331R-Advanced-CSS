@@ -117,4 +117,10 @@ $height: $width, $float: no, $shape: no, $margin: no) {
   @if $break == large {
     @media only screen and (min-width: $break-large) { @content; }
   }
+  @if $break == xlarge {
+    @media only screen and (min-width: $break-xlarge) { @content; }
+  }
+  @if $break == xxlarge {
+    @media only screen and (min-width: $break-xxlarge) { @content; }
+  }
 }
