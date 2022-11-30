@@ -29,10 +29,9 @@
       animation: xlg-floating-astronaut 17s linear infinite;
     }
     @include mixins.breakpoint(xxlarge) {
-      animation: xxlg-floating-astronaut 20s linear infinite;
+      animation: xxlg-floating-astronaut 22s linear infinite;
     }
-  }
-  
+  }  
 
   & ul li {
     padding-left: 50px;
