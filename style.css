@@ -1289,15 +1289,16 @@ header {
 }
 .design-selection ul li::before {
   content: "";
-  background-image: url("images/orange-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 27px;
-  height: 37px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 15px;
+  transform: rotate(-30deg);
 }
 .design-selection ul li:not(a) {
   color: #fff;
@@ -1362,14 +1363,15 @@ header {
 }
 .design-archives ul li::before {
   content: "";
-  background-image: url("images/earth-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   position: absolute;
   top: 0;
-  left: 15px;
+  left: 17px;
+  transform: rotate(-30deg);
 }
 
 /* sets up the animation for the floating astronaut */
@@ -1455,10 +1457,10 @@ header {
 }
 .zen-resources ul li::before {
   content: "";
-  background-image: url("images/green-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 25px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   position: absolute;
   top: 0;

@@ -28,11 +28,13 @@
     position: relative;
   
     &::before {
-      @include mixins.insert-image("images/orange-planet.svg", inline-block,
-      contain, 27px, 37px);
+      @include mixins.insert-image("images/new-planet.svg", inline-block,
+      contain, 35px);
 
       /* changed $top to 0 from -6px due changes caused by flex */
-      @include mixins.absolute($top: 0, $left: 15px);
+      @include mixins.absolute($top: 10px, $left: 15px);
+
+      transform: rotate(-30deg);
     }
 
     &:not(a) {

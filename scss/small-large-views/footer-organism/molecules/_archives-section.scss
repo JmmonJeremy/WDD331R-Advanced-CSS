@@ -38,9 +38,11 @@
     position: relative;
   
     &::before {
-      @include mixins.insert-image("images/earth-planet.svg", inline-block,
-      contain, 20px);
-      @include mixins.absolute($top: 0, $left: 15px);
+      @include mixins.insert-image("images/new-planet.svg", inline-block,
+      contain, 35px);
+      @include mixins.absolute($top: 0, $left: 17px);
+
+      transform: rotate(-30deg);
     }
   }
 }
