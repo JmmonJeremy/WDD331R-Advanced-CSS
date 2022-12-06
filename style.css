@@ -538,18 +538,16 @@ body {
   .intro::before { /* keep this in large-view */ }
   .intro::before {
     content: "";
-    background-image: url("images/jupiter.svg");
+    background-image: url("images/central-planet.svg");
     display: block;
-    width: 620px;
-    height: 610px;
+    width: 600px;
+    height: 595px;
     /* insert planet image */
     position: absolute;
-    top: -10px;
     left: 50%;
     /* position */
     z-index: -1; /* position */
-    margin-left: -310px; /* position center the planet */
-    transform: rotate(180deg); /* rotate the planet image 180deg */
+    margin-left: -300px; /* position center the planet */
     background-repeat: no-repeat;
   }
 }
@@ -571,7 +569,7 @@ header {
 }
 @media only screen and (min-width: 1130px) {
   header {
-    width: 620px; /* set width to planet width */
+    width: 600px; /* set width to planet width */
     padding: 12rem 0 0 0.4rem; /* center header in planet */
     margin-top: 12rem; /* lower header vertically in screen */
   }
@@ -701,25 +699,25 @@ header {
 
 @media only screen and (min-width: 1130px) {
   .preamble,
-  .explanation,
-  .participation,
-  .benefits,
-  .requirements { /* keep this in large-view */
+.explanation,
+.participation,
+.benefits,
+.requirements { /* keep this in large-view */
     /* styles shared by all large-view titles in moons */
     /* enlarge title when hovered over and stop pulse animation */
   }
   .preamble p,
-  .explanation p,
-  .participation p,
-  .benefits p,
-  .requirements p {
+.explanation p,
+.participation p,
+.benefits p,
+.requirements p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-  .explanation h3,
-  .participation h3,
-  .benefits h3,
-  .requirements h3 {
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -727,10 +725,10 @@ header {
     animation: pulse 3s ease-in-out infinite;
   }
   .preamble:hover h3,
-  .explanation:hover h3,
-  .participation:hover h3,
-  .benefits:hover h3,
-  .requirements:hover h3 {
+.explanation:hover h3,
+.participation:hover h3,
+.benefits:hover h3,
+.requirements:hover h3 {
     animation: none;
     transform: scale(1.2);
   }
