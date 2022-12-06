@@ -1349,9 +1349,14 @@ header {
   max-width: max-content;
 }
 
-.designer-name {
+.designer-name a {
   color: #fff;
   margin-left: 1rem;
+  background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
+}
+
+.design-name:hover::before {
+  width: 0;
 }
 
 /* ------------------------------------*\
@@ -1532,6 +1537,10 @@ footer {
 
 .zen-resources {
   padding-bottom: 3rem; /* layout */
+}
+
+footer a:hover::before {
+  width: 0;
 }
 
 /* ------------------------------------*\

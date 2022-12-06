@@ -53,7 +53,13 @@
   max-width: max-content;
 }
 
-.designer-name {
+.designer-name a {
   color: $text-light;
   margin-left: 1rem;
+  background-image: linear-gradient(to right,
+  $accent1, $accent1 50%, $text-light 50%);
+}
+
+.design-name:hover::before {
+  width: 0;
 }

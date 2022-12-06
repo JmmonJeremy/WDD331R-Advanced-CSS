@@ -25,3 +25,7 @@ footer {
 .zen-resources {
   padding-bottom: 3rem; /* layout */
 }
+
+footer a:hover::before {
+  width: 0;
+}
