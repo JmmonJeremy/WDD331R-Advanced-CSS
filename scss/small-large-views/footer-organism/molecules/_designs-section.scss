@@ -47,15 +47,14 @@
 
 .design-name {
   display: block;
-
+  
   /* changed from fit-content to max-content to keep it from prematurely
    * wrapping in flex */
   max-width: max-content;
 }
 
-.designer-name a {
-  color: $text-light;
-  margin-left: 1rem;
+.designer-name {
+  
   background-image: linear-gradient(to right,
   $accent1, $accent1 50%, $text-light 50%);
 }

@@ -1349,9 +1349,7 @@ header {
   max-width: max-content;
 }
 
-.designer-name a {
-  color: #fff;
-  margin-left: 1rem;
+.designer-name {
   background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
 }
 
