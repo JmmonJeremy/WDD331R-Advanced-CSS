@@ -1348,13 +1348,12 @@ header {
    * wrapping in flex */
   max-width: max-content;
 }
+.design-name:hover::before {
+  display: none;
+}
 
 .designer-name {
   background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
-}
-
-.design-name:hover::before {
-  width: 0;
 }
 
 /* ------------------------------------*\

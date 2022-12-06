@@ -51,14 +51,20 @@
   /* changed from fit-content to max-content to keep it from prematurely
    * wrapping in flex */
   max-width: max-content;
+
+  
+  &:hover::before {
+    /* gets rid of blue underline on design name links */
+    display: none;
+  }
 }
 
 .designer-name {
-  
-  background-image: linear-gradient(to right,
-  $accent1, $accent1 50%, $text-light 50%);
-}
-
-.design-name:hover::before {
-  width: 0;
+  background-image:
+    linear-gradient(
+      to right,
+      $accent1,
+      $accent1 50%,
+      $text-light 50%
+    );
 }
