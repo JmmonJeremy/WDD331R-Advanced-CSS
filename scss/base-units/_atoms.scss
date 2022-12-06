@@ -114,9 +114,37 @@ a {
   @include mixins.font(1.6rem, $color: $p-link, $height: 1.5rem);
   
   text-decoration: none;
-  transition: border-color 0.3s ease-in-out;
+  background-image:
+    linear-gradient(
+      to right,
+      $accent1,
+      $accent1 50%,
+      $p-link 50%
+    );
+  background-size: 200% 100%;
+  background-position: -100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
   
   &:hover {
-    border-bottom: 1px solid $accent1;
+    background-position: 0;
+
+    &::before {
+      width: 80%;
+    }
+  }
+  
+  &::before {
+    content: "";
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 50px;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
   }
 }

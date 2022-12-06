@@ -417,10 +417,30 @@ a {
   color: #ff0;
   line-height: 1.5rem;
   text-decoration: none;
-  transition: border-color 0.3s ease-in-out;
+  background-image: linear-gradient(to right, #e43388, #e43388 50%, #ff0 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 a:hover {
-  border-bottom: 1px solid #e43388;
+  background-position: 0;
+}
+a:hover::before {
+  width: 80%;
+}
+a::before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 50px;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* ------------------------------------*\
@@ -701,25 +721,25 @@ header {
 
 @media only screen and (min-width: 1130px) {
   .preamble,
-  .explanation,
-  .participation,
-  .benefits,
-  .requirements { /* keep this in large-view */
+.explanation,
+.participation,
+.benefits,
+.requirements { /* keep this in large-view */
     /* styles shared by all large-view titles in moons */
     /* enlarge title when hovered over and stop pulse animation */
   }
   .preamble p,
-  .explanation p,
-  .participation p,
-  .benefits p,
-  .requirements p {
+.explanation p,
+.participation p,
+.benefits p,
+.requirements p {
     display: none; /* conceals the sections paragraphs */
   }
   .preamble h3,
-  .explanation h3,
-  .participation h3,
-  .benefits h3,
-  .requirements h3 {
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
     font-size: 130%;
     text-align: center;
     color: #000;
@@ -727,10 +747,10 @@ header {
     animation: pulse 3s ease-in-out infinite;
   }
   .preamble:hover h3,
-  .explanation:hover h3,
-  .participation:hover h3,
-  .benefits:hover h3,
-  .requirements:hover h3 {
+.explanation:hover h3,
+.participation:hover h3,
+.benefits:hover h3,
+.requirements:hover h3 {
     animation: none;
     transform: scale(1.2);
   }
