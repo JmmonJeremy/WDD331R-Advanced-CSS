@@ -32,9 +32,9 @@
       contain, 27px, 37px);
 
       /* changed $top to 0 from -6px due changes caused by flex */
-      @include mixins.absolute($top: 0, $left: 15px);
+      @include mixins.absolute($top: 1rem, $left: 15px);
 
-      animation: down 10s linear infinite;
+      animation: down .65s cubic-bezier(.95, -1.23, .12, 1.81) infinite;
     }
 
     &:not(a) {
@@ -66,7 +66,39 @@
     transform: none;
   }
 
+  10% {
+    transform: translateY(-.03rem);
+  }
+
+  20% {
+    transform: translateY(.03rem);
+  }
+
+  30% {
+    transform: translateY(-.03rem);
+  }
+
+  40% {
+    transform: translateY(.03rem);
+  }
+
   50% {
-    transform: translateY(2.25rem);
+    transform: translateY(.25rem);
+  }
+
+  60% {
+    transform: translateY(-.03rem);
+  }
+
+  70% {
+    transform: translateY(.03rem);
+  }
+
+  80% {
+    transform: translateY(-.03rem);
+  }
+
+  90% {
+    transform: translateY(.03rem);
   }
 }

@@ -42,7 +42,7 @@
       contain, 20px);
       @include mixins.absolute($top: 0, $left: 15px);
 
-      animation: sideways 7s linear infinite;
+      animation: sideways .5s cubic-bezier(0, -0.6, 1, 1.57) infinite;
     }
   }
 }
@@ -136,8 +136,41 @@
   100% {
     transform: none;
   }
+  
+  10% {
+    transform: translateX(-.03rem);
+  }
+
+  20% {
+    transform: translateX(.03rem);
+  }
+
+  30% {
+    transform: translateX(-.03rem);
+  }
+
+  40% {
+    transform: translateX(.03rem);
+  }
 
   50% {
-    transform: translateX(.75rem);
+    transform: translateX(.25rem);
+  }
+
+   
+  60% {
+    transform: translateX(-.03rem);
+  }
+
+  70% {
+    transform: translateX(.03rem);
+  }
+
+  80% {
+    transform: translateX(-.03rem);
+  }
+
+  90% {
+    transform: translateX(.03rem);
   }
 }
