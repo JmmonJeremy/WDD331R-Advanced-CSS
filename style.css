@@ -1299,6 +1299,10 @@ header {
   top: 10px;
   left: 15px;
   transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 .design-selection ul li:not(a) {
   color: #fff;
@@ -1319,6 +1323,12 @@ header {
   margin-left: 1rem;
 }
 
+/* shimmering animation for bullet point planet */
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
+}
 /* ------------------------------------*\
   #ARCHIVES ASIDE FOOTER MOLECULE
 \*------------------------------------ */
@@ -1372,8 +1382,18 @@ header {
   top: 0;
   left: 17px;
   transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #414241 30%, rgba(0, 0, 0, 0.3333333333), #414241 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 
+/* shimmering animation for bullet point planet */
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
+}
 /* sets up the animation for the floating astronaut */
 @keyframes floating-astronaut {
   0%, 100% {
@@ -1466,8 +1486,18 @@ header {
   top: 0;
   left: 15px;
   transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 
+/* shimmering animation for bullet point planet */
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
+}
 /* ------------------------------------*\
   #FOOTER LINKS FOOTER MOLECULE
 \*------------------------------------ */

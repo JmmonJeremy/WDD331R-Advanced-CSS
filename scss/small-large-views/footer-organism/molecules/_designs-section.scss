@@ -35,6 +35,11 @@
       @include mixins.absolute($top: 10px, $left: 15px);
 
       transform: rotate(-30deg);
+
+      /* creates mask on top of planet bullet point to get a shimmering animation */
+      -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
+      background-repeat: no-repeat;
+      animation: shimmer 2.5s infinite;
     }
 
     &:not(a) {
@@ -58,4 +63,9 @@
 .designer-name {
   color: $text-light;
   margin-left: 1rem;
+}
+
+/* shimmering animation for bullet point planet */
+@keyframes shimmer {
+  100% { -webkit-mask-position: left; }
 }
