@@ -5,28 +5,29 @@
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
 
 // fonts variables
-$fonts-headline: "Londrina Solid", cursive;
-$fonts-body: "Gemunu Libre", arial, serif;
+$fonts-headline: var(--fonts-headline);
+$fonts-body: var(--fonts-body);
 
 // project main color variables
-$background-color: #030746;
-$primary: #b79ed1;
-$accent1: #e43388;
-$accent2: #48a9a6;
-$grey-sidebar: rgb(51 55 69 / 90%);
-$text-dark: #333;
-$text-darkest: #000;
-$text-light: #fff;
-$p-link: #ff0;
+$background-color: var(--background-color);
+$primary: var(--primary);
+$accent1: var(--accent1);
+$accent2: var(--accent2);
+$grey-sidebar: var(--grey-sidebar);
+$text-dark: var(--text-dark);
+$text-darkest: var(--text-darkest);
+$text-light: var(--text-light);
+$p-link: var(--p-link);
 
 // text shadows colors derived from moon svg colors
-$enlightenment-light: #fff2be;
-$about-light: #f3f4de;
-$participation-light: #fcfcfc;
-$benefits-light: #e8e7e6;
-$requirements-light: #fefca6;
+$enlightenment-light: var(--enlightenment-light);
+$about-light: var(--about-light);
+$participation-light: var(--participation-light);
+$benefits-light: var(--benefits-light);
+$requirements-light: var(--requirements-light);
 
 // set screen widths or breakpoint sizes
+// only Sass variables because CSS variables can't be used in media queries
 $break-small: 1129px;
 $break-medium: 715px;
 $break-large: 1130px;

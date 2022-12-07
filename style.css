@@ -36,6 +36,7 @@
  *
  * BASE UNITS
  * Table of Contents....(_table-of-contents) Project directory.
+ * Variables Root.......(_variables-root.scss) CSS variables.
  * CSS Reset............(_css-reset.scss) Set same baseline for all browsers.
  * Variables............(_variables.scss) Sass variables.
  * Atoms................(_atoms.scss) Basic units from atomic design.
@@ -162,6 +163,29 @@
  * Sass Compiler........CSS Map(style-pattern-library.css.map)
  * CSS..................(style-pattern-library.css) CSS file for Style Guide.
  **/
+/* set CSS variables to make code easier to change & maintain */
+:root {
+  /* fonts variables */
+  --fonts-headline: "Londrina Solid", cursive;
+  --fonts-body: "Gemunu Libre", arial, serif;
+  /* project main color variables */
+  --background-color: #030746;
+  --primary: #b79ed1;
+  --accent1: #e43388;
+  --accent2: #48a9a6;
+  --grey-sidebar: rgb(51 55 69 / 90%);
+  --text-dark: #333;
+  --text-darkest: #000;
+  --text-light: #fff;
+  --p-link: #ff0;
+  /* text shadows & box shadow colors derived from moon svg colors */
+  --enlightenment-light: #fff2be;
+  --about-light: #f3f4de;
+  --participation-light: #fcfcfc;
+  --benefits-light: #e8e7e6;
+  --requirements-light: #fefca6;
+}
+
 /* ------------------------------------*\
   #CSS RESET BASE UNITS
 \*------------------------------------ */
@@ -311,15 +335,15 @@ table {
  * for the CSS code.
  */
 body {
-  font-family: "Gemunu Libre", arial, serif;
-  background-color: #030746;
+  font-family: var(--fonts-body);
+  background-color: var(--background-color);
   margin: 0.5rem;
 }
 
 h1,
 h3,
 h4 {
-  font-family: "Londrina Solid", cursive;
+  font-family: var(--fonts-headline);
   margin: 0;
 }
 
@@ -327,7 +351,7 @@ h1 {
   font-size: 2.5rem;
   letter-spacing: 1px;
   text-align: center;
-  background-image: linear-gradient(10deg, #030746, #b79ed1, #030746, #e43388, #030746, #48a9a6, #000, #fff);
+  background-image: linear-gradient(10deg, var(--background-color), var(--primary), var(--background-color), var(--accent1), var(--background-color), var(--accent2), #000, var(--text-light));
   background-size: 100%;
   background-repeat: repeat;
   /*** Use the text as a mask for the background.
@@ -342,7 +366,7 @@ h1 {
 @media only screen and (min-width: 1130px) {
   h1 {
     font-size: 6rem;
-    color: #333;
+    color: var(--text-dark);
     background: url("images/night-time.svg");
     background-size: 20%;
     background-repeat: repeat;
@@ -360,7 +384,7 @@ h2 {
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #fff;
+  color: var(--text-light);
   font-style: italic;
   text-align: center;
   margin-top: -0.5rem;
@@ -390,7 +414,7 @@ h4 {
 p {
   font-size: 1.6rem;
   letter-spacing: 0.08rem;
-  color: #fff;
+  color: var(--text-light);
   line-height: 1.5rem;
   padding: 0.5rem 0;
   margin: 0;
@@ -415,21 +439,21 @@ li {
 .intro a,
 .main a,
 .supporting a {
-  color: #ff0;
+  color: var(--p-link);
   text-decoration: none;
 }
 .intro a:hover,
 .main a:hover,
 .supporting a:hover {
-  text-decoration: underline #e43388 2px;
+  text-decoration: underline var(--accent1) 2px;
 }
 
 .sidebar a {
   font-size: 1.6rem;
-  color: #ff0;
+  color: var(--p-link);
   line-height: 1.5rem;
   text-decoration: none;
-  background-image: linear-gradient(to right, #e43388, #e43388 50%, #ff0 50%);
+  background-image: linear-gradient(to right, var(--accent1), var(--accent1) 50%, var(--p-link) 50%);
   background-size: 200% 100%;
   background-position: -100%;
   background-clip: text;
@@ -462,8 +486,8 @@ li {
  * This section creates the starry background.
  */
 body {
-  background-color: #030746;
-  background-image: radial-gradient(#fff, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(#fff, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(#fff, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-color: var(--background-color);
+  background-image: radial-gradient(var(--text-light), rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(var(--text-light), rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(var(--text-light), rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
@@ -490,7 +514,7 @@ body {
     margin-left: -7.25rem;
     margin-top: -8rem;
     transform: rotate(0.035turn);
-    color: #e43388;
+    color: var(--accent1);
   }
 }
 
@@ -616,7 +640,7 @@ header {
  */
 .summary p:first-child {
   font-size: 1.2rem;
-  color: #000;
+  color: var(--text-darkest);
   line-height: normal;
   margin: 1.7rem auto 0;
   width: 8rem;
@@ -628,7 +652,7 @@ header {
   .summary p:first-child {
     width: 24rem; /* set width of paragraph */
     padding: 1.5rem 1rem 0 0;
-    color: #fff;
+    color: var(--text-light);
     text-align: right;
   }
 }
@@ -645,7 +669,7 @@ header {
   line-height: normal;
   font-weight: 900;
   margin-top: 17.5rem;
-  color: #fff;
+  color: var(--text-light);
   padding: 0 1rem;
 }
 @media only screen and (max-width: 1129px) {
@@ -656,7 +680,7 @@ header {
 }
 @media only screen and (min-width: 1130px) {
   .summary p:last-child {
-    color: #fff;
+    color: var(--text-light);
     text-align: center;
     margin-top: 3rem;
   }
@@ -691,25 +715,25 @@ header {
   padding: 1rem;
 }
 .preamble h3 {
-  color: #b79ed1;
+  color: var(--primary);
 }
 
 .explanation h3 {
-  color: #e43388;
+  color: var(--accent1);
 }
 
 .participation h3 {
-  color: #48a9a6;
+  color: var(--accent2);
   padding-top: 2.5rem;
 }
 
 .benefits h3 {
-  color: #b79ed1;
+  color: var(--primary);
   padding-top: 2.5rem;
 }
 
 .requirements h3 {
-  color: #e43388;
+  color: var(--accent1);
   padding-top: 2.5rem;
 }
 
@@ -752,7 +776,7 @@ header {
 .requirements h3 {
     font-size: 130%;
     text-align: center;
-    color: #000;
+    color: var(--text-darkest);
     padding-top: 40%;
     animation: pulse 3s ease-in-out infinite;
   }
@@ -771,7 +795,7 @@ header {
   .preamble h3 {
     /* keep this in large-view */
     padding: 35% 15% 25% 7%;
-    text-shadow: 1px 1px 10px #fff2be, -1px -1px 10px #fff2be;
+    text-shadow: 1px 1px 10px var(--enlightenment-light), -1px -1px 10px var(--enlightenment-light);
   }
 }
 
@@ -779,7 +803,7 @@ header {
 @media only screen and (min-width: 1130px) {
   .explanation h3 {
     /* keep this in large-view */
-    text-shadow: 1px 1px 10px #f3f4de, -1px -1px 10px #f3f4de;
+    text-shadow: 1px 1px 10px var(--about-light), -1px -1px 10px var(--about-light);
   }
 }
 
@@ -787,7 +811,7 @@ header {
 @media only screen and (min-width: 1130px) {
   .participation h3 {
     /* keep this in large-view */
-    text-shadow: 1px 1px 10px #fcfcfc, -1px -1px 10px #fcfcfc;
+    text-shadow: 1px 1px 10px var(--participation-light), -1px -1px 10px var(--participation-light);
   }
 }
 
@@ -795,7 +819,7 @@ header {
 @media only screen and (min-width: 1130px) {
   .benefits h3 {
     /* keep this in large-view */
-    text-shadow: 1px 1px 10px #e8e7e6, -1px -1px 10px #e8e7e6;
+    text-shadow: 1px 1px 10px var(--benefits-light), -1px -1px 10px var(--benefits-light);
   }
 }
 
@@ -803,7 +827,7 @@ header {
 @media only screen and (min-width: 1130px) {
   .requirements h3 {
     /* keep this in large-view */
-    text-shadow: 1px 1px 10px #fefca6, -1px -1px 10px #fefca6;
+    text-shadow: 1px 1px 10px var(--requirements-light), -1px -1px 10px var(--requirements-light);
   }
 }
 
@@ -899,7 +923,7 @@ header {
     /* shared characteristics of all Enlightenment paragraphs */
     display: block;
     text-align: center;
-    text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+    text-shadow: 1px 1px 20px var(--background-color), -1px -1px 20px var(--background-color);
     z-index: 3;
   }
   .preamble p:nth-child(3) {
@@ -966,7 +990,7 @@ header {
     left: 50%;
     margin-left: -500px;
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px #f3f4de;
+    box-shadow: 0 0 10px 10px var(--about-light);
     /* absolute position for all & placement for first paragraph */
     /* position the second paragraph */
   }
@@ -982,7 +1006,7 @@ header {
     margin-right: -740px;
     border-radius: 50%;
     background-repeat: no-repeat;
-    box-shadow: 0 0 90px 50px #f3f4de;
+    box-shadow: 0 0 90px 50px var(--about-light);
     z-index: 2;
   }
   .explanation:hover p {
@@ -993,7 +1017,7 @@ header {
     width: 490px;
     display: block;
     text-align: center;
-    text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
+    text-shadow: 1px 1px 15px var(--background-color), -1px -1px 15px var(--background-color);
     z-index: 3;
   }
   .explanation p:nth-child(3) {
@@ -1061,7 +1085,7 @@ header {
     margin-left: -75px;
     /* adds glow to headline planet */
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px #fcfcfc;
+    box-shadow: 0 0 10px 10px var(--participation-light);
     /* insertion & placement of large version of image to hold paragraphs */
     /* absolute position for all & placement for first paragraph */
   }
@@ -1078,11 +1102,11 @@ header {
     margin-top: 100px;
     background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: 0 0 90px 50px #fcfcfc;
+    box-shadow: 0 0 90px 50px var(--participation-light);
     z-index: 2;
   }
   .participation:hover a {
-    text-decoration-color: #ff0;
+    text-decoration-color: var(--p-link);
   }
   .participation:hover p {
     position: absolute;
@@ -1094,7 +1118,7 @@ header {
     /* shared characteristics of all Participation paragraphs */
     display: block;
     text-align: center;
-    text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+    text-shadow: 1px 1px 20px var(--background-color), -1px -1px 20px var(--background-color);
     z-index: 3;
   }
   .participation p:nth-child(3) {
@@ -1162,7 +1186,7 @@ header {
     left: 50%;
     margin-left: 340px;
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px #e8e7e6;
+    box-shadow: 0 0 10px 10px var(--benefits-light);
     /* absolute position for all & placement for first paragraph */
   }
   .benefits:hover::before {
@@ -1176,7 +1200,7 @@ header {
     height: 630px;
     margin-left: -730px;
     border-radius: 50%;
-    box-shadow: 0 0 90px 50px #e8e7e6;
+    box-shadow: 0 0 90px 50px var(--benefits-light);
     z-index: 2;
   }
   .benefits:hover p {
@@ -1187,7 +1211,7 @@ header {
     width: 440px;
     display: block;
     text-align: center;
-    text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
+    text-shadow: 1px 1px 15px var(--background-color), -1px -1px 15px var(--background-color);
     z-index: 3;
   }
 }
@@ -1252,7 +1276,7 @@ header {
     margin-right: -545px;
     /* adds glow to headline planet */
     border-radius: 50%;
-    box-shadow: 0 0 10px 10px #fefca6;
+    box-shadow: 0 0 10px 10px var(--requirements-light);
     /* inserts and places large version of image hold paragraphs */
     /* absolute positioning for all & placing first paragraph */
     /* placement for second paragraph */
@@ -1272,11 +1296,11 @@ header {
     margin-right: 90px;
     background-repeat: no-repeat; /* prevents svg image from repeating */
     border-radius: 50%;
-    box-shadow: 0 0 90px 50px #fefca6;
+    box-shadow: 0 0 90px 50px var(--requirements-light);
     z-index: 2;
   }
   .requirements:hover a {
-    text-decoration-color: #ff0;
+    text-decoration-color: var(--p-link);
   }
   .requirements:hover p {
     position: absolute;
@@ -1287,7 +1311,7 @@ header {
     /* shared characteristics of all Requirements paragraphs */
     display: block;
     text-align: center;
-    text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+    text-shadow: 1px 1px 20px var(--background-color), -1px -1px 20px var(--background-color);
     z-index: 3;
   }
   .requirements p:nth-child(3) {
@@ -1326,11 +1350,11 @@ header {
  * each design example.
  */
 .select {
-  color: #48a9a6;
+  color: var(--accent2);
 }
 
 .design-selection {
-  border-top: 3px solid #ff0;
+  border-top: 3px solid var(--p-link);
   padding-top: 0.5rem;
   /* put line above section */
   padding: 1rem;
@@ -1345,18 +1369,23 @@ header {
 }
 .design-selection ul li::before {
   content: "";
-  background-image: url("images/orange-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 27px;
-  height: 37px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 15px;
+  transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 .design-selection ul li:not(a) {
-  color: #fff;
+  color: var(--text-light);
 }
 .design-selection ul li a {
   margin: 0.5rem 0;
@@ -1377,7 +1406,7 @@ header {
 
 /* makes designer-name white */
 .sidebar .designer-name {
-  background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
+  background-image: linear-gradient(to right, var(--accent1), var(--accent1) 50%, var(--text-light) 50%);
 }
 .sidebar .designer-name::before {
   left: 70px;
@@ -1453,7 +1482,7 @@ li:nth-of-type(8) .designer-name:hover::before {
  * each archive entry.
  */
 .archives {
-  color: #b79ed1;
+  color: var(--primary);
 }
 
 .design-archives {
@@ -1489,14 +1518,19 @@ li:nth-of-type(8) .designer-name:hover::before {
 }
 .design-archives ul li::before {
   content: "";
-  background-image: url("images/earth-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   position: absolute;
   top: 0;
-  left: 15px;
+  left: 17px;
+  transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #414241 30%, rgba(0, 0, 0, 0.3333333333), #414241 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 
 .viewall a:hover::before {
@@ -1574,7 +1608,7 @@ li:nth-of-type(8) .designer-name:hover::before {
  * each resource listed.
  */
 .resources {
-  color: #e43388;
+  color: var(--accent1);
 }
 
 .zen-resources {
@@ -1586,15 +1620,19 @@ li:nth-of-type(8) .designer-name:hover::before {
 }
 .zen-resources ul li::before {
   content: "";
-  background-image: url("images/green-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 25px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   position: absolute;
   top: 0;
   left: 15px;
   transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 
 .view-css a:hover::before {
@@ -1613,6 +1651,15 @@ li:nth-of-type(8) .designer-name:hover::before {
   width: 75%;
 }
 
+/* shimmering animation for bullet point planet */
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
+  50% {
+    transform: rotate(-20deg) translateX(-0.25rem);
+  }
+}
 /* ------------------------------------*\
   #FOOTER LINKS FOOTER MOLECULE
 \*------------------------------------ */
@@ -1625,8 +1672,8 @@ li:nth-of-type(8) .designer-name:hover::before {
 }
 
 footer {
-  border-top: 3px solid #ff0;
-  border-bottom: 3px solid #ff0;
+  border-top: 3px solid var(--p-link);
+  border-bottom: 3px solid var(--p-link);
   padding: 0.5rem 0;
   /* put lines above & below links */
   display: flex;
