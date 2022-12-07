@@ -45,7 +45,7 @@
   }
 }
 
-.design-name {
+.sidebar .design-name {
   display: block;
   
   /* changed from fit-content to max-content to keep it from prematurely
@@ -61,7 +61,7 @@
   }
 }
 
-.designer-name {
+.sidebar .designer-name {
   background-image:
     linear-gradient(
       to right,

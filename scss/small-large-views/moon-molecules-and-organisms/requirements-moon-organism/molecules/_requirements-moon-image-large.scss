@@ -83,16 +83,5 @@
       width: 400px;
       margin-right: 265px;
     }
-
-    /* changing link hover colors so legible on planet image */
-    a {
-      background-image:
-        linear-gradient(
-          to right,
-          #000,
-          #000 50%,
-          $p-link 50%
-        );
-    }
   }
 }

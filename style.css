@@ -412,7 +412,19 @@ li {
   margin: 1.75rem 0;
 }
 
-a {
+.intro a,
+.main a,
+.supporting a {
+  color: #ff0;
+  text-decoration: none;
+}
+.intro a:hover,
+.main a:hover,
+.supporting a:hover {
+  text-decoration: underline #e43388 2px;
+}
+
+.sidebar a {
   font-size: 1.6rem;
   color: #ff0;
   line-height: 1.5rem;
@@ -425,13 +437,13 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-a:hover {
+.sidebar a:hover {
   background-position: 0;
 }
-a:hover::before {
+.sidebar a:hover::before {
   width: 70%;
 }
-a::before {
+.sidebar a::before {
   content: "";
   background: #54b3d6;
   display: block;
@@ -1212,10 +1224,6 @@ header {
   }
 }
 
-.requirements a::before {
-  display: none;
-}
-
 /* -------------------------------------------*\
   #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
 \*------------------------------------------- */
@@ -1248,7 +1256,6 @@ header {
     /* placement for third paragraph */
     /* placement for fourth paragraph */
     /* placement for fifth paragraph */
-    /* changing link hover colors so legible on planet image */
   }
   .requirements:hover::before {
     position: absolute;
@@ -1296,9 +1303,6 @@ header {
     top: 188px;
     width: 400px;
     margin-right: 265px;
-  }
-  .requirements a {
-    background-image: linear-gradient(to right, #000, #000 50%, #ff0 50%);
   }
 }
 
@@ -1352,23 +1356,23 @@ header {
   margin: 0.5rem 0;
 }
 
-.design-name {
+.sidebar .design-name {
   display: block;
   /* changed from fit-content to max-content to keep it from prematurely
    * wrapping in flex */
   max-width: max-content;
 }
-.design-name:hover::before {
+.sidebar .design-name:hover::before {
   bottom: 27px;
 }
-.design-name::before {
+.sidebar .design-name::before {
   bottom: 27px;
 }
 
-.designer-name {
+.sidebar .designer-name {
   background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
 }
-.designer-name::before {
+.sidebar .designer-name::before {
   left: 70px;
 }
 
