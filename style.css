@@ -1298,7 +1298,7 @@ header {
     margin-right: 265px;
   }
   .requirements a {
-    background-image: linear-gradient(to right, black, black 50%, #FBFF00 50%);
+    background-image: linear-gradient(to right, #000, #000 50%, #ff0 50%);
   }
 }
 
