@@ -1349,8 +1349,10 @@ header {
   max-width: max-content;
 }
 .design-name:hover::before {
-  /* gets rid of blue underline on design name links */
-  display: none;
+  bottom: 27px;
+}
+.design-name::before {
+  bottom: 27px;
 }
 
 .designer-name {
@@ -1360,6 +1362,40 @@ header {
   left: 70px;
 }
 
+/* Design name underline widths */
+li:nth-of-type(1) .design-name:hover::before {
+  width: 79%;
+}
+
+li:nth-of-type(2) .design-name:hover::before {
+  width: 60%;
+}
+
+li:nth-of-type(3) .design-name:hover::before {
+  width: 23%;
+}
+
+li:nth-of-type(4) .design-name:hover::before {
+  width: 58%;
+}
+
+li:nth-of-type(5) .design-name:hover::before {
+  width: 52%;
+}
+
+li:nth-of-type(6) .design-name:hover::before {
+  width: 60%;
+}
+
+li:nth-of-type(7) .design-name:hover::before {
+  width: 80%;
+}
+
+li:nth-of-type(8) .design-name:hover::before {
+  width: 75%;
+}
+
+/* Designer name underline widths */
 li:nth-of-type(1) .designer-name:hover::before {
   width: 65%;
 }
