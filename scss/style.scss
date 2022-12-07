@@ -3,6 +3,9 @@
 // import table of contents notes for css file throught ***table-of-contents
 @use "base-units/table-of-contents";
 
+// import the root CSS variables
+@use "base-units/variables-root";
+
 // import the pages reset
 @use "base-units/css-reset";
 
