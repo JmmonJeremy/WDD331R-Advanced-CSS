@@ -29,3 +29,35 @@
     }
   }
 }
+
+.view-css a {
+  &:hover {
+    &::before {
+      width: 80%;
+    }
+  }
+}
+
+.css-resources a {
+  &:hover {
+    &::before {
+      width: 73%;
+    }
+  }
+}
+
+.zen-faq a {
+  &:hover {
+    &::before {
+      width: 42%;
+    }
+  }
+}
+
+.zen-submit a {
+  &:hover {
+    &::before {
+      width: 75%;
+    }
+  }
+}

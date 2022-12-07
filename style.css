@@ -429,7 +429,7 @@ a:hover {
   background-position: 0;
 }
 a:hover::before {
-  width: 80%;
+  width: 70%;
 }
 a::before {
   content: "";
@@ -1356,8 +1356,36 @@ header {
 .designer-name {
   background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
 }
-.designer-name:nth-child(2):hover::before {
-  width: 60%;
+.designer-name::before {
+  left: 70px;
+}
+
+li:nth-of-type(1) .designer-name:hover::before {
+  width: 65%;
+}
+
+li:nth-of-type(2) .designer-name:hover::before {
+  width: 55%;
+}
+
+li:nth-of-type(3) .designer-name:hover::before {
+  width: 67%;
+}
+
+li:nth-of-type(4) .designer-name:hover::before {
+  width: 65%;
+}
+
+li:nth-of-type(6) .designer-name:hover::before {
+  width: 67%;
+}
+
+li:nth-of-type(7) .designer-name:hover::before {
+  width: 38%;
+}
+
+li:nth-of-type(8) .designer-name:hover::before {
+  width: 55%;
 }
 
 /* ------------------------------------*\
@@ -1412,6 +1440,10 @@ header {
   position: absolute;
   top: 0;
   left: 15px;
+}
+
+.viewall a:hover::before {
+  width: 75%;
 }
 
 /* sets up the animation for the floating astronaut */
@@ -1506,6 +1538,22 @@ header {
   top: 0;
   left: 15px;
   transform: rotate(-30deg);
+}
+
+.view-css a:hover::before {
+  width: 80%;
+}
+
+.css-resources a:hover::before {
+  width: 73%;
+}
+
+.zen-faq a:hover::before {
+  width: 42%;
+}
+
+.zen-submit a:hover::before {
+  width: 75%;
 }
 
 /* ------------------------------------*\
