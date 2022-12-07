@@ -1349,11 +1349,15 @@ header {
   max-width: max-content;
 }
 .design-name:hover::before {
+  /* gets rid of blue underline on design name links */
   display: none;
 }
 
 .designer-name {
   background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
+}
+.designer-name:nth-child(2):hover::before {
+  width: 20%;
 }
 
 /* ------------------------------------*\

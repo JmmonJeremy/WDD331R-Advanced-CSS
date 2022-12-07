@@ -67,4 +67,10 @@
       $accent1 50%,
       $text-light 50%
     );
+
+  &:nth-child(2) {
+    &:hover::before {
+      width: 20%;
+    }
+  }
 }
