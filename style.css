@@ -471,7 +471,8 @@ body {
  */
 /* inserts the rocket in the center of the planet */
 @media only screen and (min-width: 1130px) {
-  .page-wrapper::after { /* keep this in large-view */
+  .page-wrapper::after {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/rocket-animated.svg");
     display: block;
@@ -480,7 +481,7 @@ body {
     position: absolute;
     top: 14rem;
     left: 50%;
-    z-index: -1; /* place rocket behind the hover images */
+    z-index: 1; /* place rocket behind the hover images */
     margin-left: -60px; /* center the rocket over the planet */
     animation: rocket-flight 10s linear infinite;
   }
@@ -537,18 +538,16 @@ body {
   .intro::before { /* keep this in large-view */ }
   .intro::before {
     content: "";
-    background-image: url("images/jupiter.svg");
+    background-image: url("images/central-planet.svg");
     display: block;
-    width: 620px;
-    height: 610px;
+    width: 600px;
+    height: 595px;
     /* insert planet image */
     position: absolute;
-    top: -10px;
     left: 50%;
     /* position */
     z-index: -1; /* position */
-    margin-left: -310px; /* position center the planet */
-    transform: rotate(180deg); /* rotate the planet image 180deg */
+    margin-left: -300px; /* position center the planet */
     background-repeat: no-repeat;
   }
 }
@@ -570,7 +569,7 @@ header {
 }
 @media only screen and (min-width: 1130px) {
   header {
-    width: 620px; /* set width to planet width */
+    width: 600px; /* set width to planet width */
     padding: 12rem 0 0 0.4rem; /* center header in planet */
     margin-top: 12rem; /* lower header vertically in screen */
   }
@@ -827,7 +826,8 @@ header {
  */
 /* inserts the Enlightenment moon on the left side of the planet */
 @media only screen and (min-width: 1130px) {
-  .preamble { /* keep this in large-view */
+  .preamble {
+    /* keep this in large-view */
     /* insertion & placement of large version of image to hold paragraphs */
     /* absolute position for all & placement for first paragraph */
     /* placement for second paragraph */
@@ -843,7 +843,7 @@ header {
     top: 24rem;
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
-     * stable hover image positon **/
+    * stable hover image positon **/
     margin-left: -560px;
   }
   .preamble:hover::before {
@@ -856,6 +856,7 @@ header {
     width: 800px;
     height: 820px;
     margin-right: -869px;
+    z-index: 2;
   }
   .preamble:hover p {
     position: absolute;
@@ -867,6 +868,7 @@ header {
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+    z-index: 3;
   }
   .preamble p:nth-child(3) {
     top: -83%;
@@ -920,7 +922,8 @@ header {
  */
 /* inserts the About moon on the left side of the planet */
 @media only screen and (min-width: 1130px) {
-  .explanation { /* keep this in large-view */
+  .explanation {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/red-white-moon.svg");
     display: block;
@@ -948,6 +951,7 @@ header {
     border-radius: 50%;
     background-repeat: no-repeat;
     box-shadow: 0 0 90px 50px #f3f4de;
+    z-index: 2;
   }
   .explanation:hover p {
     position: absolute;
@@ -958,6 +962,7 @@ header {
     display: block;
     text-align: center;
     text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
+    z-index: 3;
   }
   .explanation p:nth-child(3) {
     top: 219%;
@@ -1005,7 +1010,8 @@ header {
  */
 /* inserts the Participation moon on the top side of the planet */
 @media only screen and (min-width: 1130px) {
-  .participation { /* keep this in large-view */
+  .participation {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/blue-moon.svg");
     display: block;
@@ -1015,7 +1021,7 @@ header {
     top: -11.5rem;
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
-     * stable hover image positon */
+    * stable hover image positon */
     margin-left: -75px;
     /* adds glow to headline planet */
     border-radius: 50%;
@@ -1037,6 +1043,7 @@ header {
     background-repeat: no-repeat;
     border-radius: 50%;
     box-shadow: 0 0 90px 50px #fcfcfc;
+    z-index: 2;
   }
   .participation:hover p {
     position: absolute;
@@ -1049,6 +1056,7 @@ header {
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+    z-index: 3;
   }
   .participation p:nth-child(3) {
     top: 120px;
@@ -1103,7 +1111,8 @@ header {
  */
 /* inserts the Benefits moon on the right side of the planet */
 @media only screen and (min-width: 1130px) {
-  .benefits { /* keep this in large-view */
+  .benefits {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/white-moon.svg");
     display: block;
@@ -1129,6 +1138,7 @@ header {
     margin-left: -730px;
     border-radius: 50%;
     box-shadow: 0 0 90px 50px #e8e7e6;
+    z-index: 2;
   }
   .benefits:hover p {
     position: absolute;
@@ -1139,6 +1149,7 @@ header {
     display: block;
     text-align: center;
     text-shadow: 1px 1px 15px #030746, -1px -1px 15px #030746;
+    z-index: 3;
   }
 }
 
@@ -1187,7 +1198,8 @@ header {
  */
 /* inserts the Requirements moon on the right side of the planet */
 @media only screen and (min-width: 1130px) {
-  .requirements { /* keep this in large-view */
+  .requirements {
+    /* keep this in large-view */
     content: "";
     background-image: url("images/orange-moon.svg");
     display: block;
@@ -1197,7 +1209,7 @@ header {
     top: 25rem;
     right: 50%;
     /* positions moon in fixed position from planet's center to create a *
-     * stable hover image positon */
+    * stable hover image positon */
     margin-right: -545px;
     /* adds glow to headline planet */
     border-radius: 50%;
@@ -1222,6 +1234,7 @@ header {
     background-repeat: no-repeat; /* prevents svg image from repeating */
     border-radius: 50%;
     box-shadow: 0 0 90px 50px #fefca6;
+    z-index: 2;
   }
   .requirements:hover p {
     position: absolute;
@@ -1233,6 +1246,7 @@ header {
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px #030746, -1px -1px 20px #030746;
+    z-index: 3;
   }
   .requirements p:nth-child(3) {
     top: -295px;
