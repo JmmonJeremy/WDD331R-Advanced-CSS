@@ -1323,15 +1323,20 @@ header {
 }
 .design-selection ul li::before {
   content: "";
-  background-image: url("images/orange-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 27px;
-  height: 37px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 15px;
+  transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 .design-selection ul li:not(a) {
   color: #fff;
@@ -1466,14 +1471,19 @@ li:nth-of-type(8) .designer-name:hover::before {
 }
 .design-archives ul li::before {
   content: "";
-  background-image: url("images/earth-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   position: absolute;
   top: 0;
-  left: 15px;
+  left: 17px;
+  transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #414241 30%, rgba(0, 0, 0, 0.3333333333), #414241 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 
 .viewall a:hover::before {
@@ -1563,15 +1573,19 @@ li:nth-of-type(8) .designer-name:hover::before {
 }
 .zen-resources ul li::before {
   content: "";
-  background-image: url("images/green-planet.svg");
+  background-image: url("images/new-planet.svg");
   display: inline-block;
-  width: 25px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   background-size: contain;
   position: absolute;
   top: 0;
   left: 15px;
   transform: rotate(-30deg);
+  /* creates mask on top of planet bullet point to get a shimmering animation */
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 2.5s infinite;
 }
 
 .view-css a:hover::before {
@@ -1590,6 +1604,15 @@ li:nth-of-type(8) .designer-name:hover::before {
   width: 75%;
 }
 
+/* shimmering animation for bullet point planet */
+@keyframes shimmer {
+  100% {
+    -webkit-mask-position: left;
+  }
+  50% {
+    transform: rotate(-20deg) translateX(-0.25rem);
+  }
+}
 /* ------------------------------------*\
   #FOOTER LINKS FOOTER MOLECULE
 \*------------------------------------ */
