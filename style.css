@@ -436,7 +436,19 @@ li {
   margin: 1.75rem 0;
 }
 
-a {
+.intro a,
+.main a,
+.supporting a {
+  color: var(--p-link);
+  text-decoration: none;
+}
+.intro a:hover,
+.main a:hover,
+.supporting a:hover {
+  text-decoration: underline var(--accent1) 2px;
+}
+
+.sidebar a {
   font-size: 1.6rem;
   color: var(--p-link);
   line-height: 1.5rem;
@@ -449,13 +461,13 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-a:hover {
+.sidebar a:hover {
   background-position: 0;
 }
-a:hover::before {
+.sidebar a:hover::before {
   width: 70%;
 }
-a::before {
+.sidebar a::before {
   content: "";
   background: #54b3d6;
   display: block;
@@ -1044,6 +1056,10 @@ header {
   }
 }
 
+.participation a::before {
+  display: none;
+}
+
 /* ----------------------------------------------*\
   #MOON LARGE-VIEW PARTICIPATION MOON MOLECULES
 \*---------------------------------------------- */
@@ -1065,7 +1081,7 @@ header {
     top: -11.5rem;
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
-    * stable hover image positon */
+     * stable hover image positon */
     margin-left: -75px;
     /* adds glow to headline planet */
     border-radius: 50%;
@@ -1088,6 +1104,9 @@ header {
     border-radius: 50%;
     box-shadow: 0 0 90px 50px var(--participation-light);
     z-index: 2;
+  }
+  .participation:hover a {
+    text-decoration-color: var(--p-link);
   }
   .participation:hover p {
     position: absolute;
@@ -1253,7 +1272,7 @@ header {
     top: 25rem;
     right: 50%;
     /* positions moon in fixed position from planet's center to create a *
-    * stable hover image positon */
+     * stable hover image positon */
     margin-right: -545px;
     /* adds glow to headline planet */
     border-radius: 50%;
@@ -1279,6 +1298,9 @@ header {
     border-radius: 50%;
     box-shadow: 0 0 90px 50px var(--requirements-light);
     z-index: 2;
+  }
+  .requirements:hover a {
+    text-decoration-color: var(--p-link);
   }
   .requirements:hover p {
     position: absolute;
@@ -1369,23 +1391,24 @@ header {
   margin: 0.5rem 0;
 }
 
-.design-name {
+.sidebar .design-name {
   display: block;
   /* changed from fit-content to max-content to keep it from prematurely
    * wrapping in flex */
   max-width: max-content;
 }
-.design-name:hover::before {
+.sidebar .design-name:hover::before {
   bottom: 27px;
 }
-.design-name::before {
+.sidebar .design-name::before {
   bottom: 27px;
 }
 
-.designer-name {
+/* makes designer-name white */
+.sidebar .designer-name {
   background-image: linear-gradient(to right, var(--accent1), var(--accent1) 50%, var(--text-light) 50%);
 }
-.designer-name::before {
+.sidebar .designer-name::before {
   left: 70px;
 }
 

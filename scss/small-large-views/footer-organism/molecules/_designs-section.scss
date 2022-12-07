@@ -52,7 +52,7 @@
   }
 }
 
-.design-name {
+.sidebar .design-name {
   display: block;
   
   /* changed from fit-content to max-content to keep it from prematurely
@@ -68,7 +68,8 @@
   }
 }
 
-.designer-name {
+/* makes designer-name white */
+.sidebar .designer-name {
   background-image:
     linear-gradient(
       to right,

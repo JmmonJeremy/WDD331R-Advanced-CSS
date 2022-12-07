@@ -110,7 +110,18 @@ li {
   margin: 1.75rem 0;
 }
 
-a {
+.intro a,
+.main a,
+.supporting a {
+  color: $p-link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline $accent1 2px;
+  }
+}
+
+.sidebar a {
   @include mixins.font(1.6rem, $color: $p-link, $height: 1.5rem);
   
   text-decoration: none;
