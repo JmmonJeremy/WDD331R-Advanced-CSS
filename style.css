@@ -1357,7 +1357,7 @@ header {
   background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
 }
 .designer-name:nth-child(2):hover::before {
-  width: 20%;
+  width: 60%;
 }
 
 /* ------------------------------------*\
