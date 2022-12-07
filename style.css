@@ -1020,6 +1020,10 @@ header {
   }
 }
 
+.participation a::before {
+  display: none;
+}
+
 /* ----------------------------------------------*\
   #MOON LARGE-VIEW PARTICIPATION MOON MOLECULES
 \*---------------------------------------------- */
@@ -1208,6 +1212,10 @@ header {
   }
 }
 
+.requirements a::before {
+  display: none;
+}
+
 /* -------------------------------------------*\
   #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
 \*------------------------------------------- */
@@ -1229,7 +1237,7 @@ header {
     top: 25rem;
     right: 50%;
     /* positions moon in fixed position from planet's center to create a *
-    * stable hover image positon */
+     * stable hover image positon */
     margin-right: -545px;
     /* adds glow to headline planet */
     border-radius: 50%;
@@ -1240,6 +1248,7 @@ header {
     /* placement for third paragraph */
     /* placement for fourth paragraph */
     /* placement for fifth paragraph */
+    /* changing link hover colors so legible on planet image */
   }
   .requirements:hover::before {
     position: absolute;
@@ -1287,6 +1296,9 @@ header {
     top: 188px;
     width: 400px;
     margin-right: 265px;
+  }
+  .requirements a {
+    background-image: linear-gradient(to right, black, black 50%, #FBFF00 50%);
   }
 }
 
