@@ -1294,9 +1294,9 @@ header {
   background-size: contain;
   /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
-  top: 1rem;
+  top: 10px;
   left: 15px;
-  animation: down 0.65s cubic-bezier(0.95, -1.23, 0.12, 1.81) infinite;
+  animation: down 8s linear infinite;
 }
 .design-selection ul li:not(a) {
   color: #fff;
@@ -1321,32 +1321,8 @@ header {
   0%, 100% {
     transform: none;
   }
-  10% {
-    transform: translateY(-0.03rem);
-  }
-  20% {
-    transform: translateY(0.03rem);
-  }
-  30% {
-    transform: translateY(-0.03rem);
-  }
-  40% {
-    transform: translateY(0.03rem);
-  }
   50% {
-    transform: translateY(0.25rem);
-  }
-  60% {
-    transform: translateY(-0.03rem);
-  }
-  70% {
-    transform: translateY(0.03rem);
-  }
-  80% {
-    transform: translateY(-0.03rem);
-  }
-  90% {
-    transform: translateY(0.03rem);
+    transform: translateY(1.25rem);
   }
 }
 /* ------------------------------------*\
@@ -1401,7 +1377,7 @@ header {
   position: absolute;
   top: 0;
   left: 15px;
-  animation: sideways 0.5s cubic-bezier(0, -0.6, 1, 1.57) infinite;
+  animation: sideways 7s linear infinite;
 }
 
 /* sets up the animation for the floating astronaut */
@@ -1471,32 +1447,8 @@ header {
   0%, 100% {
     transform: none;
   }
-  10% {
-    transform: translateX(-0.03rem);
-  }
-  20% {
-    transform: translateX(0.03rem);
-  }
-  30% {
-    transform: translateX(-0.03rem);
-  }
-  40% {
-    transform: translateX(0.03rem);
-  }
   50% {
-    transform: translateX(0.25rem);
-  }
-  60% {
-    transform: translateX(-0.03rem);
-  }
-  70% {
-    transform: translateX(0.03rem);
-  }
-  80% {
-    transform: translateX(-0.03rem);
-  }
-  90% {
-    transform: translateX(0.03rem);
+    transform: translateX(0.75rem);
   }
 }
 /* ------------------------------------*\
@@ -1528,39 +1480,15 @@ header {
   top: 0;
   left: 15px;
   transform: rotate(-30deg);
-  animation: rotate 1s linear infinite;
+  animation: rotate 8s linear infinite;
 }
 
 @keyframes rotate {
   0%, 100% {
     transform: rotate(-30deg);
   }
-  10% {
-    transform: rotate(-35deg);
-  }
-  20% {
-    transform: rotate(-25deg);
-  }
-  30% {
-    transform: rotate(-35deg);
-  }
-  40% {
-    transform: rotate(-25deg);
-  }
   50% {
     transform: rotate(30deg);
-  }
-  60% {
-    transform: rotate(-35deg);
-  }
-  70% {
-    transform: rotate(-25deg);
-  }
-  80% {
-    transform: rotate(-35deg);
-  }
-  90% {
-    transform: rotate(-25deg);
   }
 }
 /* ------------------------------------*\
