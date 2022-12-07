@@ -52,6 +52,14 @@
   }
 }
 
+.viewall a {
+  &:hover {
+    &::before {
+      width: 75%;
+    }
+  }
+}
+
 /* sets up the animation for the floating astronaut */
 @keyframes floating-astronaut {
   0%,

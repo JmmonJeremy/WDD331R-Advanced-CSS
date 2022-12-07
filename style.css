@@ -417,10 +417,30 @@ a {
   color: #ff0;
   line-height: 1.5rem;
   text-decoration: none;
-  transition: border-color 0.3s ease-in-out;
+  background-image: linear-gradient(to right, #e43388, #e43388 50%, #ff0 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 a:hover {
-  border-bottom: 1px solid #e43388;
+  background-position: 0;
+}
+a:hover::before {
+  width: 70%;
+}
+a::before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 50px;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* ------------------------------------*\
@@ -1331,10 +1351,80 @@ header {
    * wrapping in flex */
   max-width: max-content;
 }
+.design-name:hover::before {
+  bottom: 27px;
+}
+.design-name::before {
+  bottom: 27px;
+}
 
 .designer-name {
-  color: #fff;
-  margin-left: 1rem;
+  background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
+}
+.designer-name::before {
+  left: 70px;
+}
+
+/* Design name underline widths */
+li:nth-of-type(1) .design-name:hover::before {
+  width: 79%;
+}
+
+li:nth-of-type(2) .design-name:hover::before {
+  width: 60%;
+}
+
+li:nth-of-type(3) .design-name:hover::before {
+  width: 23%;
+}
+
+li:nth-of-type(4) .design-name:hover::before {
+  width: 58%;
+}
+
+li:nth-of-type(5) .design-name:hover::before {
+  width: 52%;
+}
+
+li:nth-of-type(6) .design-name:hover::before {
+  width: 60%;
+}
+
+li:nth-of-type(7) .design-name:hover::before {
+  width: 80%;
+}
+
+li:nth-of-type(8) .design-name:hover::before {
+  width: 75%;
+}
+
+/* Designer name underline widths */
+li:nth-of-type(1) .designer-name:hover::before {
+  width: 65%;
+}
+
+li:nth-of-type(2) .designer-name:hover::before {
+  width: 55%;
+}
+
+li:nth-of-type(3) .designer-name:hover::before {
+  width: 67%;
+}
+
+li:nth-of-type(4) .designer-name:hover::before {
+  width: 65%;
+}
+
+li:nth-of-type(6) .designer-name:hover::before {
+  width: 67%;
+}
+
+li:nth-of-type(7) .designer-name:hover::before {
+  width: 38%;
+}
+
+li:nth-of-type(8) .designer-name:hover::before {
+  width: 55%;
 }
 
 /* ------------------------------------*\
@@ -1394,6 +1484,10 @@ header {
   -webkit-mask: linear-gradient(-60deg, #414241 30%, rgba(0, 0, 0, 0.3333333333), #414241 70%) right/300% 100%;
   background-repeat: no-repeat;
   animation: shimmer 2.5s infinite;
+}
+
+.viewall a:hover::before {
+  width: 75%;
 }
 
 /* sets up the animation for the floating astronaut */
@@ -1494,6 +1588,22 @@ header {
   animation: shimmer 2.5s infinite;
 }
 
+.view-css a:hover::before {
+  width: 80%;
+}
+
+.css-resources a:hover::before {
+  width: 73%;
+}
+
+.zen-faq a:hover::before {
+  width: 42%;
+}
+
+.zen-submit a:hover::before {
+  width: 75%;
+}
+
 /* shimmering animation for bullet point planet */
 @keyframes shimmer {
   100% {
@@ -1533,6 +1643,10 @@ footer {
 
 .zen-resources {
   padding-bottom: 3rem; /* layout */
+}
+
+footer a:hover::before {
+  width: 0;
 }
 
 /* ------------------------------------*\
