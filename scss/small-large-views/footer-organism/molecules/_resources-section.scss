@@ -38,4 +38,8 @@
 /* shimmering animation for bullet point planet */
 @keyframes shimmer {
   100% { -webkit-mask-position: left; }
+  
+  50% {
+    transform: rotate(-20deg) translateX(-.25rem);
+  }
 }

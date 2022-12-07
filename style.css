@@ -1497,6 +1497,9 @@ header {
   100% {
     -webkit-mask-position: left;
   }
+  50% {
+    transform: rotate(-20deg) translateX(-0.25rem);
+  }
 }
 /* ------------------------------------*\
   #FOOTER LINKS FOOTER MOLECULE
