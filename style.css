@@ -1057,7 +1057,7 @@ header {
     top: -11.5rem;
     left: 50%;
     /* positions moon in fixed position from planet's center to create a *
-    * stable hover image positon */
+     * stable hover image positon */
     margin-left: -75px;
     /* adds glow to headline planet */
     border-radius: 50%;
@@ -1080,6 +1080,9 @@ header {
     border-radius: 50%;
     box-shadow: 0 0 90px 50px #fcfcfc;
     z-index: 2;
+  }
+  .participation:hover a {
+    text-decoration-color: #ff0;
   }
   .participation:hover p {
     position: absolute;
