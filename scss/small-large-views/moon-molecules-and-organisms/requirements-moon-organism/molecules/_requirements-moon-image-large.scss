@@ -40,6 +40,10 @@
       z-index: 2;
     }
 
+    &:hover a {
+      text-decoration-color: $p-link;
+    }
+
     /* absolute positioning for all & placing first paragraph */
     &:hover p {
       @include mixins.absolute($right: 50%, $top: -325%);

@@ -1272,6 +1272,9 @@ header {
     box-shadow: 0 0 90px 50px #fefca6;
     z-index: 2;
   }
+  .requirements:hover a {
+    text-decoration-color: #ff0;
+  }
   .requirements:hover p {
     position: absolute;
     top: -325%;
@@ -1369,6 +1372,7 @@ header {
   bottom: 27px;
 }
 
+/* makes designer-name white */
 .sidebar .designer-name {
   background-image: linear-gradient(to right, #e43388, #e43388 50%, #fff 50%);
 }
