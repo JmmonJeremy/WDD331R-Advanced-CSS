@@ -558,18 +558,16 @@ body {
   .intro::before { /* keep this in large-view */ }
   .intro::before {
     content: "";
-    background-image: url("images/jupiter.svg");
+    background-image: url("images/central-planet.svg");
     display: block;
-    width: 620px;
-    height: 610px;
+    width: 600px;
+    height: 595px;
     /* insert planet image */
     position: absolute;
-    top: -10px;
     left: 50%;
     /* position */
     z-index: -1; /* position */
-    margin-left: -310px; /* position center the planet */
-    transform: rotate(180deg); /* rotate the planet image 180deg */
+    margin-left: -300px; /* position center the planet */
     background-repeat: no-repeat;
   }
 }
@@ -591,7 +589,7 @@ header {
 }
 @media only screen and (min-width: 1130px) {
   header {
-    width: 620px; /* set width to planet width */
+    width: 600px; /* set width to planet width */
     padding: 12rem 0 0 0.4rem; /* center header in planet */
     margin-top: 12rem; /* lower header vertically in screen */
   }
