@@ -64,8 +64,3 @@
   color: $text-light;
   margin-left: 1rem;
 }
-
-/* shimmering animation for bullet point planet */
-@keyframes shimmer {
-  100% { -webkit-mask-position: left; }
-}

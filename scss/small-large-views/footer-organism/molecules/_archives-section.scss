@@ -52,11 +52,6 @@
   }
 }
 
-/* shimmering animation for bullet point planet */
-@keyframes shimmer {
-  100% { -webkit-mask-position: left; }
-}
-
 /* sets up the animation for the floating astronaut */
 @keyframes floating-astronaut {
   0%,

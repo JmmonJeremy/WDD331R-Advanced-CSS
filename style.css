@@ -1337,12 +1337,6 @@ header {
   margin-left: 1rem;
 }
 
-/* shimmering animation for bullet point planet */
-@keyframes shimmer {
-  100% {
-    -webkit-mask-position: left;
-  }
-}
 /* ------------------------------------*\
   #ARCHIVES ASIDE FOOTER MOLECULE
 \*------------------------------------ */
@@ -1402,12 +1396,6 @@ header {
   animation: shimmer 2.5s infinite;
 }
 
-/* shimmering animation for bullet point planet */
-@keyframes shimmer {
-  100% {
-    -webkit-mask-position: left;
-  }
-}
 /* sets up the animation for the floating astronaut */
 @keyframes floating-astronaut {
   0%, 100% {
