@@ -14,11 +14,8 @@
 .participation {
   @include mixins.breakpoint(large) {
     /* keep this in large-view */
-    @include mixins.insert-image(
-      "images/blue-moon.svg",
-      $width: 150px,
-      $height: 147px
-    );
+    @include mixins.insert-image("images/blue-moon.svg", $width: 150px,
+    $height: 147px);
     @include mixins.absolute($left: 50%, $top: -11.5rem);
 
     /* positions moon in fixed position from planet's center to create a *
@@ -32,11 +29,8 @@
     /* insertion & placement of large version of image to hold paragraphs */
     &:hover::before {
       @include mixins.absolute($right: 50%, $top: 50%);
-      @include mixins.insert-image(
-        "images/blue-moon.svg",
-        $width: 700px,
-        $height: 688px
-      );
+      @include mixins.insert-image("images/blue-moon.svg", $width: 700px,
+      $height: 688px);
 
       margin-right: -350px;
       margin-top: 100px;

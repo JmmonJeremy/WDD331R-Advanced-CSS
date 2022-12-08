@@ -1,11 +1,14 @@
 @import "https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap";
+
 /* ------------------------------------*\
   #BASE UNITS
 \*------------------------------------ */
+
 /** 
  * This is the TABLE OF CONTENTS inserted as notes at the top of the CSS file
  */
+
 /**
  * CONTENTS
  *__________
@@ -163,11 +166,13 @@
  * Sass Compiler........CSS Map(style-pattern-library.css.map)
  * CSS..................(style-pattern-library.css) CSS file for Style Guide.
  **/
+
 /* set CSS variables to make code easier to change & maintain */
 :root {
   /* fonts variables */
   --fonts-headline: "Londrina Solid", cursive;
   --fonts-body: "Gemunu Libre", arial, serif;
+
   /* project main color variables */
   --background-color: #030746;
   --primary: #b79ed1;
@@ -178,6 +183,7 @@
   --text-darkest: #000;
   --text-light: #fff;
   --p-link: #ff0;
+
   /* text shadows & box shadow colors derived from moon svg colors */
   --enlightenment-light: #fff2be;
   --about-light: #f3f4de;
@@ -189,9 +195,11 @@
 /* ------------------------------------*\
   #CSS RESET BASE UNITS
 \*------------------------------------ */
+
 /** 
  * This is the segment for setting the same starting baseline for all browsers.
  */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -330,6 +338,7 @@ table {
 /* ------------------------------------*\
   #ATOMS BASE UNITS
 \*------------------------------------ */
+
 /** 
  * This is the segment for the base elements or "atoms" as a foundation
  * for the CSS code.
@@ -354,6 +363,7 @@ h1 {
   background-image: linear-gradient(10deg, var(--background-color), var(--primary), var(--background-color), var(--accent1), var(--background-color), var(--accent2), #000, var(--text-light));
   background-size: 100%;
   background-repeat: repeat;
+
   /*** Use the text as a mask for the background.
   // This will show the gradient as a text color rather than element bg. ***/
   background-clip: text;
@@ -442,6 +452,7 @@ li {
   color: var(--p-link);
   text-decoration: none;
 }
+
 .intro a:hover,
 .main a:hover,
 .supporting a:hover {
@@ -461,12 +472,15 @@ li {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
+
 .sidebar a:hover {
   background-position: 0;
 }
+
 .sidebar a:hover::before {
   width: 70%;
 }
+
 .sidebar a::before {
   content: "";
   background: #54b3d6;
@@ -482,12 +496,13 @@ li {
 /* ------------------------------------*\
   #STARS BACKGROUND MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section creates the starry background.
  */
 body {
   background-color: var(--background-color);
-  background-image: radial-gradient(var(--text-light), rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(var(--text-light), rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(var(--text-light), rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-image: radial-gradient(var(--text-light), rgb(255 255 255 / 20%) 2px, transparent 40px), radial-gradient(var(--text-light), rgb(255 255 255 / 15%) 1px, transparent 30px), radial-gradient(var(--text-light), rgb(255 255 255 / 10%) 2px, transparent 40px), radial-gradient(rgb(255 255 255 / 40%), rgb(255 255 255 / 10%) 2px, transparent 30px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
@@ -495,6 +510,7 @@ body {
 /* -------------------------------------*\
   #ROCKET SMALL-VIEW BACKGROUND MOLECULE
 \*------------------------------------- */
+
 /** 
  * This section inserts the small-view rocket svg into the div holding
  * the introductory paragraph and HTML and CSS file downloads. It also
@@ -502,6 +518,7 @@ body {
  */
 @media only screen and (max-width: 1129px) {
   .summary::before { /* keep this in small-view */ }
+
   .summary::before {
     content: "";
     background-image: url("images/rocket-grey-red.svg");
@@ -521,10 +538,12 @@ body {
 /* -------------------------------------*\
   #ROCKET LARGE-VIEW BACKGROUND MOLECULE
 \*------------------------------------- */
+
 /** 
  * This section inserts the large-view rocket svg that animates, 
  * circling around the center planet.
  */
+
 /* inserts the rocket in the center of the planet */
 @media only screen and (min-width: 1130px) {
   .page-wrapper::after {
@@ -548,19 +567,24 @@ body {
   0% {
     transform: rotate(0deg) translateX(360px) rotate(155deg);
   }
+
   100% {
     transform: rotate(360deg) translateX(360px) rotate(155deg);
   }
 }
+
 /* ------------------------------------*\
   #BACKGROUND ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the Section for the background imagery of stars and a rocket
  */
+
 /* ------------------------------------*\
   #PLANET SMALL-VIEW PLANET MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section inserts the planet into the section tag that holds the header 
  * and opening paragraph and then positions the planet behind the title.
@@ -572,9 +596,11 @@ body {
     display: block;
     width: 270px;
     height: 265px;
+
     /* insert planet image */
     position: absolute;
     left: 50%;
+
     /* position */
     z-index: -1; /* position */
     margin-left: -135px; /* position */
@@ -585,6 +611,7 @@ body {
 /* ------------------------------------*\
   #PLANET LARGE-VIEW PLANET MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section inserts the planet into the section tag that holds the title 
  * and opening paragraphs and then positions the planet behind them and puts
@@ -592,15 +619,18 @@ body {
  */
 @media only screen and (min-width: 1130px) {
   .intro::before { /* keep this in large-view */ }
+
   .intro::before {
     content: "";
     background-image: url("images/central-planet.svg");
     display: block;
     width: 600px;
     height: 595px;
+
     /* insert planet image */
     position: absolute;
     left: 50%;
+
     /* position */
     z-index: -1; /* position */
     margin-left: -300px; /* position center the planet */
@@ -611,6 +641,7 @@ body {
 /* ------------------------------------*\
   #TITLE PLANET MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section styles the header size and shapes it into a circle the size
  * of the planet that the title is in. It also places the title in the center 
@@ -634,6 +665,7 @@ header {
 /* ------------------------------------*\
   #PARAGRAPH PLANET MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section styles and positions the paragraph over the rocket in the
  * header for the small-view and over the planet in the large-view.
@@ -660,6 +692,7 @@ header {
 /* ------------------------------------*\
   #DOWNLOADS PLANET MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section styles and positions the HTML and CSS download links and 
  * sentence they are contained within.
@@ -685,6 +718,7 @@ header {
     margin-top: 3rem;
   }
 }
+
 .summary p:last-child a {
   font-size: 0.8rem;
   line-height: normal;
@@ -695,14 +729,17 @@ header {
 /* ------------------------------------*\
   #PLANET ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the Section for styling the Header, consisting of the main planet,
  * the Header's title, the Header's intro paragraph, and the download links
  * for the site's HTML and CSS code files.
  */
+
 /* ------------------------------------*\
   #BODY'S TEXT MOONS MOLECULES
 \*------------------------------------ */
+
 /** 
  * This section styles and positions the titles of sections and the sections
  * paragraphs and links.
@@ -714,6 +751,7 @@ header {
 .preamble {
   padding: 1rem;
 }
+
 .preamble h3 {
   color: var(--primary);
 }
@@ -744,6 +782,7 @@ header {
 /* --------------------------------------*\
   #BODY'S TEXT LARGE-VIEW MOONS MOLECULES
 \*-------------------------------------- */
+
 /** 
  * This section controls the appearance of the paragraphs and their titles.
  */
@@ -752,39 +791,42 @@ header {
     margin-top: 10rem;
   }
 }
-
 @media only screen and (min-width: 1130px) {
   .preamble,
-.explanation,
-.participation,
-.benefits,
-.requirements { /* keep this in large-view */
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements { /* keep this in large-view */
     /* styles shared by all large-view titles in moons */
+
     /* enlarge title when hovered over and stop pulse animation */
   }
+
   .preamble p,
-.explanation p,
-.participation p,
-.benefits p,
-.requirements p {
+  .explanation p,
+  .participation p,
+  .benefits p,
+  .requirements p {
     display: none; /* conceals the sections paragraphs */
   }
+
   .preamble h3,
-.explanation h3,
-.participation h3,
-.benefits h3,
-.requirements h3 {
+  .explanation h3,
+  .participation h3,
+  .benefits h3,
+  .requirements h3 {
     font-size: 130%;
     text-align: center;
     color: var(--text-darkest);
     padding-top: 40%;
     animation: pulse 3s ease-in-out infinite;
   }
+
   .preamble:hover h3,
-.explanation:hover h3,
-.participation:hover h3,
-.benefits:hover h3,
-.requirements:hover h3 {
+  .explanation:hover h3,
+  .participation:hover h3,
+  .benefits:hover h3,
+  .requirements:hover h3 {
     animation: none;
     transform: scale(1.2);
   }
@@ -836,22 +878,28 @@ header {
   0% {
     transform: scale(none);
   }
+
   50% {
     transform: scale(1.03);
   }
+
   100% {
     transform: scale(none);
   }
 }
+
 /* ------------------------------------*\
   #A MOON PATTERN ORGANISM
 \*------------------------------------ */
+
 /** 
  * This is the Section for styling the Body's titles and paragraphs.
  */
+
 /* ----------------------------------------------*\
   #MOON SMALL-VIEW  ENLIGHTENMENT MOON MOLECULES
 \*---------------------------------------------- */
+
 /** 
  * This section inserts the moon image into the second paragraph within the
  * section and positions the moon in the middle of that paragraphs on the 
@@ -866,6 +914,7 @@ header {
     height: 132px;
     float: right;
     shape-outside: url("images/yellow-moon.svg");
+
     /* insert moon image to right 
     & create word wrapping */
     margin-top: 5.625rem; /* position */
@@ -875,20 +924,27 @@ header {
 /* ----------------------------------------------*\
   #MOON LARGE-VIEW ENLIGHTENMENT MOON MOLECULES
 \*---------------------------------------------- */
+
 /** 
  * This section inserts the moon image around the planet on the left side and 
  * creates the large central moon image with the Enlightenment section's text 
  * inside it when the smaller moon is hovered over.
  */
+
 /* inserts the Enlightenment moon on the left side of the planet */
 @media only screen and (min-width: 1130px) {
   .preamble {
     /* keep this in large-view */
+
     /* insertion & placement of large version of image to hold paragraphs */
+
     /* absolute position for all & placement for first paragraph */
+
     /* placement for second paragraph */
+
     /* placement for third paragraph */
   }
+
   .preamble {
     content: "";
     background-image: url("images/yellow-moon.svg");
@@ -898,10 +954,12 @@ header {
     position: absolute;
     top: 24rem;
     left: 50%;
+
     /* positions moon in fixed position from planet's center to create a *
-    * stable hover image positon **/
+     * stable hover image positon **/
     margin-left: -560px;
   }
+
   .preamble:hover::before {
     position: absolute;
     top: -270%;
@@ -914,23 +972,27 @@ header {
     margin-right: -869px;
     z-index: 2;
   }
+
   .preamble:hover p {
     position: absolute;
     top: -148.5%;
     right: 50%;
     margin-right: -695px;
     width: 450px;
+
     /* shared characteristics of all Enlightenment paragraphs */
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px var(--background-color), -1px -1px 20px var(--background-color);
     z-index: 3;
   }
+
   .preamble p:nth-child(3) {
     top: -83%;
     margin-right: -750px;
     width: 560px;
   }
+
   .preamble p:nth-child(4) {
     top: -18%;
     width: 420px;
@@ -941,12 +1003,15 @@ header {
 /* ------------------------------------*\
   #ENLIGHTENMENT MOON ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the segment for styling the The Road to Enlightenment section moon.
  */
+
 /* ------------------------------------*\
   #MOON SMALL-VIEW ABOUT MOON MOLECULES
 \*------------------------------------ */
+
 /** 
  * This section inserts the moon image into the HTML abbr tag within the
  * sections first pargraph and positions the moon on the left side between 
@@ -962,6 +1027,7 @@ header {
     float: left;
     shape-outside: url("images/red-white-moon.svg");
     shape-margin: 10px;
+
     /* insert moon image to left & create word wrapping */
     margin-right: 0.625rem; /* position */
     margin-top: 7.3rem; /* position */
@@ -971,11 +1037,13 @@ header {
 /* ----------------------------------------------*\
   #MOON LARGE-VIEW ABOUT MOON MOLECULES
 \*---------------------------------------------- */
+
 /** 
  * This section inserts the moon image around the planet on the left side and 
  * creates the large central moon image with the About section's text inside it
  * when the smaller moon is hovered over.
  */
+
 /* inserts the About moon on the left side of the planet */
 @media only screen and (min-width: 1130px) {
   .explanation {
@@ -991,9 +1059,12 @@ header {
     margin-left: -500px;
     border-radius: 50%;
     box-shadow: 0 0 10px 10px var(--about-light);
+
     /* absolute position for all & placement for first paragraph */
+
     /* position the second paragraph */
   }
+
   .explanation:hover::before {
     position: absolute;
     top: 8%;
@@ -1009,6 +1080,7 @@ header {
     box-shadow: 0 0 90px 50px var(--about-light);
     z-index: 2;
   }
+
   .explanation:hover p {
     position: absolute;
     top: 75%;
@@ -1020,6 +1092,7 @@ header {
     text-shadow: 1px 1px 15px var(--background-color), -1px -1px 15px var(--background-color);
     z-index: 3;
   }
+
   .explanation p:nth-child(3) {
     top: 219%;
   }
@@ -1028,12 +1101,15 @@ header {
 /* ------------------------------------*\
   #ABOUT MOON ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the segment for styling the So What is This About section moon.
  */
+
 /* --------------------------------------------*\
   #MOON SMALL-VIEW PARTICIPATION MOON MOLECULES
 \*-------------------------------------------- */
+
 /** 
  * This section inserts the astronaut image into the HTML abbr within the 
  * second paragraph of the section and positions the astronaut in the middle 
@@ -1050,6 +1126,7 @@ header {
     float: right;
     shape-outside: url("images/astronaut.svg");
     shape-margin: 10px;
+
     /* insert astronaut image to 
     right & create word wrapping */
     margin-top: 2.75rem; /* position */
@@ -1063,11 +1140,13 @@ header {
 /* ----------------------------------------------*\
   #MOON LARGE-VIEW PARTICIPATION MOON MOLECULES
 \*---------------------------------------------- */
+
 /** 
  * This section inserts the moon image around the planet on the top side and 
  * creates the large central moon image with the Participation section's text 
  * inside it when the smaller moon is hovered over.
  */
+
 /* inserts the Participation moon on the top side of the planet */
 @media only screen and (min-width: 1130px) {
   .participation {
@@ -1080,15 +1159,20 @@ header {
     position: absolute;
     top: -11.5rem;
     left: 50%;
+
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-left: -75px;
+
     /* adds glow to headline planet */
     border-radius: 50%;
     box-shadow: 0 0 10px 10px var(--participation-light);
+
     /* insertion & placement of large version of image to hold paragraphs */
+
     /* absolute position for all & placement for first paragraph */
   }
+
   .participation:hover::before {
     position: absolute;
     top: 50%;
@@ -1105,9 +1189,11 @@ header {
     box-shadow: 0 0 90px 50px var(--participation-light);
     z-index: 2;
   }
+
   .participation:hover a {
     text-decoration-color: var(--p-link);
   }
+
   .participation:hover p {
     position: absolute;
     top: -50%;
@@ -1115,17 +1201,20 @@ header {
     margin-top: 350px;
     margin-right: 95px;
     width: 520px;
+
     /* shared characteristics of all Participation paragraphs */
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px var(--background-color), -1px -1px 20px var(--background-color);
     z-index: 3;
   }
+
   .participation p:nth-child(3) {
     top: 120px;
     margin-right: 35px;
     width: 650px;
   }
+
   .participation p:nth-child(4) {
     top: 240px;
     width: 500px;
@@ -1136,12 +1225,15 @@ header {
 /* ------------------------------------*\
   #PARTICIPATION MOON ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the segment for styling the Participation section astronaut.
  */
+
 /* ---------------------------------------*\
   #MOON SMALL-VIEW BENEFITS MOON MOLECULES
 \*--------------------------------------- */
+
 /** 
  * This section inserts the moon image into the CSS abbr tag within the
  * sections only paragraph and positions the moon in the middle of the 
@@ -1158,6 +1250,7 @@ header {
     float: left;
     shape-outside: url("images/white-moon.svg");
     shape-margin: 10px;
+
     /* insert moon image to left & create word wrapping */
     margin-right: 0.625rem; /* position */
     margin-top: 3rem; /* position */
@@ -1167,11 +1260,13 @@ header {
 /* ----------------------------------------------*\
   #MOON LARGE-VIEW BENEFITS MOON MOLECULES
 \*---------------------------------------------- */
+
 /** 
  * This section inserts the moon image around the planet on the right side and 
  * creates the large central moon image with the Benefits section's text 
  * inside it when the smaller moon is hovered over.
  */
+
 /* inserts the Benefits moon on the right side of the planet */
 @media only screen and (min-width: 1130px) {
   .benefits {
@@ -1187,8 +1282,10 @@ header {
     margin-left: 340px;
     border-radius: 50%;
     box-shadow: 0 0 10px 10px var(--benefits-light);
+
     /* absolute position for all & placement for first paragraph */
   }
+
   .benefits:hover::before {
     position: absolute;
     top: 8%;
@@ -1203,6 +1300,7 @@ header {
     box-shadow: 0 0 90px 50px var(--benefits-light);
     z-index: 2;
   }
+
   .benefits:hover p {
     position: absolute;
     top: 130%;
@@ -1219,12 +1317,15 @@ header {
 /* ------------------------------------*\
   #BENEFITS MOON ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the segment for styling the Benefits section moon.
  */
+
 /* -------------------------------------------*\
   #MOON SMALL-VIEW REQUIREMENTS MOON MOLECULES
 \*------------------------------------------- */
+
 /** 
  * This section inserts the moon image into the CSS abbr tag within the
  * sections second pargraph and positions the moon on the right side towards 
@@ -1240,6 +1341,7 @@ header {
     float: right;
     shape-outside: url("images/orange-moon.svg");
     shape-margin: 10px;
+
     /* insert moon image to right & create word wrapping */
     margin-top: 27.75rem; /* position */
   }
@@ -1254,11 +1356,13 @@ header {
 /* -------------------------------------------*\
   #MOON LARGE-VIEW REQUIREMENTS MOON MOLECULES
 \*------------------------------------------- */
+
 /** 
  * This section inserts the moon image around the planet on the right side and 
  * creates the large central moon image with the Requirements section's text 
  * inside it when the smaller moon is hovered over.
  */
+
 /* inserts the Requirements moon on the right side of the planet */
 @media only screen and (min-width: 1130px) {
   .requirements {
@@ -1271,19 +1375,28 @@ header {
     position: absolute;
     top: 25rem;
     right: 50%;
+
     /* positions moon in fixed position from planet's center to create a *
      * stable hover image positon */
     margin-right: -545px;
+
     /* adds glow to headline planet */
     border-radius: 50%;
     box-shadow: 0 0 10px 10px var(--requirements-light);
+
     /* inserts and places large version of image hold paragraphs */
+
     /* absolute positioning for all & placing first paragraph */
+
     /* placement for second paragraph */
+
     /* placement for third paragraph */
+
     /* placement for fourth paragraph */
+
     /* placement for fifth paragraph */
   }
+
   .requirements:hover::before {
     position: absolute;
     top: -380%;
@@ -1299,36 +1412,43 @@ header {
     box-shadow: 0 0 90px 50px var(--requirements-light);
     z-index: 2;
   }
+
   .requirements:hover a {
     text-decoration-color: var(--p-link);
   }
+
   .requirements:hover p {
     position: absolute;
     top: -325%;
     right: 50%;
     margin-right: 189px;
     width: 550px;
+
     /* shared characteristics of all Requirements paragraphs */
     display: block;
     text-align: center;
     text-shadow: 1px 1px 20px var(--background-color), -1px -1px 20px var(--background-color);
     z-index: 3;
   }
+
   .requirements p:nth-child(3) {
     top: -295px;
     width: 820px;
     margin-right: 55px;
   }
+
   .requirements p:nth-child(4) {
     width: 867px;
     margin-right: 32px;
     margin-top: 408px;
   }
+
   .requirements p:nth-child(5) {
     top: 43px;
     width: 630px;
     margin-right: 150px;
   }
+
   .requirements p:nth-child(6) {
     top: 188px;
     width: 400px;
@@ -1339,12 +1459,15 @@ header {
 /* ------------------------------------*\
   #REQUIREMENTS MOON ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the segment for styling the Requirements section moon.
  */
+
 /* ------------------------------------*\
   #DESIGNS ASIDE FOOTER MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section styles the designs aside and inserts planet icons next to 
  * each design example.
@@ -1356,17 +1479,21 @@ header {
 .design-selection {
   border-top: 3px solid var(--p-link);
   padding-top: 0.5rem;
+
   /* put line above section */
   padding: 1rem;
   margin-top: 3rem; /* seperates footer from main body */
 }
+
 .design-selection .designer-name {
   margin-left: 0.25rem;
 }
+
 .design-selection ul li {
   padding-left: 3.125rem;
   position: relative;
 }
+
 .design-selection ul li::before {
   content: "";
   background-image: url("images/new-planet.svg");
@@ -1374,32 +1501,40 @@ header {
   width: 35px;
   height: 35px;
   background-size: contain;
+
   /* changed $top to 0 from -6px due changes caused by flex */
   position: absolute;
   top: 10px;
   left: 15px;
   transform: rotate(-30deg);
-  /* creates mask on top of planet bullet point to get a shimmering animation */
-  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+
+  /* creates mask on top of planet bullet point to get a shimmering
+   * animation */
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgb(0 0 0 / 33.3%), #000 70%) right/300% 100%;
   background-repeat: no-repeat;
   animation: shimmer 2.5s infinite;
 }
+
 .design-selection ul li:not(a) {
   color: var(--text-light);
 }
+
 .design-selection ul li a {
   margin: 0.5rem 0;
 }
 
 .sidebar .design-name {
   display: block;
+
   /* changed from fit-content to max-content to keep it from prematurely
    * wrapping in flex */
   max-width: max-content;
 }
+
 .sidebar .design-name:hover::before {
   bottom: 27px;
 }
+
 .sidebar .design-name::before {
   bottom: 27px;
 }
@@ -1408,6 +1543,7 @@ header {
 .sidebar .designer-name {
   background-image: linear-gradient(to right, var(--accent1), var(--accent1) 50%, var(--text-light) 50%);
 }
+
 .sidebar .designer-name::before {
   left: 70px;
 }
@@ -1477,6 +1613,7 @@ li:nth-of-type(8) .designer-name:hover::before {
 /* ------------------------------------*\
   #ARCHIVES ASIDE FOOTER MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section styles the archives aside and inserts planet icons next to 
  * each archive entry.
@@ -1487,6 +1624,7 @@ li:nth-of-type(8) .designer-name:hover::before {
 
 .design-archives {
   padding: 1rem;
+
   /* inserts animated astronaut in large-view */
 }
 @media only screen and (min-width: 1130px) {
@@ -1512,10 +1650,12 @@ li:nth-of-type(8) .designer-name:hover::before {
     animation: xxlg-floating-astronaut 22s linear infinite;
   }
 }
+
 .design-archives ul li {
   padding-left: 50px;
   position: relative;
 }
+
 .design-archives ul li::before {
   content: "";
   background-image: url("images/new-planet.svg");
@@ -1527,8 +1667,10 @@ li:nth-of-type(8) .designer-name:hover::before {
   top: 0;
   left: 17px;
   transform: rotate(-30deg);
-  /* creates mask on top of planet bullet point to get a shimmering animation */
-  -webkit-mask: linear-gradient(-60deg, #414241 30%, rgba(0, 0, 0, 0.3333333333), #414241 70%) right/300% 100%;
+
+  /* creates mask on top of planet bullet point to get a shimmering
+   * animation */
+  -webkit-mask: linear-gradient(-60deg, #414241 30%, rgb(0 0 0 / 33.3%), #414241 70%) right/300% 100%;
   background-repeat: no-repeat;
   animation: shimmer 2.5s infinite;
 }
@@ -1539,70 +1681,92 @@ li:nth-of-type(8) .designer-name:hover::before {
 
 /* sets up the animation for the floating astronaut */
 @keyframes floating-astronaut {
-  0%, 100% {
+  0%,
+  100% {
     bottom: 12rem;
   }
+
   15% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
+
   30% {
     transform: rotate(0deg) translateX(-18rem) rotate(0deg);
   }
+
   45% {
     transform: rotate(0deg) translateY(5rem) rotate(-15deg);
   }
+
   70% {
     transform: rotate(0deg) translateX(10rem) rotate(0deg);
   }
+
   85% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
 }
+
 /* sets up the animation for the floating astronaut */
 @keyframes xlg-floating-astronaut {
-  0%, 100% {
+  0%,
+  100% {
     bottom: 12rem;
   }
+
   10% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
+
   40% {
     transform: rotate(0deg) translateX(-30rem) rotate(0deg);
   }
+
   70% {
     transform: rotate(0deg) translateY(5rem) rotate(-15deg);
   }
+
   80% {
     transform: rotate(0deg) translateX(10rem) rotate(0deg);
   }
+
   90% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
 }
+
 /* sets up the animation for the floating astronaut */
 @keyframes xxlg-floating-astronaut {
-  0%, 100% {
+  0%,
+  100% {
     bottom: 12rem;
   }
+
   10% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
+
   40% {
     transform: rotate(0deg) translateX(-45rem) rotate(0deg);
   }
+
   70% {
     transform: rotate(0deg) translateY(5rem) rotate(-15deg);
   }
+
   80% {
     transform: rotate(0deg) translateX(10rem) rotate(0deg);
   }
+
   90% {
     transform: rotate(0deg) translateY(-10rem) rotate(25deg);
   }
 }
+
 /* ------------------------------------*\
   #RESOURCES ASIDE FOOTER MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section styles the resources aside and inserts planet icons next to 
  * each resource listed.
@@ -1614,10 +1778,12 @@ li:nth-of-type(8) .designer-name:hover::before {
 .zen-resources {
   padding: 1rem; /* changed from padding-left to mathc other asides */
 }
+
 .zen-resources ul li {
   padding-left: 50px;
   position: relative;
 }
+
 .zen-resources ul li::before {
   content: "";
   background-image: url("images/new-planet.svg");
@@ -1629,8 +1795,9 @@ li:nth-of-type(8) .designer-name:hover::before {
   top: 0;
   left: 15px;
   transform: rotate(-30deg);
+
   /* creates mask on top of planet bullet point to get a shimmering animation */
-  -webkit-mask: linear-gradient(-60deg, #000 30%, rgba(0, 0, 0, 0.3333333333), #000 70%) right/300% 100%;
+  -webkit-mask: linear-gradient(-60deg, #000 30%, rgb(0 0 0 / 33.3%), #000 70%) right/300% 100%;
   background-repeat: no-repeat;
   animation: shimmer 2.5s infinite;
 }
@@ -1656,13 +1823,16 @@ li:nth-of-type(8) .designer-name:hover::before {
   100% {
     -webkit-mask-position: left;
   }
+
   50% {
     transform: rotate(-20deg) translateX(-0.25rem);
   }
 }
+
 /* ------------------------------------*\
   #FOOTER LINKS FOOTER MOLECULE
 \*------------------------------------ */
+
 /** 
  * This section places the footer below the aside aside and styles the footer
  * and creates the layout for the links in the footer.
@@ -1675,14 +1845,17 @@ footer {
   border-top: 3px solid var(--p-link);
   border-bottom: 3px solid var(--p-link);
   padding: 0.5rem 0;
+
   /* put lines above & below links */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   column-gap: 0.75rem;
+
   /* layout */
   position: absolute;
   bottom: 0;
+
   /* place footer at bottom */
   width: 100%; /* layout */
   margin-left: -1rem; /* layout */
@@ -1699,9 +1872,8 @@ footer a:hover::before {
 /* ------------------------------------*\
   #FOOTER ORGANISM
 \*------------------------------------ */
+
 /**
  * This is the Section for styling the Select a Design, Archives and Resources
  * sections of the Aside placed in the Footer as well as the Footer links
  */
-
-/*# sourceMappingURL=style.css.map */
