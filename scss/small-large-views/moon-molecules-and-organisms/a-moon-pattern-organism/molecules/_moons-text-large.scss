@@ -95,7 +95,7 @@
 /* Sets up the actions for the title's pulsing */
 @keyframes pulse {
   0% {
-    transform: scale(none);
+    transform: scale(1);
   }
 
   50% {
@@ -103,6 +103,6 @@
   }
 
   100% {
-    transform: scale(none);
+    transform: scale(1);
   }
 }
